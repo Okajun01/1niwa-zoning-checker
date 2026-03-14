@@ -11,6 +11,12 @@
 
 import streamlit as st
 import pandas as pd
+
+APP_VERSION = "v2.1.0-crs-fix"
+
+# 起動時にキャッシュを全クリア（CRS修正を確実に反映するため）
+st.cache_resource.clear()
+
 from zoning_checker import load_zoning_data, load_school_data, check_zoning, ZoningResult
 
 # ===== ページ設定 =====
@@ -133,7 +139,7 @@ def result_to_html(result: ZoningResult) -> str:
 
 # ===== メイン画面 =====
 st.title("🏨 1NIWA 用途地域チェッカー")
-st.markdown('<p class="header-sub">住所を入力すると、旅館業の営業可否を自動判定します（東京都23区対応）</p>', unsafe_allow_html=True)
+st.markdown(f'<p class="header-sub">住所を入力すると、旅館業の営業可否を自動判定します（東京都23区対応）　{APP_VERSION}</p>', unsafe_allow_html=True)
 
 st.divider()
 
