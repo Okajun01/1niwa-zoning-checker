@@ -44,10 +44,8 @@ st.markdown("""
 
 # ===== GISデータの読み込み（キャッシュ）=====
 @st.cache_resource
-def setup_and_load(_cache_version=3):
-    """初回起動時にGISデータを自動ダウンロードして読み込む。
-    _cache_versionを変更するとキャッシュが無効化される。
-    """
+def setup_and_load():
+    """初回起動時にGISデータを自動ダウンロードして読み込む"""
     import download_data
     download_data.main()
     import os, zipfile, requests
@@ -67,17 +65,42 @@ def setup_and_load(_cache_version=3):
             pass
     # .prjファイルの確認・生成（CRS問題の防止）
     download_data.ensure_prj_files(data_dir)
-    return load_zoning_data(), load_school_data()
+
+    # デバッグ情報を収集
+    debug_info = {}
+    # .prjファイルの存在確認
+    for root, dirs, files in os.walk(data_dir):
+        for f in files:
+            if f.endswith(".prj"):
+                prj_path = os.path.join(root, f)
+                with open(prj_path, "r") as pf:
+                    debug_info["prj_content"] = pf.read()
+                debug_info["prj_path"] = prj_path
+
+    gdf = load_zoning_data()
+    school_gdf = load_school_data()
+
+    debug_info["crs"] = str(gdf.crs) if gdf.crs else "None"
+    debug_info["epsg"] = str(gdf.crs.to_epsg()) if gdf.crs else "None"
+    debug_info["records"] = len(gdf)
+    bounds = gdf.total_bounds  # [minx, miny, maxx, maxy]
+    debug_info["bounds"] = f"lon: {bounds[0]:.6f}~{bounds[2]:.6f}, lat: {bounds[1]:.6f}~{bounds[3]:.6f}"
+
+    return gdf, school_gdf, debug_info
 
 @st.cache_resource
 def get_gdf():
-    gdf, _ = setup_and_load()
+    gdf, _, _ = setup_and_load()
     return gdf
 
 @st.cache_resource
 def get_school_gdf():
-    _, school = setup_and_load()
+    _, school, _ = setup_and_load()
     return school
+
+def get_debug_info():
+    _, _, debug = setup_and_load()
+    return debug
 
 
 def result_to_html(result: ZoningResult) -> str:
@@ -140,6 +163,18 @@ def result_to_html(result: ZoningResult) -> str:
 # ===== メイン画面 =====
 st.title("🏨 1NIWA 用途地域チェッカー")
 st.markdown(f'<p class="header-sub">住所を入力すると、旅館業の営業可否を自動判定します（東京都23区対応）　{APP_VERSION}</p>', unsafe_allow_html=True)
+
+# デバッグ情報（原因特定用・後で削除）
+with st.expander("🔧 デバッグ情報（開発用）"):
+    debug = get_debug_info()
+    st.json(debug)
+    # テスト用ジオコーディング
+    from zoning_checker import geocode
+    test_coords = geocode("江東区豊洲3丁目4-1")
+    if test_coords:
+        st.write(f"テスト座標（豊洲3-4-1）: lon={test_coords[0]}, lat={test_coords[1]}")
+    else:
+        st.write("テスト座標: ジオコーディング失敗")
 
 st.divider()
 
