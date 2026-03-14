@@ -176,11 +176,25 @@ def geocode_nominatim(address: str) -> Optional[tuple[float, float]]:
     return None
 
 
+def normalize_address(address: str) -> str:
+    """住所の全角文字を半角に正規化する"""
+    import unicodedata
+    # 全角英数字・記号を半角に変換（NFKC正規化）
+    address = unicodedata.normalize("NFKC", address)
+    # 全角ハイフン系の文字を半角ハイフンに統一
+    for ch in ["−", "ー", "‐", "–", "—", "―"]:
+        address = address.replace(ch, "-")
+    return address
+
+
 def geocode(address: str) -> Optional[tuple[float, float]]:
     """
     住所→座標変換。国土地理院APIを優先し、失敗時はNominatimにフォールバック。
     戻り値: (経度, 緯度) or None
     """
+    # 全角文字を半角に正規化
+    address = normalize_address(address)
+
     result = geocode_msearch(address)
     if result:
         return result

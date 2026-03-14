@@ -38,8 +38,10 @@ st.markdown("""
 
 # ===== GISデータの読み込み（キャッシュ）=====
 @st.cache_resource
-def setup_and_load():
-    """初回起動時にGISデータを自動ダウンロードして読み込む"""
+def setup_and_load(_cache_version=2):
+    """初回起動時にGISデータを自動ダウンロードして読み込む。
+    _cache_versionを変更するとキャッシュが無効化される。
+    """
     import download_data
     download_data.main()
     import os, zipfile, requests
@@ -57,6 +59,8 @@ def setup_and_load():
             os.remove(zpath)
         except Exception:
             pass
+    # .prjファイルの確認・生成（CRS問題の防止）
+    download_data.ensure_prj_files(data_dir)
     return load_zoning_data(), load_school_data()
 
 @st.cache_resource

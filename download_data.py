@@ -80,15 +80,30 @@ def find_geojson(directory):
     return None
 
 
+def ensure_prj_files(data_dir):
+    """既存のShapefileに.prjファイルがなければ生成する（JGD2000座標系）"""
+    prj_content = 'GEOGCS["JGD2000",DATUM["Japanese_Geodetic_Datum_2000",SPHEROID["GRS 1980",6378137,298.257222101]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433]]'
+    for root, dirs, files in os.walk(data_dir):
+        for f in files:
+            if f.endswith(".shp"):
+                prj_path = os.path.join(root, f.replace(".shp", ".prj"))
+                if not os.path.exists(prj_path):
+                    with open(prj_path, "w") as pf:
+                        pf.write(prj_content)
+                    print(f"  .prjファイルを生成: {prj_path}")
+
+
 def main():
     os.makedirs(DATA_DIR, exist_ok=True)
 
-    # 既にデータがある場合はスキップ
+    # 既にデータがある場合はスキップ（ただし.prjファイルは確認・生成する）
     shp = find_shapefile(DATA_DIR)
     gjson = find_geojson(DATA_DIR)
     if shp or gjson:
         found = shp or gjson
         print(f"既にデータが存在します: {found}")
+        # .prjファイルが欠落している場合は生成する
+        ensure_prj_files(DATA_DIR)
         print("再ダウンロードする場合は data/ ディレクトリを削除してから実行してください。")
         return
 
