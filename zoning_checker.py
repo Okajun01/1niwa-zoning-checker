@@ -239,7 +239,7 @@ def check_schools_nearby(lon: float, lat: float, school_gdf: gpd.GeoDataFrame) -
     import pyproj
 
     point_wgs84 = Point(lon, lat)
-    proj = pyproj.Transformer.from_crs("EPSG:4326", "EPSG:6677", always_xy=True)
+    proj = pyproj.Transformer.from_crs("EPSG:4326", "EPSG:6680", always_xy=True)
     point_m = transform(proj.transform, point_wgs84)
 
     within_110m = []
@@ -316,8 +316,8 @@ def load_zoning_data() -> gpd.GeoDataFrame:
 
     # 座標系をWGS84（EPSG:4326）に変換
     if gdf.crs is None:
-        print("  警告: CRSが未設定。EPSG:4326を仮定します。")
-        gdf = gdf.set_crs("EPSG:4326")
+        print("  警告: CRSが未設定。国土数値情報のデフォルトJGD2000(EPSG:4612)を仮定します。")
+        gdf = gdf.set_crs("EPSG:4612")
     elif gdf.crs.to_epsg() != 4326:
         print(f"  座標系変換: {gdf.crs} → EPSG:4326")
         gdf = gdf.to_crs("EPSG:4326")

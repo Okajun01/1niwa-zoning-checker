@@ -119,6 +119,13 @@ def main():
     gjson = find_geojson(DATA_DIR)
     if shp:
         print(f"\nShapefileを検出: {shp}")
+        # 国土数値情報A29はJGD2000座標系だが.prjファイルが欠落している場合があるため生成
+        prj_path = shp.replace(".shp", ".prj")
+        if not os.path.exists(prj_path):
+            prj_content = 'GEOGCS["JGD2000",DATUM["Japanese_Geodetic_Datum_2000",SPHEROID["GRS 1980",6378137,298.257222101]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433]]'
+            with open(prj_path, "w") as f:
+                f.write(prj_content)
+            print(f"  .prjファイルを生成: {prj_path}")
     elif gjson:
         print(f"\nGeoJSONを検出: {gjson}")
     else:
