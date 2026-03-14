@@ -122,7 +122,7 @@ class ZoningResult:
     ryokan_detail: Optional[str] = None
     # 学校距離判定
     schools_within_110m: Optional[list] = None  # [(学校名, 種別, 距離m)]
-    schools_within_200m: Optional[list] = None  # 110-200m（精度誤差考慮の警告圏）
+    schools_within_300m: Optional[list] = None  # 110-300m（精度誤差考慮の警告圏）
     school_warning: Optional[str] = None
     # 文教地区判定
     bunkyo_chiku: Optional[str] = None  # 文教地区の警告
@@ -246,8 +246,8 @@ def load_school_data() -> Optional[gpd.GeoDataFrame]:
 def check_schools_nearby(lon: float, lat: float, school_gdf: gpd.GeoDataFrame) -> tuple[list, list]:
     """
     周辺の学校等を検出する。
-    戻り値: (110m以内のリスト, 110-200m以内のリスト)
-    200mまで検出する理由: ジオコーディングの精度誤差（丁目レベルで最大100m程度）を考慮
+    戻り値: (110m以内のリスト, 110-300m以内のリスト)
+    300mまで検出する理由: ジオコーディングの精度誤差（丁目レベルで最大200m程度）を考慮
     """
     from shapely.ops import transform
     import pyproj
@@ -257,11 +257,11 @@ def check_schools_nearby(lon: float, lat: float, school_gdf: gpd.GeoDataFrame) -
     point_m = transform(proj.transform, point_wgs84)
 
     within_110m = []
-    within_200m = []
+    within_300m = []
     for _, row in school_gdf.iterrows():
         school_point = transform(proj.transform, row.geometry)
         dist = point_m.distance(school_point)
-        if dist <= 200:
+        if dist <= 300:
             school_type_code = str(row.get("P29_003", "")).strip()
             if "." in school_type_code:
                 school_type_code = str(int(float(school_type_code)))
@@ -271,11 +271,11 @@ def check_schools_nearby(lon: float, lat: float, school_gdf: gpd.GeoDataFrame) -
             if dist <= 110:
                 within_110m.append(entry)
             else:
-                within_200m.append(entry)
+                within_300m.append(entry)
 
     within_110m.sort(key=lambda x: x[2])
-    within_200m.sort(key=lambda x: x[2])
-    return within_110m, within_200m
+    within_300m.sort(key=lambda x: x[2])
+    return within_110m, within_300m
 
 
 def check_bunkyo_chiku(address: str) -> Optional[str]:
@@ -467,16 +467,16 @@ def check_zoning(address: str, gdf: gpd.GeoDataFrame, school_gdf: gpd.GeoDataFra
 
     # 4. 学校距離チェック（110m + 200m警告圏）
     if school_gdf is not None and len(school_gdf) > 0:
-        within_110, within_200 = check_schools_nearby(lon, lat, school_gdf)
+        within_110, within_300 = check_schools_nearby(lon, lat, school_gdf)
         if within_110:
             result.schools_within_110m = within_110
             result.school_warning = f"🔴 110m以内に{len(within_110)}件の学校等あり（学校照会が必要）"
-        if within_200:
-            result.schools_within_200m = within_200
+        if within_300:
+            result.schools_within_300m = within_300
             if result.school_warning:
-                result.school_warning += f"  + 110-200m圏内に{len(within_200)}件（住所精度により照会対象の可能性あり）"
+                result.school_warning += f"  + 110-300m圏内に{len(within_300)}件（住所精度により照会対象の可能性あり）"
             else:
-                result.school_warning = f"⚠️ 110-200m圏内に{len(within_200)}件（住所の精度誤差により照会対象の可能性あり。要現地確認）"
+                result.school_warning = f"⚠️ 110-300m圏内に{len(within_300)}件（住所の精度誤差により照会対象の可能性あり。要現地確認）"
 
     # 5. 総合判定
     next_steps = []
@@ -501,9 +501,9 @@ def check_zoning(address: str, gdf: gpd.GeoDataFrame, school_gdf: gpd.GeoDataFra
         if result.schools_within_110m:
             result.sogo_hantei = "要確認"
             result.sogo_detail = f"用途地域OK。ただし学校照会が必要（110m以内に学校等あり）"
-        elif result.schools_within_200m:
+        elif result.schools_within_300m:
             result.sogo_hantei = "要確認"
-            result.sogo_detail = f"用途地域OK。110-200m圏内に学校等あり（住所精度の誤差により110m以内の可能性。現地確認推奨）"
+            result.sogo_detail = f"用途地域OK。110-300m圏内に学校等あり（住所精度の誤差により110m以内の可能性。現地確認推奨）"
         else:
             result.sogo_hantei = "○"
             result.sogo_detail = "用途地域OK・学校照会リスク低"
@@ -549,18 +549,18 @@ def print_result(result: ZoningResult):
         print(f"旅館業（用途地域）: {result.ryokan_kahi} {result.ryokan_detail}")
         if result.bunkyo_chiku:
             print(f"文教地区: {result.bunkyo_chiku}")
-        if result.schools_within_110m or result.schools_within_200m:
+        if result.schools_within_110m or result.schools_within_300m:
             print(f"学校チェック: {result.school_warning}")
             if result.schools_within_110m:
                 print(f"  【110m以内】")
                 for name, stype, dist in result.schools_within_110m:
                     print(f"    🔴 {name}（{stype}）: {dist}m")
-            if result.schools_within_200m:
-                print(f"  【110-200m（要現地確認）】")
-                for name, stype, dist in result.schools_within_200m:
+            if result.schools_within_300m:
+                print(f"  【110-300m（要現地確認）】")
+                for name, stype, dist in result.schools_within_300m:
                     print(f"    🟡 {name}（{stype}）: {dist}m")
         else:
-            print(f"学校チェック: ✅ 200m以内に学校等なし")
+            print(f"学校チェック: ✅ 300m以内に学校等なし")
         print(f"-"*60)
         print(f"【総合判定】: {result.sogo_hantei} {result.sogo_detail}")
         if result.next_steps:
