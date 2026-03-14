@@ -332,7 +332,8 @@ def load_zoning_data() -> gpd.GeoDataFrame:
     if gdf.crs is None:
         print("  警告: CRSが未設定。国土数値情報のデフォルトJGD2000(EPSG:4612)を仮定します。")
         gdf = gdf.set_crs("EPSG:4612")
-    elif gdf.crs.to_epsg() != 4326:
+
+    if gdf.crs is not None and gdf.crs.to_epsg() != 4326:
         print(f"  座標系変換: {gdf.crs} → EPSG:4326")
         gdf = gdf.to_crs("EPSG:4326")
 

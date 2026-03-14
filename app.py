@@ -38,7 +38,7 @@ st.markdown("""
 
 # ===== GISデータの読み込み（キャッシュ）=====
 @st.cache_resource
-def setup_and_load(_cache_version=2):
+def setup_and_load(_cache_version=3):
     """初回起動時にGISデータを自動ダウンロードして読み込む。
     _cache_versionを変更するとキャッシュが無効化される。
     """
