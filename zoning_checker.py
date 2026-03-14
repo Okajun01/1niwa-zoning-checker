@@ -300,20 +300,25 @@ def load_zoning_data() -> gpd.GeoDataFrame:
         print("先にセットアップを実行してください: bash setup.sh")
         sys.exit(1)
 
-    # データファイルを探す（優先順: Shapefile > GeoJSON > GML）
+    # データファイルを探す（A29用途地域データを優先）
     gis_file = None
+    fallback_file = None
     for root, dirs, files in os.walk(DATA_DIR):
         for f in files:
             path = os.path.join(root, f)
-            if f.endswith(".shp"):
+            if f.endswith(".shp") and ("A29" in f or "A29" in root):
                 gis_file = path
                 break
-            elif f.endswith(".geojson") and gis_file is None:
-                gis_file = path
-            elif f.endswith(".gml") and gis_file is None:
-                gis_file = path
-        if gis_file and gis_file.endswith(".shp"):
+            elif f.endswith(".shp") and fallback_file is None:
+                fallback_file = path
+            elif f.endswith(".geojson") and fallback_file is None:
+                fallback_file = path
+            elif f.endswith(".gml") and fallback_file is None:
+                fallback_file = path
+        if gis_file:
             break
+    if gis_file is None:
+        gis_file = fallback_file
 
     if gis_file is None:
         print(f"エラー: GISデータファイルが見つかりません。")
