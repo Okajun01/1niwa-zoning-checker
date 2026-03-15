@@ -417,7 +417,7 @@ with tab4:
 
     # === 自動収集セクション ===
     st.markdown("### 自動収集（ジモティー・家いちば）— 賃貸のみ")
-    st.markdown("ボタンを押すと、ジモティーと家いちばから東京23区の**賃貸**物件を自動収集し、旅館業可否を判定します。検索済みの物件は自動スキップされます。")
+    st.markdown("ボタンを押すと物件を収集し、旅館業可否を判定します。結果はGoogle Drive（`04_事業物件/PJ2_物件検索/`）に自動保存されます。")
 
     col_s1, col_s2, col_s3 = st.columns(3)
     with col_s1:
@@ -429,57 +429,20 @@ with tab4:
 
     if auto_all or auto_ieichiba or auto_jimoty:
         try:
-            from auto_search import search_ieichiba, search_jimoty, load_cache, save_cache, filter_new_properties
-            cached_urls = load_cache()
+            from auto_search import search_ieichiba, search_jimoty
             all_properties = []
 
             if auto_all or auto_ieichiba:
                 with st.spinner("家いちばを検索中（賃貸のみ）..."):
                     ie_props = search_ieichiba()
-                    ie_props, ie_skipped = filter_new_properties(ie_props, cached_urls)
                     all_properties.extend(ie_props)
-                    st.success(f"家いちば: {len(ie_props)}件（新着） / {ie_skipped}件スキップ")
+                    st.success(f"家いちば: {len(ie_props)}件取得")
 
             if auto_all or auto_jimoty:
                 with st.spinner("ジモティーを検索中（賃貸のみ）..."):
                     jm_props = search_jimoty(max_pages=1)
-                    jm_props, jm_skipped = filter_new_properties(jm_props, cached_urls)
                     all_properties.extend(jm_props)
-                    st.success(f"ジモティー: {len(jm_props)}件（新着） / {jm_skipped}件スキップ")
-
-            # キャッシュ更新
-            for p in all_properties:
-                url = p.get("url", "").split("?")[0]
-                if url:
-                    cached_urls.add(url)
-            save_cache(cached_urls)
-
-            # 検索結果をGitHubに自動保存
-            try:
-                from github_storage import read_file, write_file
-                import csv as _csv, io as _io
-                existing_csv = read_file("data/bukken_history.csv") or ""
-                new_rows = _io.StringIO()
-                writer = _csv.writer(new_rows)
-                if not existing_csv:
-                    writer.writerow(["検索日", "ソース", "タイトル", "住所", "用途地域", "旅館業可否", "総合判定", "URL"])
-                for p in all_properties:
-                    r = p.get("zoning_result")
-                    writer.writerow([
-                        datetime.now().strftime("%Y-%m-%d"),
-                        p.get("source", ""),
-                        p.get("title", ""),
-                        p.get("address", ""),
-                        r.youto_chiiki if r else "",
-                        r.ryokan_kahi if r else "",
-                        r.sogo_hantei if r else "",
-                        p.get("url", ""),
-                    ])
-                content = existing_csv.rstrip("\n") + "\n" + new_rows.getvalue() if existing_csv else new_rows.getvalue()
-                write_file("data/bukken_history.csv", content, f"auto: search results {datetime.now().strftime('%Y-%m-%d')}")
-                st.success("検索結果をGitHubに自動保存しました")
-            except Exception as e:
-                st.warning(f"GitHub保存に失敗（ローカルCSVダウンロードをご利用ください）: {e}")
+                    st.success(f"ジモティー: {len(jm_props)}件取得")
 
             if all_properties:
                 # 住所があるものをチェッカーで判定
@@ -487,7 +450,7 @@ with tab4:
                 props_no_addr = [p for p in all_properties if not p.get("address")]
 
                 if props_with_addr:
-                    st.markdown(f"### 判定結果（住所あり: {len(props_with_addr)}件）")
+                    st.markdown(f"### 判定結果（{len(props_with_addr)}件）")
                     gdf = get_gdf()
                     progress = st.progress(0)
                     for i, prop in enumerate(props_with_addr):
@@ -495,53 +458,88 @@ with tab4:
                         prop["zoning_result"] = result
                         progress.progress((i + 1) / len(props_with_addr))
 
-                    # 旅館業可否別に表示
-                    ok_props = [p for p in props_with_addr if p["zoning_result"].ryokan_kahi in ("○",)]
-                    cond_props = [p for p in props_with_addr if p["zoning_result"].ryokan_kahi in ("△",)]
-                    check_props = [p for p in props_with_addr if p["zoning_result"].sogo_hantei == "要確認"]
-                    ng_props = [p for p in props_with_addr if p["zoning_result"].ryokan_kahi in ("×",) or p["zoning_result"].sogo_hantei == "×"]
-
-                    col1, col2, col3, col4 = st.columns(4)
-                    col1.metric("✅ 営業可能", f"{len(ok_props)}件")
-                    col2.metric("⚠️ 条件付き", f"{len(cond_props)}件")
-                    col3.metric("🔍 要確認", f"{len(check_props)}件")
-                    col4.metric("❌ 営業不可", f"{len(ng_props)}件")
-
-                    # 候補物件を表示
-                    good_props = ok_props + cond_props + check_props
-                    if good_props:
-                        st.markdown("#### 候補物件")
-                        for p in good_props:
-                            r = p["zoning_result"]
-                            with st.expander(f"{r.sogo_hantei} {p.get('title', '物件名不明')} — {p.get('address', '')}"):
-                                st.markdown(f"**ソース**: [{p.get('source', '')}]({p.get('url', '')})")
-                                if p.get("price"):
-                                    st.markdown(f"**価格**: {p['price']}")
-                                display_result(r)
-
-                    # CSV出力
+                    # 結果をDataFrameに変換
                     result_rows = []
                     for p in props_with_addr:
                         r = p["zoning_result"]
                         result_rows.append({
+                            "検索日": datetime.now().strftime("%Y-%m-%d"),
                             "物件名": p.get("title", ""),
                             "住所": p.get("address", ""),
                             "価格": p.get("price", ""),
                             "ソース": p.get("source", ""),
-                            "URL": p.get("url", ""),
                             "用途地域": r.youto_chiiki or "",
                             "旅館業可否": r.ryokan_kahi or "",
                             "特別用途地区": r.tokubetsu_youto or "該当なし",
                             "地区計画": r.chiku_keikaku or "該当なし",
                             "総合判定": r.sogo_hantei or "",
+                            "URL": p.get("url", ""),
                         })
-                    df = pd.DataFrame(result_rows)
-                    csv_data = df.to_csv(index=False, encoding="utf-8-sig")
-                    st.download_button("📥 判定結果をCSVでダウンロード", csv_data, "bukken_auto_results.csv", "text/csv", use_container_width=True)
+                    df_new = pd.DataFrame(result_rows)
 
-                # 蓄積データへのリンク
-                st.markdown("---")
-                st.markdown("**蓄積データ**: [GitHub上の累積CSV](https://github.com/Okajun01/1niwa-zoning-checker/blob/main/data/bukken_history.csv)（自動保存先）")
+                    # GitHubに自動保存（累積）
+                    try:
+                        from github_storage import read_file, write_file
+                        existing_csv = read_file("data/bukken_history.csv")
+                        if existing_csv:
+                            import io as _io
+                            df_existing = pd.read_csv(_io.StringIO(existing_csv))
+                            df_all = pd.concat([df_existing, df_new], ignore_index=True)
+                        else:
+                            df_all = df_new
+                        csv_content = df_all.to_csv(index=False)
+                        write_file("data/bukken_history.csv", csv_content, f"auto: search {datetime.now().strftime('%Y-%m-%d %H:%M')}")
+                        st.success("検索結果を自動保存しました（Google Drive: 04_事業物件/PJ2_物件検索/）")
+                    except Exception as e:
+                        df_all = df_new
+                        st.warning(f"自動保存に失敗: {e}")
+
+                    # === フィルタUI ===
+                    st.markdown("---")
+                    st.markdown("### 検索結果一覧")
+
+                    col_f1, col_f2 = st.columns(2)
+                    with col_f1:
+                        show_filter = st.radio("表示範囲", ["今回の検索結果のみ", "累積データ（全件）"], horizontal=True, key="show_range")
+                    with col_f2:
+                        hantei_filter = st.multiselect("旅館業可否フィルタ", ["○", "△", "要確認", "×"], default=["○", "△", "要確認"], key="hantei_filter")
+
+                    # 表示するデータを選択
+                    if show_filter == "累積データ（全件）":
+                        display_df = df_all
+                    else:
+                        display_df = df_new
+
+                    # フィルタ適用
+                    if hantei_filter:
+                        mask = display_df["旅館業可否"].isin(hantei_filter) | display_df["総合判定"].isin(hantei_filter)
+                        display_df = display_df[mask]
+
+                    # サマリー
+                    col1, col2, col3, col4 = st.columns(4)
+                    col1.metric("✅ 営業可能", f"{len(display_df[display_df['旅館業可否'] == '○'])}件")
+                    col2.metric("⚠️ 条件付き", f"{len(display_df[display_df['旅館業可否'] == '△'])}件")
+                    col3.metric("🔍 要確認", f"{len(display_df[display_df['総合判定'] == '要確認'])}件")
+                    col4.metric("❌ 営業不可", f"{len(display_df[display_df['旅館業可否'] == '×'])}件")
+
+                    # テーブル表示
+                    st.dataframe(display_df, use_container_width=True, hide_index=True, height=400)
+
+                    # 候補物件の詳細表示
+                    good_df = display_df[display_df["旅館業可否"].isin(["○", "△"]) | (display_df["総合判定"] == "要確認")]
+                    if len(good_df) > 0:
+                        st.markdown("#### 候補物件の詳細")
+                        for _, row in good_df.iterrows():
+                            with st.expander(f"{row.get('総合判定', '')} {row.get('物件名', '')} — {row.get('住所', '')}"):
+                                st.markdown(f"**ソース**: {row.get('ソース', '')}　**価格**: {row.get('価格', '不明')}")
+                                st.markdown(f"**用途地域**: {row.get('用途地域', '')}　**旅館業**: {row.get('旅館業可否', '')}")
+                                st.markdown(f"**特別用途地区**: {row.get('特別用途地区', '')}　**地区計画**: {row.get('地区計画', '')}")
+                                if row.get("URL"):
+                                    st.markdown(f"[物件ページを開く]({row['URL']})")
+
+                    # CSV出力
+                    csv_data = display_df.to_csv(index=False, encoding="utf-8-sig")
+                    st.download_button("📥 表示中のデータをCSVでダウンロード", csv_data, "bukken_results.csv", "text/csv", use_container_width=True)
 
                 if props_no_addr:
                     st.markdown(f"#### 住所未取得（{len(props_no_addr)}件 — 手動確認）")
@@ -552,6 +550,31 @@ with tab4:
 
         except Exception as e:
             st.error(f"自動収集でエラーが発生しました: {e}")
+
+    # === 蓄積データ閲覧 ===
+    st.markdown("---")
+    st.markdown("### 過去の検索履歴")
+    if st.button("📂 蓄積データを表示", use_container_width=True):
+        try:
+            from github_storage import read_file
+            import io as _io
+            csv_content = read_file("data/bukken_history.csv")
+            if csv_content:
+                df_history = pd.read_csv(_io.StringIO(csv_content))
+                st.success(f"累積データ: {len(df_history)}件")
+
+                hantei_hist = st.multiselect("フィルタ", ["○", "△", "要確認", "×"], default=["○", "△", "要確認"], key="hist_filter")
+                if hantei_hist:
+                    mask = df_history["旅館業可否"].isin(hantei_hist) | df_history["総合判定"].isin(hantei_hist)
+                    df_history = df_history[mask]
+
+                st.dataframe(df_history, use_container_width=True, hide_index=True, height=400)
+                csv_dl = df_history.to_csv(index=False, encoding="utf-8-sig")
+                st.download_button("📥 履歴CSVダウンロード", csv_dl, "bukken_history.csv", "text/csv", use_container_width=True, key="hist_dl")
+            else:
+                st.info("まだ検索履歴がありません。上の「自動収集」ボタンで検索してください。")
+        except Exception as e:
+            st.warning(f"履歴の読み込みに失敗: {e}")
 
     st.divider()
 
