@@ -27,9 +27,7 @@ from typing import Optional
 try:
     from bs4 import BeautifulSoup
 except ImportError:
-    print("エラー: beautifulsoup4 がインストールされていません。")
-    print("  pip3 install --user --break-system-packages beautifulsoup4")
-    sys.exit(1)
+    BeautifulSoup = None
 
 # 用途地域チェッカーのインポート準備
 # ローカル環境: ../zoning-checker/  クラウド環境: 同一ディレクトリ
