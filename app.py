@@ -12,7 +12,7 @@
 import streamlit as st
 import pandas as pd
 
-APP_VERSION = "v3.0.0"
+APP_VERSION = "v3.1.0"
 
 from zoning_checker import load_zoning_data, load_school_data, load_chiku_keikaku_data, check_zoning, ZoningResult
 
@@ -95,66 +95,59 @@ def get_chiku_gdf():
     return chiku
 
 
-def result_to_html(result: ZoningResult) -> str:
-    """判定結果をHTML表示用に変換"""
+def display_result(result: ZoningResult):
+    """判定結果をStreamlitネイティブコンポーネントで表示"""
     if result.error:
-        return f"""<div class="result-err">
-            <h3>📍 {result.address}</h3>
-            <p>⚠️ {result.error}</p>
-        </div>"""
+        st.error(f"📍 **{result.address}**\n\n{result.error}")
+        return
 
     sogo = result.sogo_hantei or result.ryokan_kahi
     if sogo == "○":
-        css_class = "result-ok"
+        container = st.success
         emoji = "✅"
         label = "営業可能（リスク低）"
     elif sogo in ("△", "要確認"):
-        css_class = "result-cond"
+        container = st.warning
         emoji = "⚠️"
         label = sogo
     else:
-        css_class = "result-ng"
+        container = st.error
         emoji = "❌"
         label = "営業不可"
 
-    school_html = ""
-    school_content = ""
-    if result.schools_within_110m:
-        lines = "".join(f"<li>🔴 <b>{n}</b>（{t}）: {d}m</li>" for n, t, d in result.schools_within_110m)
-        school_content += f"<b>110m以内: {len(result.schools_within_110m)}件（学校照会必要）</b><ul style='margin:5px 0;'>{lines}</ul>"
-    if result.schools_within_300m:
-        lines = "".join(f"<li>🟡 {n}（{t}）: {d}m</li>" for n, t, d in result.schools_within_300m)
-        school_content += f"<b>110-300m圏内: {len(result.schools_within_300m)}件（要現地確認）</b><ul style='margin:5px 0;'>{lines}</ul>"
-    if school_content:
-        school_html = f'<tr><td><b>学校チェック</b></td><td>{school_content}<small style="color:#888;">※住所のジオコーディング精度により実距離と誤差あり。最終確認は現地測定で。</small></td></tr>'
-    else:
-        school_html = '<tr><td><b>学校チェック</b></td><td>✅ 300m以内に学校等なし</td></tr>'
+    container(f"📍 **{result.address}**\n\n"
+              f"{emoji} **総合判定: {label}**\n\n"
+              f"{result.sogo_detail or result.ryokan_detail}")
 
-    bunkyo_html = ""
-    if result.bunkyo_chiku:
-        bunkyo_html = f'<tr><td><b>文教地区</b></td><td>{result.bunkyo_chiku}</td></tr>'
+    with st.expander("詳細情報", expanded=True):
+        st.markdown(f"**用途地域**: {result.youto_chiiki}（{result.ryokan_kahi} {result.ryokan_detail}）")
 
-    chiku_html = ""
-    if result.chiku_keikaku:
-        chiku_html = f'<tr><td><b>地区計画</b></td><td>⚠️ {result.chiku_keikaku}（区の都市計画課に用途制限を確認）</td></tr>'
+        if result.bunkyo_chiku:
+            st.markdown(f"**文教地区**: {result.bunkyo_chiku}")
 
-    next_html = ""
-    if result.next_steps and sogo != "×":
-        steps = "".join(f"<li>{s}</li>" for s in result.next_steps)
-        next_html = f'<tr><td><b>次のステップ</b></td><td><ol style="margin:5px 0;padding-left:20px;">{steps}</ol></td></tr>'
+        if result.chiku_keikaku:
+            st.markdown(f"**地区計画**: ⚠️ {result.chiku_keikaku}（区の都市計画課に用途制限を確認）")
 
-    return f"""<div class="{css_class}">
-        <h3>📍 {result.address}</h3>
-        <table style="width:100%; font-size:15px;">
-            <tr><td style="width:120px;"><b>総合判定</b></td><td>{emoji} <b>{label}</b> — {result.sogo_detail or result.ryokan_detail}</td></tr>
-            <tr><td><b>用途地域</b></td><td>{result.youto_chiiki}（{result.ryokan_kahi} {result.ryokan_detail}）</td></tr>
-            {bunkyo_html}
-            {chiku_html}
-            {school_html}
-            <tr><td><b>座標</b></td><td>({result.lat:.6f}, {result.lon:.6f})</td></tr>
-            {next_html}
-        </table>
-    </div>"""
+        # 学校チェック
+        if result.schools_within_110m:
+            st.markdown(f"**学校チェック**: 🔴 110m以内に{len(result.schools_within_110m)}件（学校照会が必要）")
+            for name, stype, dist in result.schools_within_110m:
+                st.markdown(f"- 🔴 **{name}**（{stype}）: {dist}m")
+        if result.schools_within_300m:
+            st.markdown(f"**学校チェック**: ⚠️ 110-300m圏内に{len(result.schools_within_300m)}件（要現地確認）")
+            for name, stype, dist in result.schools_within_300m:
+                st.markdown(f"- 🟡 {name}（{stype}）: {dist}m")
+            st.caption("※住所のジオコーディング精度により実距離と誤差あり。最終確認は現地測定で。")
+        if not result.schools_within_110m and not result.schools_within_300m:
+            st.markdown("**学校チェック**: ✅ 300m以内に学校等なし")
+
+        st.markdown(f"**座標**: ({result.lat:.6f}, {result.lon:.6f})")
+
+        # 次のステップ
+        if result.next_steps and sogo != "×":
+            st.markdown("**次のステップ**:")
+            for i, step in enumerate(result.next_steps, 1):
+                st.markdown(f"{i}. {step}")
 
 
 # ===== メイン画面 =====
@@ -195,7 +188,7 @@ with tab1:
         with st.spinner("判定中..."):
             gdf = get_gdf()
             result = check_zoning(address.strip(), gdf, get_school_gdf(), get_chiku_gdf())
-        st.markdown(result_to_html(result), unsafe_allow_html=True)
+        display_result(result)
 
     # 複数住所の判定
     if multi_btn and multi_addresses.strip():
@@ -223,7 +216,7 @@ with tab1:
             col4.metric("⚠️ エラー", f"{err}件")
 
             for r in results:
-                st.markdown(result_to_html(r), unsafe_allow_html=True)
+                display_result(r)
 
             # CSV ダウンロード
             df = pd.DataFrame([{
