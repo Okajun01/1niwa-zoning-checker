@@ -1,5 +1,7 @@
 data/
 !data/A55_tokubetsu_youto.geojson
+data/searched_cache.json
+data/bukken_history.csv
 __pycache__/
 *.pyc
 .DS_Store

@@ -415,8 +415,8 @@ with tab4:
     st.subheader("🔍 物件検索")
 
     # === 自動収集セクション ===
-    st.markdown("### 自動収集（ジモティー・家いちば）")
-    st.markdown("ボタンを押すと、ジモティーと家いちばから東京23区の物件を自動収集し、旅館業可否を判定します。")
+    st.markdown("### 自動収集（ジモティー・家いちば）— 賃貸のみ")
+    st.markdown("ボタンを押すと、ジモティーと家いちばから東京23区の**賃貸**物件を自動収集し、旅館業可否を判定します。検索済みの物件は自動スキップされます。")
 
     col_s1, col_s2, col_s3 = st.columns(3)
     with col_s1:
@@ -428,20 +428,30 @@ with tab4:
 
     if auto_all or auto_ieichiba or auto_jimoty:
         try:
-            from auto_search import search_ieichiba, search_jimoty
+            from auto_search import search_ieichiba, search_jimoty, load_cache, save_cache, filter_new_properties
+            cached_urls = load_cache()
             all_properties = []
 
             if auto_all or auto_ieichiba:
-                with st.spinner("家いちばを検索中..."):
+                with st.spinner("家いちばを検索中（賃貸のみ）..."):
                     ie_props = search_ieichiba()
+                    ie_props, ie_skipped = filter_new_properties(ie_props, cached_urls)
                     all_properties.extend(ie_props)
-                    st.success(f"家いちば: {len(ie_props)}件取得")
+                    st.success(f"家いちば: {len(ie_props)}件（新着） / {ie_skipped}件スキップ")
 
             if auto_all or auto_jimoty:
-                with st.spinner("ジモティーを検索中（時間がかかる場合があります）..."):
+                with st.spinner("ジモティーを検索中（賃貸のみ）..."):
                     jm_props = search_jimoty(max_pages=1)
+                    jm_props, jm_skipped = filter_new_properties(jm_props, cached_urls)
                     all_properties.extend(jm_props)
-                    st.success(f"ジモティー: {len(jm_props)}件取得")
+                    st.success(f"ジモティー: {len(jm_props)}件（新着） / {jm_skipped}件スキップ")
+
+            # キャッシュ更新
+            for p in all_properties:
+                url = p.get("url", "").split("?")[0]
+                if url:
+                    cached_urls.add(url)
+            save_cache(cached_urls)
 
             if all_properties:
                 # 住所があるものをチェッカーで判定

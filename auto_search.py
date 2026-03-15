@@ -58,18 +58,57 @@ TOKYO_23KU = [
     "葛飾区", "江戸川区",
 ]
 
-# ジモティーのカテゴリURL
+# ジモティーのカテゴリURL（賃貸のみ）
 JIMOTY_BASE = "https://jmty.jp"
 JIMOTY_CATEGORIES = {
-    "不動産売買": "/tokyo/est-buy",
-    "土地販売": "/tokyo/est-land",
+    "賃貸": "/tokyo/est-rent",
 }
+
+# 検索済み物件キャッシュファイル
+CACHE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "searched_cache.json")
 
 # 家いちばAPI
 IEICHIBA_API = "https://www.ieichiba.com/api/properties"
 IEICHIBA_BASE = "https://www.ieichiba.com"
 
 REQUEST_INTERVAL = 1.5  # リクエスト間隔（秒）
+
+
+# ===== キャッシュ管理 =====
+
+def load_cache() -> set:
+    """検索済み物件URLのキャッシュを読み込む"""
+    if os.path.isfile(CACHE_FILE):
+        try:
+            with open(CACHE_FILE, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                return set(data.get("searched_urls", []))
+        except Exception:
+            pass
+    return set()
+
+
+def save_cache(cached_urls: set):
+    """検索済み物件URLをキャッシュに保存"""
+    os.makedirs(os.path.dirname(CACHE_FILE), exist_ok=True)
+    with open(CACHE_FILE, "w", encoding="utf-8") as f:
+        json.dump({
+            "searched_urls": list(cached_urls),
+            "updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        }, f, ensure_ascii=False, indent=2)
+
+
+def filter_new_properties(properties: list[dict], cached_urls: set) -> tuple[list[dict], int]:
+    """キャッシュ済みの物件を除外し、新着のみ返す"""
+    new_props = []
+    skipped = 0
+    for p in properties:
+        url = p.get("url", "").split("?")[0]  # クエリパラメータ除去
+        if url and url in cached_urls:
+            skipped += 1
+        else:
+            new_props.append(p)
+    return new_props, skipped
 
 
 # ===== HTTP取得 =====
@@ -145,7 +184,7 @@ def _parse_jimoty_listing(soup: BeautifulSoup, category: str) -> list[dict]:
     # 物件リンクを探す（article-xxx または alliance- パターン）
     # ジモティーは完全URLまたは相対パスの両方がありうる
     pattern = re.compile(
-        r"(?:https?://jmty\.jp)?/tokyo/est-(?:buy|land)/(?:article-|alliance-)"
+        r"(?:https?://jmty\.jp)?/tokyo/est-(?:buy|land|rent)/(?:article-|alliance-)"
     )
     links = soup.find_all("a", href=pattern)
 
@@ -325,10 +364,19 @@ def search_ieichiba(max_pages: int = 3) -> list[dict]:
             prop_id = prop.get("id", "")
             name = prop.get("name", "")
 
-            # 価格をbodyから抽出
+            # 賃貸物件のフィルタ（売買のみの物件を除外）
             body = prop.get("body", "")
+            title_lower = (title + " " + body).lower()
+            # 「賃貸」「家賃」「月額」が含まれるか、「売」のみでないかチェック
+            is_rental = any(kw in title_lower for kw in ["賃貸", "家賃", "月額", "賃料", "借"])
+            is_sale_only = any(kw in title_lower for kw in ["売却", "売出", "売り"]) and not is_rental
+            # 賃貸可能な物件のみ（賃貸キーワードあり、または売買専用でない）
+            if is_sale_only:
+                continue
+
+            # 価格をbodyから抽出
             price = ""
-            price_match = re.search(r"(?:希望価格|売出価格|価格)[：:\s]*([\d,]+万円)", body)
+            price_match = re.search(r"(?:希望価格|売出価格|価格|賃料|家賃|月額)[：:\s]*([\d,]+万円)", body)
             if price_match:
                 price = price_match.group(1)
             else:
@@ -502,6 +550,37 @@ def _print_property(p: dict):
     print(f"    URL: {p.get('url', '')}")
 
 
+def append_csv(properties: list[dict], output_path: str):
+    """結果をCSVファイルに追記する（ヘッダーはファイルが新規の場合のみ）。"""
+    file_exists = os.path.isfile(output_path)
+    with open(output_path, "a", newline="", encoding="utf-8-sig") as f:
+        writer = csv.writer(f)
+        if not file_exists:
+            writer.writerow([
+                "検索日", "ソース", "カテゴリ", "タイトル", "価格", "エリア", "住所",
+                "用途地域", "旅館業可否", "総合判定", "詳細",
+                "特別用途地区", "学校警告", "URL",
+            ])
+        for p in properties:
+            writer.writerow([
+                datetime.now().strftime("%Y-%m-%d"),
+                p.get("source", ""),
+                p.get("category", ""),
+                p.get("title", ""),
+                p.get("price", ""),
+                p.get("area", ""),
+                p.get("address", ""),
+                p.get("youto_chiiki", ""),
+                p.get("ryokan_kahi", ""),
+                p.get("sogo_hantei", ""),
+                p.get("sogo_detail", ""),
+                p.get("tokubetsu_youto", ""),
+                p.get("school_warning", ""),
+                p.get("url", ""),
+            ])
+    print(f"  → {len(properties)}件を追記: {output_path}")
+
+
 def write_csv(properties: list[dict], output_path: str):
     """結果をCSVファイルに出力する。"""
     with open(output_path, "w", newline="", encoding="utf-8-sig") as f:
@@ -573,47 +652,65 @@ def main():
     print(f"対象: {args.site} | ページ数: {args.pages}")
     print("=" * 60)
 
+    # キャッシュ読み込み
+    cached_urls = load_cache()
+    print(f"検索済みキャッシュ: {len(cached_urls)}件")
+
     all_properties = []
 
     # ジモティー
     if args.site in ("jimoty", "all"):
         print(f"\n{'─' * 40}")
-        print("ジモティー東京 不動産売買・土地")
+        print("ジモティー東京 賃貸")
         print(f"{'─' * 40}")
         props = search_jimoty(
             max_pages=args.pages,
             fetch_detail=not args.no_detail,
         )
-        print(f"\nジモティー: {len(props)}件取得")
+        # キャッシュで新着のみフィルタ
+        props, skipped = filter_new_properties(props, cached_urls)
+        print(f"\nジモティー: {len(props)}件（新着） / {skipped}件スキップ（検索済み）")
         all_properties.extend(props)
 
     # 家いちば
     if args.site in ("ieichiba", "all"):
         print(f"\n{'─' * 40}")
-        print("家いちば 東京都")
+        print("家いちば 東京都（賃貸可能物件）")
         print(f"{'─' * 40}")
         props = search_ieichiba(max_pages=args.pages)
-        print(f"\n家いちば: {len(props)}件取得")
+        # キャッシュで新着のみフィルタ
+        props, skipped = filter_new_properties(props, cached_urls)
+        print(f"\n家いちば: {len(props)}件（新着） / {skipped}件スキップ（検索済み）")
         all_properties.extend(props)
 
     if not all_properties:
-        print("\n物件が見つかりませんでした。")
+        print("\n新着物件が見つかりませんでした（全て検索済み）。")
         sys.exit(0)
 
     # 用途地域チェック
     if not args.no_zoning:
         all_properties = check_zoning_batch(all_properties)
 
+    # キャッシュ更新（検索した物件URLを追加）
+    for p in all_properties:
+        url = p.get("url", "").split("?")[0]
+        if url:
+            cached_urls.add(url)
+    save_cache(cached_urls)
+    print(f"\nキャッシュ更新: {len(cached_urls)}件")
+
     # 結果表示
     print_results(all_properties)
 
-    # CSV出力
+    # CSV出力（累積保存）
     if args.output:
         write_csv(all_properties, args.output)
     else:
-        default_name = f"bukken_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
-        default_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), default_name)
-        print(f"\nヒント: --output {default_name} を付けるとCSV出力できます")
+        # デフォルトで累積CSVに追記
+        default_csv = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "bukken_history.csv")
+        os.makedirs(os.path.dirname(default_csv), exist_ok=True)
+        append_csv(all_properties, default_csv)
+        print(f"\n累積CSV: {default_csv}")
 
 
 if __name__ == "__main__":
