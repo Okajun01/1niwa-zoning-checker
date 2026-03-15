@@ -126,6 +126,8 @@ class ZoningResult:
     school_warning: Optional[str] = None
     # 文教地区判定
     bunkyo_chiku: Optional[str] = None  # 文教地区の警告
+    # 地区計画判定
+    chiku_keikaku: Optional[str] = None  # 地区計画名（該当する場合）
     # 総合判定
     sogo_hantei: Optional[str] = None  # 総合判定（○△×要確認）
     sogo_detail: Optional[str] = None
@@ -208,6 +210,7 @@ def geocode(address: str) -> Optional[tuple[float, float]]:
 
 _gdf_cache = None
 _school_gdf_cache = None
+_chiku_gdf_cache = None
 
 
 def load_school_data() -> Optional[gpd.GeoDataFrame]:
@@ -284,6 +287,68 @@ def check_bunkyo_chiku(address: str) -> Optional[str]:
         if ku in address:
             return f"⚠️ {ku}は{detail}"
     return None
+
+
+def load_chiku_keikaku_data() -> Optional[gpd.GeoDataFrame]:
+    """地区計画データ（東京都都市計画GIS）を読み込む"""
+    global _chiku_gdf_cache
+    if _chiku_gdf_cache is not None:
+        return _chiku_gdf_cache
+
+    chiku_dir = os.path.join(DATA_DIR, "tokyo-toshikeikaku")
+    if not os.path.isdir(chiku_dir):
+        return None
+
+    # 地区計画のShapefileを検索
+    chiku_shp = None
+    for root, dirs, files in os.walk(chiku_dir):
+        for f in files:
+            if f.endswith(".shp") and "chikukeikaku" in root:
+                chiku_shp = os.path.join(root, f)
+                break
+        if chiku_shp:
+            break
+    if chiku_shp is None:
+        return None
+
+    try:
+        gdf = gpd.read_file(chiku_shp)
+        # CRS: EPSG:6677 → WGS84に変換
+        if gdf.crs is None:
+            gdf = gdf.set_crs("EPSG:6677")
+        if gdf.crs.to_epsg() != 4326:
+            gdf = gdf.to_crs("EPSG:4326")
+        _chiku_gdf_cache = gdf
+        print(f"地区計画データ読み込み: {len(gdf)}件")
+        return gdf
+    except Exception:
+        return None
+
+
+def check_chiku_keikaku(lon: float, lat: float, chiku_gdf: gpd.GeoDataFrame) -> Optional[str]:
+    """
+    座標が地区計画区域内かを判定する。
+    該当する場合は地区計画名を返す。
+    """
+    point = Point(lon, lat)
+
+    try:
+        possible_matches_idx = list(chiku_gdf.sindex.intersection(point.bounds))
+        if possible_matches_idx:
+            possible_matches = chiku_gdf.iloc[possible_matches_idx]
+            matches = possible_matches[possible_matches.geometry.contains(point)]
+        else:
+            return None
+    except Exception:
+        matches = chiku_gdf[chiku_gdf.geometry.contains(point)]
+
+    if len(matches) == 0:
+        return None
+
+    # TLP1F2: 地区計画名称
+    matched = matches.iloc[0]
+    chiku_name = str(matched.get("TLP1F2", "不明"))
+    return chiku_name
 
 
 def load_zoning_data() -> gpd.GeoDataFrame:
@@ -409,13 +474,14 @@ def get_youto_name(code: str) -> str:
 
 # ===== 用途地域判定 =====
 
-def check_zoning(address: str, gdf: gpd.GeoDataFrame, school_gdf: gpd.GeoDataFrame = None) -> ZoningResult:
+def check_zoning(address: str, gdf: gpd.GeoDataFrame, school_gdf: gpd.GeoDataFrame = None, chiku_gdf: gpd.GeoDataFrame = None) -> ZoningResult:
     """
     住所から用途地域を判定し、旅館業の営業可否を総合判定する。
     判定項目:
       1. 用途地域（建築基準法48条）
       2. 文教地区（東京都文教地区建築条例）
       3. 学校等110m距離（旅館業法3条3項）
+      4. 地区計画（都市計画法）
     """
     result = ZoningResult(address=address)
 
@@ -478,7 +544,13 @@ def check_zoning(address: str, gdf: gpd.GeoDataFrame, school_gdf: gpd.GeoDataFra
             else:
                 result.school_warning = f"⚠️ 110-300m圏内に{len(within_300)}件（住所の精度誤差により照会対象の可能性あり。要現地確認）"
 
-    # 5. 総合判定
+    # 5. 地区計画チェック
+    if chiku_gdf is not None and len(chiku_gdf) > 0:
+        chiku_name = check_chiku_keikaku(lon, lat, chiku_gdf)
+        if chiku_name:
+            result.chiku_keikaku = chiku_name
+
+    # 6. 総合判定
     next_steps = []
 
     if result.ryokan_kahi == "×":
@@ -517,6 +589,12 @@ def check_zoning(address: str, gdf: gpd.GeoDataFrame, school_gdf: gpd.GeoDataFra
             result.sogo_detail += f"。注意: {result.bunkyo_chiku}"
         next_steps.append("当該住所が文教地区に該当するか区の都市計画課に確認")
 
+    # 地区計画注記
+    if result.chiku_keikaku and result.sogo_hantei not in ("×",):
+        if result.sogo_detail:
+            result.sogo_detail += f"。地区計画あり → 区の都市計画課に用途制限を確認"
+        next_steps.append("地区計画の建築制限を確認")
+
     # 次のステップ
     if result.sogo_hantei in ("○", "△", "要確認"):
         next_steps.append("保健所への事前相談（用途地域・構造設備基準の確認）")
@@ -549,6 +627,8 @@ def print_result(result: ZoningResult):
         print(f"旅館業（用途地域）: {result.ryokan_kahi} {result.ryokan_detail}")
         if result.bunkyo_chiku:
             print(f"文教地区: {result.bunkyo_chiku}")
+        if result.chiku_keikaku:
+            print(f"地区計画: ⚠️ {result.chiku_keikaku}（区の都市計画課に用途制限を確認）")
         if result.schools_within_110m or result.schools_within_300m:
             print(f"学校チェック: {result.school_warning}")
             if result.schools_within_110m:
@@ -575,7 +655,7 @@ def write_csv(results: list[ZoningResult], output_path: str):
     """結果をCSVファイルに出力する"""
     with open(output_path, "w", newline="", encoding="utf-8-sig") as f:
         writer = csv.writer(f)
-        writer.writerow(["住所", "緯度", "経度", "用途地域", "用途地域判定", "文教地区", "学校110m", "総合判定", "総合詳細", "次のステップ", "エラー"])
+        writer.writerow(["住所", "緯度", "経度", "用途地域", "用途地域判定", "文教地区", "地区計画", "学校110m", "総合判定", "総合詳細", "次のステップ", "エラー"])
         for r in results:
             schools_str = ""
             if r.schools_within_110m:
@@ -587,6 +667,7 @@ def write_csv(results: list[ZoningResult], output_path: str):
                 r.youto_chiiki or "",
                 f"{r.ryokan_kahi or ''} {r.ryokan_detail or ''}",
                 r.bunkyo_chiku or "該当なし",
+                r.chiku_keikaku or "該当なし",
                 schools_str or "110m以内になし",
                 r.sogo_hantei or "",
                 r.sogo_detail or "",
@@ -649,12 +730,13 @@ def main():
     # GISデータ読み込み
     gdf = load_zoning_data()
     school_gdf = load_school_data()
+    chiku_gdf = load_chiku_keikaku_data()
 
     # 各住所を判定
     results = []
     for i, addr in enumerate(addresses):
         print(f"\n[{i+1}/{len(addresses)}] {addr}")
-        result = check_zoning(addr, gdf, school_gdf)
+        result = check_zoning(addr, gdf, school_gdf, chiku_gdf)
         results.append(result)
         print_result(result)
 

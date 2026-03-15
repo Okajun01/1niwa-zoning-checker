@@ -12,9 +12,9 @@
 import streamlit as st
 import pandas as pd
 
-APP_VERSION = "v2.2.0"
+APP_VERSION = "v3.0.0"
 
-from zoning_checker import load_zoning_data, load_school_data, check_zoning, ZoningResult
+from zoning_checker import load_zoning_data, load_school_data, load_chiku_keikaku_data, check_zoning, ZoningResult
 
 # ===== ページ設定 =====
 st.set_page_config(
@@ -60,19 +60,39 @@ def setup_and_load():
             os.remove(zpath)
         except Exception:
             pass
+    # 地区計画データのダウンロード（東京都オープンデータ）
+    chiku_dir = os.path.join(data_dir, "tokyo-toshikeikaku", "gis04_chikukeikaku")
+    if not os.path.isdir(chiku_dir):
+        try:
+            resp = requests.get("https://www.opendata.metro.tokyo.lg.jp/toshiseibi/gis04_chikukeikaku.zip", timeout=120)
+            resp.raise_for_status()
+            os.makedirs(os.path.join(data_dir, "tokyo-toshikeikaku"), exist_ok=True)
+            zpath = os.path.join(data_dir, "chiku_keikaku.zip")
+            with open(zpath, "wb") as f:
+                f.write(resp.content)
+            with zipfile.ZipFile(zpath) as zf:
+                zf.extractall(os.path.join(data_dir, "tokyo-toshikeikaku", "gis04_chikukeikaku"))
+            os.remove(zpath)
+        except Exception as e:
+            print(f"地区計画データのダウンロードに失敗: {e}")
     # .prjファイルの確認・生成（CRS問題の防止）
     download_data.ensure_prj_files(data_dir)
-    return load_zoning_data(), load_school_data()
+    return load_zoning_data(), load_school_data(), load_chiku_keikaku_data()
 
 @st.cache_resource
 def get_gdf():
-    gdf, _ = setup_and_load()
+    gdf, _, _ = setup_and_load()
     return gdf
 
 @st.cache_resource
 def get_school_gdf():
-    _, school = setup_and_load()
+    _, school, _ = setup_and_load()
     return school
+
+@st.cache_resource
+def get_chiku_gdf():
+    _, _, chiku = setup_and_load()
+    return chiku
 
 
 def result_to_html(result: ZoningResult) -> str:
@@ -114,6 +134,10 @@ def result_to_html(result: ZoningResult) -> str:
     if result.bunkyo_chiku:
         bunkyo_html = f'<tr><td><b>文教地区</b></td><td>{result.bunkyo_chiku}</td></tr>'
 
+    chiku_html = ""
+    if result.chiku_keikaku:
+        chiku_html = f'<tr><td><b>地区計画</b></td><td>⚠️ {result.chiku_keikaku}（区の都市計画課に用途制限を確認）</td></tr>'
+
     next_html = ""
     if result.next_steps and sogo != "×":
         steps = "".join(f"<li>{s}</li>" for s in result.next_steps)
@@ -125,6 +149,7 @@ def result_to_html(result: ZoningResult) -> str:
             <tr><td style="width:120px;"><b>総合判定</b></td><td>{emoji} <b>{label}</b> — {result.sogo_detail or result.ryokan_detail}</td></tr>
             <tr><td><b>用途地域</b></td><td>{result.youto_chiiki}（{result.ryokan_kahi} {result.ryokan_detail}）</td></tr>
             {bunkyo_html}
+            {chiku_html}
             {school_html}
             <tr><td><b>座標</b></td><td>({result.lat:.6f}, {result.lon:.6f})</td></tr>
             {next_html}
@@ -169,7 +194,7 @@ with tab1:
     if check_btn and address.strip():
         with st.spinner("判定中..."):
             gdf = get_gdf()
-            result = check_zoning(address.strip(), gdf, get_school_gdf())
+            result = check_zoning(address.strip(), gdf, get_school_gdf(), get_chiku_gdf())
         st.markdown(result_to_html(result), unsafe_allow_html=True)
 
     # 複数住所の判定
@@ -181,7 +206,7 @@ with tab1:
                 results = []
                 progress = st.progress(0)
                 for i, addr in enumerate(addresses):
-                    result = check_zoning(addr, gdf, get_school_gdf())
+                    result = check_zoning(addr, gdf, get_school_gdf(), get_chiku_gdf())
                     results.append(result)
                     progress.progress((i + 1) / len(addresses))
 
@@ -246,7 +271,7 @@ with tab2:
                 results = []
                 progress = st.progress(0)
                 for i, addr in enumerate(addresses):
-                    result = check_zoning(addr, gdf, get_school_gdf())
+                    result = check_zoning(addr, gdf, get_school_gdf(), get_chiku_gdf())
                     results.append(result)
                     progress.progress((i + 1) / len(addresses))
 
