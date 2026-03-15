@@ -12,9 +12,9 @@
 import streamlit as st
 import pandas as pd
 
-APP_VERSION = "v3.1.0"
+APP_VERSION = "v3.2.0"
 
-from zoning_checker import load_zoning_data, load_school_data, load_chiku_keikaku_data, check_zoning, ZoningResult
+from zoning_checker import load_zoning_data, load_school_data, load_chiku_keikaku_data, load_tokubetsu_youto_data, check_zoning, ZoningResult
 
 # ===== ページ設定 =====
 st.set_page_config(
@@ -75,24 +75,48 @@ def setup_and_load():
             os.remove(zpath)
         except Exception as e:
             print(f"地区計画データのダウンロードに失敗: {e}")
+    # 特別用途地区データ（A55）のダウンロードと変換
+    a55_geojson = os.path.join(data_dir, "A55_tokubetsu_youto.geojson")
+    a55_dir = os.path.join(data_dir, "A55-24_13000_GML")
+    if not os.path.isfile(a55_geojson):
+        try:
+            if not os.path.isdir(a55_dir):
+                resp = requests.get("https://nlftp.mlit.go.jp/ksj/gml/data/A55/A55-24/A55-24_13000_GML.zip", timeout=180)
+                resp.raise_for_status()
+                zpath = os.path.join(data_dir, "a55.zip")
+                with open(zpath, "wb") as f:
+                    f.write(resp.content)
+                with zipfile.ZipFile(zpath) as zf:
+                    zf.extractall(data_dir)
+                os.remove(zpath)
+            # CityGML → GeoJSON変換
+            import convert_a55
+            convert_a55.main()
+        except Exception as e:
+            print(f"特別用途地区データの準備に失敗: {e}")
     # .prjファイルの確認・生成（CRS問題の防止）
     download_data.ensure_prj_files(data_dir)
-    return load_zoning_data(), load_school_data(), load_chiku_keikaku_data()
+    return load_zoning_data(), load_school_data(), load_chiku_keikaku_data(), load_tokubetsu_youto_data()
 
 @st.cache_resource
 def get_gdf():
-    gdf, _, _ = setup_and_load()
+    gdf, _, _, _ = setup_and_load()
     return gdf
 
 @st.cache_resource
 def get_school_gdf():
-    _, school, _ = setup_and_load()
+    _, school, _, _ = setup_and_load()
     return school
 
 @st.cache_resource
 def get_chiku_gdf():
-    _, _, chiku = setup_and_load()
+    _, _, chiku, _ = setup_and_load()
     return chiku
+
+@st.cache_resource
+def get_tokubetsu_gdf():
+    _, _, _, tokubetsu = setup_and_load()
+    return tokubetsu
 
 
 def display_result(result: ZoningResult):
@@ -122,11 +146,15 @@ def display_result(result: ZoningResult):
     with st.expander("詳細情報", expanded=True):
         st.markdown(f"**用途地域**: {result.youto_chiiki}（{result.ryokan_kahi} {result.ryokan_detail}）")
 
-        # 文教地区（常に表示）
-        if result.bunkyo_chiku:
-            st.markdown(f"**文教地区**: {result.bunkyo_chiku}")
+        # 特別用途地区（常に表示）
+        if result.tokubetsu_youto:
+            st.markdown(f"**特別用途地区**: ⚠️ {result.tokubetsu_youto}")
         else:
-            st.markdown("**文教地区**: ✅ 該当なし")
+            st.markdown("**特別用途地区**: ✅ 該当なし")
+
+        # 文教地区フォールバック（GISデータ未収録区のみ表示）
+        if result.bunkyo_chiku:
+            st.markdown(f"**文教地区（参考）**: {result.bunkyo_chiku}")
 
         # 地区計画（常に表示）
         if result.chiku_keikaku:
@@ -194,7 +222,7 @@ with tab1:
     if check_btn and address.strip():
         with st.spinner("判定中..."):
             gdf = get_gdf()
-            result = check_zoning(address.strip(), gdf, get_school_gdf(), get_chiku_gdf())
+            result = check_zoning(address.strip(), gdf, get_school_gdf(), get_chiku_gdf(), get_tokubetsu_gdf())
         display_result(result)
 
     # 複数住所の判定
@@ -206,7 +234,7 @@ with tab1:
                 results = []
                 progress = st.progress(0)
                 for i, addr in enumerate(addresses):
-                    result = check_zoning(addr, gdf, get_school_gdf(), get_chiku_gdf())
+                    result = check_zoning(addr, gdf, get_school_gdf(), get_chiku_gdf(), get_tokubetsu_gdf())
                     results.append(result)
                     progress.progress((i + 1) / len(addresses))
 
@@ -271,7 +299,7 @@ with tab2:
                 results = []
                 progress = st.progress(0)
                 for i, addr in enumerate(addresses):
-                    result = check_zoning(addr, gdf, get_school_gdf(), get_chiku_gdf())
+                    result = check_zoning(addr, gdf, get_school_gdf(), get_chiku_gdf(), get_tokubetsu_gdf())
                     results.append(result)
                     progress.progress((i + 1) / len(addresses))
 

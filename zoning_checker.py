@@ -85,15 +85,29 @@ RYOKAN_ELIGIBILITY = {
 }
 
 
-# 文教地区が広範に指定されている区（旅館業が原則不可となる特別用途地区）
-BUNKYO_CHIKU_AREAS = {
+# 特別用途地区の用途コード → 名称（国土数値情報 A55）
+TOKUBETSU_YOUTO_CODE_MAP = {
+    "0": "特別用途地区（種別不明）",
+    "1": "特別工業地区",
+    "2": "文教地区",
+    "3": "小売店舗地区",
+    "4": "事務所地区",
+    "5": "厚生地区",
+    "6": "娯楽・レクリエーション地区",
+    "7": "観光地区",
+    "8": "特別業務地区",
+    "9": "中高層階住居専用地区",
+    "10": "商業専用地区",
+    "11": "研究開発地区",
+    "12": "その他",
+}
+
+# A55データに文教地区ポリゴンが含まれていない区のフォールバック情報
+# （国土数値情報に未収録の場合の補完）
+BUNKYO_CHIKU_FALLBACK = {
     "文京区": "区の大部分が文教地区に指定（本郷、小石川、大塚、目白台、関口、音羽、春日、西片、白山、千石、小日向、水道 等）。旅館業は原則不可",
-    "千代田区": "一部地域が文教地区（神田駿河台1-2丁目、一ツ橋2丁目、神田猿楽町、西神田2-3丁目、三崎町2-3丁目、富士見1-2丁目 等）",
-    "新宿区": "一部地域が文教地区（早稲田町、早稲田鶴巻町、戸山1-3丁目、市谷砂土原町、市谷左内町、若宮町、払方町、南榎町 等）",
     "豊島区": "一部地域が文教地区（目白1-5丁目、雑司が谷1-3丁目、南池袋3-4丁目、西池袋2-3丁目 等）",
-    "世田谷区": "一部地域が文教地区（池尻4丁目、三宿1-2丁目、太子堂1丁目、下馬4丁目 等）",
     "目黒区": "一部地域が文教地区（駒場1-4丁目、大橋2丁目 等）",
-    "杉並区": "一部地域が文教地区（和田3丁目、大宮1-2丁目、松ノ木1丁目 等）",
 }
 
 # 学校種別コード（P29_003）と110m照会対象
@@ -124,8 +138,10 @@ class ZoningResult:
     schools_within_110m: Optional[list] = None  # [(学校名, 種別, 距離m)]
     schools_within_300m: Optional[list] = None  # 110-300m（精度誤差考慮の警告圏）
     school_warning: Optional[str] = None
-    # 文教地区判定
-    bunkyo_chiku: Optional[str] = None  # 文教地区の警告
+    # 特別用途地区判定（GISデータ）
+    tokubetsu_youto: Optional[str] = None  # 特別用途地区名（文教地区等）
+    # 文教地区判定（フォールバック）
+    bunkyo_chiku: Optional[str] = None  # 文教地区の警告（GISデータ未収録区用）
     # 地区計画判定
     chiku_keikaku: Optional[str] = None  # 地区計画名（該当する場合）
     # 総合判定
@@ -211,6 +227,7 @@ def geocode(address: str) -> Optional[tuple[float, float]]:
 _gdf_cache = None
 _school_gdf_cache = None
 _chiku_gdf_cache = None
+_tokubetsu_gdf_cache = None
 
 
 def load_school_data() -> Optional[gpd.GeoDataFrame]:
@@ -281,9 +298,68 @@ def check_schools_nearby(lon: float, lat: float, school_gdf: gpd.GeoDataFrame) -
     return within_110m, within_300m
 
 
-def check_bunkyo_chiku(address: str) -> Optional[str]:
-    """住所から文教地区の可能性を判定する"""
-    for ku, detail in BUNKYO_CHIKU_AREAS.items():
+def load_tokubetsu_youto_data() -> Optional[gpd.GeoDataFrame]:
+    """特別用途地区データ（A55 GeoJSON）を読み込む"""
+    global _tokubetsu_gdf_cache
+    if _tokubetsu_gdf_cache is not None:
+        return _tokubetsu_gdf_cache
+
+    geojson_path = os.path.join(DATA_DIR, "A55_tokubetsu_youto.geojson")
+    if not os.path.isfile(geojson_path):
+        return None
+
+    try:
+        gdf = gpd.read_file(geojson_path)
+        if gdf.crs is None:
+            gdf = gdf.set_crs("EPSG:4326")
+        elif gdf.crs.to_epsg() != 4326:
+            gdf = gdf.to_crs("EPSG:4326")
+        _tokubetsu_gdf_cache = gdf
+        bunkyo_count = len(gdf[gdf["YoutoCode"] == "2"])
+        print(f"特別用途地区データ読み込み: {len(gdf)}件（うち文教地区{bunkyo_count}件）")
+        return gdf
+    except Exception as e:
+        print(f"特別用途地区データの読み込みに失敗: {e}", file=sys.stderr)
+        return None
+
+
+def check_tokubetsu_youto(lon: float, lat: float, tokubetsu_gdf: gpd.GeoDataFrame) -> Optional[str]:
+    """
+    座標が特別用途地区内かを判定する。
+    該当する場合は用途名（文教地区等）を返す。
+    複数該当する場合はすべて連結して返す。
+    """
+    point = Point(lon, lat)
+
+    try:
+        possible_matches_idx = list(tokubetsu_gdf.sindex.intersection(point.bounds))
+        if possible_matches_idx:
+            possible_matches = tokubetsu_gdf.iloc[possible_matches_idx]
+            matches = possible_matches[possible_matches.geometry.contains(point)]
+        else:
+            return None
+    except Exception:
+        matches = tokubetsu_gdf[tokubetsu_gdf.geometry.contains(point)]
+
+    if len(matches) == 0:
+        return None
+
+    # 該当する特別用途地区名をすべて収集（重複排除）
+    names = []
+    for _, row in matches.iterrows():
+        name = str(row.get("YoutoName", "特別用途地区"))
+        if name not in names:
+            names.append(name)
+
+    return "、".join(names)
+
+
+def check_bunkyo_chiku_fallback(address: str) -> Optional[str]:
+    """
+    GISデータに文教地区が未収録の区について、住所からフォールバック判定する。
+    A55データに含まれる区（千代田区、新宿区、世田谷区等）はGISで判定済みなので対象外。
+    """
+    for ku, detail in BUNKYO_CHIKU_FALLBACK.items():
         if ku in address:
             return f"⚠️ {ku}は{detail}"
     return None
@@ -474,12 +550,12 @@ def get_youto_name(code: str) -> str:
 
 # ===== 用途地域判定 =====
 
-def check_zoning(address: str, gdf: gpd.GeoDataFrame, school_gdf: gpd.GeoDataFrame = None, chiku_gdf: gpd.GeoDataFrame = None) -> ZoningResult:
+def check_zoning(address: str, gdf: gpd.GeoDataFrame, school_gdf: gpd.GeoDataFrame = None, chiku_gdf: gpd.GeoDataFrame = None, tokubetsu_gdf: gpd.GeoDataFrame = None) -> ZoningResult:
     """
     住所から用途地域を判定し、旅館業の営業可否を総合判定する。
     判定項目:
       1. 用途地域（建築基準法48条）
-      2. 文教地区（東京都文教地区建築条例）
+      2. 特別用途地区 / 文教地区（東京都文教地区建築条例）
       3. 学校等110m距離（旅館業法3条3項）
       4. 地区計画（都市計画法）
     """
@@ -528,8 +604,13 @@ def check_zoning(address: str, gdf: gpd.GeoDataFrame, school_gdf: gpd.GeoDataFra
         result.ryokan_kahi = "?"
         result.ryokan_detail = "判定不可（用途地域が特定できません）"
 
-    # 3. 文教地区チェック
-    result.bunkyo_chiku = check_bunkyo_chiku(address)
+    # 3. 特別用途地区チェック（GISデータ）
+    if tokubetsu_gdf is not None and len(tokubetsu_gdf) > 0:
+        result.tokubetsu_youto = check_tokubetsu_youto(lon, lat, tokubetsu_gdf)
+
+    # 3b. 文教地区フォールバック（GISデータ未収録区）
+    if result.tokubetsu_youto is None or "文教地区" not in (result.tokubetsu_youto or ""):
+        result.bunkyo_chiku = check_bunkyo_chiku_fallback(address)
 
     # 4. 学校距離チェック（110m + 200m警告圏）
     if school_gdf is not None and len(school_gdf) > 0:
@@ -553,11 +634,20 @@ def check_zoning(address: str, gdf: gpd.GeoDataFrame, school_gdf: gpd.GeoDataFra
     # 6. 総合判定
     next_steps = []
 
+    # 文教地区判定（GIS or フォールバック）
+    is_bunkyo_chiku_gis = result.tokubetsu_youto is not None and "文教地区" in result.tokubetsu_youto
+    is_bunkyo_chiku_fallback = result.bunkyo_chiku is not None
+
     if result.ryokan_kahi == "×":
         result.sogo_hantei = "×"
         result.sogo_detail = f"用途地域（{youto_name}）で旅館業営業不可"
-    elif result.bunkyo_chiku and "文京区" in address:
-        # 文京区は大部分が文教地区のため原則不可
+    elif is_bunkyo_chiku_gis:
+        # GISデータで文教地区に該当 → 旅館業は原則不可
+        result.sogo_hantei = "×"
+        result.sogo_detail = f"文教地区（GISデータで確認）。旅館業は原則不可"
+        next_steps.append("文教地区規制の詳細を区の都市計画課に確認")
+    elif is_bunkyo_chiku_fallback and "文京区" in address:
+        # 文京区は大部分が文教地区のため原則不可（GISデータ未収録）
         result.sogo_hantei = "×"
         result.sogo_detail = f"文京区は大部分が文教地区。旅館業は原則不可"
         next_steps.append("文教地区規制の詳細を区の都市計画課に確認")
@@ -583,8 +673,14 @@ def check_zoning(address: str, gdf: gpd.GeoDataFrame, school_gdf: gpd.GeoDataFra
         result.sogo_hantei = "?"
         result.sogo_detail = "判定不可"
 
-    # 文教地区注記（一部の区の場合）
-    if result.bunkyo_chiku and "文京区" not in address and result.sogo_hantei not in ("×",):
+    # 特別用途地区注記（文教地区以外の特別用途地区）
+    if result.tokubetsu_youto and not is_bunkyo_chiku_gis and result.sogo_hantei not in ("×",):
+        if result.sogo_detail:
+            result.sogo_detail += f"。特別用途地区（{result.tokubetsu_youto}）あり → 区の都市計画課に制限を確認"
+        next_steps.append("特別用途地区の建築制限を確認")
+
+    # 文教地区フォールバック注記（GISデータ未収録区の一部区域）
+    if is_bunkyo_chiku_fallback and "文京区" not in address and result.sogo_hantei not in ("×",):
         if result.sogo_detail:
             result.sogo_detail += f"。注意: {result.bunkyo_chiku}"
         next_steps.append("当該住所が文教地区に該当するか区の都市計画課に確認")
@@ -625,8 +721,10 @@ def print_result(result: ZoningResult):
         print(f"座標: ({result.lat:.6f}, {result.lon:.6f})")
         print(f"用途地域: {result.youto_chiiki}")
         print(f"旅館業（用途地域）: {result.ryokan_kahi} {result.ryokan_detail}")
+        if result.tokubetsu_youto:
+            print(f"特別用途地区: ⚠️ {result.tokubetsu_youto}")
         if result.bunkyo_chiku:
-            print(f"文教地区: {result.bunkyo_chiku}")
+            print(f"文教地区（参考）: {result.bunkyo_chiku}")
         if result.chiku_keikaku:
             print(f"地区計画: ⚠️ {result.chiku_keikaku}（区の都市計画課に用途制限を確認）")
         if result.schools_within_110m or result.schools_within_300m:
@@ -655,7 +753,7 @@ def write_csv(results: list[ZoningResult], output_path: str):
     """結果をCSVファイルに出力する"""
     with open(output_path, "w", newline="", encoding="utf-8-sig") as f:
         writer = csv.writer(f)
-        writer.writerow(["住所", "緯度", "経度", "用途地域", "用途地域判定", "文教地区", "地区計画", "学校110m", "総合判定", "総合詳細", "次のステップ", "エラー"])
+        writer.writerow(["住所", "緯度", "経度", "用途地域", "用途地域判定", "特別用途地区", "文教地区（参考）", "地区計画", "学校110m", "総合判定", "総合詳細", "次のステップ", "エラー"])
         for r in results:
             schools_str = ""
             if r.schools_within_110m:
@@ -666,6 +764,7 @@ def write_csv(results: list[ZoningResult], output_path: str):
                 r.lon or "",
                 r.youto_chiiki or "",
                 f"{r.ryokan_kahi or ''} {r.ryokan_detail or ''}",
+                r.tokubetsu_youto or "該当なし",
                 r.bunkyo_chiku or "該当なし",
                 r.chiku_keikaku or "該当なし",
                 schools_str or "110m以内になし",
@@ -731,12 +830,13 @@ def main():
     gdf = load_zoning_data()
     school_gdf = load_school_data()
     chiku_gdf = load_chiku_keikaku_data()
+    tokubetsu_gdf = load_tokubetsu_youto_data()
 
     # 各住所を判定
     results = []
     for i, addr in enumerate(addresses):
         print(f"\n[{i+1}/{len(addresses)}] {addr}")
-        result = check_zoning(addr, gdf, school_gdf, chiku_gdf)
+        result = check_zoning(addr, gdf, school_gdf, chiku_gdf, tokubetsu_gdf)
         results.append(result)
         print_result(result)
 
