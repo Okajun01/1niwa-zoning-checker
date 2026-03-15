@@ -539,6 +539,10 @@ with tab4:
                     csv_data = df.to_csv(index=False, encoding="utf-8-sig")
                     st.download_button("📥 判定結果をCSVでダウンロード", csv_data, "bukken_auto_results.csv", "text/csv", use_container_width=True)
 
+                # 蓄積データへのリンク
+                st.markdown("---")
+                st.markdown("**蓄積データ**: [GitHub上の累積CSV](https://github.com/Okajun01/1niwa-zoning-checker/blob/main/data/bukken_history.csv)（自動保存先）")
+
                 if props_no_addr:
                     st.markdown(f"#### 住所未取得（{len(props_no_addr)}件 — 手動確認）")
                     for p in props_no_addr:

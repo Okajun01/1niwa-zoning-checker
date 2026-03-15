@@ -245,6 +245,11 @@ def _parse_jimoty_listing(soup: BeautifulSoup, category: str) -> list[dict]:
                 area = ku
                 break
 
+        # 分譲・売買専用物件を除外（賃貸のみ）
+        exclude_words = ["分譲", "売却", "売出", "売り出し", "売買", "中古マンション", "新築マンション", "購入"]
+        if any(w in title for w in exclude_words):
+            continue
+
         prop = {
             "source": "ジモティー",
             "category": category,
@@ -382,13 +387,14 @@ def search_ieichiba(max_pages: int = 3) -> list[dict]:
             prop_id = prop.get("id", "")
             name = prop.get("name", "")
 
-            # 賃貸物件のフィルタ（売買のみの物件を除外）
+            # 賃貸物件のフィルタ（売買・分譲のみの物件を除外）
             body = prop.get("body", "")
-            title_lower = (title + " " + body).lower()
-            # 「賃貸」「家賃」「月額」が含まれるか、「売」のみでないかチェック
-            is_rental = any(kw in title_lower for kw in ["賃貸", "家賃", "月額", "賃料", "借"])
-            is_sale_only = any(kw in title_lower for kw in ["売却", "売出", "売り"]) and not is_rental
-            # 賃貸可能な物件のみ（賃貸キーワードあり、または売買専用でない）
+            combined_text = title + " " + body
+            # 分譲・売買専用キーワード
+            sale_words = ["売却", "売出", "売り出し", "売買", "分譲", "購入", "中古マンション", "新築マンション"]
+            rental_words = ["賃貸", "家賃", "月額", "賃料", "借", "テナント", "貸"]
+            is_rental = any(kw in combined_text for kw in rental_words)
+            is_sale_only = any(kw in combined_text for kw in sale_words) and not is_rental
             if is_sale_only:
                 continue
 
