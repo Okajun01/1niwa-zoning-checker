@@ -122,19 +122,26 @@ def display_result(result: ZoningResult):
     with st.expander("詳細情報", expanded=True):
         st.markdown(f"**用途地域**: {result.youto_chiiki}（{result.ryokan_kahi} {result.ryokan_detail}）")
 
+        # 文教地区（常に表示）
         if result.bunkyo_chiku:
             st.markdown(f"**文教地区**: {result.bunkyo_chiku}")
+        else:
+            st.markdown("**文教地区**: ✅ 該当なし")
 
+        # 地区計画（常に表示）
         if result.chiku_keikaku:
             st.markdown(f"**地区計画**: ⚠️ {result.chiku_keikaku}（区の都市計画課に用途制限を確認）")
+        else:
+            st.markdown("**地区計画**: ✅ 該当なし")
 
-        # 学校チェック
+        # 学校チェック（常に表示）
         if result.schools_within_110m:
             st.markdown(f"**学校チェック**: 🔴 110m以内に{len(result.schools_within_110m)}件（学校照会が必要）")
             for name, stype, dist in result.schools_within_110m:
                 st.markdown(f"- 🔴 **{name}**（{stype}）: {dist}m")
         if result.schools_within_300m:
-            st.markdown(f"**学校チェック**: ⚠️ 110-300m圏内に{len(result.schools_within_300m)}件（要現地確認）")
+            if not result.schools_within_110m:
+                st.markdown(f"**学校チェック**: ⚠️ 110-300m圏内に{len(result.schools_within_300m)}件（要現地確認）")
             for name, stype, dist in result.schools_within_300m:
                 st.markdown(f"- 🟡 {name}（{stype}）: {dist}m")
             st.caption("※住所のジオコーディング精度により実距離と誤差あり。最終確認は現地測定で。")
