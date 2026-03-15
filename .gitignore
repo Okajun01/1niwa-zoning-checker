@@ -1,4 +1,5 @@
 data/
+!data/A55_tokubetsu_youto.geojson
 __pycache__/
 *.pyc
 .DS_Store

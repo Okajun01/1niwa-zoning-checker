@@ -75,25 +75,7 @@ def setup_and_load():
             os.remove(zpath)
         except Exception as e:
             print(f"地区計画データのダウンロードに失敗: {e}")
-    # 特別用途地区データ（A55）のダウンロードと変換
-    a55_geojson = os.path.join(data_dir, "A55_tokubetsu_youto.geojson")
-    a55_dir = os.path.join(data_dir, "A55-24_13000_GML")
-    if not os.path.isfile(a55_geojson):
-        try:
-            if not os.path.isdir(a55_dir):
-                resp = requests.get("https://nlftp.mlit.go.jp/ksj/gml/data/A55/A55-24/A55-24_13000_GML.zip", timeout=180)
-                resp.raise_for_status()
-                zpath = os.path.join(data_dir, "a55.zip")
-                with open(zpath, "wb") as f:
-                    f.write(resp.content)
-                with zipfile.ZipFile(zpath) as zf:
-                    zf.extractall(data_dir)
-                os.remove(zpath)
-            # CityGML → GeoJSON変換
-            import convert_a55
-            convert_a55.main()
-        except Exception as e:
-            print(f"特別用途地区データの準備に失敗: {e}")
+    # 特別用途地区データ（A55 GeoJSON）はリポジトリに同梱済み（data/A55_tokubetsu_youto.geojson）
     # .prjファイルの確認・生成（CRS問題の防止）
     download_data.ensure_prj_files(data_dir)
     return load_zoning_data(), load_school_data(), load_chiku_keikaku_data(), load_tokubetsu_youto_data()
