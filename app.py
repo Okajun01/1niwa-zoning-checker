@@ -12,7 +12,7 @@
 import streamlit as st
 import pandas as pd
 
-APP_VERSION = "v4.0.0"
+APP_VERSION = "v4.1.0"
 
 from zoning_checker import load_zoning_data, load_school_data, load_chiku_keikaku_data, load_tokubetsu_youto_data, check_zoning, ZoningResult
 
@@ -313,24 +313,112 @@ with tab2:
             )
 
 with tab4:
-    st.subheader("🔍 物件検索リンク集")
-    st.markdown("1NIWAの条件（23区・賃貸一戸建て・月30〜50万円）に合わせた検索リンクです。")
+    st.subheader("🔍 物件検索")
 
-    st.markdown("### 賃貸一戸建て")
+    # === 自動収集セクション ===
+    st.markdown("### 自動収集（ジモティー・家いちば）")
+    st.markdown("ボタンを押すと、ジモティーと家いちばから東京23区の物件を自動収集し、旅館業可否を判定します。")
+
+    col_s1, col_s2, col_s3 = st.columns(3)
+    with col_s1:
+        auto_all = st.button("🤖 全サイト自動収集", type="primary", use_container_width=True)
+    with col_s2:
+        auto_ieichiba = st.button("🏠 家いちばのみ", use_container_width=True)
+    with col_s3:
+        auto_jimoty = st.button("📦 ジモティーのみ", use_container_width=True)
+
+    if auto_all or auto_ieichiba or auto_jimoty:
+        try:
+            from auto_search import search_ieichiba, search_jimoty
+            all_properties = []
+
+            if auto_all or auto_ieichiba:
+                with st.spinner("家いちばを検索中..."):
+                    ie_props = search_ieichiba()
+                    all_properties.extend(ie_props)
+                    st.success(f"家いちば: {len(ie_props)}件取得")
+
+            if auto_all or auto_jimoty:
+                with st.spinner("ジモティーを検索中（時間がかかる場合があります）..."):
+                    jm_props = search_jimoty(max_pages=1)
+                    all_properties.extend(jm_props)
+                    st.success(f"ジモティー: {len(jm_props)}件取得")
+
+            if all_properties:
+                # 住所があるものをチェッカーで判定
+                props_with_addr = [p for p in all_properties if p.get("address")]
+                props_no_addr = [p for p in all_properties if not p.get("address")]
+
+                if props_with_addr:
+                    st.markdown(f"### 判定結果（住所あり: {len(props_with_addr)}件）")
+                    gdf = get_gdf()
+                    progress = st.progress(0)
+                    for i, prop in enumerate(props_with_addr):
+                        result = check_zoning(prop["address"], gdf, get_school_gdf(), get_chiku_gdf(), get_tokubetsu_gdf())
+                        prop["zoning_result"] = result
+                        progress.progress((i + 1) / len(props_with_addr))
+
+                    # 旅館業可否別に表示
+                    ok_props = [p for p in props_with_addr if p["zoning_result"].ryokan_kahi in ("○",)]
+                    cond_props = [p for p in props_with_addr if p["zoning_result"].ryokan_kahi in ("△",)]
+                    check_props = [p for p in props_with_addr if p["zoning_result"].sogo_hantei == "要確認"]
+                    ng_props = [p for p in props_with_addr if p["zoning_result"].ryokan_kahi in ("×",) or p["zoning_result"].sogo_hantei == "×"]
+
+                    col1, col2, col3, col4 = st.columns(4)
+                    col1.metric("✅ 営業可能", f"{len(ok_props)}件")
+                    col2.metric("⚠️ 条件付き", f"{len(cond_props)}件")
+                    col3.metric("🔍 要確認", f"{len(check_props)}件")
+                    col4.metric("❌ 営業不可", f"{len(ng_props)}件")
+
+                    # 候補物件を表示
+                    good_props = ok_props + cond_props + check_props
+                    if good_props:
+                        st.markdown("#### 候補物件")
+                        for p in good_props:
+                            r = p["zoning_result"]
+                            with st.expander(f"{r.sogo_hantei} {p.get('title', '物件名不明')} — {p.get('address', '')}"):
+                                st.markdown(f"**ソース**: [{p.get('source', '')}]({p.get('url', '')})")
+                                if p.get("price"):
+                                    st.markdown(f"**価格**: {p['price']}")
+                                display_result(r)
+
+                    # CSV出力
+                    result_rows = []
+                    for p in props_with_addr:
+                        r = p["zoning_result"]
+                        result_rows.append({
+                            "物件名": p.get("title", ""),
+                            "住所": p.get("address", ""),
+                            "価格": p.get("price", ""),
+                            "ソース": p.get("source", ""),
+                            "URL": p.get("url", ""),
+                            "用途地域": r.youto_chiiki or "",
+                            "旅館業可否": r.ryokan_kahi or "",
+                            "特別用途地区": r.tokubetsu_youto or "該当なし",
+                            "地区計画": r.chiku_keikaku or "該当なし",
+                            "総合判定": r.sogo_hantei or "",
+                        })
+                    df = pd.DataFrame(result_rows)
+                    csv_data = df.to_csv(index=False, encoding="utf-8-sig")
+                    st.download_button("📥 判定結果をCSVでダウンロード", csv_data, "bukken_auto_results.csv", "text/csv", use_container_width=True)
+
+                if props_no_addr:
+                    st.markdown(f"#### 住所未取得（{len(props_no_addr)}件 — 手動確認）")
+                    for p in props_no_addr:
+                        st.markdown(f"- [{p.get('title', '物件名不明')}]({p.get('url', '')}) — {p.get('price', '価格不明')}")
+            else:
+                st.info("該当する物件が見つかりませんでした。")
+
+        except Exception as e:
+            st.error(f"自動収集でエラーが発生しました: {e}")
+
+    st.divider()
+
+    # === 手動検索リンク集 ===
+    st.markdown("### 手動検索リンク集")
     search_sites = {
-        "SUUMO": {
-            "台東区（谷根千）": "https://suumo.jp/chintai/tokyo/sc_taito/?ts=2&ts=3",
-            "墨田区（向島・京島）": "https://suumo.jp/chintai/tokyo/sc_sumida/?ts=2&ts=3",
-            "荒川区（日暮里）": "https://suumo.jp/chintai/tokyo/sc_arakawa/?ts=2&ts=3",
-            "品川区（戸越・中延）": "https://suumo.jp/chintai/tokyo/sc_shinagawa/?ts=2&ts=3",
-            "大田区（蒲田・池上）": "https://suumo.jp/chintai/tokyo/sc_ota/?ts=2&ts=3",
-            "台東区（蔵前・浅草橋）": "https://suumo.jp/chintai/tokyo/sc_taito/?ts=2&ts=3",
-        },
-        "athome": {
+        "athome（賃貸一戸建て）": {
             "東京23区 一戸建て": "https://www.athome.co.jp/chintai/kodate/tokyo/",
-        },
-        "LIFULL HOME'S": {
-            "東京23区": "https://www.homes.co.jp/chintai/tokyo/city/",
         },
         "ジモティー": {
             "東京都 不動産": "https://jmty.jp/tokyo/estate",
@@ -338,12 +426,14 @@ with tab4:
         "家いちば（空き家売買）": {
             "東京都": "https://www.ieichiba.com/area/tokyo",
         },
+        "LIFULL HOME'S": {
+            "東京23区": "https://www.homes.co.jp/chintai/tokyo/city/",
+        },
     }
 
     for site, links in search_sites.items():
-        with st.expander(f"**{site}**", expanded=False):
-            for name, url in links.items():
-                st.markdown(f"- [{name}]({url})")
+        for name, url in links.items():
+            st.markdown(f"- **{site}**: [{name}]({url})")
 
     st.divider()
     st.markdown("### 検索条件メモ")
@@ -352,8 +442,6 @@ with tab4:
     **賃料:** 月額30〜50万円  |  **面積:** 50〜120㎡
     **必須:** 旅館業営業OK（オーナー同意）・リノベ可
     **優先:** 和の要素あり・路地裏/隠れ家感・庭付き
-
-    気になる物件を見つけたら「📝 住所を入力」タブで旅館業可否をチェック！
     """)
 
     st.markdown("### 優先エリア（Aランク）")
