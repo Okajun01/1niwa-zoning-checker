@@ -11,6 +11,7 @@
 
 import re
 import unicodedata
+from datetime import datetime
 
 import streamlit as st
 import pandas as pd
@@ -452,6 +453,33 @@ with tab4:
                 if url:
                     cached_urls.add(url)
             save_cache(cached_urls)
+
+            # 検索結果をGitHubに自動保存
+            try:
+                from github_storage import read_file, write_file
+                import csv as _csv, io as _io
+                existing_csv = read_file("data/bukken_history.csv") or ""
+                new_rows = _io.StringIO()
+                writer = _csv.writer(new_rows)
+                if not existing_csv:
+                    writer.writerow(["検索日", "ソース", "タイトル", "住所", "用途地域", "旅館業可否", "総合判定", "URL"])
+                for p in all_properties:
+                    r = p.get("zoning_result")
+                    writer.writerow([
+                        datetime.now().strftime("%Y-%m-%d"),
+                        p.get("source", ""),
+                        p.get("title", ""),
+                        p.get("address", ""),
+                        r.youto_chiiki if r else "",
+                        r.ryokan_kahi if r else "",
+                        r.sogo_hantei if r else "",
+                        p.get("url", ""),
+                    ])
+                content = existing_csv.rstrip("\n") + "\n" + new_rows.getvalue() if existing_csv else new_rows.getvalue()
+                write_file("data/bukken_history.csv", content, f"auto: search results {datetime.now().strftime('%Y-%m-%d')}")
+                st.success("検索結果をGitHubに自動保存しました")
+            except Exception as e:
+                st.warning(f"GitHub保存に失敗（ローカルCSVダウンロードをご利用ください）: {e}")
 
             if all_properties:
                 # 住所があるものをチェッカーで判定

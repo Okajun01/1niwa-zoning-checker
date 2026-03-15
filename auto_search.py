@@ -77,7 +77,17 @@ REQUEST_INTERVAL = 1.5  # リクエスト間隔（秒）
 # ===== キャッシュ管理 =====
 
 def load_cache() -> set:
-    """検索済み物件URLのキャッシュを読み込む"""
+    """検索済み物件URLのキャッシュを読み込む（GitHub API → ローカルファイル）"""
+    # まずGitHub APIから読み込み
+    try:
+        from github_storage import read_json
+        data = read_json("data/searched_cache.json")
+        if data:
+            return set(data.get("searched_urls", []))
+    except Exception:
+        pass
+
+    # ローカルファイルフォールバック
     if os.path.isfile(CACHE_FILE):
         try:
             with open(CACHE_FILE, "r", encoding="utf-8") as f:
@@ -89,13 +99,23 @@ def load_cache() -> set:
 
 
 def save_cache(cached_urls: set):
-    """検索済み物件URLをキャッシュに保存"""
+    """検索済み物件URLをキャッシュに保存（GitHub API + ローカルファイル）"""
+    cache_data = {
+        "searched_urls": list(cached_urls),
+        "updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+    }
+
+    # GitHub APIに保存
+    try:
+        from github_storage import write_json
+        write_json("data/searched_cache.json", cache_data, "auto: update search cache")
+    except Exception:
+        pass
+
+    # ローカルファイルにも保存
     os.makedirs(os.path.dirname(CACHE_FILE), exist_ok=True)
     with open(CACHE_FILE, "w", encoding="utf-8") as f:
-        json.dump({
-            "searched_urls": list(cached_urls),
-            "updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        }, f, ensure_ascii=False, indent=2)
+        json.dump(cache_data, f, ensure_ascii=False, indent=2)
 
 
 def filter_new_properties(properties: list[dict], cached_urls: set) -> tuple[list[dict], int]:
@@ -551,16 +571,21 @@ def _print_property(p: dict):
 
 
 def append_csv(properties: list[dict], output_path: str):
-    """結果をCSVファイルに追記する（ヘッダーはファイルが新規の場合のみ）。"""
+    """結果をCSVファイルに追記する（ヘッダーはファイルが新規の場合のみ）。GitHub APIにも保存。"""
+    import io as _io
+
+    csv_header = [
+        "検索日", "ソース", "カテゴリ", "タイトル", "価格", "エリア", "住所",
+        "用途地域", "旅館業可否", "総合判定", "詳細",
+        "特別用途地区", "学校警告", "URL",
+    ]
+
+    # ローカルファイルに追記
     file_exists = os.path.isfile(output_path)
     with open(output_path, "a", newline="", encoding="utf-8-sig") as f:
         writer = csv.writer(f)
         if not file_exists:
-            writer.writerow([
-                "検索日", "ソース", "カテゴリ", "タイトル", "価格", "エリア", "住所",
-                "用途地域", "旅館業可否", "総合判定", "詳細",
-                "特別用途地区", "学校警告", "URL",
-            ])
+            writer.writerow(csv_header)
         for p in properties:
             writer.writerow([
                 datetime.now().strftime("%Y-%m-%d"),
@@ -579,6 +604,36 @@ def append_csv(properties: list[dict], output_path: str):
                 p.get("url", ""),
             ])
     print(f"  → {len(properties)}件を追記: {output_path}")
+
+    # GitHub APIにも保存
+    try:
+        from github_storage import read_file, write_file
+        existing_csv = read_file("data/bukken_history.csv") or ""
+        buf = _io.StringIO()
+        writer = csv.writer(buf)
+        if not existing_csv:
+            writer.writerow(csv_header)
+        for p in properties:
+            writer.writerow([
+                datetime.now().strftime("%Y-%m-%d"),
+                p.get("source", ""),
+                p.get("category", ""),
+                p.get("title", ""),
+                p.get("price", ""),
+                p.get("area", ""),
+                p.get("address", ""),
+                p.get("youto_chiiki", ""),
+                p.get("ryokan_kahi", ""),
+                p.get("sogo_hantei", ""),
+                p.get("sogo_detail", ""),
+                p.get("tokubetsu_youto", ""),
+                p.get("school_warning", ""),
+                p.get("url", ""),
+            ])
+        content = existing_csv.rstrip("\n") + "\n" + buf.getvalue() if existing_csv else buf.getvalue()
+        write_file("data/bukken_history.csv", content, f"auto: append {len(properties)} properties {datetime.now().strftime('%Y-%m-%d')}")
+    except Exception:
+        pass
 
 
 def write_csv(properties: list[dict], output_path: str):
