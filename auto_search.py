@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
 """
 1NIWA 物件自動収集ツール
-ジモティー・家いちばから物件を自動収集し、用途地域チェッカーで判定する。
+テンポスマート・Tempodasから物件を自動収集し、用途地域チェッカーで判定する。
 
 使い方:
-  python3 auto_search.py                    # 全サイトから収集+判定
-  python3 auto_search.py --site jimoty      # ジモティーのみ
-  python3 auto_search.py --site ieichiba    # 家いちばのみ
-  python3 auto_search.py --no-zoning        # 用途地域判定なし（収集のみ）
-  python3 auto_search.py --output result.csv  # CSV出力
-  python3 auto_search.py --pages 3          # 最大3ページ取得
+  python3 auto_search.py                        # 全サイトから収集+判定
+  python3 auto_search.py --site temposmart      # テンポスマートのみ
+  python3 auto_search.py --site tempodas        # Tempodasのみ
+  python3 auto_search.py --no-zoning            # 用途地域判定なし（収集のみ）
+  python3 auto_search.py --output result.csv    # CSV出力
+  python3 auto_search.py --pages 3              # 最大3ページ取得
 """
 
 import argparse
 import csv
+import http.cookiejar
 import json
 import os
 import re
@@ -56,18 +57,16 @@ TOKYO_23KU = [
     "葛飾区", "江戸川区",
 ]
 
-# ジモティーのカテゴリURL（賃貸のみ）
-JIMOTY_BASE = "https://jmty.jp"
-JIMOTY_CATEGORIES = {
-    "賃貸": "/tokyo/est-rent",
-}
+# テンポスマート
+TEMPOSMART_BASE = "https://www.temposmart.jp"
+TEMPOSMART_LOGIN_URL = "https://www.temposmart.jp/login"
+TEMPOSMART_LIST_URL = "https://www.temposmart.jp/estates/pref/13/newest"  # 東京都
+
+# テンポダス
+TEMPODAS_BASE = "https://tempodas.com"
 
 # 検索済み物件キャッシュファイル
 CACHE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "searched_cache.json")
-
-# 家いちばAPI
-IEICHIBA_API = "https://www.ieichiba.com/api/properties"
-IEICHIBA_BASE = "https://www.ieichiba.com"
 
 REQUEST_INTERVAL = 1.5  # リクエスト間隔（秒）
 
@@ -148,195 +147,244 @@ def fetch_url(url: str, is_json: bool = False) -> Optional[str | dict]:
         return None
 
 
-# ===== ジモティー スクレイパー =====
+# ===== 認証情報取得 =====
+
+def _get_credential(key: str) -> str:
+    """認証情報を取得（Streamlit secrets → 環境変数）"""
+    try:
+        import streamlit as st
+        return st.secrets[key]
+    except Exception:
+        return os.environ.get(key, "")
+
+
+# ===== テンポスマート スクレイパー =====
 
 def _clean_address(addr: str) -> str:
     """住所文字列をクリーンアップする。"""
-    # 末尾の不要な文字を除去
     addr = re.sub(r"[💰🔥🏠✨📍\s]+.*$", "", addr)
-    # 末尾のハイフンを除去
     addr = addr.rstrip("-－")
     return addr.strip()
 
 
-def _extract_address_from_jimoty_detail(url: str) -> Optional[str]:
-    """ジモティーの物件詳細ページから住所を抽出する。"""
-    time.sleep(REQUEST_INTERVAL)
-    html = fetch_url(url)
-    if not html:
+def _create_temposmart_session() -> urllib.request.OpenerDirector:
+    """テンポスマートにログインしてセッション付きOpenerを返す。"""
+    cj = http.cookiejar.CookieJar()
+    opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
+
+    email = _get_credential("TEMPOSMART_EMAIL")
+    password = _get_credential("TEMPOSMART_PASSWORD")
+
+    if not email or not password:
+        print("  警告: テンポスマートの認証情報が設定されていません。", file=sys.stderr)
+        print("  環境変数 TEMPOSMART_EMAIL / TEMPOSMART_PASSWORD を設定してください。", file=sys.stderr)
+        return opener
+
+    # ログインページを取得（CSRFトークン取得）
+    try:
+        req = urllib.request.Request(TEMPOSMART_LOGIN_URL, headers=HEADERS)
+        with opener.open(req, timeout=20) as resp:
+            login_html = resp.read().decode("utf-8")
+
+        # CSRFトークンを抽出
+        csrf_token = ""
+        if BeautifulSoup:
+            soup = BeautifulSoup(login_html, "html.parser")
+            token_input = soup.find("input", {"name": "_token"})
+            if token_input:
+                csrf_token = token_input.get("value", "")
+        if not csrf_token:
+            match = re.search(r'name="_token"\s+value="([^"]+)"', login_html)
+            if match:
+                csrf_token = match.group(1)
+
+        # ログインPOST
+        login_data = urllib.parse.urlencode({
+            "_token": csrf_token,
+            "email": email,
+            "password": password,
+        }).encode("utf-8")
+
+        req = urllib.request.Request(
+            TEMPOSMART_LOGIN_URL,
+            data=login_data,
+            headers={**HEADERS, "Content-Type": "application/x-www-form-urlencoded",
+                     "Referer": TEMPOSMART_LOGIN_URL},
+        )
+        with opener.open(req, timeout=20) as resp:
+            resp.read()
+
+        print("  テンポスマート: ログイン成功")
+    except Exception as e:
+        print(f"  テンポスマート: ログイン失敗 ({e})", file=sys.stderr)
+
+    return opener
+
+
+def _fetch_with_session(opener: urllib.request.OpenerDirector, url: str) -> Optional[str]:
+    """セッション付きでURLを取得する。"""
+    try:
+        req = urllib.request.Request(url, headers=HEADERS)
+        with opener.open(req, timeout=20) as resp:
+            return resp.read().decode("utf-8")
+    except Exception as e:
+        print(f"  取得エラー: {e} ({url})", file=sys.stderr)
         return None
 
-    soup = BeautifulSoup(html, "html.parser")
 
-    # 本文テキストから住所パターンを検索
+def _extract_address_from_temposmart_detail(opener: urllib.request.OpenerDirector, url: str) -> tuple[Optional[str], str]:
+    """テンポスマートの物件詳細ページから住所と賃料を抽出する。"""
+    time.sleep(REQUEST_INTERVAL)
+    html = _fetch_with_session(opener, url)
+    if not html:
+        return None, ""
+
+    soup = BeautifulSoup(html, "html.parser")
     body_text = soup.get_text()
 
-    # 住所の終端を示す文字パターン（絵文字等も含む）
-    addr_end = r"[^\d丁目番号-]"
-
-    # 「所在地：〒xxx-xxxx 東京都○○区...」パターン
+    # 住所抽出
+    address = None
+    # 「所在地」「住所」ラベルから抽出
     addr_match = re.search(
         r"(?:所在地|住所|物件所在地)[：:\s]*(?:〒[\d-]+\s*)?"
         r"(東京都[\w]+区[\w\d丁目番号\-－]*)",
         body_text,
     )
     if addr_match:
-        return _clean_address(addr_match.group(1))
+        address = _clean_address(addr_match.group(1))
+    else:
+        # 「東京都○○区...」の一般的なパターン
+        ku_pattern = "|".join(TOKYO_23KU)
+        addr_match = re.search(
+            r"(東京都(?:" + ku_pattern + r")[\w\d丁目番号\-－]*)",
+            body_text,
+        )
+        if addr_match:
+            address = _clean_address(addr_match.group(1))
 
-    # 「東京都○○区...」の一般的なパターン（23区限定）
-    ku_pattern = "|".join(TOKYO_23KU)
-    addr_match = re.search(
-        r"(東京都(?:" + ku_pattern + r")[\w\d丁目番号\-－]*)",
-        body_text,
-    )
-    if addr_match:
-        return _clean_address(addr_match.group(1))
-
-    return None
-
-
-def _parse_jimoty_listing(soup: BeautifulSoup, category: str) -> list[dict]:
-    """ジモティーの一覧ページから物件情報を抽出する。"""
-    properties = []
-
-    # 物件リンクを探す（article-xxx または alliance- パターン）
-    # ジモティーは完全URLまたは相対パスの両方がありうる
-    pattern = re.compile(
-        r"(?:https?://jmty\.jp)?/tokyo/est-(?:buy|land|rent)/(?:article-|alliance-)"
-    )
-    links = soup.find_all("a", href=pattern)
-
-    # まずURL -> テキストありリンクのマッピングを作成
-    # （同一URLで画像リンク(テキストなし)とテキストリンクの2つがある）
-    url_to_info = {}
-    for link in links:
-        href = link.get("href", "")
-        if not href:
-            continue
-        full_url = href if href.startswith("http") else JIMOTY_BASE + href
-        # URLの正規化（クエリパラメータ除去）
-        base_url = full_url.split("?")[0]
-        text = link.get_text(strip=True)
-        if base_url not in url_to_info or (text and len(text) > len(url_to_info[base_url].get("title", ""))):
-            url_to_info[base_url] = {"url": full_url, "title": text}
-
-    for base_url, info in url_to_info.items():
-        title = info.get("title", "")
-        full_url = info["url"]
-
-        # タイトルがない場合もリストに含める（URLのみ）
-        if not title:
-            title = base_url.split("/")[-1]  # article-xxxxx をタイトル代わりに
-
-        # 長すぎるテキストはカット
-        if len(title) > 200:
-            title = title[:200]
-
-        # 価格抽出（テキスト内から）
-        price = ""
-        price_match = re.search(r"([\d,]+万円)", title)
+    # 賃料抽出
+    price = ""
+    price_match = re.search(r"(?:賃料|月額|家賃)[：:\s]*([\d,]+(?:\.\d+)?万?円)", body_text)
+    if price_match:
+        price = price_match.group(1)
+    else:
+        price_match = re.search(r"([\d,]+(?:\.\d+)?万?円)", body_text)
         if price_match:
             price = price_match.group(1)
 
-        # 地域（区名）抽出
-        area = ""
-        for ku in TOKYO_23KU:
-            if ku in title:
-                area = ku
-                break
-
-        # 分譲・売買専用物件を除外（賃貸のみ）
-        exclude_words = ["分譲", "売却", "売出", "売り出し", "売買", "中古マンション", "新築マンション", "購入"]
-        if any(w in title for w in exclude_words):
-            continue
-
-        prop = {
-            "source": "ジモティー",
-            "category": category,
-            "title": title[:100],
-            "price": price,
-            "area": area,
-            "address": "",  # 詳細ページから取得
-            "url": full_url,
-        }
-        properties.append(prop)
-
-    return properties
+    return address, price
 
 
-def search_jimoty(max_pages: int = 2, fetch_detail: bool = True) -> list[dict]:
+def search_temposmart(max_pages: int = 2, fetch_detail: bool = True) -> list[dict]:
     """
-    ジモティーから物件を収集。
+    テンポスマートから東京23区の物件を収集。
 
     Args:
         max_pages: 取得する最大ページ数
-        fetch_detail: 詳細ページから住所を取得するか
+        fetch_detail: 詳細ページから住所・賃料を取得するか
 
     Returns:
         [{"source": ..., "title": ..., "address": ..., "price": ..., "url": ..., "area": ...}, ...]
     """
+    if not BeautifulSoup:
+        print("  エラー: BeautifulSoupが必要です。pip install beautifulsoup4", file=sys.stderr)
+        return []
+
+    # ログインセッション作成
+    opener = _create_temposmart_session()
     all_properties = []
 
-    for cat_name, cat_path in JIMOTY_CATEGORIES.items():
-        print(f"\n  [{cat_name}] を取得中...")
+    for page in range(1, max_pages + 1):
+        url = f"{TEMPOSMART_LIST_URL}?page={page}"
+        print(f"    ページ {page}: {url}")
+        time.sleep(REQUEST_INTERVAL)
 
-        for page in range(1, max_pages + 1):
-            if page == 1:
-                url = JIMOTY_BASE + cat_path
+        html = _fetch_with_session(opener, url)
+        if not html:
+            print(f"    ページ取得失敗。")
+            break
+
+        soup = BeautifulSoup(html, "html.parser")
+
+        # 物件リンクを抽出（/estates/数字 パターン）
+        pattern = re.compile(r"/estates/(\d+)")
+        links = soup.find_all("a", href=pattern)
+
+        url_to_info = {}
+        for link in links:
+            href = link.get("href", "")
+            if not href:
+                continue
+            match = pattern.search(href)
+            if not match:
+                continue
+            estate_id = match.group(1)
+            full_url = f"{TEMPOSMART_BASE}/estates/{estate_id}"
+            text = link.get_text(strip=True)
+            if full_url not in url_to_info or (text and len(text) > len(url_to_info[full_url].get("title", ""))):
+                url_to_info[full_url] = {"url": full_url, "title": text, "id": estate_id}
+
+        if not url_to_info:
+            print(f"    物件なし。")
+            break
+
+        for full_url, info in url_to_info.items():
+            title = info.get("title", "") or f"物件ID: {info['id']}"
+            if len(title) > 200:
+                title = title[:200]
+
+            # 区名抽出（タイトルから）
+            area = ""
+            for ku in TOKYO_23KU:
+                if ku in title:
+                    area = ku
+                    break
+
+            # 価格抽出（タイトルから）
+            price = ""
+            price_match = re.search(r"([\d,]+(?:\.\d+)?万?円)", title)
+            if price_match:
+                price = price_match.group(1)
+
+            prop = {
+                "source": "テンポスマート",
+                "category": "店舗・テナント",
+                "title": title[:100],
+                "price": price,
+                "area": area,
+                "address": "",
+                "url": full_url,
+            }
+            all_properties.append(prop)
+
+        print(f"    {len(url_to_info)}件取得")
+
+        # 次のページがあるか
+        if f"?page={page + 1}" not in html:
+            break
+
+    # 詳細ページから住所・賃料取得
+    if fetch_detail and all_properties:
+        print(f"\n  詳細ページから住所・賃料を取得中...")
+        for i, p in enumerate(all_properties):
+            print(f"    [{i+1}/{len(all_properties)}] {p['title'][:30]}...")
+            addr, price = _extract_address_from_temposmart_detail(opener, p["url"])
+            if addr:
+                p["address"] = addr
+                for ku in TOKYO_23KU:
+                    if ku in addr:
+                        p["area"] = ku
+                        break
+                print(f"      -> 住所: {addr}")
             else:
-                url = JIMOTY_BASE + cat_path + f"/p-{page}"
+                print(f"      -> 住所取得不可")
+            if price and not p["price"]:
+                p["price"] = price
 
-            print(f"    ページ {page}: {url}")
-            time.sleep(REQUEST_INTERVAL)
-
-            html = fetch_url(url)
-            if not html:
-                print(f"    ページ取得失敗。次のカテゴリへ。")
-                break
-
-            soup = BeautifulSoup(html, "html.parser")
-            props = _parse_jimoty_listing(soup, cat_name)
-
-            if not props:
-                print(f"    物件なし。次のカテゴリへ。")
-                break
-
-            # 23区内フィルタ（区名が判明しているもの + 不明なもの）
-            filtered = []
-            for p in props:
-                if p["area"] in TOKYO_23KU or not p["area"]:
-                    filtered.append(p)
-
-            print(f"    {len(filtered)}件取得 (23区内 or 未分類)")
-
-            # 詳細ページから住所取得
-            if fetch_detail:
-                for i, p in enumerate(filtered):
-                    if not p["address"]:
-                        print(f"      [{i+1}/{len(filtered)}] 住所取得中: {p['title'][:30]}...")
-                        addr = _extract_address_from_jimoty_detail(p["url"])
-                        if addr:
-                            p["address"] = addr
-                            # 区名も更新
-                            for ku in TOKYO_23KU:
-                                if ku in addr:
-                                    p["area"] = ku
-                                    break
-                            print(f"        -> {addr}")
-                        else:
-                            print(f"        -> 住所取得不可")
-
-            all_properties.extend(filtered)
-
-            # 次のページがあるか確認
-            if f"/p-{page + 1}" not in (html or ""):
-                break
-
-    # 23区外のものを除外（住所が判明して23区外だったもの）
+    # 23区外を除外
     result = []
     for p in all_properties:
         if p["address"]:
-            # 住所が判明しているが23区外
             is_23ku = any(ku in p["address"] for ku in TOKYO_23KU)
             if not is_23ku:
                 continue
@@ -345,11 +393,71 @@ def search_jimoty(max_pages: int = 2, fetch_detail: bool = True) -> list[dict]:
     return result
 
 
-# ===== 家いちば スクレイパー =====
+# ===== テンポダス スクレイパー =====
 
-def search_ieichiba(max_pages: int = 3) -> list[dict]:
+def _create_tempodas_session() -> urllib.request.OpenerDirector:
+    """テンポダスにログインしてセッション付きOpenerを返す。"""
+    cj = http.cookiejar.CookieJar()
+    opener = urllib.request.build_opener(
+        urllib.request.HTTPCookieProcessor(cj),
+        urllib.request.HTTPRedirectHandler(),
+    )
+
+    email = _get_credential("TEMPODAS_EMAIL")
+    password = _get_credential("TEMPODAS_PASSWORD")
+
+    if not email or not password:
+        print("  警告: テンポダスの認証情報が設定されていません。", file=sys.stderr)
+        print("  環境変数 TEMPODAS_EMAIL / TEMPODAS_PASSWORD を設定してください。", file=sys.stderr)
+        return opener
+
+    # ログインページを取得
+    login_url = f"{TEMPODAS_BASE}/login"
+    try:
+        req = urllib.request.Request(login_url, headers=HEADERS)
+        with opener.open(req, timeout=20) as resp:
+            login_html = resp.read().decode("utf-8")
+
+        # CSRFトークンを抽出
+        csrf_token = ""
+        token_match = re.search(r'name="[^"]*token[^"]*"\s+value="([^"]+)"', login_html, re.IGNORECASE)
+        if token_match:
+            csrf_token = token_match.group(1)
+        else:
+            token_match = re.search(r'value="([^"]+)"\s+name="[^"]*token[^"]*"', login_html, re.IGNORECASE)
+            if token_match:
+                csrf_token = token_match.group(1)
+
+        # ログインPOST
+        login_data = urllib.parse.urlencode({
+            "_token": csrf_token,
+            "email": email,
+            "password": password,
+        }).encode("utf-8")
+
+        req = urllib.request.Request(
+            login_url,
+            data=login_data,
+            headers={**HEADERS, "Content-Type": "application/x-www-form-urlencoded",
+                     "Referer": login_url},
+        )
+        with opener.open(req, timeout=20) as resp:
+            resp.read()
+
+        print("  テンポダス: ログイン成功")
+    except Exception as e:
+        print(f"  テンポダス: ログイン失敗 ({e})", file=sys.stderr)
+        print("  テンポダスはJavaScript SPAのため、自動収集が制限される場合があります。", file=sys.stderr)
+
+    return opener
+
+
+def search_tempodas(max_pages: int = 2) -> list[dict]:
     """
-    家いちばから物件を収集（API利用）。
+    テンポダスから東京23区の物件を収集。
+
+    テンポダスはJavaScript SPAのため、サーバーサイドでレンダリングされた
+    コンテンツが限られる場合があります。
 
     Args:
         max_pages: 取得する最大ページ数
@@ -357,79 +465,107 @@ def search_ieichiba(max_pages: int = 3) -> list[dict]:
     Returns:
         [{"source": ..., "title": ..., "address": ..., "price": ..., "url": ..., "area": ...}, ...]
     """
+    if not BeautifulSoup:
+        print("  エラー: BeautifulSoupが必要です。pip install beautifulsoup4", file=sys.stderr)
+        return []
+
+    opener = _create_tempodas_session()
     all_properties = []
 
-    for page in range(1, max_pages + 1):
-        url = f"{IEICHIBA_API}?area=tokyo&page={page}"
-        print(f"    ページ {page}: {url}")
+    # テンポダスの物件ページURL候補を試行
+    search_urls = [
+        f"{TEMPODAS_BASE}/estates",
+        f"{TEMPODAS_BASE}/estates/pref/13",
+        f"{TEMPODAS_BASE}/search?prefecture=13",
+        f"{TEMPODAS_BASE}/properties",
+        f"{TEMPODAS_BASE}/properties?area=tokyo",
+    ]
+
+    html = None
+    working_url = None
+    for try_url in search_urls:
         time.sleep(REQUEST_INTERVAL)
+        print(f"    試行: {try_url}")
+        test_html = _fetch_with_session(opener, try_url)
+        if test_html and len(test_html) > 1000:
+            # 物件情報が含まれているか確認
+            if any(ku in test_html for ku in TOKYO_23KU) or "物件" in test_html or "estate" in test_html.lower():
+                html = test_html
+                working_url = try_url
+                print(f"    -> コンテンツ取得成功")
+                break
 
-        data = fetch_url(url, is_json=True)
-        if not data:
-            print(f"    API取得失敗。")
-            break
+    if not html:
+        print("  テンポダス: 物件ページの自動取得ができませんでした。", file=sys.stderr)
+        print("  テンポダスはJavaScript SPAのため、手動検索をご利用ください。", file=sys.stderr)
+        print(f"  手動検索URL: {TEMPODAS_BASE}", file=sys.stderr)
+        return []
 
-        properties = data.get("properties", [])
-        if not properties:
-            print(f"    物件なし。")
-            break
+    # HTMLから物件情報を抽出
+    soup = BeautifulSoup(html, "html.parser")
 
-        pager = data.get("pager", {})
-        total = pager.get("total", "?")
-        print(f"    {len(properties)}件取得 (全{total}件中)")
+    # 物件リンクを探す（一般的なパターン）
+    link_patterns = [
+        re.compile(r"/estates?/\d+"),
+        re.compile(r"/properties?/\d+"),
+        re.compile(r"/detail/\d+"),
+    ]
 
-        for prop in properties:
-            title = prop.get("title", "") or prop.get("name", "")
-            address = prop.get("google_map_address", "") or prop.get("label_address", "")
-            prop_url = prop.get("url", "")
-            if prop_url and prop_url.startswith("/"):
-                prop_url = IEICHIBA_BASE + prop_url
-            prop_id = prop.get("id", "")
-            name = prop.get("name", "")
-
-            # 賃貸物件のフィルタ（売買・分譲のみの物件を除外）
-            body = prop.get("body", "")
-            combined_text = title + " " + body
-            # 分譲・売買専用キーワード
-            sale_words = ["売却", "売出", "売り出し", "売買", "分譲", "購入", "中古マンション", "新築マンション"]
-            rental_words = ["賃貸", "家賃", "月額", "賃料", "借", "テナント", "貸"]
-            is_rental = any(kw in combined_text for kw in rental_words)
-            is_sale_only = any(kw in combined_text for kw in sale_words) and not is_rental
-            if is_sale_only:
+    url_to_info = {}
+    for pat in link_patterns:
+        links = soup.find_all("a", href=pat)
+        for link in links:
+            href = link.get("href", "")
+            if not href:
                 continue
+            full_url = href if href.startswith("http") else TEMPODAS_BASE + href
+            base_url = full_url.split("?")[0]
+            text = link.get_text(strip=True)
+            if base_url not in url_to_info or (text and len(text) > len(url_to_info[base_url].get("title", ""))):
+                url_to_info[base_url] = {"url": full_url, "title": text}
 
-            # 価格をbodyから抽出
-            price = ""
-            price_match = re.search(r"(?:希望価格|売出価格|価格|賃料|家賃|月額)[：:\s]*([\d,]+万円)", body)
-            if price_match:
-                price = price_match.group(1)
-            else:
-                price_match = re.search(r"([\d,]+万円)", body)
-                if price_match:
-                    price = price_match.group(1)
+    for full_url, info in url_to_info.items():
+        title = info.get("title", "") or full_url.split("/")[-1]
+        if len(title) > 200:
+            title = title[:200]
 
-            # 区名抽出
-            area = prop.get("area_code_name", "")
+        area = ""
+        for ku in TOKYO_23KU:
+            if ku in title:
+                area = ku
+                break
 
-            # 23区フィルタ
-            is_23ku = any(ku in (address or area or "") for ku in TOKYO_23KU)
-            if not is_23ku:
-                continue
+        price = ""
+        price_match = re.search(r"([\d,]+(?:\.\d+)?万?円)", title)
+        if price_match:
+            price = price_match.group(1)
 
-            item = {
-                "source": "家いちば",
-                "category": "空き家売買",
-                "title": title[:100],
-                "price": price,
-                "area": area,
-                "address": address,
-                "url": prop_url,
-            }
-            all_properties.append(item)
+        # 住所抽出（テキストから）
+        address = ""
+        ku_pattern = "|".join(TOKYO_23KU)
+        addr_match = re.search(
+            r"(東京都(?:" + ku_pattern + r")[\w\d丁目番号\-－]*)",
+            title,
+        )
+        if addr_match:
+            address = _clean_address(addr_match.group(1))
 
-        # 次のページがあるか
-        if not pager.get("hasNext", False):
-            break
+        prop = {
+            "source": "テンポダス",
+            "category": "店舗・テナント",
+            "title": title[:100],
+            "price": price,
+            "area": area,
+            "address": address,
+            "url": full_url,
+        }
+        all_properties.append(prop)
+
+    if all_properties:
+        print(f"    {len(all_properties)}件取得")
+    else:
+        print("  テンポダス: 物件の自動抽出ができませんでした（JavaScript SPA）。", file=sys.stderr)
+        print(f"  手動検索をご利用ください: {TEMPODAS_BASE}", file=sys.stderr)
 
     return all_properties
 
@@ -676,17 +812,17 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 使用例:
-  python3 auto_search.py                      # 全サイトから収集+判定
-  python3 auto_search.py --site jimoty        # ジモティーのみ
-  python3 auto_search.py --site ieichiba      # 家いちばのみ
-  python3 auto_search.py --no-zoning          # 用途地域判定なし（収集のみ）
-  python3 auto_search.py --output result.csv  # CSV出力
-  python3 auto_search.py --pages 3            # 最大3ページ取得
-  python3 auto_search.py --no-detail          # 詳細ページ取得スキップ（高速）
+  python3 auto_search.py                        # 全サイトから収集+判定
+  python3 auto_search.py --site temposmart      # テンポスマートのみ
+  python3 auto_search.py --site tempodas        # テンポダスのみ
+  python3 auto_search.py --no-zoning            # 用途地域判定なし（収集のみ）
+  python3 auto_search.py --output result.csv    # CSV出力
+  python3 auto_search.py --pages 3              # 最大3ページ取得
+  python3 auto_search.py --no-detail            # 詳細ページ取得スキップ（高速）
         """,
     )
     parser.add_argument(
-        "--site", choices=["jimoty", "ieichiba", "all"], default="all",
+        "--site", choices=["temposmart", "tempodas", "all"], default="all",
         help="取得するサイト（default: all）",
     )
     parser.add_argument(
@@ -700,7 +836,7 @@ def main():
     )
     parser.add_argument(
         "--no-detail", action="store_true",
-        help="ジモティーの詳細ページ取得をスキップ（高速モード）",
+        help="テンポスマートの詳細ページ取得をスキップ（高速モード）",
     )
 
     args = parser.parse_args()
@@ -717,29 +853,29 @@ def main():
 
     all_properties = []
 
-    # ジモティー
-    if args.site in ("jimoty", "all"):
+    # テンポスマート
+    if args.site in ("temposmart", "all"):
         print(f"\n{'─' * 40}")
-        print("ジモティー東京 賃貸")
+        print("テンポスマート 東京都（店舗・テナント）")
         print(f"{'─' * 40}")
-        props = search_jimoty(
+        props = search_temposmart(
             max_pages=args.pages,
             fetch_detail=not args.no_detail,
         )
         # キャッシュで新着のみフィルタ
         props, skipped = filter_new_properties(props, cached_urls)
-        print(f"\nジモティー: {len(props)}件（新着） / {skipped}件スキップ（検索済み）")
+        print(f"\nテンポスマート: {len(props)}件（新着） / {skipped}件スキップ（検索済み）")
         all_properties.extend(props)
 
-    # 家いちば
-    if args.site in ("ieichiba", "all"):
+    # テンポダス
+    if args.site in ("tempodas", "all"):
         print(f"\n{'─' * 40}")
-        print("家いちば 東京都（賃貸可能物件）")
+        print("テンポダス 東京都（店舗・テナント）")
         print(f"{'─' * 40}")
-        props = search_ieichiba(max_pages=args.pages)
+        props = search_tempodas(max_pages=args.pages)
         # キャッシュで新着のみフィルタ
         props, skipped = filter_new_properties(props, cached_urls)
-        print(f"\n家いちば: {len(props)}件（新着） / {skipped}件スキップ（検索済み）")
+        print(f"\nテンポダス: {len(props)}件（新着） / {skipped}件スキップ（検索済み）")
         all_properties.extend(props)
 
     if not all_properties:

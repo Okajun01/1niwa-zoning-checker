@@ -416,33 +416,33 @@ with tab4:
     st.subheader("🔍 物件検索")
 
     # === 自動収集セクション ===
-    st.markdown("### 自動収集（ジモティー・家いちば）— 賃貸のみ")
+    st.markdown("### 自動収集（テンポスマート・テンポダス）— 店舗・テナント")
     st.markdown("ボタンを押すと物件を収集し、旅館業可否を判定します。結果はGoogle Drive（`04_事業物件/PJ2_物件検索/`）に自動保存されます。")
 
     col_s1, col_s2, col_s3 = st.columns(3)
     with col_s1:
         auto_all = st.button("🤖 全サイト自動収集", type="primary", use_container_width=True)
     with col_s2:
-        auto_ieichiba = st.button("🏠 家いちばのみ", use_container_width=True)
+        auto_temposmart = st.button("🏪 テンポスマートのみ", use_container_width=True)
     with col_s3:
-        auto_jimoty = st.button("📦 ジモティーのみ", use_container_width=True)
+        auto_tempodas = st.button("🏢 テンポダスのみ", use_container_width=True)
 
-    if auto_all or auto_ieichiba or auto_jimoty:
+    if auto_all or auto_temposmart or auto_tempodas:
         try:
-            from auto_search import search_ieichiba, search_jimoty
+            from auto_search import search_temposmart, search_tempodas
             all_properties = []
 
-            if auto_all or auto_ieichiba:
-                with st.spinner("家いちばを検索中（賃貸のみ）..."):
-                    ie_props = search_ieichiba()
-                    all_properties.extend(ie_props)
-                    st.success(f"家いちば: {len(ie_props)}件取得")
+            if auto_all or auto_temposmart:
+                with st.spinner("テンポスマートを検索中（店舗・テナント）..."):
+                    ts_props = search_temposmart(max_pages=1)
+                    all_properties.extend(ts_props)
+                    st.success(f"テンポスマート: {len(ts_props)}件取得")
 
-            if auto_all or auto_jimoty:
-                with st.spinner("ジモティーを検索中（賃貸のみ）..."):
-                    jm_props = search_jimoty(max_pages=1)
-                    all_properties.extend(jm_props)
-                    st.success(f"ジモティー: {len(jm_props)}件取得")
+            if auto_all or auto_tempodas:
+                with st.spinner("テンポダスを検索中（店舗・テナント）..."):
+                    td_props = search_tempodas(max_pages=1)
+                    all_properties.extend(td_props)
+                    st.success(f"テンポダス: {len(td_props)}件取得")
 
             if all_properties:
                 # 住所があるものをチェッカーで判定
@@ -584,11 +584,11 @@ with tab4:
         "athome（賃貸一戸建て）": {
             "東京23区 一戸建て": "https://www.athome.co.jp/chintai/kodate/tokyo/",
         },
-        "ジモティー": {
-            "東京都 不動産": "https://jmty.jp/tokyo/estate",
+        "テンポスマート（店舗・テナント）": {
+            "東京都 新着": "https://www.temposmart.jp/estates/pref/13/newest",
         },
-        "家いちば（空き家売買）": {
-            "東京都": "https://www.ieichiba.com/area/tokyo",
+        "テンポダス（居抜き・貸店舗）": {
+            "トップページ": "https://tempodas.com/",
         },
         "LIFULL HOME'S": {
             "東京23区": "https://www.homes.co.jp/chintai/tokyo/city/",
