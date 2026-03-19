@@ -63,19 +63,19 @@ def extract_zip(zip_path, extract_to):
 
 
 def find_shapefile(directory):
-    """ディレクトリ内のShapefileを探す"""
-    for root, dirs, files in os.walk(directory):
+    """ディレクトリ内のA29用途地域Shapefileを探す"""
+    for root, dirs, files in os.walk(directory, followlinks=True):
         for f in files:
-            if f.endswith(".shp"):
+            if f.endswith(".shp") and "A29" in (f + root):
                 return os.path.join(root, f)
     return None
 
 
 def find_geojson(directory):
-    """ディレクトリ内のGeoJSONを探す"""
-    for root, dirs, files in os.walk(directory):
+    """ディレクトリ内のA29用途地域GeoJSONを探す"""
+    for root, dirs, files in os.walk(directory, followlinks=True):
         for f in files:
-            if f.endswith(".geojson") or f.endswith(".json"):
+            if f.endswith(".geojson") and "A29" in (f + root):
                 return os.path.join(root, f)
     return None
 
@@ -83,7 +83,7 @@ def find_geojson(directory):
 def ensure_prj_files(data_dir):
     """既存のShapefileに.prjファイルがなければ生成する（JGD2000座標系）"""
     prj_content = 'GEOGCS["JGD2000",DATUM["Japanese_Geodetic_Datum_2000",SPHEROID["GRS 1980",6378137,298.257222101]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433]]'
-    for root, dirs, files in os.walk(data_dir):
+    for root, dirs, files in os.walk(data_dir, followlinks=True):
         for f in files:
             if f.endswith(".shp"):
                 prj_path = os.path.join(root, f.replace(".shp", ".prj"))
