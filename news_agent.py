@@ -233,7 +233,7 @@ def generate_ai_analysis(articles: list[dict]) -> list[dict]:
                 "responseMimeType": "application/json",
             },
         })
-        gemini_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={api_key}"
+        gemini_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
         req = urllib.request.Request(
             gemini_url,
             data=req_body.encode("utf-8"),
