@@ -190,26 +190,11 @@ def _parse_rss_date(date_str: str) -> str:
 
 # === AI要約・影響分析 ===
 
-def generate_ai_analysis(articles: list[dict]) -> list[dict]:
-    """Gemini APIで記事の要約と1NIWAへの影響を一括生成する。"""
-    api_key = os.environ.get("GEMINI_API_KEY", "")
-    if not api_key:
-        print("⚠️  GEMINI_API_KEY未設定: 要約・影響分析をスキップ")
-        return articles
+BATCH_SIZE = 5  # Gemini 2.5 Flashの思考トークンを考慮した安全なバッチサイズ
 
-    # 分析対象の記事を抽出（要約が空のもの）
-    targets = [i for i, a in enumerate(articles) if not a.get("summary")]
-    if not targets:
-        return articles
 
-    print(f"\n🤖 Gemini APIで {len(targets)}件 の要約・影響分析を生成中...")
-
-    # バッチで処理（全記事を1回のAPI呼び出しで）
-    batch_items = []
-    for idx in targets:
-        a = articles[idx]
-        batch_items.append(f"記事{idx}: タイトル「{a['title']}」 カテゴリ: {a['category']} 出典: {a['source']} 日付: {a['date']}")
-
+def _call_gemini(api_key: str, batch_items: list[str]) -> list[dict]:
+    """Gemini APIを1回呼び出して分析結果を返す。"""
     prompt = f"""以下の宿泊業界ニュース記事について、それぞれ「要約」と「1NIWAへの影響」を生成してください。
 
 【1NIWAについて】
@@ -224,46 +209,71 @@ def generate_ai_analysis(articles: list[dict]) -> list[dict]:
 【記事一覧】
 {chr(10).join(batch_items)}"""
 
-    try:
-        req_body = json.dumps({
-            "contents": [{"parts": [{"text": prompt}]}],
-            "generationConfig": {
-                "temperature": 0.2,
-                "maxOutputTokens": 4096,
-            },
-        })
-        gemini_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
-        req = urllib.request.Request(
-            gemini_url,
-            data=req_body.encode("utf-8"),
-            headers={"Content-Type": "application/json"},
-        )
-        with urllib.request.urlopen(req, timeout=90) as resp:
-            result = json.loads(resp.read().decode("utf-8"))
-            # 思考パートをスキップしてテキストパートを取得
-            parts = result["candidates"][0]["content"]["parts"]
-            text = ""
-            for part in parts:
-                if "text" in part:
-                    text = part["text"]
+    req_body = json.dumps({
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": {
+            "temperature": 0.2,
+            "maxOutputTokens": 4096,
+        },
+    })
+    gemini_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
+    req = urllib.request.Request(
+        gemini_url,
+        data=req_body.encode("utf-8"),
+        headers={"Content-Type": "application/json"},
+    )
+    with urllib.request.urlopen(req, timeout=90) as resp:
+        result = json.loads(resp.read().decode("utf-8"))
+        parts = result["candidates"][0]["content"]["parts"]
+        text = ""
+        for part in parts:
+            if "text" in part:
+                text = part["text"]
 
-        # JSONを抽出（```json ... ``` で囲まれている場合も対応）
-        if "```" in text:
-            text = text.split("```")[1]
-            if text.startswith("json"):
-                text = text[4:]
-        analyses = json.loads(text.strip())
+    if "```" in text:
+        text = text.split("```")[1]
+        if text.startswith("json"):
+            text = text[4:]
+    return json.loads(text.strip())
 
-        for item in analyses:
-            idx = item["idx"]
-            if 0 <= idx < len(articles):
-                articles[idx]["summary"] = item.get("summary", "")
-                articles[idx]["impact_memo"] = item.get("impact", "")
-        print(f"  ✅ {len(analyses)}件の分析を生成しました")
 
-    except Exception as e:
-        print(f"  ⚠️  AI分析エラー（記事収集は続行）: {e}")
+def generate_ai_analysis(articles: list[dict]) -> list[dict]:
+    """Gemini APIで記事の要約と1NIWAへの影響をバッチ生成する。"""
+    api_key = os.environ.get("GEMINI_API_KEY", "")
+    if not api_key:
+        print("⚠️  GEMINI_API_KEY未設定: 要約・影響分析をスキップ")
+        return articles
 
+    targets = [i for i, a in enumerate(articles) if not a.get("summary")]
+    if not targets:
+        return articles
+
+    print(f"\n🤖 Gemini APIで {len(targets)}件 の要約・影響分析を生成中...")
+
+    # バッチに分割して処理
+    total_done = 0
+    for batch_start in range(0, len(targets), BATCH_SIZE):
+        batch_indices = targets[batch_start:batch_start + BATCH_SIZE]
+        batch_items = []
+        for idx in batch_indices:
+            a = articles[idx]
+            batch_items.append(
+                f"記事{idx}: タイトル「{a['title']}」 カテゴリ: {a['category']} "
+                f"出典: {a['source']} 日付: {a['date']}"
+            )
+
+        try:
+            analyses = _call_gemini(api_key, batch_items)
+            for item in analyses:
+                idx = item["idx"]
+                if 0 <= idx < len(articles):
+                    articles[idx]["summary"] = item.get("summary", "")
+                    articles[idx]["impact_memo"] = item.get("impact", "")
+                    total_done += 1
+        except Exception as e:
+            print(f"  ⚠️  バッチ{batch_start // BATCH_SIZE + 1} AI分析エラー: {e}")
+
+    print(f"  ✅ {total_done}件の分析を生成しました")
     return articles
 
 
