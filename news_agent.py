@@ -3,7 +3,7 @@
 宿泊業界ニュース自動収集スクリプト（GitHub Actions用）。
 
 Google News RSSから旅館業・宿泊業界の最新ニュースを収集し、
-Claude APIで要約・影響分析を生成した後、
+Gemini APIで要約・影響分析を生成した後、
 GitHub APIで data/news_history.json を更新する。
 
 使い方:
@@ -12,7 +12,7 @@ GitHub APIで data/news_history.json を更新する。
 
 環境変数:
   GITHUB_TOKEN       - GitHub APIトークン（必須）
-  ANTHROPIC_API_KEY  - Claude APIキー（任意: なければ要約・影響は空）
+  GEMINI_API_KEY     - Google Gemini APIキー（任意: なければ要約・影響は空）
 """
 
 import base64
@@ -191,10 +191,10 @@ def _parse_rss_date(date_str: str) -> str:
 # === AI要約・影響分析 ===
 
 def generate_ai_analysis(articles: list[dict]) -> list[dict]:
-    """Claude APIで記事の要約と1NIWAへの影響を一括生成する。"""
-    api_key = os.environ.get("ANTHROPIC_API_KEY", "")
+    """Gemini APIで記事の要約と1NIWAへの影響を一括生成する。"""
+    api_key = os.environ.get("GEMINI_API_KEY", "")
     if not api_key:
-        print("⚠️  ANTHROPIC_API_KEY未設定: 要約・影響分析をスキップ")
+        print("⚠️  GEMINI_API_KEY未設定: 要約・影響分析をスキップ")
         return articles
 
     # 分析対象の記事を抽出（要約が空のもの）
@@ -202,7 +202,7 @@ def generate_ai_analysis(articles: list[dict]) -> list[dict]:
     if not targets:
         return articles
 
-    print(f"\n🤖 Claude APIで {len(targets)}件 の要約・影響分析を生成中...")
+    print(f"\n🤖 Gemini APIで {len(targets)}件 の要約・影響分析を生成中...")
 
     # バッチで処理（全記事を1回のAPI呼び出しで）
     batch_items = []
@@ -226,22 +226,22 @@ def generate_ai_analysis(articles: list[dict]) -> list[dict]:
 
     try:
         req_body = json.dumps({
-            "model": "claude-haiku-4-5-20251001",
-            "max_tokens": 2048,
-            "messages": [{"role": "user", "content": prompt}],
-        })
-        req = urllib.request.Request(
-            "https://api.anthropic.com/v1/messages",
-            data=req_body.encode("utf-8"),
-            headers={
-                "x-api-key": api_key,
-                "anthropic-version": "2023-06-01",
-                "Content-Type": "application/json",
+            "contents": [{"parts": [{"text": prompt}]}],
+            "generationConfig": {
+                "temperature": 0.2,
+                "maxOutputTokens": 2048,
+                "responseMimeType": "application/json",
             },
+        })
+        gemini_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={api_key}"
+        req = urllib.request.Request(
+            gemini_url,
+            data=req_body.encode("utf-8"),
+            headers={"Content-Type": "application/json"},
         )
         with urllib.request.urlopen(req, timeout=60) as resp:
             result = json.loads(resp.read().decode("utf-8"))
-            text = result["content"][0]["text"]
+            text = result["candidates"][0]["content"]["parts"][0]["text"]
 
         # JSONを抽出（```json ... ``` で囲まれている場合も対応）
         if "```" in text:
