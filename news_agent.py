@@ -3,11 +3,16 @@
 宿泊業界ニュース自動収集スクリプト（GitHub Actions用）。
 
 Google News RSSから旅館業・宿泊業界の最新ニュースを収集し、
+Claude APIで要約・影響分析を生成した後、
 GitHub APIで data/news_history.json を更新する。
 
 使い方:
   GITHUB_TOKEN=xxx python news_agent.py          # 通常実行
   GITHUB_TOKEN=xxx python news_agent.py --dry-run # 保存せずプレビュー
+
+環境変数:
+  GITHUB_TOKEN       - GitHub APIトークン（必須）
+  ANTHROPIC_API_KEY  - Claude APIキー（任意: なければ要約・影響は空）
 """
 
 import base64
@@ -183,6 +188,81 @@ def _parse_rss_date(date_str: str) -> str:
         return datetime.now().strftime("%Y-%m-%d")
 
 
+# === AI要約・影響分析 ===
+
+def generate_ai_analysis(articles: list[dict]) -> list[dict]:
+    """Claude APIで記事の要約と1NIWAへの影響を一括生成する。"""
+    api_key = os.environ.get("ANTHROPIC_API_KEY", "")
+    if not api_key:
+        print("⚠️  ANTHROPIC_API_KEY未設定: 要約・影響分析をスキップ")
+        return articles
+
+    # 分析対象の記事を抽出（要約が空のもの）
+    targets = [i for i, a in enumerate(articles) if not a.get("summary")]
+    if not targets:
+        return articles
+
+    print(f"\n🤖 Claude APIで {len(targets)}件 の要約・影響分析を生成中...")
+
+    # バッチで処理（全記事を1回のAPI呼び出しで）
+    batch_items = []
+    for idx in targets:
+        a = articles[idx]
+        batch_items.append(f"記事{idx}: タイトル「{a['title']}」 カテゴリ: {a['category']} 出典: {a['source']} 日付: {a['date']}")
+
+    prompt = f"""以下の宿泊業界ニュース記事について、それぞれ「要約」と「1NIWAへの影響」を生成してください。
+
+【1NIWAについて】
+東京都23区で旅館業法に基づく簡易宿所の許可取得を目指すスタートアップ企業。現在は物件探し段階。
+
+【出力形式】
+各記事について以下のJSON配列で出力してください。他の文章は不要です。
+[
+  {{"idx": 記事番号, "summary": "1-2文の要約", "impact": "1NIWAへの具体的な影響（1-2文）"}}
+]
+
+【記事一覧】
+{chr(10).join(batch_items)}"""
+
+    try:
+        req_body = json.dumps({
+            "model": "claude-haiku-4-5-20251001",
+            "max_tokens": 2048,
+            "messages": [{"role": "user", "content": prompt}],
+        })
+        req = urllib.request.Request(
+            "https://api.anthropic.com/v1/messages",
+            data=req_body.encode("utf-8"),
+            headers={
+                "x-api-key": api_key,
+                "anthropic-version": "2023-06-01",
+                "Content-Type": "application/json",
+            },
+        )
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            result = json.loads(resp.read().decode("utf-8"))
+            text = result["content"][0]["text"]
+
+        # JSONを抽出（```json ... ``` で囲まれている場合も対応）
+        if "```" in text:
+            text = text.split("```")[1]
+            if text.startswith("json"):
+                text = text[4:]
+        analyses = json.loads(text.strip())
+
+        for item in analyses:
+            idx = item["idx"]
+            if 0 <= idx < len(articles):
+                articles[idx]["summary"] = item.get("summary", "")
+                articles[idx]["impact_memo"] = item.get("impact", "")
+        print(f"  ✅ {len(analyses)}件の分析を生成しました")
+
+    except Exception as e:
+        print(f"  ⚠️  AI分析エラー（記事収集は続行）: {e}")
+
+    return articles
+
+
 def classify_importance(title: str, summary: str = "") -> str:
     """タイトルと要約から重要度を判定する。"""
     text = f"{title} {summary}".lower()
@@ -252,6 +332,9 @@ def main():
     if not new_articles:
         print("新しい記事はありませんでした。")
         return
+
+    # AI要約・影響分析を生成
+    new_articles = generate_ai_analysis(new_articles)
 
     if dry_run:
         print("\n--- ドライラン結果 ---")
