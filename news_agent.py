@@ -383,8 +383,7 @@ def main():
         print(f"  {updated}件 の要約を補完しました")
 
     if added == 0 and not empty_summary:
-        print("新規記事も要約補完もありませんでした。")
-        return
+        print("新規記事はありませんでした。更新日時のみ更新します。")
 
     # 4. 件数制限
     if len(existing["articles"]) > MAX_ARTICLES:
