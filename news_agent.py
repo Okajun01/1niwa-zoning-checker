@@ -333,17 +333,16 @@ def main():
     new_articles = collect_news()
     print(f"\n📊 収集結果: {len(new_articles)}件")
 
-    if not new_articles:
-        print("新しい記事はありませんでした。")
-        return
-
-    # AI要約・影響分析を生成
-    new_articles = generate_ai_analysis(new_articles)
+    # AI要約・影響分析を生成（新規記事がある場合）
+    if new_articles:
+        new_articles = generate_ai_analysis(new_articles)
 
     if dry_run:
         print("\n--- ドライラン結果 ---")
         for art in new_articles:
             print(f"  [{art['importance']}] [{art['category']}] {art['title']}")
+            if art.get("summary"):
+                print(f"    要約: {art['summary'][:80]}")
         return
 
     # 2. 既存データを読み込み
@@ -365,8 +364,16 @@ def main():
             existing_urls.add(article["url"])
             added += 1
 
-    if added == 0:
-        print("重複を除外した結果、追加する新規記事はありませんでした。")
+    # 4. 既存記事で要約が空のものにもAI分析を実行
+    empty_summary = [a for a in existing["articles"] if not a.get("summary")]
+    if empty_summary:
+        print(f"\n📝 既存記事 {len(empty_summary)}件 の要約を補完中...")
+        generate_ai_analysis(empty_summary)
+        updated = sum(1 for a in empty_summary if a.get("summary"))
+        print(f"  {updated}件 の要約を補完しました")
+
+    if added == 0 and not empty_summary:
+        print("新規記事も要約補完もありませんでした。")
         return
 
     # 4. 件数制限
