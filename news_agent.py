@@ -229,8 +229,7 @@ def generate_ai_analysis(articles: list[dict]) -> list[dict]:
             "contents": [{"parts": [{"text": prompt}]}],
             "generationConfig": {
                 "temperature": 0.2,
-                "maxOutputTokens": 2048,
-                "responseMimeType": "application/json",
+                "maxOutputTokens": 4096,
             },
         })
         gemini_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
@@ -239,9 +238,14 @@ def generate_ai_analysis(articles: list[dict]) -> list[dict]:
             data=req_body.encode("utf-8"),
             headers={"Content-Type": "application/json"},
         )
-        with urllib.request.urlopen(req, timeout=60) as resp:
+        with urllib.request.urlopen(req, timeout=90) as resp:
             result = json.loads(resp.read().decode("utf-8"))
-            text = result["candidates"][0]["content"]["parts"][0]["text"]
+            # 思考パートをスキップしてテキストパートを取得
+            parts = result["candidates"][0]["content"]["parts"]
+            text = ""
+            for part in parts:
+                if "text" in part:
+                    text = part["text"]
 
         # JSONを抽出（```json ... ``` で囲まれている場合も対応）
         if "```" in text:
