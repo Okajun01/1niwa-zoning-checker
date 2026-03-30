@@ -1,20 +1,24 @@
-name: "\U0001F4F0 Daily News Collection"                                                                                                   
+ name: Daily News Collection                                                                                                                
                                                                                                                                              
-  on:                                                                                                                                            schedule:                                                                                                                                
-      - cron: '0 22 * * *'                                                                                                                       workflow_dispatch:                                                                                                                       
-                                                                                                                                               jobs:                                                                                                                                          collect-news:                                                                                                                            
-      runs-on: ubuntu-latest                                                                                                                 
+  on:
+    schedule:
+      - cron: '0 22 * * *'                                                                                                                       workflow_dispatch:
+                                                                                                                                             
+  jobs:                                                                                                                                      
+    collect-news:
+      runs-on: ubuntu-latest
       permissions:
         contents: write
   
-      steps:    
+      steps:
         - name: Checkout repository
-          uses: actions/checkout@v4                                                                                                            
-        - name: Set up Python                                                                                                                
-          uses: actions/setup-python@v5
-          with:
+          uses: actions/checkout@v4
+                                                                                                                                                     - name: Set up Python
+          uses: actions/setup-python@v5                                                                                                      
+          with:                                                                                                                              
             python-version: '3.11'
-
-        - name: Run news collector                                                                                                                     env:
-            GITHUB_TOKEN: ${{ secrets.NEWS_GITHUB_TOKEN }}                                                                                   
+  
+        - name: Run news collector
+          env:
+            GITHUB_TOKEN: ${{ secrets.NEWS_GITHUB_TOKEN }}
           run: python news_agent.py
