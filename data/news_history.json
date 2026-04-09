@@ -1,6 +1,76 @@
 {
-  "last_updated": "2026-04-08 23:55",
+  "last_updated": "2026-04-09 23:56",
   "articles": [
+    {
+      "date": "2026-04-09",
+      "title": "自然観光資源の棄損を防ぐための外来生物対策事業（補助金）",
+      "summary": "自然観光資源の保護を目的とした外来生物対策事業への補助金が提供されます。",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFA1SnNXMDE3NjZ4TnJHXzJOQndIOUFHNVA2enMzRHczWU9JYWpTRTNyOG9iUkxkZWFBVGk4d1Btam16ZTdERmtNaEFwY0pobXJsS21ZdXk0MXY?oc=5",
+      "category": "補助金・助成金",
+      "importance": "高",
+      "source": "erca.go.jp",
+      "impact_memo": "1NIWAは東京都23区での都市型簡易宿所を計画しているため、自然観光資源の保護を目的としたこの補助金は直接的な関連性が低く、現時点での影響は小さいと考えられます。"
+    },
+    {
+      "date": "2026-04-09",
+      "title": "観光立国の新計画 腰据えて課題解決進めよ",
+      "summary": "日本の観光立国に向けた新たな計画が策定され、観光客誘致だけでなく、持続可能な観光や地域経済への貢献といった課題解決に注力すべきだと提言されています。",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNQlZsODRSWk5nd2hkVjNhMHAxbnBXREFKR0xORkR6a3lSU3Z2TktrVk9ONGlwUDNQUjZ5aGZrUm9qMEo4Z0pKT0ZhM0dpNzZXbHNVcFdDQ3BrTV9icHg2OUg2bWZSVlB0djV6ZWRxREJ4VWdpUHdCc2NZM19YSU5xRzlIZWJQSjhuVXc?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "JAPAN Forward",
+      "impact_memo": "観光立国に向けた政府の取り組みは、インバウンド市場全体の拡大を後押しするため、1NIWAの事業環境にとって追い風となりますが、同時に持続可能性や地域貢献といった新たな視点も求められる可能性があります。"
+    },
+    {
+      "date": "2026-04-09",
+      "title": "観光DMP「デジプラ」にインバウンド流動データを搭載、訪日客の移動を6つの分析ビューで可視化",
+      "summary": "観光DMP「デジプラ」がインバウンド流動データを搭載し、訪日客の移動パターンを6つの分析ビューで多角的に可視化できるようになったと報じられました。",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5fUS1tQkxqamxYeEFWSFliN2hvZHI0d1A2X1FJOVc4VXlzckQyNXIwVURiZ1VzOGY0UlpwTGJkcmktMU5oRGVOVWRnQVhuRjg0MFhpcg?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "トラベルボイス",
+      "impact_memo": "訪日客の移動データ分析ツールは、1NIWAが東京都23区内で物件を探す際に、ターゲット顧客の動線や需要が高いエリアを特定するための貴重な情報源となり得ます。"
+    },
+    {
+      "date": "2026-04-09",
+      "title": "【2026年最新】大阪で外国人に人気のホテル・旅館TOP10！Just Sleep 大阪心斎橋は5位、1位は？",
+      "summary": "大阪における外国人に人気のホテル・旅館ランキングが発表され、特定の施設が上位を占めていることが明らかになりました。",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5iQ3VVWHNhd05KMWItV1NSSGhDZ0RudjUxM2hlRUxUOGl6QXlybWF1UkN1MFVDeE81MW9IeUkxSGdOb1JpRllTQlAwaE1MWFBoNlRYSXBOLWVvd2phX0VWdnIwS3dQOEtmZnFFYmljTU4zTUlFV24xQ09B?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "訪日ラボ",
+      "impact_memo": "大阪での人気施設ランキングは、外国人が求める宿泊施設の傾向（立地、設備、サービスなど）を把握する上で参考になり、1NIWAの物件選定や施設コンセプト策定に役立ちます。"
+    },
+    {
+      "date": "2026-04-09",
+      "title": "インバウンド好調 大分の外国人宿泊客が過去最多 韓国・台湾中心に増加、観光消費に（ＯＡＢ大分朝日放送）",
+      "summary": "大分県で外国人宿泊客が過去最多を記録し、特に韓国・台湾からの観光客が増加して観光消費に貢献していることが報じられました。",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE84NXhvY2lZbHNnR0RhNmlwWGFaSDRxbHFrSElkWUZKQVZaM3ZlaXdsQ1V4bW90cEMzV0NKYmEzRWF1U2xmckdXb0tHRFF1Zzk1Wi1mQjI1bmdfdDlpczhxbUljNTB4RTl2d3NhOVJndklvT2lkeG5NXzJpUjg0eGM?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "Yahoo!ニュース",
+      "impact_memo": "大分県でのインバウンド好調は、日本全体のインバウンド需要の高さを示唆しており、1NIWAがターゲットとする東京都23区でも同様に高い需要が見込まれるため、事業計画の追い風となります。"
+    },
+    {
+      "date": "2026-04-05",
+      "title": "「特区民泊」申請、不認定は1件のみ 1万件超ほぼ全て審査通過（毎日新聞）",
+      "summary": "特区民泊の申請が1万件以上あり、不認定が1件のみと、ほとんどが審査を通過していることから、特区民泊の参入障壁が低い現状が示されています。",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE43LWtfZ3g0bE51UXkyQi1iVGZpSjVMNGVaWjdCX1lpNVBlbkR1SklfR2tIbVhLa1IyR2Y3VDIxbXJFZTJ1OEl4UUY0VkhlR1d3M2FPSGxONkI0UFAzM0UtVU81RUdLNnkwVEVsYmRNTWM0WFZYQmNib0VnTlFDWEU?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "中",
+      "source": "Yahoo!ニュース",
+      "impact_memo": "1NIWAは旅館業法に基づく簡易宿所を目指しており、特区民泊とは異なる法制度であるため直接的な影響はありません。ただし、特区民泊の増加は宿泊施設の供給増を意味し、市場全体の競争環境に間接的な影響を与える可能性があります。"
+    },
+    {
+      "date": "2026-04-07",
+      "title": "民泊規制強化へ有識者会議、京都 営業日数の制限検討",
+      "summary": "京都府で民泊の営業日数制限を含む規制強化が有識者会議で検討されており、住宅宿泊事業法に基づく民泊事業者に影響を与える可能性があります。",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBHXzlwb2w4YzhtQWNKdzBOTTRjTV9qS2pDc3J6RFI3LUNmZmZ3NXJzNFd2aVFIbmMtajJqYTBRUWYtcFpBSTEzdjB2cnc3S3lrN0VWUGg2RG56ZGdrdEthYnVuZ0FvUEdPUWQ5S0ZpSUdlOHZsck1vQw?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "高",
+      "source": "神戸新聞",
+      "impact_memo": "1NIWAは旅館業法に基づく簡易宿所を目指しており、直接的な影響はありません。しかし、民泊規制強化により、一部の民泊事業者が簡易宿所への転換を検討する可能性があり、物件取得競争や市場環境に間接的な影響を与えるかもしれません。"
+    },
     {
       "date": "2026-04-08",
       "title": "秋田県と鹿角市の観光支援事業で助成金不正受給 宿泊施設運営・社長の女に懲役５年を求刑（秋田朝日放送）",
