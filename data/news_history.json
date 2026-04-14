@@ -1,6 +1,56 @@
 {
-  "last_updated": "2026-04-14 00:08",
+  "last_updated": "2026-04-14 22:51",
   "articles": [
+    {
+      "date": "2026-04-08",
+      "title": "西海市宿泊施設魅力アップ事業補助金の募集について",
+      "summary": "長崎県西海市が、市内の宿泊施設の魅力向上を目的とした改修や設備導入等に対する補助金の募集を開始しました。",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5meklraFJXMGVqanlET2prNlpBblgzM2ppOF9YOE9lMTVDUGhLaG9DU1IzV0o2WlpqM255eFUtWjdmd0lVTjFmeXZfdzh4bFQxRFVhUTJ3a2UtdEdJU3JDNVcwbDhKbWpMSWtNbDY4RzA?oc=5",
+      "category": "補助金・助成金",
+      "importance": "高",
+      "source": "city.saikai.nagasaki.jp",
+      "impact_memo": "この補助金は長崎県西海市に限定されており、東京都23区で事業展開を目指す1NIWAは直接的な対象外であるため、現時点での影響はありません。"
+    },
+    {
+      "date": "2026-04-14",
+      "title": "「多様な食習慣や文化的慣習を持つ訪日外国人旅行者の受入環境整備に向けたモデル事業」の公募を開始します！",
+      "summary": "国土交通省が、多様な食習慣や文化的慣習を持つ訪日外国人旅行者を受け入れるための環境整備を支援するモデル事業の公募を開始しました。",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5jTHBVTHBYOXdzUEZsUTBRdEt4dEVtTFBjSjY0LXVpLWVfMXlWQmxmUVVXQ2tDUHBDUXd0cXJrOFZDelJTYW5DQVYwN053clN2SHdqbUlVS0hYU0gzaXc?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "高",
+      "source": "mlit.go.jp",
+      "impact_memo": "1NIWAは東京都23区で簡易宿所を運営予定であり、将来的にこのモデル事業を活用することで、多様な外国人観光客のニーズに対応した施設・サービスを導入し、競争力向上や集客力強化に繋げられる可能性があります。"
+    },
+    {
+      "date": "2026-04-14",
+      "title": "【なぜ？】『岩沼市』訪れる外国人旅行者が“全国1位の増加率”、知名度急上昇！ある神社の存在（宮城）（ミヤギテレビ）",
+      "summary": "宮城県岩沼市が特定の神社の存在により外国人旅行者の増加率で全国1位となり、知名度が急上昇している。",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5ubDVvc0V0QmZPOVBveTFaSnRSa3QzSHdzMGkxQmRHdnJ2WlNVOTlVSm9hUmN3N2JUSXhqT21VbTh0UTRBSHdXc1NPWjh2TDktZmNXaWNtd0RCdjBCZzZvQVA4M29HVVJxUzhOd3VSY2FKMkxweW9VRjRsejM2Nmc?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "Yahoo!ニュース",
+      "impact_memo": "特定の文化施設や体験が外国人観光客を強く惹きつける事例として、1NIWAは東京都23区内の物件選定において、周辺のユニークな観光資源や文化体験へのアクセスを重視することで、集客力を高めることができる。"
+    },
+    {
+      "date": "2026-04-14",
+      "title": "【AD】地域の絶景を発掘し、新たな旅の目的地を創る",
+      "summary": "地域の隠れた絶景を発掘し、それを新たな観光目的地として創出する取り組みが紹介されている。",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNbHpSS3h2WUkzWVA3Wk9nTVpHbll2SjN4N2ZGZzNOV1p5cWdPbzZ2eGlTZFZHcTR5VDZ6YlotYzZuck5Rbl94d1JpLU9GSU82bnFpWEFNQ2hJMU04bG9EWmpfejZGelI2RHVxcXE0bzdxa2xqRVFkd3ZHMDNRVGFmTHZQM0V2UQ?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "日経ビジネス電子版",
+      "impact_memo": "1NIWAは東京都23区という立地を活かし、周辺の知られざる魅力や体験を発掘・紹介することで、宿泊客に付加価値を提供し、差別化を図る戦略を検討できる。"
+    },
+    {
+      "date": "2026-04-14",
+      "title": "インバウンド特化型メディア「Japan of Japan」、SNS総フォロワー数が50万人を突破。4,000万回再生超のメガヒット動画を複数輩出。",
+      "summary": "インバウンド特化型メディア「Japan of Japan」がSNSフォロワー50万人を突破し、多数のメガヒット動画を輩出するなど、外国人観光客への情報発信で大きな影響力を持つ。",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE0xUnVMbTNDdjAyNHl1OFo5bDFnMXNOOEFCWWNvZElyU2RZN3hxNXAzNHhLWHBYcVViVHBFa2JuQ1ZCeWFsSGFEenlDcGowLTI4c1dKX1EwTkRxSTI5VmFMeEJKMUlaU3lpa0E?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "PR TIMES",
+      "impact_memo": "1NIWAは、開業後の集客戦略において、このような影響力のあるインバウンド特化型メディアとの連携や、SNSを活用した情報発信の重要性を認識し、マーケティング戦略に組み込むべきである。"
+    },
     {
       "date": "2026-04-14",
       "title": "千葉県御宿町「伊勢えび・あわびが専門の宿大野荘」リニューアルオープン！コロナ禍や田舎企業の課題などを打破するために補助金を活用した改修を行いました！",
