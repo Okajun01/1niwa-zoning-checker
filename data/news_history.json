@@ -1,6 +1,46 @@
 {
-  "last_updated": "2026-05-08 23:00",
+  "last_updated": "2026-05-09 22:53",
   "articles": [
+    {
+      "date": "2026-05-07",
+      "title": "コロナ禍の観光支援事業めぐり、ホテルの宿泊実績を水増しして補助金をだまし取った疑い 会社役員の男ら２人逮捕",
+      "summary": "コロナ禍の観光支援事業において、ホテルの宿泊実績を水増しして補助金を不正受給した疑いで会社役員らが逮捕された。",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE8yMTYtOUNOZkJzQ3F1blJFWHJNZERMejlPNkk3ODB2VmFMdjFYVnJCNFFtMlhJRXdvc2MyN0ZhS19GXzdEb2syamRaX2hNT29iSl9PYU1DdUpxRVZwUm5UdDhJRW5lU1dOSmRaM2lpQnA0UWpXLXNTRENJWm1uZ0E?oc=5",
+      "category": "補助金・助成金",
+      "importance": "高",
+      "source": "Yahoo!ニュース",
+      "impact_memo": "補助金制度の不正利用に関するニュースであり、1NIWAが将来的に補助金申請を検討する際には、制度の適切な理解と厳格なコンプライアンス遵守の重要性を再認識させる。"
+    },
+    {
+      "date": "2026-05-07",
+      "title": "GWの富山、各観光地のにぎわいをインバウンド客が後押し アルペンルート・黒部峡谷鉄道は去年上回る",
+      "summary": "GW期間中、富山の主要観光地はインバウンド客の増加により昨年を上回る賑わいを見せ、特にアルペンルートや黒部峡谷鉄道が好調だった。",
+      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5ESXVjTmRjeW5VX1k0aEdEb20xd0Jfam9LQlp4XzRqenBoR0FURzNNSHU0WlhkSzgxX1RDR3BIdG9pRXZLWnc3SEhtZ0o4Zw?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "FNNプライムオンライン",
+      "impact_memo": "地方観光地でのインバウンド需要の堅調さは、東京都心で簡易宿所を開業する1NIWAにとっても、インバウンド客の安定した集客が期待できることを示唆している。"
+    },
+    {
+      "date": "2026-05-09",
+      "title": "【独自】訪日客、7都道府県に集中 上位100地点、25県なし（共同通信）",
+      "summary": "訪日外国人観光客の宿泊が7都道府県に集中しており、上位100地点に25県が含まれていないことが明らかになった。",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9RbUJiM1F1Q1JaSVM4NENSM2xxQWlwSW1fYzNiMTV2ZUN5SkRxVzc4dTVzdjJVWTBNb0dPbENRT3RzbUMxU1oybDJjU25LWFMxcjhhQ0VvelpFS1loenRJRGdMVWZaQ2p6cmlfem1jdVpybm1QeXlOeFVSOWZabDA?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "Yahoo!ニュース",
+      "impact_memo": "1NIWAが事業展開を予定している東京都23区は訪日客が集中する主要地域に含まれるため、安定した需要が見込める。この集中傾向は、都心部での事業展開の優位性を裏付ける。"
+    },
+    {
+      "date": "2026-05-07",
+      "title": "民泊規制強化へ有識者会議、京都 営業日数の制限検討",
+      "summary": "京都府で民泊の規制強化に向けた有識者会議が開催され、営業日数の制限などが検討されている。",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPTkY0VnhvZ0xlSjZjRFlfWWs3cFZWMERsSjlwYUFiOHV4Mnk2OGd0WlA3LV9YT2tfUklDdTlZTXRyUTJBdk4xdWo0WHRndEVhTm1pcnpCY3dPNFB4b1VtcW4tV0lCejFCSGR5d05yZnU3aXotUDdzNjBBTWpUSmc2amc1VHVEdFQ2MTBxa3dIX2w5UW9tNEFRY2l3V19VRmhKZ2I1c3dQUkhQbjg2LU1V?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "高",
+      "source": "山陽新聞",
+      "impact_memo": "1NIWAは旅館業法に基づく簡易宿所を目指しており、民泊規制強化は直接的な影響はないが、民泊からの需要シフトにより簡易宿所の需要が増加する可能性がある。"
+    },
     {
       "date": "2026-05-08",
       "title": "「コロナに負けまいと」観光業支援の補助金詐取の疑いで逮捕「えん罪」関与否定も不正受給の全額返さず",
