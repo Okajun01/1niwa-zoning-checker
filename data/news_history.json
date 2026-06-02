@@ -1,6 +1,96 @@
 {
-  "last_updated": "2026-06-01 23:38",
+  "last_updated": "2026-06-02 23:51",
   "articles": [
+    {
+      "date": "2026-06-02",
+      "title": "定期船エンジン故障で観光直撃 酒田市飛島の宿泊客2割まで落ち込む 市が補助金と代船費を計上（YBC山形放送）",
+      "summary": "山形県酒田市飛島で定期船のエンジン故障により観光客が激減し、宿泊客が2割に落ち込んだため、市が宿泊施設への補助金と代船費を計上した。",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9yOUJTN2ZxcFVRSmY1blBlSTVnTGctUnMxeGc0ODlUWmFiUkdmajJ4STdHQ3pZNGVzaWVjX0k2YW1LTFprZnFMMkxRUzU1THVPLTNHRTBNN0dpYzRsTnY4RnZiQTFPSjAxM3QxcHowcklKMGozYWVnSWQ5NzNDYTQ?oc=5",
+      "category": "補助金・助成金",
+      "importance": "高",
+      "source": "Yahoo!ニュース",
+      "impact_memo": "1NIWAは東京都23区での事業展開であり、酒田市飛島の交通インフラ問題は直接的な影響はない。しかし、予期せぬ外部要因による集客への打撃に対し、自治体が補助金などで支援するケースがあることを示しており、将来的なリスク管理や行政連携の参考になる。"
+    },
+    {
+      "date": "2026-06-02",
+      "title": "東京都、観光地でのAI実装など促進する補助金の募集開始、システム導入や専門家指導など対象、上限4000万円",
+      "summary": "東京都が観光地でのAI実装などを促進するため、システム導入や専門家指導を対象とした上限4000万円の補助金の募集を開始した。",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE44RmdGVXhRVHFITDIyUGZ4dGQtLXBqT2tGaGhQMm45R0dkRm9VS1poZzFqRjA3S0dzTjVjYkw0b3NKMTNIaU8xMFNJeEJ2ZXVuRWlqUw?oc=5",
+      "category": "補助金・助成金",
+      "importance": "高",
+      "source": "トラベルボイス",
+      "impact_memo": "1NIWAは東京都23区で簡易宿所を運営するため、開業後にAIを活用したシステム導入を検討する際、この補助金を活用できる可能性がある。"
+    },
+    {
+      "date": "2026-06-02",
+      "title": "宿泊税の使い道は？ 宿泊事業者と宮城県が意見交換会",
+      "summary": "宮城県で宿泊税の導入が検討されており、その使途について宿泊事業者と県が意見交換会を実施した。",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5ZeVlyZjFZYkc4b25PQi1VTVEwRDF1Y3hqUlZGUS0tOUhYaUo0ZnlKTzRHRHA3NmFpY1lVanJrYlotZlFMUU5JeENMU2NadkU?oc=5",
+      "category": "補助金・助成金",
+      "importance": "中",
+      "source": "khb東日本放送",
+      "impact_memo": "東京都23区で簡易宿所を運営する1NIWAは既に東京都の宿泊税の対象となるため、他県の動向は直接的な影響はないが、宿泊税の使途に関する議論は今後の税制変更の可能性を考慮する上で参考になる。"
+    },
+    {
+      "date": "2026-06-02",
+      "title": "あわら市で北陸新幹線の開業効果が持続 2025年の観光客は約206万人 前年割れも3年前より20万人多く 欧米からのインバウンド客が大幅増",
+      "summary": "北陸新幹線開業効果により、あわら市では2025年の観光客数が前年割れながらも3年前より増加し、特に欧米からのインバウンド客が大幅に増えている。",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZWEwNUp2ZVBiZ1djUl9FcFM1eUd5cnBEcGdraDU5RWstZmNKVy1VU3Z5VjRobjRNblN1ekszLWlvU2FzSjdoT3RDOVdxZko3RV9fbkZYdGJtYWxhUHJrTmRSeTdrRUZTUmVJWE9QaFM0V1hxbHZKRUY0aWxsdUNPQnpGeTJkbk0?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "日テレNEWS NNN",
+      "impact_memo": "地方での新幹線開業によるインバウンド増加は、東京都心部への波及効果も期待でき、1NIWAがターゲットとするインバウンド需要の継続的な高まりを示唆する。"
+    },
+    {
+      "date": "2026-06-02",
+      "title": "外国人観光客の急な体調不良、54%の宿泊・接客業従事者が「対応に不安」。医療機関との連携不足が課題に。",
+      "summary": "外国人観光客の急な体調不良に対し、宿泊・接客業従事者の半数以上が対応に不安を感じており、医療機関との連携不足が課題となっている。",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBxMXhJRktBcXcyV2xCcm0wUVZfWDVRN2daUHNqaW9qRHpGVkdQbVdlbUhacWhjUS00Zm9zLWhmWUhuS19aMGQ4MWpvb3lvQ29GZlhwZndfVENqSmZfOExqMzMwdzhFdkgtVWc?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "PR TIMES",
+      "impact_memo": "1NIWAは簡易宿所として、外国人宿泊客の緊急時の体調不良に備え、多言語対応可能な医療機関の情報提供や、緊急連絡体制の構築を事前に準備し、安心・安全な宿泊環境を提供すべき。"
+    },
+    {
+      "date": "2026-06-02",
+      "title": "4月外国人宿泊数は前年比9.0%減 3月国籍別では台湾が27.2%増で1位 ほか：訪日ラボ 今週の注目記事5選",
+      "summary": "4月の外国人宿泊者数は前年比で減少したが、3月には台湾からの宿泊者が大幅に増加しており、国籍別の動向に変化が見られる。",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE80bTctTnZmTFVYZ0RudjJaR0Y4dTJZU1pmVm5JOHFrbll2N0NFb1AzOWhVazZkSGMwemJfN2ZaV2RBX201R3FJZTdjRWlBcWpLU0Fzd1U4WGJOWW9fYjdFb3dlQjdjOFluRHlnVjdDRk5QT3ZaNXc?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "Excite エキサイト",
+      "impact_memo": "全体的な宿泊者数の減少は一時的なものか注視が必要だが、特定の国からの需要が伸びていることを踏まえ、1NIWAはターゲットとする顧客層を絞り込み、台湾など需要の高い国からの集客戦略を検討するべき。"
+    },
+    {
+      "date": "2026-06-02",
+      "title": "インバウンド需要を逃さない宿泊施設とは？ 〜予約獲得から、現場を疲弊させないスマートな運営まで",
+      "summary": "インバウンド需要を取り込むためには、予約獲得から現場の負担を軽減するスマートな運営まで、効率的かつ質の高いサービス提供が重要である。",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBudmFIeTYzX0dicFNYVjFzNFdGcDZ1YTdJRkdJREtaUHBkWFloenA5c21iaFBZZ1htTjZhVi1RQ0lnX1plbDBuVWxPYWNjME5MTGxyd01YTV9kNzZNb0M0?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "訪日ラボ",
+      "impact_memo": "1NIWAは簡易宿所として開業するにあたり、予約システムやチェックイン・アウトの自動化など、スマートな運営体制を初期段階から構築することで、人件費を抑えつつ顧客満足度を高める必要がある。"
+    },
+    {
+      "date": "2026-06-02",
+      "title": "九州のインバウンドが過去最多 ホテル拡充&観光の高付加価値化が課題に｜NetIB-News",
+      "summary": "九州地方のインバウンド観光客数が過去最多を記録したが、宿泊施設の不足と高付加価値な観光体験の提供が今後の課題となっている。",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1OLWxOVVhTQXNLbWJBYnBGUDJ6V3Z0SEl2UjJBNHE3d1QyTi1nWXItakRoVzBld0dMY3R2Q1ZRTzI4UGpPZThDQTJmTEZUMWxoZkE?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "data-max.co.jp",
+      "impact_memo": "九州の事例だが、東京都23区でもインバウンド需要の増加と宿泊施設不足は同様の傾向が予想され、1NIWAの簡易宿所事業には追い風となる。高付加価値化のニーズも示唆されており、単なる宿泊だけでなく体験価値の提供も検討すべき。"
+    },
+    {
+      "date": "2026-06-02",
+      "title": "国交省、住宅宿泊管理業者への立入り検査の結果公表、44業者中35業者に指導",
+      "summary": "国土交通省が住宅宿泊管理業者44社に対し立入検査を実施し、そのうち35社に指導を行ったことを公表しました。",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1tRFc1YmYwTGxPLXJFa1ZqTGViOVJhT1I3Z2ZSZXRJUGNFVXA3LVZOcFA4bXNwdkhoQUxta1hScGdRdGRMTjFtVGFHT3RSRnNpT2FQaQ?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "中",
+      "source": "トラベルボイス",
+      "impact_memo": "1NIWAは旅館業法に基づく簡易宿所を目指しており、住宅宿泊事業法下の管理業者ではないため直接的な影響はありません。しかし、宿泊施設全般に対する行政の監視強化の傾向を示しており、1NIWAも旅館業法遵守の徹底がより一層求められます。"
+    },
     {
       "date": "2026-06-01",
       "title": "観光立国の持続可能な発展へ。羅針盤が「地域プロデューサー養成講座」を開設",
