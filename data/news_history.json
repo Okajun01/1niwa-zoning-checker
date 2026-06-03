@@ -1,6 +1,66 @@
 {
-  "last_updated": "2026-06-02 23:51",
+  "last_updated": "2026-06-03 23:48",
   "articles": [
+    {
+      "date": "2026-06-03",
+      "title": "ナビタイム、訪日客向けアプリにユーザーが交流できる掲示板、AI回答と体験談で旅程作成を支援",
+      "summary": "ナビタイムが訪日外国人向けアプリに、ユーザーが交流できる掲示板機能と、AI回答・体験談による旅程作成支援機能を追加しました。",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBQSC03Ry1nYjRkUXFrVThqeTNtc0xWNnhOOTY4YWVoREpqSGVTTGc0c190Z3dsZDhSQkhQVGwwRVVrNGJBQ1BoODVqSWxlak1aM2lkTw?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "トラベルボイス",
+      "impact_memo": "訪日客が旅程を計画する際の主要ツールが進化しており、1NIWAはこれらのプラットフォームでの情報発信や連携を検討することで、集客機会を増やせる可能性があります。"
+    },
+    {
+      "date": "2026-06-03",
+      "title": "箱根の観光客数、7年ぶり2100万人台 外国人宿泊客は27%増 [神奈川県]",
+      "summary": "箱根の観光客数が7年ぶりに2100万人台を回復し、特に外国人宿泊客が27%増加しました。",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE4xWVlXZUtVaThJUC1rVC15R2NHMDVhLTRsVHp0Tmc4Z1ltQ3NKY2ZEQ3JFbk5JUkNpUWxQbEY5UEkwcV82bTV0NWFVSUJSZFZOUWFnZE91MHB3Wkp1Q2sxYzY2akVlY2s?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "朝日新聞",
+      "impact_memo": "東京都23区と隣接する神奈川県の人気観光地における外国人宿泊客の増加は、首都圏全体のインバウンド需要の高さを示唆し、1NIWAの集客に追い風となる可能性があります。"
+    },
+    {
+      "date": "2026-06-03",
+      "title": "日本人観光客が「京都離れ」してる？してない？ データが示す実態は（朝日新聞）",
+      "summary": "日本人観光客の「京都離れ」について、データに基づいた実態が分析された記事です。",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5SMjA4eVdscDlHQXRlcWticllxZ09tV2d5UDFCQXZrUE5qYTE2N0lwc08tYnRSc1NtUEZVbWY4SXh6a2ZaS3NPYkhUVEkwWXNaS0dwSXBTNmEwc21XRExNRlozaTNOSThWajNrTUZRWnQzeDdkZUVFYldkVjcyaW8?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "Yahoo!ニュース",
+      "impact_memo": "1NIWAは東京都23区をターゲットとしているため、京都の日本人観光客動向は直接的な影響は少ないものの、国内観光客全体のトレンドとして参考にできます。"
+    },
+    {
+      "date": "2026-06-03",
+      "title": "国交省、住宅宿泊管理業者への立入り検査の結果公表、44業者中35業者に指導（トラベルボイス）",
+      "summary": "国土交通省が住宅宿泊管理業者への立入り検査を実施し、44業者中35業者に指導が入ったことが公表され、民泊運営におけるコンプライアンス強化の必要性が浮き彫りになった。",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBUeU5HX0JRczN3b3NNNVlPMnRtTzRrUXdEYUVlaHkyWkZmVnJOX1JkNXJXSmJHUkJnUDIteUM5Tlp1R3NWRTRSTXdkTVNVYURHWkdfRkUyZDVtZ2NLS0dwdGFUdlR3T0c3c25qQzJweUNZMzVYRkU1SGdvUEZFa1U?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "中",
+      "source": "Yahoo!ニュース",
+      "impact_memo": "1NIWAは旅館業法に基づく簡易宿所を目指しており、民泊の管理業者ではないため直接的な影響はないが、宿泊施設運営全般におけるコンプライアンス遵守の重要性を再認識させる。"
+    },
+    {
+      "date": "2026-06-03",
+      "title": "人口減の日本で勝つインバウンドを見据えた「投資」の選択肢…民泊・旅館業を選択した、ベテラン大家さんの実例",
+      "summary": "人口減少下でインバウンド需要を取り込むため、民泊や旅館業への投資が注目されており、ベテラン大家が成功事例として紹介されている。",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB1WC1mNnlhT0FBMFV0UHZodkNWZnB5ZWFRd3ROMVNOa1Bjb3o5OEJiMG5HUXBmUTVfb3V6amVLZWEzUlBGeXRjZUh6S2Z1SVVVMlE?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "中",
+      "source": "ゴールドオンライン",
+      "impact_memo": "1NIWAが目指す簡易宿所は旅館業法に基づくため、インバウンド需要を見据えた投資対象として魅力的であり、物件オーナーとの交渉において有利に働く可能性がある。"
+    },
+    {
+      "date": "2026-06-03",
+      "title": "【世田谷区議会】代表質問に立ちます！民泊規制・火葬場建設・多文化共生など７項目",
+      "summary": "世田谷区議会で民泊規制が主要な議題の一つとして取り上げられる予定であり、都内における民泊への関心と規制強化の動きが続いていることを示唆している。",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE03dThQbXVqU2dBZTBuVjd1ZVdvWGFFdHVqcU9jcUs2X1dEX21aeE5QTnd1U0pCcFg1b2pLSFdESUdCalZ1T25oOG9MNVU2bXFyREJHdXY5MTYwOXA1R1Nr?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "中",
+      "source": "選挙ドットコム",
+      "impact_memo": "1NIWAは旅館業法に基づく簡易宿所を目指しており、民泊規制の強化は、合法的な宿泊施設としての1NIWAの優位性を高める可能性がある。"
+    },
     {
       "date": "2026-06-02",
       "title": "定期船エンジン故障で観光直撃 酒田市飛島の宿泊客2割まで落ち込む 市が補助金と代船費を計上（YBC山形放送）",
@@ -4940,26 +5000,6 @@
       "importance": "高",
       "source": "訪日ラボ",
       "impact_memo": "大手ホテルの大量供給は競合激化を意味するが、江東区は開発集中エリアから外れておりニッチ市場として有利。"
-    },
-    {
-      "date": "2025-12-05",
-      "title": "宿泊統計2025レポート：インバウンドが全体の4分の1に上昇",
-      "summary": "2024年の外国人延べ宿泊者数は約1.64億人泊で全体の約25%を占め過去最高。東京では外国人宿泊比率が50%超。",
-      "url": "https://www.travelvoice.jp/20251205-158840",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "トラベルボイス",
-      "impact_memo": "東京では宿泊者の半数以上が外国人。多言語対応、キャッシュレス決済が競争力の源泉。"
-    },
-    {
-      "date": "2025-12-02",
-      "title": "豊島区の民泊改正条例成立 26年12月適用、既存施設も年120日に制限",
-      "summary": "豊島区議会が民泊規制強化の条例改正案を全会一致で可決。営業期間を180日から120日に短縮。施設新設は区内7割の地域で禁止。既存施設にも遡及適用される。",
-      "url": "https://www.nikkei.com/article/DGXZQOCC0249B0S5A201C2000000/",
-      "category": "旅館業法・条例改正",
-      "importance": "中",
-      "source": "日本経済新聞",
-      "impact_memo": "民泊対象だが、民泊から簡易宿所への転換需要が増え、競合が増加する可能性がある。"
     }
   ]
 }
