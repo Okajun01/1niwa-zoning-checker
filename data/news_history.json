@@ -1,6 +1,16 @@
 {
-  "last_updated": "2026-06-06 23:08",
+  "last_updated": "2026-06-07 23:11",
   "articles": [
+    {
+      "date": "2026-06-07",
+      "title": "四国を訪れる欧米豪訪日客、居住国1位はドイツ 遍路・直島で消費額増の傾向も",
+      "summary": "四国を訪れる欧米豪からの訪日客はドイツが最も多く、遍路や直島といった特定の観光資源が消費額増加に貢献していることが明らかになりました。",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPUTYtdWhQOFdDajFjcEJCMHZOQnMxaHE5amhiRXJDOHlvYU9JR3Zvejl4UUpzT21Ub3dUenRReW8wa3BPajVxTkQ0M25yM2JkTFBjSGMwelM1bllYU3dNQTYwSVF3TEZycWFkWmxYR0lUSUVGZS1PSTlsZmE0akhCOHBsQkhxSjQwb3c?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "訪日ラボ",
+      "impact_memo": "特定の文化体験が欧米豪客の誘致と消費額増加に繋がっていることから、1NIWAは東京都23区の簡易宿所でも日本文化体験の提供を検討することで、高単価な欧米豪客の獲得に繋がる可能性があります。"
+    },
     {
       "date": "2026-06-06",
       "title": "【速報】3月24日開始・多数の中小企業向け補助金・観光・宿泊・インバウンド関連多数・国土交通省観光庁補助金【中小企業診断士・行政書士 マキノヤ先生】第2107回 Taylor Lautner (iXZIi2ZjlE)",
@@ -4990,16 +5000,6 @@
       "importance": "高",
       "source": "東京観光財団（TCVB）",
       "impact_memo": "簡易宿所も対象。多言語対応やキャッシュレス導入はインバウンド対応に直結。許可取得後の施設整備段階で活用を検討すべき。"
-    },
-    {
-      "date": "2026-03-01",
-      "title": "東京観光財団「宿泊施設バリアフリー化支援補助金」令和7年度受付継続中",
-      "summary": "宿泊施設のバリアフリー化費用を支援。延床面積1,000㎡未満は施設整備で補助率4/5・上限3,000万円。令和8年3月31日まで申請可能。",
-      "url": "https://www.tcvb.or.jp/jp/project/infra/yado-barrier-free/",
-      "category": "補助金・助成金",
-      "importance": "中",
-      "source": "東京観光財団（TCVB）",
-      "impact_memo": "補助率が最大9/10と非常に高い。施設整備段階でバリアフリー化を同時に行う場合に大きなコスト削減効果。"
     }
   ]
 }
