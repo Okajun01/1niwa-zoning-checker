@@ -1,6 +1,66 @@
 {
-  "last_updated": "2026-06-11 23:40",
+  "last_updated": "2026-06-12 23:22",
   "articles": [
+    {
+      "date": "2026-06-08",
+      "title": "【6/30(火)】「富士通ホテルセミナー/旅マエ旅ナカアプリやレベニューマネジメントシステムと富士通PMS、補助金情報",
+      "summary": "富士通がホテルセミナーを開催し、旅マエ旅ナカアプリ、レベニューマネジメントシステム、PMS、補助金情報について解説する。",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1rcXBaZjdwYzloTEpYb0pGRGJ6WUpLNWJ4QjhyNWRxYTV4aHFaNzQ3QndMN1RZak81OExJcXFjVGVLSWRKenZtd3hwM1JROTIwc0xsUg?oc=5",
+      "category": "補助金・助成金",
+      "importance": "高",
+      "source": "ニコニコニュース",
+      "impact_memo": "新規開業を目指す1NIWAにとって、PMSやレベニューマネジメントシステムは必須であり、このセミナーは最新のシステム情報や補助金情報を効率的に収集できるため、事業計画やIT導入戦略に直接役立つ。"
+    },
+    {
+      "date": "2026-06-12",
+      "title": "日本人の過半数が「海外旅行したくない」…世界で進む観光ブームに逆行する日本の異変",
+      "summary": "世界的な観光ブームに反し、日本人の過半数が海外旅行に消極的であるという調査結果が示された。",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBKMWtQa1FMLWJFaktrODAxdHVtZThLcHJoWmlNazAzbnRTZWN1TUhMWmMwSllfa05XeVBwOUYxeVItSXRhZGFpdENYWklRckU?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "現代ビジネス",
+      "impact_memo": "日本人の海外旅行意欲の低下は、国内旅行需要の増加に繋がり、1NIWAが国内客もターゲットとする場合、新たな顧客層獲得の機会となる可能性がある。"
+    },
+    {
+      "date": "2026-06-12",
+      "title": "世界の海外旅行経験者へのアンケート、東北各地の認知度と訪問意向は",
+      "summary": "世界の海外旅行経験者を対象としたアンケートで、東北地方の認知度と訪問意向が調査された。",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1TT25XQmMyemRHSjU1cFFiYTRoZERoOXliRkxPd3FLNTlBLTJqd2V1c1dkc21BaXIybEVscXBWQ3hvTTFqclA0Sm41R01hMWZsU2FiVWdEaHV4MFNEdXY3UHdocVBUaUk?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "朝日新聞",
+      "impact_memo": "東京都23区で簡易宿所を目指す1NIWAにとって、東北地方のインバウンド動向は直接的な顧客層とは異なるため、事業への具体的な影響は小さい。"
+    },
+    {
+      "date": "2026-06-12",
+      "title": "京都市の観光客数が６７０万人増で過去最高に 長期滞在する訪日外国人の増加が大きく影響",
+      "summary": "京都市の観光客数が670万人増で過去最高を記録し、特に長期滞在する訪日外国人の増加が大きく寄与した。",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNd2UtZ2IzT1lWNjJIWmtCaUJyZDRMT1RzYnRwdE9UQ3R2eUNvTldreVB5ZGQyVV9Na3pOd19aWnkxM0VnM0p1VFBScWRraGxDOTNZa184Znl1VjBhd3JObFhaMnpqLVFxdHV3VEVrWkFna3hDa3E0ZU1nMzZPOGx0NnR2a28zY05kNHk4dm9B?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "Yahoo!ニュース",
+      "impact_memo": "京都市での長期滞在型インバウンドの増加は、東京都内でも同様の需要が見込まれるため、1NIWAが提供する簡易宿所が長期滞在客の選択肢となる可能性を示唆する。"
+    },
+    {
+      "date": "2026-06-12",
+      "title": "中部9県のDMO、インバウンド周遊観光後押し 松本市内で定時総会",
+      "summary": "中部9県のDMOが定時総会で、インバウンドの周遊観光を後押しする方針を確認し、地域全体の観光振興を図る。",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1hQktENENWWjI3bnQwNlJZRm5fSGZpSFVxdnAxS2EtSjd4V09taEk2Z3ZfOVFrSlREWUFsTGZ3djJhTEswM01Wb3R5ZmhlUDBDbTlQRXVoMEJKQWJUekJiYTktN3FKdnhwWUxadg?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "日本経済新聞",
+      "impact_memo": "中部地方でのインバウンド周遊観光推進は、日本全体での外国人観光客の増加と滞在期間の長期化を促すため、東京都内での簡易宿所需要にも間接的に良い影響を与える可能性がある。"
+    },
+    {
+      "date": "2026-06-12",
+      "title": "大田区の特区民泊はこのままで良いのか ━ 住民生活を第一にした制度見直しを ━",
+      "summary": "大田区の特区民泊制度について、住民生活への影響を考慮した見直しを求める意見が提起されている。",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5WdDJOcHRiU01SSEdQM1NwbWR2NlYtUnFJRU8yQ1lpcnJWMno3UUNDNkRlUndQSVJYSmZfSmhBcERJT3pKZmpPUk9CMUVjTXRoSlFMeDNvLW90QmN0cUE?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "中",
+      "source": "選挙ドットコム",
+      "impact_memo": "1NIWAは簡易宿所を目指しており特区民泊とは異なるが、民泊に対する住民の懸念や規制強化の動きは、宿泊施設全般に対する地域住民の理解を得る上での課題となり、地域との共存が重要となる。"
+    },
     {
       "date": "2026-06-10",
       "title": "観光資源となる歴史的な施設や技術の維持保全を支援|6月",
@@ -4940,66 +5000,6 @@
       "importance": "中",
       "source": "毎日新聞",
       "impact_memo": "1NIWAの宿泊客も体験型アクティビティを求める可能性が高いため、周辺の体験施設情報提供や、将来的にはツアー会社との連携も検討する価値がある。"
-    },
-    {
-      "date": "2026-03-31",
-      "title": "三井不動産ホテル、インバウンド向けオンライン診療の紹介サービスを国内全39施設に導入（トラベルボイス）",
-      "summary": "三井不動産ホテルが国内全39施設でインバウンド向けオンライン診療紹介サービスを導入し、外国人宿泊客の医療アクセス向上を図っている。",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1tRHdHc2VObHJiOEJTU0FoZVBFTm1ldVg0dWx4dHh6NUUxbFc4cGhsWnFVMHZ1dERibnNETmc4TzlqbWYzellfUjFESHBlRy15ODJpLW9LR25tcmh2aTdGcC10dlVqUkJVRExvdHA0cVVIVUF5WXZBNUxCZkhDTkE?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "Yahoo!ニュース",
-      "impact_memo": "1NIWAは簡易宿所として、大手ホテルチェーンが提供するような付加価値サービスを直接提供することは難しいが、外国人宿泊客の安心・安全へのニーズが高いことを認識し、提携や情報提供の形で対応を検討するヒントとなる。"
-    },
-    {
-      "date": "2026-03-31",
-      "title": "【速報】2月外国人宿泊数は1,298万人 国籍別宿泊数は韓国・台湾が初の200万人超え【観光庁 宿泊旅行統計 2026年1月・2月】",
-      "summary": "2026年2月の外国人宿泊者数が1,298万人を記録し、特に韓国と台湾からの宿泊者が初めて200万人を超え、インバウンド需要が引き続き好調であることを示している。",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9fblhOT2NUdTE3ZFJiV21DN3FkWUs0RkdKcTRoS2QyWURPekVvNE5jdEc5a09NaEFKOUh4RGlzVVZIWGVYUEFxanZZRkJ6NnhPX2hGNF9xaElOeUxJOEJDY3BB?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "訪日ラボ",
-      "impact_memo": "1NIWAがターゲットとする東京都23区でもインバウンド需要の恩恵を受けやすく、特に韓国・台湾からの旅行者増加は簡易宿所の稼働率向上に繋がる好材料となる。"
-    },
-    {
-      "date": "2026-03-27",
-      "title": "特区民泊の「重点監視対象」に2817施設 大阪市、認定取り消しも（朝日新聞）",
-      "summary": "大阪市は特区民泊2817施設を重点監視対象とし、違反があれば認定取り消しを行う方針を示した。",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9FNG9ma25CcXU4R3pzdGlpd3hJd25reEUtak5la3docjFqSHhaZkFzRldIUVZqZjJjdUxpaGFtRktaY3Z6YXB2eHdzS2pKRnAwaXMyQlkyMFlMWXJEbVFxdGJUTjllQVBjRFo1cW1sVThNWDFySU9QWHhjajJkc2s?oc=5",
-      "category": "民泊・住宅宿泊事業",
-      "importance": "中",
-      "source": "Yahoo!ニュース",
-      "impact_memo": "1NIWAは旅館業法に基づく簡易宿所を目指しており、特区民泊とは異なるため直接的な影響はないが、民泊に対する監視強化は合法的な宿泊施設の信頼性を高め、1NIWAのような簡易宿所への需要を間接的に増加させる可能性がある。"
-    },
-    {
-      "date": "2026-03-27",
-      "title": "「観光立国推進基本計画」を閣議決定 | 2026年 | 報道発表 | 観光庁",
-      "summary": "観光庁が2026年からの「観光立国推進基本計画」を閣議決定し、国の観光政策の新たな方向性を示しました。",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFB0aHJNN0xHMmpkSDlyTVV2NjBhWDZSc3IyU1llbjR0RjJadHkwbno0VWtpMjJlZlB2ajhONjFYVVB1b2UwMHNfZGtfa1l5ZzNaTWJPcFM2WlN6cDFHRlE?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "mlit.go.jp",
-      "impact_memo": "国の観光振興策が強化されることで、インバウンド需要の増加や観光関連投資の活性化が期待でき、1NIWAの事業環境にとって追い風となります。"
-    },
-    {
-      "date": "2026-03-30",
-      "title": "令和8年度 観光関連事業者向け各種補助事業について",
-      "summary": "東京都が令和8年度（2026年度）の観光関連事業者向けの各種補助事業を発表しました。",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB4dFZUQXNXdDdiQVJoTDVlNmVfZDlXMVZJZktOVVl1ZDc4R3ZoZHliZTBWNjREeVhBYm9mTkhid1dLaWdnNnl4SC1vZ3RmLVhvSXR2MDktY2JNQXZCMXEzR0JyMGo2RXd3?oc=5",
-      "category": "補助金・助成金",
-      "importance": "中",
-      "source": "my.metro.tokyo.lg.jp",
-      "impact_memo": "1NIWAは東京都23区で事業展開を予定しており、簡易宿所の開業や運営に必要な設備投資、システム導入などに活用できる補助金があるか確認し、積極的に申請を検討すべきです。"
-    },
-    {
-      "date": "2026-03-26",
-      "title": "「沖縄県宿泊税への対応に向けたシステム改修等補助金事業」に対応したシステム導入・改修に関する無料相談フォームを公開",
-      "summary": "沖縄県の宿泊税対応システム改修に関する補助金事業に対応した無料相談フォームが公開されました。",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1FQzYxRjdEMHJETHJEUmQzZDhFbmJMbmw2bmFiUGRwb1h3R21SdFNyWUVPcGhYbGQyNldBbDBCSkhBRXNuVzF2NWtuLTE4UUpPMXVfNFBR?oc=5",
-      "category": "補助金・助成金",
-      "importance": "中",
-      "source": "フーズチャネル",
-      "impact_memo": "この補助金は沖縄県に特化したものであり、東京都23区で事業展開する1NIWAには直接的な影響はありません。"
     }
   ]
 }
