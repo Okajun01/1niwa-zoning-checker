@@ -30,8 +30,9 @@ def load_news() -> dict:
         data = read_json(NEWS_FILE)
         if data and "articles" in data:
             return data
-    except Exception:
-        pass
+    except Exception as e:
+        import logging
+        logging.warning("load_news failed: %s", e)
     return {"last_updated": "", "articles": []}
 
 

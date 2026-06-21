@@ -645,6 +645,19 @@ with tab7:
 
         st.caption(f"最終更新: {last_updated}　｜　記事数: {len(articles)}件")
 
+        # 鮮度チェック（無音の古さ／取得失敗を可視化）
+        if last_updated and last_updated != "未取得":
+            from datetime import datetime as _dt
+            try:
+                _age = (_dt.now() - _dt.strptime(last_updated, "%Y-%m-%d %H:%M")).days
+                if _age >= 2:
+                    st.warning(
+                        f"⚠ ニュースが {_age} 日間更新されていません（最終更新: {last_updated}）。"
+                        "収集ジョブまたはデータ取得に問題がある可能性があります。"
+                    )
+            except ValueError:
+                pass
+
         if articles:
             # フィルターUI
             col_f1, col_f2 = st.columns(2)
@@ -718,7 +731,11 @@ with tab7:
             if not filtered:
                 st.info("選択した条件に一致するニュースはありません。フィルターを変更してみてください。")
         else:
-            st.info("まだニュースが収集されていません。スケジュールエージェントが毎朝自動で収集します。")
+            st.warning(
+                "ニュースを取得できませんでした（記事0件）。"
+                "data/news_history.json の読み取りに失敗したか、まだ収集されていない可能性があります。"
+                "問題が続く場合は、収集ジョブ（Actions）とデータソースの状態を確認してください。"
+            )
 
     except Exception as e:
         st.error(f"ニュースの読み込みに失敗しました: {e}")
