@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      issues: write
 
     steps:
       - name: Checkout repository
@@ -22,6 +23,26 @@ jobs:
 
       - name: Run news collector
         env:
-          GITHUB_TOKEN: ${{ secrets.NEWS_GITHUB_TOKEN }}
+          # PAT (NEWS_GITHUB_TOKEN) をやめ、Actions が毎回自動発行する組み込みトークンを使用。
+          # トークン失効・ローテーション起因の失敗を恒久的に排除する（2026-06-28〜の連続失敗の対策）。
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python news_agent.py
+
+      - name: Notify on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `ニュース収集が失敗しました (run #${context.runNumber})`,
+              body: [
+                'Daily News Collection が失敗しました。',
+                '',
+                `実行ログ: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+                '',
+                '2日以上放置するとダッシュボードに鮮度警告が表示されます。'
+              ].join('\n')
+            });
