@@ -1,6 +1,26 @@
 {
-  "last_updated": "2026-08-07 01:30",
+  "last_updated": "2026-08-07 22:41",
   "articles": [
+    {
+      "date": "2026-08-07",
+      "title": "JR4社とJALが連携、インバウンド向け巡礼観光プロジェクト始動…出羽三山・熊野古道・四国遍路を軸に広域周遊を推進",
+      "summary": "JR4社とJALが連携し、出羽三山、熊野古道、四国遍路を軸としたインバウンド向け広域周遊の巡礼観光プロジェクトを開始した。",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5Ra01xTGxHeWdIOUMzSm50N0VYZlZlYXgwVVNDWmdVaVVyYy00LTVfV1BkTFYzYm1iLXlSQzdteVk0VjFwZVFkNURSTkh4RnN2Z01Ia0g3WkhyaHNWWmhJ?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "レスポンス（Response.jp）",
+      "impact_memo": "広域周遊の推進は、地方への誘客を強化する一方で、国際線の玄関口である東京での滞在需要をさらに高め、1NIWAの簡易宿所利用に繋がる可能性がある。"
+    },
+    {
+      "date": "2026-08-07",
+      "title": "インバウンドの体験予約、日本の予約サイト利用はタビナカ43％、海外サイトを上回る、ホテル・百貨店の現地接点も活用 ―デロイト調査",
+      "summary": "デロイトの調査によると、インバウンド客の体験予約において、日本の予約サイトの利用がタビナカで43%と海外サイトを上回り、ホテルや百貨店などの現地接点も活用されている。",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE16R1NlVm1GMjBqY2NzNEJ0eW9rM0tkbEtWdUE3TjZMVDhWaklTSmw1T25tT1BvUDdxZWhmamF4UmEtRVd1NS1TdW9zLWxNTV9FdGpzQw?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "トラベルボイス",
+      "impact_memo": "1NIWAがインバウンド客をターゲットにする場合、日本の予約サイトの活用や現地での情報提供・連携が重要であり、集客戦略の参考になる。"
+    },
     {
       "date": "2026-07-31",
       "title": "宿泊税を活用した市町補助金事業の交付決定について",
@@ -4980,26 +5000,6 @@
       "importance": "中",
       "source": "トラベルボイス",
       "impact_memo": "1NIWAが将来的に宿泊施設を開業した際、インバウンド客をターゲットにする上で、体験商品の企画・販売戦略や集客チャネルの多様化について学ぶ良い機会となる。"
-    },
-    {
-      "date": "2026-05-15",
-      "title": "浜松、湖西で茶文化体験 インバウンド向け観光プログラム企画へ 濃茶や書道：ニュース",
-      "summary": "浜松と湖西地域で、インバウンド向けに日本の茶文化や書道などを体験できる観光プログラムが企画されている。",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9vU1IyYmswZkpWWDhGNGJCUWhVSThaZFJLanRmMmprTE5yQWpySE9KSFl3Z29lZ2x5UTlIZ1pXZWJUSXFldjVWRjhUaDZxUVlTMUFYUm9CTDFTT0psaDJB?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "中日BIZナビ",
-      "impact_memo": "簡易宿所として開業する1NIWAは、宿泊だけでなく、日本の文化体験プログラムを周辺施設と連携して提供することで、インバウンド顧客への付加価値を高め、差別化を図る戦略を検討できる。"
-    },
-    {
-      "date": "2026-05-15",
-      "title": "AI時代の宿泊集客｜Googleマップで\"選ばれる施設\"になる夏休み前の対策とは？［5/27無料セミナー］",
-      "summary": "AI時代における宿泊施設の集客戦略として、Googleマップでの露出強化や評価管理の重要性を解説する無料セミナーが開催される。",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9GeTNBVl80Q202cFdoNFM2YjMyYlBVQThEN3B4Ny0wWlZ2MlNXQ2ppMVdNbFJYZHJjR3JfVVAwNDk3R1VrclFkVEJLWVgwVzVoYkdTMkZRTGpUNUNhQmc?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "訪日ラボ",
-      "impact_memo": "1NIWAは開業後、Googleマップでの視認性向上や高評価獲得が重要な集客手段となるため、物件選定段階から立地や周辺情報、開業後のオンラインマーケティング戦略を考慮する必要がある。"
     }
   ]
 }
