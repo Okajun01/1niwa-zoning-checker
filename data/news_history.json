@@ -1,6 +1,56 @@
 {
-  "last_updated": "2026-08-09 22:35",
+  "last_updated": "2026-08-10 22:42",
   "articles": [
+    {
+      "date": "2026-08-05",
+      "title": "公式情報を自動更新、生成 AI が整理する観光庁系の補助金一覧「観光補助金ボード」を公開",
+      "summary": "生成AIを活用し、観光庁系の補助金情報を自動更新・整理する「観光補助金ボード」が公開されました。",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE51V080aE5EcV90akp5LUdObnNwVEtvZ1pzUHBZQzlFOXg3R1o2T0J0SXBWZ0NlWk54NllfZ1I1ZzVXWHV2cW5XelB1X01fbnI2dFhId1BBSFlJUXR6ZmVsQmpIV0RPVXlucHc?oc=5",
+      "category": "補助金・助成金",
+      "importance": "高",
+      "source": "PR TIMES",
+      "impact_memo": "1NIWAは開業資金や設備投資に補助金を活用する可能性があるため、このツールは物件探し段階から効率的に補助金情報を収集する上で非常に有用です。"
+    },
+    {
+      "date": "2026-08-10",
+      "title": "伊東「門脇つり橋」が訪日外国人ランキング全国2位 大室山と合わせて訪問",
+      "summary": "伊東市の「門脇つり橋」が訪日外国人観光客に人気で、全国2位の訪問数を記録し、大室山と合わせて訪問される主要な観光スポットとなっています。",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE40REEyTGxZcmF3ZF9PV0tKQm5IU0c4Mi1EczItVmRjdS1Sc0R3YURSbVVscWVGRi1FdjZrczE5My1tclh2Y2Rkb2R2Y3ZUSVh1WjJzUUo5N2VjcnVzZHhndU8zVlZhblRpWmVhQy1n?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "au Webポータル",
+      "impact_memo": "この記事は伊東市の観光スポットの人気に関するものであり、東京都23区で事業展開を目指す1NIWAへの直接的な影響は小さいです。しかし、特定の観光スポットがインバウンドに強く支持される事例として、東京都内の人気スポットとの連携や情報提供のヒントにはなります。"
+    },
+    {
+      "date": "2026-08-10",
+      "title": "阪神北インバウンド向けウェブプロモーション業務に係る企画提案コンペの実施",
+      "summary": "阪神北地域がインバウンド誘致を目的として、ウェブプロモーション業務に関する企画提案コンペを実施することを発表しました。",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5HLXItN0R0ZnZkY0hRRnVnVU1MWXpaa1RsWnhtaWoydjdsMzZzcmtQdENvdHpObU9CbXlWMU5uLTY4WVRUakJ3dFFWd1NnSDJt?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "トラベルボイス",
+      "impact_memo": "この記事は特定の地域（阪神北）のプロモーションに関するものであり、東京都23区で事業展開を目指す1NIWAへの直接的な影響は小さいですが、地域がインバウンド誘致に力を入れる動向は参考になります。"
+    },
+    {
+      "date": "2026-08-10",
+      "title": "「先進テクノロジー」が中国インバウンド観光の新たな注目ポイントに",
+      "summary": "中国からのインバウンド観光客は、スマートホテルやVR/AR体験など、先進テクノロジーを活用した観光体験を重視する傾向が強まっています。",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBsRDlPdzEtNnVoQm9FQkZkNmczdGhhRzRZeTlQV3ZXencwTHhTVnhQSGlHUkg4NHNYSWdMNWR1WmVtcER3cnM3RnlWeTM4Vm1nelHSAVRBVV95cUxNdWhyMDB0ZGVsaDBTbnFnZzBXNUZWTVY4Uk44MlB2ekZ1V1h3Y2xVajJ2cWF6QWUwbDRmWWxFQmRMY0d6dzFMNzZCYTVUWEttSzJFc3c?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "AFPBB News",
+      "impact_memo": "1NIWAは、将来的にスマートチェックイン、AI翻訳、VR/ARを活用した地域情報提供など、先進テクノロジーを導入することで、特に中国人観光客の誘致と顧客体験向上に繋がる可能性があります。"
+    },
+    {
+      "date": "2026-08-10",
+      "title": "2026.8.10 ｜ 「民泊」規制強化の条例提案に関する記者会見",
+      "summary": "民泊規制強化に関する条例提案の記者会見が行われたことを示唆する記事で、民泊事業に対する規制強化の動きがあることを報じています。",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5KdThjLTBRQjdudnMxUVpoazZxdExwTFdVNnNfbk04bXpHNmN3VXpoY0tRSUpIZjNqQ292NnhISHQxa2pmVC1GOUV2a0ZBSnItcWlQVlpFVlBwcFFI?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "高",
+      "source": "YouTube",
+      "impact_memo": "1NIWAは旅館業法に基づく簡易宿所を目指しており、民泊（住宅宿泊事業法）とは異なるため、直接的な規制強化の影響は受けにくいと考えられます。"
+    },
     {
       "date": "2026-08-09",
       "title": "神奈川県　「かながわ観光連携エリア」補助金　 観光の周遊促進事業を支援　２次募集を開始〈厚木市・愛川町・清川村〉",
@@ -4950,56 +5000,6 @@
       "importance": "中",
       "source": "選挙ドットコム",
       "impact_memo": "1NIWAは旅館業法に基づく簡易宿所であり、住宅宿泊事業法（民泊）とは異なるため直接的な影響は少ないですが、地域住民の宿泊施設全般に対する感情や規制強化の動きが間接的に簡易宿所にも波及する可能性はあります。"
-    },
-    {
-      "date": "2026-05-17",
-      "title": "京都市と市観光協会、市内の宿の質向上に助成 市内宿泊事業者が対象",
-      "summary": "京都市が市内の宿泊施設の質向上を目的とした助成金制度を発表し、市内宿泊事業者が対象となります。",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1MZXlaU2RpRk1MRFd2cXMzelRvbkdXV1g1QTIxcVJ2Y240RktSeUtLUHlZOVB1eDlLZDBoaDgzZDM2c2JhY3MwLVh2Nzl3emtXamk0Nw?oc=5",
-      "category": "補助金・助成金",
-      "importance": "中",
-      "source": "観光経済新聞",
-      "impact_memo": "1NIWAは東京都23区での事業展開を予定しているため直接的な対象ではないが、将来的に東京都でも同様の制度が導入される可能性を考慮し、情報収集を続けるべきです。"
-    },
-    {
-      "date": "2026-05-17",
-      "title": "訪日外国人旅行者の1割強が公共交通に苦戦 乗り換えルートや乗り場分からず 観光庁調査（日刊自動車新聞）",
-      "summary": "観光庁の調査により、訪日外国人旅行者の1割強が公共交通機関の利用、特に乗り換えルートや乗り場探しに苦戦していることが判明した。",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE4wVmlab3kwcVZVc3p0RGhhQ2tyVFFnN1A5M0h1OVZJLUxzQXRqcTFlWGJBZWs5Sm9TQ0w5dEtIenlLelRpVjU1djFfdncyZWlSWFEtWUY5aHZQRG9aQUk5V25uSDRCZTRjWUY0ZDNIcXliaEstc0xReC02WktXb0U?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "Yahoo!ニュース",
-      "impact_memo": "1NIWAは宿泊客に対し、公共交通機関の利用案内や周辺情報提供を多言語で強化することで、顧客満足度向上と競合との差別化を図れる。"
-    },
-    {
-      "date": "2026-05-16",
-      "title": "習近平が｢日本に行くな｣と煽った意外な結末…街から中国人が消えて分かった｢日本の観光業｣の知られざる強さ",
-      "summary": "中国からの観光客が減少しても、他の国からの観光客や国内需要により日本の観光業が堅調さを維持していることが明らかになった。",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE91bnRfS3RVYnVwSWNoSFVxSF9lbnd1ekNDQXpEd2p3OFBvaEpyb0M3VVNvNlhMUWhMbjdPdmJpb2p0OG96VVBtaDUyd0taak5tWk0tckFTTnc?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "PRESIDENT Online（プレジデントオンライン）",
-      "impact_memo": "特定の国籍に依存せず多様なインバウンド需要が日本の観光業を支えているため、1NIWAも幅広い層の外国人観光客をターゲットとすることで安定した集客が見込める。"
-    },
-    {
-      "date": "2026-05-17",
-      "title": "＜戦後という時代＞インバウンド経済偏重の「観光大国」",
-      "summary": "日本がインバウンド経済に偏重した「観光大国」となっている現状を分析し、その持続可能性への課題を提起している。",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE54dGxQNWR0STA5ekJyQXJyZWFyTXJ4YW5FY0gwY3dXM1lJck5hV0c0YlVUUGp5Q0RQaExRaVNuR0JMSTZTWExYdjBsSQ?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "北日本新聞webunプラス",
-      "impact_memo": "インバウンド需要の高さは1NIWAにとって追い風となるが、オーバーツーリズムなどの課題も意識し、地域住民との調和や持続可能な運営を考慮する必要がある。"
-    },
-    {
-      "date": "2026-05-17",
-      "title": "東北の県庁所在地六市連携によるインバウンド向け情報発信業務に係る公募型プロポーザルの実施",
-      "summary": "東北の県庁所在地6市が連携し、インバウンド向けの情報発信業務に関する公募型プロポーザルを実施する。",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5XZGVTUXJkNHNNMFZDazhvV1ZUQl9lUjRBZHFsWXBXU2ZNdGpTRkhvU0NDemR3QWRyN25sSGgzZmEyMGozTGNIMmFYbkZWTjJz?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "高",
-      "source": "トラベルボイス",
-      "impact_memo": "1NIWAは東京都での事業のため直接的な影響は小さいが、地方自治体によるインバウンド誘致強化は全国的な観光需要の高まりを示唆し、東京での需要も引き続き堅調と見込まれる。"
     }
   ]
 }
