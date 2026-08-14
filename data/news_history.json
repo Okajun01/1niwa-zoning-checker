@@ -1,6 +1,56 @@
 {
-  "last_updated": "2026-08-13 22:49",
+  "last_updated": "2026-08-14 22:27",
   "articles": [
+    {
+      "date": "2026-08-12",
+      "title": "【2026年最新版】小規模事業者持続化補助金とは？概要や最新動向などを解説 - 起業の「わからない」を「できる」に",
+      "summary": "小規模事業者持続化補助金の概要、申請方法、最新動向について解説する記事で、小規模事業者が事業の持続的な発展のために活用できる公的支援制度を紹介。",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBYWURYS3BIcXgwUEhDWk9xQi1Tck1MbXVQMXdpV182TjRCNDBHSDlPOXF6bTdmV2NLMXFqSEl2ZzRvc0JjcmhyN0s0QXRlOTBqakIxcnNEaw?oc=5",
+      "category": "補助金・助成金",
+      "importance": "高",
+      "source": "sogyotecho.jp",
+      "impact_memo": "1NIWAはスタートアップ企業として、簡易宿所の開業準備や運営初期段階において、この補助金制度を活用することで、設備投資や販促活動などの資金調達を支援し、事業の安定化を図れる可能性がある。"
+    },
+    {
+      "date": "2026-08-14",
+      "title": "“BBQ禁止”無視で大騒ぎ。「No problem」と笑う外国人観光客が警察に連行されるまで",
+      "summary": "外国人観光客が日本のルール（BBQ禁止）を無視して騒ぎ、警察沙汰になった事例で、文化やルールの違いによるトラブル発生とその対応の難しさを示唆。",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1jWFlNZkk0dE1LWk9UeUd3OVdYZDkyeUxDRER6ZDA4N1RhVzZ1cVpBWVZmX01VTWVRYURqakFjYTZVRWs2bndZZ3BmZm1fRjZGN3plZE9VQkg2MU9fb0hQdHoxdDZ2bC1uZ3fSAW9BVV95cUxPOTlHS2Vob3lZd2ZFNjdLY0hKTFVHNFFwSGZlVXZxZzFtNjhJcWVvRlJJT1FuRFVsV2VuTG54dlB5bk9TMkdmaWo4VlltX3Q1TDRRQ2Jub3FvemVGM3dHTmlqRlNlSUNYaUtCREJKTWs?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "Infoseek",
+      "impact_memo": "1NIWAは簡易宿所運営において、外国人宿泊客に対し日本のルールやマナーを明確に伝え、トラブルを未然に防ぐための多言語での注意喚起や、緊急時の対応体制を整備する必要がある。"
+    },
+    {
+      "date": "2026-08-14",
+      "title": "３９都道府県「コロナ前」超え ２５年の外国人宿泊者数―観光庁調査",
+      "summary": "観光庁の調査によると、2025年には39都道府県で外国人宿泊者数がコロナ禍前の水準を超えると予測されている。",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBEdnNfY05rX3dMaHdHdGtQOWZFTE9HeElOQnlXU1dWcnp6ZFV5VTdqMENPdHNXOTNzWlY5eTdERy16OXRwUjc3OXljRjhQR01ONjlxcHRPM205VjZ2TU03c0hmWQ?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "時事ドットコム",
+      "impact_memo": "外国人宿泊者数の増加予測は、東京都23区で簡易宿所を運営する1NIWAにとって、主要なターゲット層であるインバウンド需要の拡大を意味し、事業の収益性向上に非常にポジティブな影響を与える。"
+    },
+    {
+      "date": "2026-08-14",
+      "title": "株式会社旅行新聞新社",
+      "summary": "記事タイトルが企業名のみで、具体的なニュース内容は不明である。",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9qOWVwN0Z5RnF6UEI0VktkVmtKT0lUZVIzRzJ2emxxcGdHZmRBbHJzT3ozcmtmVUplZmFBeUxGR04zbHZBdjk4bmxMVE5kUm5EelRvWnkxNWFhUXVpN3lpaWcxLU9xOHM0aGc?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "株式会社旅行新聞新社",
+      "impact_memo": "記事内容が不明なため、1NIWAへの具体的な影響は判断できない。"
+    },
+    {
+      "date": "2026-08-14",
+      "title": "イギリス人12歳少女が行方不明 家族旅行で都内の民泊に滞在中 蒲田署が情報提供を呼びかけ",
+      "summary": "東京都内の民泊に滞在中のイギリス人12歳少女が行方不明となり、警察が情報提供を呼びかけている事件が発生した。",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9NaXBNeV9LQWN3TThuVnByNjVlaGhjZmhyS0FOZDRaZ3A4WEJJTGR2SndIUVh2Yk1wZWM4TjM0SGdGUUZzdnMzS3RQNVU5SkZ3bHVv?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "中",
+      "source": "東京新聞",
+      "impact_memo": "この事件は民泊での出来事であり、旅館業法に基づく簡易宿所を目指す1NIWAに直接的な影響はないが、宿泊施設の安全管理に対する社会的な関心が高まり、簡易宿所でもより一層の安全対策が求められる可能性がある。"
+    },
     {
       "date": "2026-08-12",
       "title": "骨太の方針2026から見る、今後のインバウンド誘客・外国人政策の方針 ほか：訪日ラボ 今週の注目記事5選",
@@ -4950,56 +5000,6 @@
       "importance": "中",
       "source": "トラベルボイス",
       "impact_memo": "地方の交通機関がインバウンド需要に対応する動きは、日本全体の観光インフラ整備が進むことを示唆し、1NIWAがターゲットとする訪日客の移動利便性向上に間接的に寄与します。"
-    },
-    {
-      "date": "2026-05-20",
-      "title": "【やさしく解説】訪日外国人の事前審査「JESTA」、2028年度に導入する理由とは？",
-      "summary": "2028年度に導入予定の訪日外国人事前審査システム「JESTA」は、入国時のセキュリティ強化と円滑化を目的としています。",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE14bXJHZ0IzLWt6aXR6V0p2VWd5ZHhFTFVKUDRGYW9oNWJFRmJnZlJqUzdDVXFhV0pnZ28tNFYyU2ViNUFjTWxDY2VGcDBtckthN0xtWDVB?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "JBpress",
-      "impact_memo": "JESTA導入により訪日外国人の入国がスムーズになることで、1NIWAがターゲットとするインバウンド需要の増加に繋がり、予約獲得に好影響を与える可能性があります。"
-    },
-    {
-      "date": "2026-05-20",
-      "title": "4月の訪日外国人、中国・中東の大幅減響き前年同月比5.5%減 : 韓国、台湾は好調持続",
-      "summary": "4月の訪日外国人数は中国・中東からの減少が響き前年同月比で5.5%減少したが、韓国と台湾からの訪問者は引き続き好調だった。",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE43SzNDekNQU1NsYm42OFNnWG9MZlNKS3Flay1WSWFXOUtDZFlMaWRKWmw1VTNxTHN4MHZfYjVpUXh4V1dJd0RPNDRrMU92WDBGb0k2QUZFcw?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "nippon.com",
-      "impact_memo": "訪日外国人全体の動向は1NIWAの将来的な集客に影響を与えるため、特定の国からの減少傾向を把握し、好調な韓国・台湾市場に注力するなど、ターゲット戦略を検討する上で参考となる。"
-    },
-    {
-      "date": "2026-05-20",
-      "title": "総額「２４億円超」！グランスノー奥伊吹のスキー場内へ「ホテル建設」決定！「日帰り」から「滞在型」の「宿泊型総合リゾートへの転換」で観光産業の新たな成長モデルを確立！インバウンドには「都市観光＋雪体験」",
-      "summary": "グランスノー奥伊吹がスキー場内にホテルを建設し、日帰りから滞在型リゾートへの転換を図り、都市観光と雪体験を組み合わせたインバウンド誘致を目指す。",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9SbXN3eWRHTFduUFdUMGFxRHZVRWtmVVFVTWphRFZxbDFEUGxfalg2MGUzU01KM0ZpNGJpYXo3ZnVuaFg0aEFJQ0tRZnVHaUgtU2tNc0FGLTI5WkdoS2V0X0duaWZfZ0FqS2c?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "PR TIMES",
-      "impact_memo": "この記事は地方の大型リゾート開発に関するものであり、東京都23区で簡易宿所を運営する1NIWAの事業とは直接的な関連性は低い。"
-    },
-    {
-      "date": "2026-05-20",
-      "title": "TikTok上でそのまま旅行予約へ 新機能「TikTok GO」日本で提供開始",
-      "summary": "TikTokが日本で新機能「TikTok GO」を提供開始し、ユーザーはアプリ内で直接旅行予約ができるようになる。",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9JMVZOVy1Dd2pZMC0yaGVxcG5TREVvcW1DWENaRkFzMWRsQ0xSazQ0OEtweGVOaEZMeVdsVjcyMXBsb3g1ZFlOTS1UYmF2Vmdva2pZUllScFJLdw?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "訪日ラボ",
-      "impact_memo": "1NIWAは開業後、TikTok GOのようなSNSプラットフォームを通じた直接予約機能の活用を検討することで、若年層を中心とした新たな顧客層へのリーチと集客力強化が期待できる。"
-    },
-    {
-      "date": "2026-05-20",
-      "title": "［5/27無料セミナー開催］夏休みインバウンドピーク前に｜\"AIに選ばれる宿泊施設\"のGoogleマップ対策（PR TIMES）",
-      "summary": "夏のインバウンドピークを前に、AIに選ばれる宿泊施設となるためのGoogleマップ対策に関する無料セミナーが開催される。",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1takYzS3hEQmVDNXVDZ2RtTE1oSHh5UGhHZ2plVTItSnhZNEI5bGV3dFQ5cGlfSzJDVGZUOUFOWTdDWF9oWHZjMFVsTlgxTDdEeEo0ZmowdnRnY1diZERiUUxyek9kbkk5?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "毎日新聞",
-      "impact_memo": "1NIWAは開業後、集客のためにGoogleマップでの露出が重要となるため、このセミナー内容はAIを活用した効果的なオンライン集客戦略を学ぶ上で参考になる。"
     }
   ]
 }
