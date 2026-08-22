@@ -1,6 +1,26 @@
 {
-  "last_updated": "2026-08-21 22:29",
+  "last_updated": "2026-08-22 22:26",
   "articles": [
+    {
+      "date": "2026-08-17",
+      "title": "【2026年8月更新】宿泊税対策に使える補助金一覧！システム改修費を最大全額補助",
+      "summary": "宿泊税の導入や変更に伴うシステム改修費用を補助する制度が紹介されており、最大で全額補助される可能性がある。",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5UQ24ySVdLcG1kb1lta3RrcndNbjdqdnM0b3dKWjk5Tm1rREJKZ2dPS2w1WUkxYWlfLUFfZnN4Vy1FcTBrbi1ZcUg5MUotV25JcmthTF9qY0dQbGJyTkQybDhWR2NrQQ?oc=5",
+      "category": "補助金・助成金",
+      "importance": "高",
+      "source": "補助金ポータル",
+      "impact_memo": "1NIWAは開業後に宿泊税対応のシステム導入が必要となるため、これらの補助金を活用することで初期投資や運用コストを削減できる可能性がある。"
+    },
+    {
+      "date": "2026-08-21",
+      "title": "オーバーツーリズムの現状は？ 訪日客のリピーター増、混乱減る",
+      "summary": "訪日外国人観光客の増加に伴うオーバーツーリズム問題は、リピーターの増加や分散化により、以前よりも混乱が減少している傾向にある。",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBLQXpNVEdWeVZpSUg0bjdYYmdzejNwNUNHXzhkcjF1dkpCOURicjNqVFhMdmdHWDJhRHdNYmZjZWljMVZVYVlaYVdwSDVwWG9pWUVESGJTaUdMc3d1WWhUZzhTbVhrT0dqTWpkRA?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "日本経済新聞",
+      "impact_memo": "オーバーツーリズムの混乱が減少傾向にあることは、東京都内での簡易宿所運営において、外国人観光客の受け入れ環境が改善されつつあることを示唆し、事業展開の追い風となる可能性がある。"
+    },
     {
       "date": "2026-08-21",
       "title": "キャンセル損失20億円超の熊本観光 政府が旅行代金を補助する「九州応援割」の導入へ 2026年熊本地震（RKK熊本放送）",
@@ -4980,26 +5000,6 @@
       "importance": "中",
       "source": "Yahoo!ニュース",
       "impact_memo": "1NIWAが東京都23区で簡易宿所を運営する際、富裕層インバウンドは高単価・高稼働に繋がり得る重要なターゲットとなる。富裕層のニーズに応える高品質なサービスや設備、体験を提供できるよう、開業前から戦略を練る必要がある。"
-    },
-    {
-      "date": "2026-05-27",
-      "title": "首都圏で「愛知」売り込め 昨年の宿泊者数は最多2280万人、インバウンドに遅れ、訪日客の取り込みが課題",
-      "summary": "愛知県は昨年の宿泊者数が過去最多を記録したものの、インバウンド誘致が遅れており、首都圏でのプロモーションを通じて訪日客の取り込みを強化する必要がある。",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFA4bU5sWDdZVjdUUFBOZC1YNlNkTDIxUkFta284Y3lZNmhKRXY4QzlMRjROaGZjdEU1cDJSb2tXdmYwMTFQanVUaVhHTQ?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "47NEWS",
-      "impact_memo": "1NIWAは東京都23区に立地するため、インバウンド誘致の最前線にいる。愛知県の課題を反面教師とし、開業当初から訪日客のニーズを捉えたプロモーション戦略を積極的に展開し、集客に繋げるべきである。"
-    },
-    {
-      "date": "2026-05-27",
-      "title": "インバウンドよりも地元の子連れ客を狙え 北海道ホテル&リゾートの戦略 宿泊客の9割が道民",
-      "summary": "北海道ホテル&リゾートは、インバウンドではなく地元の子連れ客を主要ターゲットとすることで、宿泊客の9割を道民が占める成功を収めている。",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBtVFlnRWRveHhBdGtDb1pNdXFMd1V5UG90TFE3WlU1ZjBMRmg1dWhINmFuNVJMeWc5cWt0Vmw4N3p0UUxJRGRxeHk2czNwQm41ZTMzX1A2enNCUQ?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "愛知のニュース",
-      "impact_memo": "1NIWAも東京都23区という立地ながら、インバウンドだけでなく、都内や近郊からの国内ファミリー層をターゲットにすることで、安定した集客基盤を築ける可能性がある。子連れ客向けの設備やサービスを検討する価値がある。"
     }
   ]
 }
