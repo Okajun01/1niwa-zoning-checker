@@ -1,6 +1,126 @@
 {
-  "last_updated": "2026-08-31 00:19",
+  "last_updated": "2026-09-01 01:07",
   "articles": [
+    {
+      "date": "2026-08-30",
+      "title": "【熊本地震】「九州ふっこう応援割」10月開始 宿泊費など補助し観光業を支援（日テレNEWS NNN）",
+      "summary": "熊本地震からの復興支援として、10月から「九州ふっこう応援割」が開始され、宿泊費などを補助することで九州の観光業を支援する。",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1LNUlNZXk2dHpXQ3p5dDMzTTRHM2ktaXpVYXJXZjBRdktVNWZjQzhwM1JKTzJCc2FrVTFfanlEMTl2OFVRMDg3WF94dDA1S1p4Ym12amkwVl9UZlhIWWh0V3ZyY2ZSQXhxS0xIS2dFUWZSanExYXQyeldhd0wxV00?oc=5",
+      "category": "補助金・助成金",
+      "importance": "中",
+      "source": "Yahoo!ニュース",
+      "impact_memo": "1NIWAは東京都での事業展開のため、九州の復興支援策は直接的な影響はないが、災害発生地域への観光支援策が宿泊需要を大きく喚起する事例として、将来的な事業戦略やリスクマネジメントを検討する上で参考となる。"
+    },
+    {
+      "date": "2026-08-31",
+      "title": "観光庁木村長官が初会見、「第5次計画」を推進 宿泊業の収益性向上に注力 地方誘客、交通機能強化も",
+      "summary": "観光庁の木村長官が、宿泊業の収益性向上、地方誘客、交通機能強化を柱とする「第5次観光立国推進基本計画」を推進する方針を表明しました。",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1LWVZXWE9vblA1R0VmbXpfX0dXUjZwdjVhZzlBanpvcTdXcGtmUUxkV2d0QkVpRUtHUlBuckNLck9ZRDNOZlRGcWhSMk9SU2YxcmJ4Xw?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "観光経済新聞",
+      "impact_memo": "宿泊業全体の収益性向上に向けた国の支援策が期待でき、将来的な事業運営において補助金や制度活用を検討する上で重要な情報となります。"
+    },
+    {
+      "date": "2026-08-28",
+      "title": "「日本人は外国人観光客が嫌いだって聞いて」 欧米人たちが驚き 母国とは違った日本人の習慣とは（Hint-Pot）",
+      "summary": "欧米人観光客が、日本人の外国人観光客に対する態度や習慣について、母国との違いに驚き、誤解が解けたという内容です。",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1zb3Jua3FPVExMOVNQTVNhZTFWZFVaOC1zd1pHY0FTb1ZDZlNuN2xhLWVZYWRqdHNnaTdkUWtEeHFodl84UVNqODJCTjlBSHphU1pmNHJBRnBIVTJtQ3JOU3hLRnZoZkJNUGZ3U3RSVFJKWDRySHlGWXNTc3hXTUk?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "Yahoo!ニュース",
+      "impact_memo": "外国人観光客の日本に対する認識や期待を理解する上で参考になり、将来的なサービス設計やコミュニケーション戦略に活かせます。"
+    },
+    {
+      "date": "2026-08-30",
+      "title": "｢道頓堀から\"大阪人\"が消えた｣ インバウンド急増の陰で進む｢芝居の街｣の終焉…大阪屈指の歓楽街に今起こっていること",
+      "summary": "大阪の道頓堀ではインバウンド客の急増により地元住民が減少し、地域の文化や雰囲気が変容している現状が報じられている。",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1wcE1xZVJvZjVoSWtESG02cEFBTVd4a0Nwa1Bna0ZQRmlnaWZMb1k3cE1oV3A5ZFVqZllJTmtZSzdvcHBCMHVwdlFKbmY2VmNpVFZXTmstZHdRVnc?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "東洋経済オンライン",
+      "impact_memo": "この大阪の事例は、東京都23区で簡易宿所を運営する1NIWAも、インバウンド需要と地域住民との共存、地域文化への配慮を物件選定や運営方針において考慮する必要があることを示唆している。"
+    },
+    {
+      "date": "2026-08-31",
+      "title": "【9/9開催】韓国インバウンド トレンドLIVE! Vol.2 〜訪日ピーク期に突入！宿泊事業者が知るべき韓国トレンド〜",
+      "summary": "訪日ピーク期に突入する韓国インバウンド市場のトレンドを宿泊事業者が学ぶためのオンラインイベント「韓国インバウンド トレンドLIVE! Vol.2」が9月9日に開催される。",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE50emllLUh4MU9vZldDeUlzQmo5d2N1N3ZaQUdLRHVMTjdHdHJpVXB2Q2l2X1dmd1V0b1FMcl9zWDVuU0psTTNLaUVONzRycDF5Q2I5T0FJWDBwNi1ZNEptX3NqckhQc2FwaUE?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "PR TIMES",
+      "impact_memo": "1NIWAは、韓国からの訪日客のトレンドを把握することで、簡易宿所のサービス内容やマーケティング戦略を最適化し、集客力向上に繋げることができる。"
+    },
+    {
+      "date": "2026-08-31",
+      "title": "PRESS | CLASSY.[クラッシィ]",
+      "summary": "記事タイトル「PRESS | CLASSY.[クラッシィ]」のみでは具体的な内容が不明であり、宿泊業界ニュースとしての詳細な情報が得られない。",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFA5WjJEelU4TGdwTFhQaGdzRnpTRTdWZ090X0g0dFFSbmt1ME1YMjEyWWFYSmV5THkxOUE5b3F4R1NYNEFLWkZ1T2h5b2lmUmZuZlNSeWdKbw?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "CLASSY.[クラッシィ]",
+      "impact_memo": "記事内容が不明なため、1NIWAへの具体的な影響は判断できない。もしインバウンド関連の特集であれば、ターゲット層のトレンド把握に役立つ可能性がある。"
+    },
+    {
+      "date": "2026-08-31",
+      "title": "【速報】7月外国人宿泊数は1,358万人 6月国籍別、台湾が1位【観光庁 宿泊旅行統計 2026年6月・7月】",
+      "summary": "2026年7月の外国人宿泊者数が1,358万人を記録し、6月の国籍別では台湾が最多となったことが観光庁の宿泊旅行統計で明らかになった。",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5oM2NUNXZBeUZERWEyMnFXTE54c0lHNEV2RnlibnQ1V0tqY2xuQUJVdDBsTzk1U2NMa3JQQUx2X3ZzbklkTF9QaHNlMlJMWXNzY21ycFhJbUFpUkhfMTU0V2d3?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "訪日ラボ",
+      "impact_memo": "東京都23区で簡易宿所を運営する1NIWAにとって、台湾からの訪日客が多いことは、ターゲット層設定や多言語対応、プロモーション戦略を検討する上で重要な情報となる。"
+    },
+    {
+      "date": "2026-08-31",
+      "title": "京都市で民泊施設の新規営業「事実上禁止」に 住居専用地域と工業地域で、規制強化の素案まとまる",
+      "summary": "京都市が、住居専用地域と工業地域での民泊施設の新規営業を事実上禁止する規制強化の素案をまとめた。",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE80TG9zX05JX0hMbHJuVjhuWXU4SWhqV2dUeFpYSnJKOGRTMU5lbmZBSjlDUmtackdJMGtjejNCN0ozU2Z6MTRXZDFMam0teUpEYWZzaks4TUY?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "高",
+      "source": "京都新聞デジタル",
+      "impact_memo": "京都市の民泊規制は1NIWAの事業地域とは異なるが、自治体による宿泊事業への規制強化の動きは、将来的に東京都23区でも同様の議論が起こる可能性を示唆しており、情報収集が重要となる。"
+    },
+    {
+      "date": "2026-08-31",
+      "title": "京都：京都市新規民泊禁止へ 住宅地と工業用地 条例改正向け議論 ：地域ニュース",
+      "summary": "京都市が、住宅地と工業用地での新規民泊を事実上禁止する条例改正に向けた議論を開始し、有識者会議に素案を提示した。",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBYbVJvSzBydXVjcGZVQm5NbllVWWdva09JSlV0dXJ2T1ZjZVJiVndjbFFQNnBwZllRR1NkMjIzTDdhWDFWQTlhOGd1M2VCT1dOUUxuTVpOLS1xdmc3VUUyVEZHSHVMNERYbFdOaTVETHo?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "高",
+      "source": "読売新聞",
+      "impact_memo": "京都市の規制強化は、東京都23区で簡易宿所を計画中の1NIWAには直接関係ないが、自治体による宿泊事業規制の動きとして、将来的な事業環境の変化を予測する上で重要である。"
+    },
+    {
+      "date": "2026-08-31",
+      "title": "新規民泊、事実上禁止する素案 京都市が有識者会議に提示",
+      "summary": "京都市が、住居専用地域と工業地域における新規民泊（住宅宿泊事業）を事実上禁止する素案を有識者会議に提示した。",
+      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE90X2ZKQm5EdDBfM2JYRHlIc1ZiNHREcFc3ZHVpUHhMV25STDZYbGhyLXRseTl2QkU0U2ZiY3c1cV9kUHp1ajczeDJWbDJSdw?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "中",
+      "source": "静岡新聞DIGITAL",
+      "impact_memo": "この京都市の動きは、東京都23区で簡易宿所を目指す1NIWAに直接影響しないものの、全国的な宿泊施設規制のトレンドとして今後の動向を把握しておくべきである。"
+    },
+    {
+      "date": "2026-08-31",
+      "title": "京都市が打ち出した「民泊規制」に宿泊事業者が猛反発 影響大きく「退場しないといけなくなる」",
+      "summary": "京都市が打ち出した新規民泊の事実上禁止案に対し、宿泊事業者からは「退場しないといけなくなる」といった強い反発の声が上がっている。",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBCakpnTGc4akR0MU1TbC0zelh6S2tyUEZyX3ZkaER6M1AzbTMwZnNHZnBiUUYzYmpRUlc2S1hrNU9pVkdMalpvRF9HLTNZU2NKTDZGNkNveGQ?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "中",
+      "source": "京都新聞デジタル",
+      "impact_memo": "京都市の規制は1NIWAの事業地域外だが、民泊事業者の反発は、将来的に他地域で同様の規制が検討された際の業界の動向を予測する上で参考になる。"
+    },
+    {
+      "date": "2026-08-31",
+      "title": "新規民泊、事実上禁止する素案 京都市が有識者会議に提示（共同通信）",
+      "summary": "京都市が、住居専用地域と工業地域での新規民泊（住宅宿泊事業）を事実上禁止する素案を有識者会議に提示した。",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBsaWtGeFh6SjgxNHJfX2pTbWo4cUlxbUlkVGk4ZVg5SEx2NF9ybmJOS3YyZ1F4dFZrd21PXzBVZlBjVlU0eGJ2NFpDMHhGT21lU3VUZnlXR0VsOUExVHQtb3QzTkdITkd3VHhabW5qVTNGMkdDUDFRN001YjhvOHM?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "中",
+      "source": "Yahoo!ニュース",
+      "impact_memo": "京都市の民泊規制強化は東京都23区で簡易宿所を目指す1NIWAに直接的な影響はないが、他自治体への規制強化の波及可能性を注視する必要がある。"
+    },
     {
       "date": "2026-08-30",
       "title": "【潮流】観光庁の旅行振興策、2年目に問われる真価",
@@ -4880,126 +5000,6 @@
       "importance": "中",
       "source": "ｄメニューニュース",
       "impact_memo": "中国からのインバウンド需要の回復・増加は、日本、特に東京を訪れる観光客数の増加に直結するため、1NIWAの将来的な集客に非常にポジティブな影響をもたらすでしょう。"
-    },
-    {
-      "date": "2026-06-04",
-      "title": "インバウンドはもう「来なくていい」では済まされない",
-      "summary": "インバウンド観光客の増加に伴う課題はあるものの、経済効果や国際交流の観点から、もはや「来なくていい」という選択肢はなく、共存のための対策が不可欠であると論じられている。",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE92U1JEcTQyaHg1UWFUN2duMWx4ZWphQl8zNmlzUVNsb2VGTHExZmtESE5PbzdUeVhrUGFOQ1pRbWx3dEpMeEFYZkJSWWNrVkhNSFNHZlFDb01WWVU?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "アゴラ 言論プラットフォーム",
-      "impact_memo": "1NIWAは東京都23区で簡易宿所を運営する上で、インバウンド需要は主要な収益源となるため、オーバーツーリズム対策や地域住民との共存を意識した運営方針を初期段階から検討する必要がある。インバウンド客を積極的に受け入れつつ、持続可能な事業モデルを構築する視点が求められる。"
-    },
-    {
-      "date": "2026-05-31",
-      "title": "日本人の「京都離れ」はなぜ起こったか オーバーツーリズムでもホテル高騰でもない、根本原因（ITmedia ビジネスオンライン）",
-      "summary": "日本人の京都離れは、オーバーツーリズムやホテル高騰だけでなく、観光客の多様化や情報過多による「京都らしさ」の希薄化が根本原因であると分析されている。",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBjek9lNmpWbDE5YXUxZE1fai0wVVlkZEJfYTlmdDZOUUxrMFd5emxJQ01TYkEzMGZIeFZ4Q0xDSnZDT0sxWDByNUZqdTYxa1B3Nk9WNFYxTEhiODl5RDJ6MThrZ2ZtMVhwMlVoUWthU0hlOTMxMWZWOUVIM3pmMVE?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "Yahoo!ニュース",
-      "impact_memo": "1NIWAは東京都23区での事業展開を予定しており、京都の事例は直接的ではないが、特定の地域における観光客の動向やニーズの変化は、将来的なターゲット層設定やサービス設計において参考となる。特に、日本人客のニーズを捉える重要性を示唆している。"
-    },
-    {
-      "date": "2026-05-30",
-      "title": "【特区民泊】新規の受付は停止も『新法民泊』が“抜け穴”に?『年間営業日数180日以内』は守られるのか…大阪市は「適切に監視・指導していく」",
-      "summary": "特区民泊の新規受付停止後も、新法民泊が実質的な抜け穴となり年間営業日数180日制限が形骸化する可能性が指摘されており、大阪市は監視・指導を強化する方針。",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9Oc1dnZ3ZaWHdCSFpYWll2WmRaRHFOOE9hRlhfZGFBejV3QnE5OTRCVzJ2am1tUnlRT3IyaGowTmdYNTRhVlF2Q2s3eG5yWm9BeVMyUWpfTnlLUHhlbmJITHR6Z0FrYzZDdVRCZTh6R1BubVhueE9YZ0ZQYWxSdGM?oc=5",
-      "category": "民泊・住宅宿泊事業",
-      "importance": "中",
-      "source": "Yahoo!ニュース",
-      "impact_memo": "1NIWAは簡易宿所を目指しており民泊とは異なるため直接的な影響は少ないが、民泊規制の厳格化は宿泊施設全体の供給バランスや競争環境に影響を与える可能性がある。また、簡易宿所も旅館業法に基づくため、規制当局の監視強化の傾向は常に意識すべき点となる。"
-    },
-    {
-      "date": "2026-06-04",
-      "title": "特別区長会の有志の区長が連名で、厚生労働省に「住宅宿泊事業の適正化に関する要望書」を提出",
-      "summary": "東京都の特別区長会の有志が、住宅宿泊事業（民泊）の適正化を求める要望書を厚生労働省に提出した。",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE4wLW9OUXEwV1dJVjRBSGphaUFXNWRsMEFHOVp3WlFTRXlqX1VScWxWdS0waEpnaWtVMmNlNG9TanI1TnUzQmNQY0paYW1JMVpMTmV2dmpucm5NalRGN0xBdXlfalB0bnlP?oc=5",
-      "category": "民泊・住宅宿泊事業",
-      "importance": "中",
-      "source": "ニコニコニュース",
-      "impact_memo": "東京都の区長らが民泊規制強化を求めていることは、都内での民泊事業のハードルがさらに高まることを示唆する。これは、旅館業法に基づく簡易宿所を目指す1NIWAにとって、合法的な宿泊施設としての優位性を高める追い風となる。"
-    },
-    {
-      "date": "2026-06-03",
-      "title": "民泊規制強化へ有識者会議、京都 営業日数の制限検討",
-      "summary": "京都で民泊規制強化に向けた有識者会議が開催され、営業日数の制限などが検討されている。",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQRnRWY2J1ZXlTd1dhMU54LTA2bDJ3Q1FvTW1xOEs5TnpTTWYyMndzdTEwZkRRVXEyOWlwVGJOajdvWWtoeTRWU1NieEdLc2l5YVFEa3ptQ1JDZFpPNFFMbnRYV0NPV2VheVc4TmctcW12ZWY3YjhkUk1ldjNocWU2cWxfV3BWZzBFYWJ6eUwxVTVXZml3MDV5aThVRXZydWlhb2prSnBZaE9fUlpEajNYTkR5NUd3djIzR1E?oc=5",
-      "category": "民泊・住宅宿泊事業",
-      "importance": "高",
-      "source": "山陽新聞",
-      "impact_memo": "全国的な民泊規制強化の動きは、簡易宿所である1NIWAの事業環境を相対的に有利にする。民泊の営業日数が制限されれば、通年営業可能な簡易宿所の需要が高まる。"
-    },
-    {
-      "date": "2026-06-03",
-      "title": "ナビタイム、訪日客向けアプリにユーザーが交流できる掲示板、AI回答と体験談で旅程作成を支援",
-      "summary": "ナビタイムが訪日外国人向けアプリに、ユーザーが交流できる掲示板機能と、AI回答・体験談による旅程作成支援機能を追加しました。",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBQSC03Ry1nYjRkUXFrVThqeTNtc0xWNnhOOTY4YWVoREpqSGVTTGc0c190Z3dsZDhSQkhQVGwwRVVrNGJBQ1BoODVqSWxlak1aM2lkTw?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "トラベルボイス",
-      "impact_memo": "訪日客が旅程を計画する際の主要ツールが進化しており、1NIWAはこれらのプラットフォームでの情報発信や連携を検討することで、集客機会を増やせる可能性があります。"
-    },
-    {
-      "date": "2026-06-03",
-      "title": "箱根の観光客数、7年ぶり2100万人台 外国人宿泊客は27%増 [神奈川県]",
-      "summary": "箱根の観光客数が7年ぶりに2100万人台を回復し、特に外国人宿泊客が27%増加しました。",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE4xWVlXZUtVaThJUC1rVC15R2NHMDVhLTRsVHp0Tmc4Z1ltQ3NKY2ZEQ3JFbk5JUkNpUWxQbEY5UEkwcV82bTV0NWFVSUJSZFZOUWFnZE91MHB3Wkp1Q2sxYzY2akVlY2s?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "朝日新聞",
-      "impact_memo": "東京都23区と隣接する神奈川県の人気観光地における外国人宿泊客の増加は、首都圏全体のインバウンド需要の高さを示唆し、1NIWAの集客に追い風となる可能性があります。"
-    },
-    {
-      "date": "2026-06-03",
-      "title": "日本人観光客が「京都離れ」してる？してない？ データが示す実態は（朝日新聞）",
-      "summary": "日本人観光客の「京都離れ」について、データに基づいた実態が分析された記事です。",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5SMjA4eVdscDlHQXRlcWticllxZ09tV2d5UDFCQXZrUE5qYTE2N0lwc08tYnRSc1NtUEZVbWY4SXh6a2ZaS3NPYkhUVEkwWXNaS0dwSXBTNmEwc21XRExNRlozaTNOSThWajNrTUZRWnQzeDdkZUVFYldkVjcyaW8?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "Yahoo!ニュース",
-      "impact_memo": "1NIWAは東京都23区をターゲットとしているため、京都の日本人観光客動向は直接的な影響は少ないものの、国内観光客全体のトレンドとして参考にできます。"
-    },
-    {
-      "date": "2026-06-03",
-      "title": "国交省、住宅宿泊管理業者への立入り検査の結果公表、44業者中35業者に指導（トラベルボイス）",
-      "summary": "国土交通省が住宅宿泊管理業者への立入り検査を実施し、44業者中35業者に指導が入ったことが公表され、民泊運営におけるコンプライアンス強化の必要性が浮き彫りになった。",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBUeU5HX0JRczN3b3NNNVlPMnRtTzRrUXdEYUVlaHkyWkZmVnJOX1JkNXJXSmJHUkJnUDIteUM5Tlp1R3NWRTRSTXdkTVNVYURHWkdfRkUyZDVtZ2NLS0dwdGFUdlR3T0c3c25qQzJweUNZMzVYRkU1SGdvUEZFa1U?oc=5",
-      "category": "民泊・住宅宿泊事業",
-      "importance": "中",
-      "source": "Yahoo!ニュース",
-      "impact_memo": "1NIWAは旅館業法に基づく簡易宿所を目指しており、民泊の管理業者ではないため直接的な影響はないが、宿泊施設運営全般におけるコンプライアンス遵守の重要性を再認識させる。"
-    },
-    {
-      "date": "2026-06-03",
-      "title": "人口減の日本で勝つインバウンドを見据えた「投資」の選択肢…民泊・旅館業を選択した、ベテラン大家さんの実例",
-      "summary": "人口減少下でインバウンド需要を取り込むため、民泊や旅館業への投資が注目されており、ベテラン大家が成功事例として紹介されている。",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB1WC1mNnlhT0FBMFV0UHZodkNWZnB5ZWFRd3ROMVNOa1Bjb3o5OEJiMG5HUXBmUTVfb3V6amVLZWEzUlBGeXRjZUh6S2Z1SVVVMlE?oc=5",
-      "category": "民泊・住宅宿泊事業",
-      "importance": "中",
-      "source": "ゴールドオンライン",
-      "impact_memo": "1NIWAが目指す簡易宿所は旅館業法に基づくため、インバウンド需要を見据えた投資対象として魅力的であり、物件オーナーとの交渉において有利に働く可能性がある。"
-    },
-    {
-      "date": "2026-06-03",
-      "title": "【世田谷区議会】代表質問に立ちます！民泊規制・火葬場建設・多文化共生など７項目",
-      "summary": "世田谷区議会で民泊規制が主要な議題の一つとして取り上げられる予定であり、都内における民泊への関心と規制強化の動きが続いていることを示唆している。",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE03dThQbXVqU2dBZTBuVjd1ZVdvWGFFdHVqcU9jcUs2X1dEX21aeE5QTnd1U0pCcFg1b2pLSFdESUdCalZ1T25oOG9MNVU2bXFyREJHdXY5MTYwOXA1R1Nr?oc=5",
-      "category": "民泊・住宅宿泊事業",
-      "importance": "中",
-      "source": "選挙ドットコム",
-      "impact_memo": "1NIWAは旅館業法に基づく簡易宿所を目指しており、民泊規制の強化は、合法的な宿泊施設としての1NIWAの優位性を高める可能性がある。"
-    },
-    {
-      "date": "2026-06-02",
-      "title": "定期船エンジン故障で観光直撃 酒田市飛島の宿泊客2割まで落ち込む 市が補助金と代船費を計上（YBC山形放送）",
-      "summary": "山形県酒田市飛島で定期船のエンジン故障により観光客が激減し、宿泊客が2割に落ち込んだため、市が宿泊施設への補助金と代船費を計上した。",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9yOUJTN2ZxcFVRSmY1blBlSTVnTGctUnMxeGc0ODlUWmFiUkdmajJ4STdHQ3pZNGVzaWVjX0k2YW1LTFprZnFMMkxRUzU1THVPLTNHRTBNN0dpYzRsTnY4RnZiQTFPSjAxM3QxcHowcklKMGozYWVnSWQ5NzNDYTQ?oc=5",
-      "category": "補助金・助成金",
-      "importance": "高",
-      "source": "Yahoo!ニュース",
-      "impact_memo": "1NIWAは東京都23区での事業展開であり、酒田市飛島の交通インフラ問題は直接的な影響はない。しかし、予期せぬ外部要因による集客への打撃に対し、自治体が補助金などで支援するケースがあることを示しており、将来的なリスク管理や行政連携の参考になる。"
     }
   ]
 }
