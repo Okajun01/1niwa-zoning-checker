@@ -1,6 +1,36 @@
 {
-  "last_updated": "2026-09-05 23:40",
+  "last_updated": "2026-09-06 23:39",
   "articles": [
+    {
+      "date": "2026-09-04",
+      "title": "観光地で増える入場料の「二重価格」…姫路城では市民以外2500円 価格差の「理屈」と「効果」は",
+      "summary": "観光地で入場料の「二重価格」が増加しており、姫路城では市民以外に高額な料金を設定することで、観光客と地元住民のバランスを取り、収益向上を図っている。",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9POWRmOFVIdkRac2FOZjMyZFdwLXp5MV93WllEZVIwZEE1N0xjNDN3ZHBPMVkwVkNKS2UwQnpOdlJ1Y3Q4b1VYU0pRMUR1bHNrbEVz?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "東京新聞",
+      "impact_memo": "1NIWAの簡易宿所運営には直接関係ないが、観光客からの収益最大化と地元住民への配慮という視点は、宿泊料金設定やサービス提供において、ターゲット層に応じた価格戦略を検討する上で参考になる。"
+    },
+    {
+      "date": "2026-09-06",
+      "title": "民泊規制の論点、複雑化したルールの統一が必要 矢ケ崎紀子氏",
+      "summary": "矢ケ崎紀子氏が、複雑化した民泊規制のルール統一の必要性を指摘している。",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE82dWt6V2txblRVd3laQm1seUwyb1BvaVVvUjQwaXlYYUpQUmNIVXJFajQ1U0tBS3ZCampKUTMzTXBmSWNQZ3JFaGI2d2tYNE53Z05CS0s1WUJhcjhhZFFGblpmcVh0LVZHNnZPaw?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "中",
+      "source": "日本経済新聞",
+      "impact_memo": "1NIWAは簡易宿所を目指しており、民泊規制の複雑さは直接的な影響は少ない。しかし、将来的に簡易宿所を含む宿泊施設全般の規制が統一・簡素化されれば、事業運営の透明性や予測可能性が高まる可能性がある。"
+    },
+    {
+      "date": "2026-09-06",
+      "title": "民泊が全国最多の新宿区、住宅地や学校周辺の営業禁止へ…既存施設も・半数以上営業できなくなる可能性",
+      "summary": "新宿区が民泊の規制を強化し、住宅地や学校周辺での営業を禁止する方針で、既存施設も半数以上が営業できなくなる可能性がある。",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1GWEZBRHpYZWY2cDJFUEpBdnE0Vmk4NEJqTFJOLVFhYWZiU1RkVzFBbEMwYnJ1VGxaUHh4bTRvT1NUT080VGZ3QzBJMHctYUdRdEVZcGxKVzBYVFkwaW9jNHZiSHFfUQ?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "中",
+      "source": "読売新聞",
+      "impact_memo": "1NIWAは旅館業法に基づく簡易宿所を目指しており、民泊とは異なるが、新宿区が簡易宿所に対しても同様の規制を導入する可能性があり、物件選定時には立地条件（住宅地、学校周辺など）に注意が必要となる。"
+    },
     {
       "date": "2026-09-05",
       "title": "横手市の協力隊に台湾出身・陳さん　インバウンド向け観光ＰＲ担う",
@@ -4970,36 +5000,6 @@
       "importance": "中",
       "source": "Yahoo!ニュース",
       "impact_memo": "京都市での長期滞在型インバウンドの増加は、東京都内でも同様の需要が見込まれるため、1NIWAが提供する簡易宿所が長期滞在客の選択肢となる可能性を示唆する。"
-    },
-    {
-      "date": "2026-06-12",
-      "title": "中部9県のDMO、インバウンド周遊観光後押し 松本市内で定時総会",
-      "summary": "中部9県のDMOが定時総会で、インバウンドの周遊観光を後押しする方針を確認し、地域全体の観光振興を図る。",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1hQktENENWWjI3bnQwNlJZRm5fSGZpSFVxdnAxS2EtSjd4V09taEk2Z3ZfOVFrSlREWUFsTGZ3djJhTEswM01Wb3R5ZmhlUDBDbTlQRXVoMEJKQWJUekJiYTktN3FKdnhwWUxadg?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "日本経済新聞",
-      "impact_memo": "中部地方でのインバウンド周遊観光推進は、日本全体での外国人観光客の増加と滞在期間の長期化を促すため、東京都内での簡易宿所需要にも間接的に良い影響を与える可能性がある。"
-    },
-    {
-      "date": "2026-06-12",
-      "title": "大田区の特区民泊はこのままで良いのか ━ 住民生活を第一にした制度見直しを ━",
-      "summary": "大田区の特区民泊制度について、住民生活への影響を考慮した見直しを求める意見が提起されている。",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5WdDJOcHRiU01SSEdQM1NwbWR2NlYtUnFJRU8yQ1lpcnJWMno3UUNDNkRlUndQSVJYSmZfSmhBcERJT3pKZmpPUk9CMUVjTXRoSlFMeDNvLW90QmN0cUE?oc=5",
-      "category": "民泊・住宅宿泊事業",
-      "importance": "中",
-      "source": "選挙ドットコム",
-      "impact_memo": "1NIWAは簡易宿所を目指しており特区民泊とは異なるが、民泊に対する住民の懸念や規制強化の動きは、宿泊施設全般に対する地域住民の理解を得る上での課題となり、地域との共存が重要となる。"
-    },
-    {
-      "date": "2026-06-10",
-      "title": "観光資源となる歴史的な施設や技術の維持保全を支援|6月",
-      "summary": "東京都が観光資源となる歴史的な施設や技術の維持保全を支援する補助金を提供していることを示す記事です。",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBpTzNMUzIwQnZXUDdidjJtYlZOTG42RDFUQ3dXVlpKd3ZnQTZpbC1GMnl4bThPTTNEUlpTMzdvTHI3cVIwU0paTjIxOEVKb0t6NWxfMGRCS1VFcU9BejdnVnRaVGdod0o1UGY2MTRxeUczZFhj?oc=5",
-      "category": "補助金・助成金",
-      "importance": "中",
-      "source": "metro.tokyo.lg.jp",
-      "impact_memo": "1NIWAが歴史的建造物を活用した簡易宿所の開設を検討する場合、この補助金を利用して改修費用などを賄える可能性があり、物件探しの選択肢を広げることができます。"
     }
   ]
 }
