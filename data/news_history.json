@@ -1,6 +1,66 @@
 {
-  "last_updated": "2026-09-12 00:00",
+  "last_updated": "2026-09-12 22:04",
   "articles": [
+    {
+      "date": "2026-09-12",
+      "title": "【2026年度】宿泊施設が使える補助金・助成金10制度まとめ",
+      "summary": "2026年度の宿泊業向け補助金として、DX・AI導入補助金（PMSや自動チェックインシステム導入）、業務改善助成金（賃金引上げと設備投資）などが活用可能。高い補助率と比較的申請しやすい制度として宿泊事業者の注目を集めている。",
+      "url": "https://www.yadoken.net/archives/column/hotel-subsidy-guide-2026",
+      "category": "補助金・助成金",
+      "importance": "低",
+      "source": "宿泊業経営者向け情報サイト",
+      "impact_memo": "開業後のシステム導入やスタッフ採用時に活用できる制度。許可取得後の事業計画に組み込むことを検討。"
+    },
+    {
+      "date": "2026-09-12",
+      "title": "2026年7月訪日外客数3,442,100人 7月として過去最高を更新",
+      "summary": "日本政府観光局（JNTO）発表によると、2026年7月の訪日外客数は3,442,100人（前年同月比0.1%増）で7月として過去最高を記録。韓国・インドネシアなど17市場で過去最高。上半期累計は21,084,800人で宿泊需要が高水準で推移している。",
+      "url": "https://www.jnto.go.jp/news/press/20260819_montly.html",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "JNTO（日本政府観光局）",
+      "impact_memo": "インバウンド需要の堅調さが続いており、東京23区での宿泊施設需要は旺盛。旅館業許可取得の事業価値を裏付ける。"
+    },
+    {
+      "date": "2026-09-12",
+      "title": "旅館業許可申請のハードル緩和：無人チェックインの条件と面積基準",
+      "summary": "2026年の旅館業許可申請では、ICT対応による本人確認システムや緊急対応体制（30分以内にスタッフが到着）により玄関帳場（フロント）要件が緩和された。また2026年4月の省令改正で33㎡ルールも緩和され、小規模施設の参入障壁が下がった。",
+      "url": "https://aoffice-hal.jp/2026/05/24/minpaku-4/",
+      "category": "旅館業法・条例改正",
+      "importance": "中",
+      "source": "行政書士officeHAL",
+      "impact_memo": "無人運営が可能になることで、管理コスト削減と多拠点展開が現実的な選択肢になる。申請要件の最新確認が必要。"
+    },
+    {
+      "date": "2026-09-12",
+      "title": "旅館業法2026年最新版：1室営業解禁と面積基準緩和の影響",
+      "summary": "2026年4月から簡易宿所の客室面積基準が緩和され、10人未満の施設では「3.3㎡×収容人数」の計算方式が適用可能になった。また自動チェックイン機器によるICT対応フロントも旅館業で認められ、無人運営の許可要件が整備されている。",
+      "url": "https://hotelbank.jp/trends/ryokan-law-revision-2026-single-room-shift/",
+      "category": "旅館業法・条例改正",
+      "importance": "中",
+      "source": "HotelBank",
+      "impact_memo": "面積基準緩和により小規模物件での許可取得が容易になった。1NIWAが検討する物件の客室面積計算に直接影響する可能性がある。"
+    },
+    {
+      "date": "2026-09-12",
+      "title": "東京・新宿区、住宅地などの民泊禁止へ 約2,000施設が営業不可の可能性",
+      "summary": "新宿区は都市計画上の住居専用地域・文教地区での民泊を禁止し、商業地域でも営業日数を現行180日から120日に削減する方針。10月にパブリックコメントを実施し、2027年2月の区議会定例会に条例改正案を提出予定。既存施設約2,000件が営業できなくなる可能性がある。",
+      "url": "https://www.nikkei.com/article/DGXZQOCC043YF0U6A900C2000000/",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "高",
+      "source": "日本経済新聞",
+      "impact_memo": "新宿区での民泊縮小により合法的な宿泊施設不足が生じる。旅館業許可取得済みの1NIWAには宿泊需要取り込みの好機となりうる。"
+    },
+    {
+      "date": "2026-09-12",
+      "title": "東京23区で民泊営業禁止へ 新宿・大田は住宅地対象、全国拡大も",
+      "summary": "東京23区が民泊営業を一部エリアで禁止する措置に踏み出した。民泊数が全国最多の新宿区は住宅地などでの営業を原則禁止にし、大田区も新設禁止を検討。民泊新法では年180日を上限に営業できるが、騒音・ゴミ問題で規制強化の動きが広がっている。全国への拡大も見込まれる。",
+      "url": "https://www.nikkei.com/article/DGXZQOCC047PX0U6A900C2000000/",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "高",
+      "source": "日本経済新聞",
+      "impact_memo": "民泊規制強化は旅館業許可取得への追い風。旅館業許可（簡易宿所）は通年営業可能なため相対的な競争優位が向上する。"
+    },
     {
       "date": "2026-09-11",
       "title": "高知市議全員の報酬減額案を可決 観光補助金を飲食費などとして20年以上使用した問題で【高知】（高知さんさんテレビ）",
@@ -4940,66 +5000,6 @@
       "importance": "中",
       "source": "Yahoo!ニュース",
       "impact_memo": "地方の特定の地域でインバウンドが急増している事例は、東京都23区内でも特定のエリアやコンセプトがインバウンド誘致に有効であることを示唆し、物件選定やコンセプト設計の参考になります。"
-    },
-    {
-      "date": "2026-06-21",
-      "title": "5月訪日外客数、中東が航空便増加により過去最高／民泊規制の方針転換に言及【観光庁長官会見】",
-      "summary": "5月の訪日外客数が中東からの航空便増加で過去最高を記録し、観光庁長官が民泊規制の方針転換について言及しました。",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBDRlBaT0lmUzlMUlFid1U0U0liOVhueUF2U3FGWnBlcXlSMW9BbndjWWwxNmNScm1CVWcyZGRpRmo5R3hjM29kN1pFVURteFBqSkxOV0hmMkVUemhnTGpINFNCeVIzZw?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "訪日ラボ",
-      "impact_memo": "訪日客数の増加は1NIWAの宿泊需要を押し上げ、特に中東からの富裕層の取り込みに注力することで収益機会を拡大できます。また、民泊規制強化は競合減少につながります。"
-    },
-    {
-      "date": "2026-06-21",
-      "title": "東京・目黒区 “事実上の民泊”条例改正で規制強化へ",
-      "summary": "東京都目黒区が条例改正により、事実上の民泊規制強化を進める方針です。",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1mVjVLRm9HVzFDVUs1TDFoaWtYRlVpQVlFdTc2NkhMYzRSV0RCOUp3cmVCb2FOYTZrWmpIZVVZT1lTb1h3cXN2azk5ZUdwSEN3bkRNUEZ1QTQ?oc=5",
-      "category": "民泊・住宅宿泊事業",
-      "importance": "高",
-      "source": "NHKニュース",
-      "impact_memo": "目黒区での民泊規制強化は、1NIWAが目指す簡易宿所事業にとって、競合が減少し、市場での優位性を高める要因となります。"
-    },
-    {
-      "date": "2026-06-17",
-      "title": "タイ、観光立国に陰り 「お得意様」中東旅行者25%減",
-      "summary": "タイの観光産業が中東からの旅行者減少により陰りを見せており、特定の市場に依存することのリスクが浮き彫りになっている。",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBHVmlXa3k1RVFpOEZ1dlBDT2hZYlQ5T2lTN0JqWnExZDE3MDNKVko5VE90M0J6U2I0XzRBaGZCQ1ROdVI0d01fN3huaUhDNGJacGNLNkttYThXa2ZOdGhucnN0SFJNeEhFOURMbw?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "日本経済新聞",
-      "impact_memo": "特定の国や地域からのインバウンド需要に過度に依存せず、多様な国籍の旅行者をターゲットにするマーケティング戦略の重要性を1NIWAに示唆する。"
-    },
-    {
-      "date": "2026-06-18",
-      "title": "北九州初の英語版観光地図が創刊 外国人の観光回遊促進へ",
-      "summary": "北九州市で初の英語版観光地図が創刊され、外国人観光客の市内回遊促進を目指す取り組みが始まった。",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE04bEZFejRXbjhpVXRJdWVyaS1ROEJsRGJPSUFiVGZzMndTNnljaVU3Z1p4MFg3TlRONGRwSXVfemJSempVZkJmVnJYd2dFOHJkMlI4aHVWcEtKaV9hTldiWERXdzFNUEZ6?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "毎日新聞",
-      "impact_memo": "1NIWAが東京都で簡易宿所を運営する際、外国人観光客の利便性向上のための多言語情報提供の重要性を示唆しており、同様の取り組みを検討する参考になる。"
-    },
-    {
-      "date": "2026-06-19",
-      "title": "「訪日客4268万人」に頼る危うさ…インバウンド大国・日本の意外な弱点",
-      "summary": "訪日客数4268万人という目標に依存する日本のインバウンド戦略には、特定の国への偏りや地方への波及不足といった弱点が存在すると指摘されている。",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5jeWZSS25WbkN6NS1vZ2JxRXE3U0RQc1FudVpDYkMxeUZ6a0VGTTZWem9UMVV6cDhpdGxnUmd2Mjczb3VSUURzeFc2ZElUd2c?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "現代ビジネス",
-      "impact_memo": "インバウンド市場の潜在的なリスクや構造的な課題を認識し、1NIWAは特定の客層に偏らず、多様な国籍のゲストをターゲットにする戦略や、リピーター獲得に向けたサービス提供を検討する必要がある。"
-    },
-    {
-      "date": "2026-06-20",
-      "title": "留学生インターン、インバウンド増で双方に利点／青森県弘前の観光施設（陸奥新報）",
-      "summary": "青森県弘前の観光施設で留学生インターンシップが導入され、インバウンド増加に対応する人材確保と留学生の就労経験という双方の利点が生まれている。",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9xY2dwU0hfZVA5eF9VblhZN0FXSHFmU2ljamR1OWRCUzhtcWl3Y1h5MlloaGdUY3hnX2RZMkxKZHB5OGFHeGdNZ2xzaWN5OEYweVNmUWgzajBOX2RmbHYyVDFLQmpTOFViOG41VUhadEhkaWJCclNxd0h1WHpOX28?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "Yahoo!ニュース",
-      "impact_memo": "インバウンド増加に伴う多言語対応や人材不足は1NIWAも直面する可能性があり、留学生インターンシップは将来的な人材確保や多言語サービス提供の有効な手段として検討できる。"
     }
   ]
 }
