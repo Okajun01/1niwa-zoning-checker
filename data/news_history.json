@@ -1,6 +1,76 @@
 {
-  "last_updated": "2026-09-19 00:02",
+  "last_updated": "2026-09-19 23:58",
   "articles": [
+    {
+      "date": "2026-09-19",
+      "title": "公式情報を自動更新、生成 AI が整理する観光庁系の補助金一覧「観光補助金ボード」を公開",
+      "summary": "観光庁系の補助金情報を生成AIが自動更新・整理する「観光補助金ボード」が公開され、公式情報を効率的に確認できるようになりました。",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE52UzVRREU0VWJYUTU2cmFRcmxvckNNLXZ1Wk81TTBiTmNqRjhvQ19PQnJHUDlqcTZNOHpYVFF5Rk9YMFgyVU8zUFl5SHEwQmtiaFNlNnRZQkg1alU?oc=5",
+      "category": "補助金・助成金",
+      "importance": "高",
+      "source": "asahi.com",
+      "impact_memo": "1NIWAは「観光補助金ボード」を活用することで、簡易宿所開業や運営に利用できる補助金情報を効率的に収集・検討できるようになり、事業計画策定に役立ちます。"
+    },
+    {
+      "date": "2026-09-16",
+      "title": "令和8年度南魚沼市サイクリスト受入環境整備支援補助金",
+      "summary": "南魚沼市が2026年度に、サイクリストの受け入れ環境整備を支援するための補助金制度を設けることを発表しました。",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5OcWRoNlh5aFA1R1BLVVpFVnRmUnFuVUxOME1VQXIwS09RdFVSaHByaklvcS1uUzR4RGJPbkRWZFVGUHEzQnhLbmtNeWp3SDFiYUg3VUZqNTMxRkkxWTI5OTVCMEJmQjg?oc=5",
+      "category": "補助金・助成金",
+      "importance": "高",
+      "source": "city.minamiuonuma.niigata.jp",
+      "impact_memo": "この補助金は南魚沼市に特化したものであり、東京都23区で簡易宿所を計画している1NIWAの事業には直接的な影響はありません。"
+    },
+    {
+      "date": "2026-09-17",
+      "title": "8月の訪日外国人観光客30万人減 韓国など14の国と地域からは過去最多も中国は6割減",
+      "summary": "8月の訪日外国人観光客数は全体で30万人減少したが、韓国など一部の国・地域からは過去最多を記録した一方、中国からの観光客は6割減と大幅に落ち込んだ。",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9uYnZrR1Bfa0hhWmRfczFQblNGeWUtYXNKem0tWlF4SFdJZ2VaaDlYeWd2VFpjUnRkdjQ2c196LV9ZSmFfcU1YX3AwRXFNVE1IWjBFblVqUUN5YUNBek5aWVAxbnFNTmpkWWlMQjViUktEZw?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "テレ朝NEWS",
+      "impact_memo": "全体的な訪日客数の減少は懸念材料だが、特定の国・地域からの需要は堅調であるため、1NIWAはターゲットとする国籍を絞り込むことで影響を緩和できる可能性がある。"
+    },
+    {
+      "date": "2026-09-19",
+      "title": "若者より深刻…「シニアの旅行離れ」を加速させる「お金だけじゃない」理由",
+      "summary": "シニア層の旅行離れが深刻化しており、その原因は経済的な理由だけでなく、健康不安や旅行への意欲低下など多岐にわたることが指摘されている。",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5tZkVDc01hanl3Q1ExWHU0S0NTclAteHJHNllKaVVrdlpwRVBwa2hjRkdzTkhJM1BlX193cDEzWFViTW1SamtPbUR6NnTSAU9BVV95cUxORnFYLVA3ZGZkaGpPcFBCTmdzOUpBM0dtVWVhcGFMSWpjbGZFdEloVEh2SWRLYU9VbFc5V003MG1IcUxUQkRVanRvU3RpX0FN?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "ダイヤモンド・オンライン",
+      "impact_memo": "1NIWAは簡易宿所を計画しており、主なターゲットはインバウンドや若年層が想定されるため、シニア層の旅行離れは直接的な影響は小さいと見られる。"
+    },
+    {
+      "date": "2026-09-17",
+      "title": "大手ホテル「客室単価」1万8,003円、前年から678円増 インバウンド需要が好調、ホテル稼働率は80％台を維持",
+      "summary": "大手ホテルの客室単価は前年比で上昇し1万8,003円となり、好調なインバウンド需要を背景に稼働率も80％台を維持している。",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE81VDRzYkF1RnBXamhxVlJaYUw1V205S1NtbHhfODZxQk83cHBPNkVFQ2x0WjVWNDIxaUExamJjTVhhTkhSMXlYZWw3VVBzUjJ2ZEtZeDM1QUR6bkhZNGlqd0tuNFdRUQ?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "東京商工リサーチ",
+      "impact_memo": "東京都23区で簡易宿所を目指す1NIWAにとって、大手ホテルの客室単価上昇と高稼働率は、市場の宿泊需要が旺盛であり、高い収益性と安定した稼働が見込める非常にポジティブな事業環境であることを示している。"
+    },
+    {
+      "date": "2026-09-17",
+      "title": "JR山形駅東口エリアにホテルの進出相次ぐ インバウンド増加で宿泊施設需要高まる",
+      "summary": "JR山形駅東口エリアではインバウンド増加に伴う宿泊施設需要の高まりを受け、ホテルの進出が相次いでいる。",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBYMTBRaGdDdHRWajcwQnNKR1phM1FjT21xbVlVYWY3STRaLXVDM2pVWTF5TUo3RVBOekxDUlRESFllZld1ZHQ5VGZmdjFOZTY5?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "yts.co.jp",
+      "impact_memo": "地方都市の事例だが、インバウンド需要の高まりという全国的なトレンドは、1NIWAが事業展開を目指す東京都23区でも宿泊需要を押し上げる要因となり、事業環境として追い風となる。"
+    },
+    {
+      "date": "2026-09-16",
+      "title": "【プレビュー】世田谷区、民泊規制緩和で“年間180日まで”検討…区議会で論戦 来年度の施行目指す",
+      "summary": "世田谷区が民泊の年間営業日数を現行の180日未満から最大180日まで緩和する方向で検討しており、区議会で議論が進められている。",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBjcDN2U0I4VkxneEVnLTMzMFNCRk9WNldUNGhJVGlTSjhFRDJubkN2VWgwYUIwOUlha3dkczBCTF9JbXlNdENqWjAzOGFTajRWQUZ1VjFyR2RRSl9PcGt3Q3E5alM?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "中",
+      "source": "TOKYO MX",
+      "impact_memo": "1NIWAは旅館業法に基づく簡易宿所を目指しており、民泊規制の緩和は直接的な影響はない。しかし、民泊の営業日数が制限されることで、より安定した稼働を求める事業者が簡易宿所を選択する可能性があり、区内での事業展開を検討する際の市場環境として間接的に有利に働く可能性がある。"
+    },
     {
       "date": "2026-09-17",
       "title": "福岡で観光支援「九州ふっこう応援割」内容明らかに｜KBCニュース",
@@ -4930,76 +5000,6 @@
       "importance": "中",
       "source": "AdverTimes.（アドタイ） by 宣伝会議",
       "impact_memo": "インバウンド客にとって、日本文化や特定の地域を連想させるキーワードが強い訴求力を持つことを示しており、1NIWAは施設名やプロモーションにおいて、外国人観光客に響くような東京らしさや日本の魅力を打ち出すことで集客力を高めるヒントになります。"
-    },
-    {
-      "date": "2026-07-09",
-      "title": "大阪・難波エリアに1室最大10名が宿泊可能な新ホテル、大人数旅行に対応、2026年7月開業 ―SQUEEZE社",
-      "summary": "大阪・難波エリアに1室最大10名まで宿泊可能な大人数対応の新ホテルが2026年7月に開業し、ファミリー層やグループ旅行客の需要に対応します。",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE10c2lINE9sWmRQWk80eGFQYWtkZ0pjWTM5UVNvR0NHbTJ5eUUyWXFNMmZMVDN3SG52YVhpVUZTVjBBYTU3OXlHMnVpcHNnaFlUWnV0eQ?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "トラベルボイス",
-      "impact_memo": "大人数対応の宿泊施設が増加していることから、1NIWAも物件選定や施設設計において、ファミリー層やグループ旅行客のニーズに応える部屋タイプや設備を検討することで、競争力を高められる可能性があります。"
-    },
-    {
-      "date": "2026-07-09",
-      "title": "〝静かな住宅地〟の民泊規制強化へ でも大阪の本丸は対象外！？（週刊大阪日日新聞）",
-      "summary": "大阪で静かな住宅地における民泊規制強化の動きがあるが、主要な民泊エリアは対象外となる可能性が指摘されている。",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE8wTjd2X0JYSjNQcVdjYzlLaWpEUjhrdDNZVkIybWdSaExsZVVKUUwyMWhwUE94NElVUkNqd09VaDV3V1MteVA3VmR4NE1mSnFGaS1TQjhhYjZ5OE9pdXJWc0NRdDg3VHpvMzZvWm0wdVRqSTBTT0dLUkEzdTFhMEU?oc=5",
-      "category": "民泊・住宅宿泊事業",
-      "importance": "高",
-      "source": "Yahoo!ニュース",
-      "impact_memo": "1NIWAは旅館業法に基づく簡易宿所を目指しており、民泊の規制強化は直接的な影響はないものの、簡易宿所への需要シフトや物件選定における住民感情への配慮の重要性を示唆する。"
-    },
-    {
-      "date": "2026-07-10",
-      "title": "政府、2026年度版「観光白書」を閣議決定、宿泊業の構造課題に焦点、「働いてよし」の観光産業へ",
-      "summary": "政府は2026年度版「観光白書」を閣議決定し、宿泊業の構造課題、特に「働いてよし」の観光産業実現に向けた方針を打ち出した。",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFA3cUl3dnRieGhDV2lPWEJVbG9tNEF3UVlsVHpXWG5xVFBZay0zSl9yaEdrOGtDcnRUdnZkQjJFR2s3Z1RpVjRJWDl0R2ZfMDVhNVFWYQ?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "トラベルボイス",
-      "impact_memo": "1NIWAは開業準備段階から、従業員の働きがいや労働環境改善を重視した経営戦略を検討することで、人材確保や定着において優位性を築ける。"
-    },
-    {
-      "date": "2026-07-10",
-      "title": "「令和７年度観光の状況 令和８年度観光施策」（観光白書）について | 2026年 | 報道発表 | 観光庁",
-      "summary": "観光庁が「令和７年度観光の状況 令和８年度観光施策」に関する観光白書を発表し、今後の観光政策の方向性を示した。",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE41WXdBRVpRUi1iMTlDQ080UHdzLVVaVXhNYmo1ZWxxd1pqQlhCUEt3OWZrLWhVaGNjOVlWMDFFYkJpbWNBdWRlSnJGYk9ndWlpdmo0ZU9heU5fR2J4WXc?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "mlit.go.jp",
-      "impact_memo": "白書の内容を詳細に分析することで、政府の観光振興策や規制緩和の動向を把握し、1NIWAの物件選定や事業計画策定に活かすことができる。"
-    },
-    {
-      "date": "2026-07-10",
-      "title": "プレスリリース：株式会社SEZOと株式会社Gappy、インバウンド観光DXを加速するAI開発で協業開始（PR TIMES）",
-      "summary": "株式会社SEZOと株式会社Gappyが、インバウンド観光のデジタルトランスフォーメーション（DX）を加速させるAI開発で協業を開始した。",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBodzdQMmJib205bUxxUVdfRE1DY3VRYVVhUUNoOGhZRWNKQ2RvZkF3ekxiODFSMGI4MlJyRnF4dm9KT254ZlFweWdVOGZILWhyeVhVd2oxWjI3cVVvVl83MUJhbW93SWNN?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "毎日新聞",
-      "impact_memo": "将来的に1NIWAの簡易宿所運営において、AIを活用した効率的な顧客対応や多言語サービス導入を検討することで、競争力強化に繋がる可能性がある。"
-    },
-    {
-      "date": "2026-07-10",
-      "title": "2026年版観光白書 2025年の訪日外国人観光客数・旅行消費額ともに過去最高を記録",
-      "summary": "2026年版観光白書によると、2025年の訪日外国人観光客数と旅行消費額が過去最高を記録し、観光需要が堅調に推移していることが示された。",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFB4TzBNVTBLWHg4cmpCODFaSGQ4NmtLM1NRQ1F4NDlua2VYWmNJZ2tBcF9aZFRLdGRmeUhxUDB2VTFsVmpjaFZ2ZkxHX29qNFRLeUVsZGJVWDBRdVgwSlJn?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "テレ東BIZ",
-      "impact_memo": "訪日客の増加は東京都23区での簡易宿所需要拡大に直結するため、1NIWAが事業を開始する上で非常に有利な市場環境が期待できる。"
-    },
-    {
-      "date": "2026-07-10",
-      "title": "インバウンドは18％増、昨年の市内観光客動態調査、「地球の歩き方」効果も【山口】（宇部日報）",
-      "summary": "山口県宇部市で昨年のインバウンド観光客が18%増加し、「地球の歩き方」掲載がその一因となったことが報告された。",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1yT0JRM19IU3FfOUN0WDhsdF9NdnhDOE5FOGJZbGxfeGRnODhVUEU4ZVQ0ZlhZdnpjaWNYQzVlVWM0dW5xMnN5SFN2RzUydUFaVDRjS3ZlV2x2VzYyZk9wWnR3aGtkTXFtQkZZTzFPLVRzWHR1ejhYU0VZT2NHUXM?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "Yahoo!ニュース",
-      "impact_memo": "この事例は東京都23区の1NIWAに直接的な影響はないが、特定のメディア掲載がインバウンド誘致に効果的であるという示唆は、将来的なマーケティング戦略の参考になる。"
     }
   ]
 }
