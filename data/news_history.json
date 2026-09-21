@@ -1,6 +1,36 @@
 {
-  "last_updated": "2026-09-19 23:58",
+  "last_updated": "2026-09-21 00:00",
   "articles": [
+    {
+      "date": "2026-09-15",
+      "title": "統合型ホテルOSとAIエージェントを組み合わせた伴走支援事業",
+      "summary": "統合型ホテルOSとAIエージェントを組み合わせた宿泊施設のDX推進を支援する事業が紹介されており、これに対する補助金・助成金も利用可能である。",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5zbUhlVmVnTmU5RS1kVmlldTd2b2dsWWV6ZHNLekNhR056VGxZMDBzcmsxWjlMc0U3OTlEMUdSOGR2QnhfLV9GRDBYNmw2bEFwd1pOaw?oc=5",
+      "category": "補助金・助成金",
+      "importance": "中",
+      "source": "ascii.jp",
+      "impact_memo": "1NIWAは開業後にこのような先進的なホテルOSやAIエージェントを導入することで、業務効率化や顧客体験向上を図れる。関連する補助金・助成金を活用できれば、初期投資を抑えつつDXを推進できる可能性がある。"
+    },
+    {
+      "date": "2026-09-19",
+      "title": "若者より深刻…「シニアの旅行離れ」を加速させる「お金だけじゃない」理由",
+      "summary": "シニア層の旅行離れが若者以上に深刻化しており、経済的な理由だけでなく、健康不安や情報収集の困難さなどが背景にあると指摘されています。",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBCNkYyUEg3b1B0eHg0S0d0eWRrOUo1SWgyYmN0VDZuV3luSFFTbXJDcjdtdGtsTy1YbnU5b18yWTdGckpfa2w1YTJEZGNJRFJqNkNZOXpR0gFPQVVfeXFMTkZxWC1QN2RmZGhqT3BQQk5nczlKQTNHbVVlYXBhTElqY2xmRXRJaFRIdklkS2FPVWxXOVdNNzBtSHFMVEJEVWp0b1N0aV9BTQ?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "ダイヤモンド・オンライン",
+      "impact_memo": "1NIWAがターゲット顧客層を検討する際、シニア層の旅行需要が低迷している現状を踏まえ、インバウンドや若年層に注力するなどの戦略を立てる必要があります。"
+    },
+    {
+      "date": "2026-09-20",
+      "title": "観光庁、インバウンド安全・安心対策事業、公募期間を来年1月29日まで延長",
+      "summary": "観光庁は、インバウンド旅行者の安全・安心対策を支援する事業の公募期間を2027年1月29日まで延長しました。",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBIdjAtN2tLSDByZzc4YnVWSHpVMnhrWjVibVNORjVUTHg5WjA0bzlUVzRXZk1OTHpSa2F5Y0M3enNQWjBIejZtMEFOUXM4V2xva1A0Zw?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "高",
+      "source": "観光経済新聞",
+      "impact_memo": "1NIWAが簡易宿所を運営する際、防犯カメラ設置や多言語対応などの安全対策費用について、この補助金制度の活用を検討できる可能性があります。"
+    },
     {
       "date": "2026-09-19",
       "title": "公式情報を自動更新、生成 AI が整理する観光庁系の補助金一覧「観光補助金ボード」を公開",
@@ -4970,36 +5000,6 @@
       "importance": "中",
       "source": "47NEWS",
       "impact_memo": "1NIWAは簡易宿所を目指しており民泊の180日規制は直接関係ないが、民泊事業者の多様な運営形態は宿泊市場の競争環境を示唆しており、簡易宿所としての差別化戦略を検討する上で参考になる。"
-    },
-    {
-      "date": "2026-07-13",
-      "title": "札幌の民泊マンション投資に熱視線 「180日縛り」の新法を逆手にマンスリーとの二毛作",
-      "summary": "札幌では、民泊の年間180日営業制限を逆手に取り、残りの期間をマンスリーマンションとして活用する「二毛作」投資が注目されている。",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5sWHp5SHVvckdLMTFaUW0tWFpaYjNCdnBxdnpHelBwdWVDVEd5a3dXX2VZLXdkSDY2eFJjSHpfd1dkbW5NWnZycnlzNWRhUVktankzS3JPNFA?oc=5",
-      "category": "民泊・住宅宿泊事業",
-      "importance": "中",
-      "source": "週刊大阪日日新聞",
-      "impact_memo": "1NIWAは簡易宿所を目指しており民泊の180日規制は直接関係ないが、民泊事業者の多様な運営形態は宿泊市場の競争環境を示唆しており、簡易宿所としての差別化戦略を検討する上で参考になる。"
-    },
-    {
-      "date": "2026-07-09",
-      "title": "AI・DX・省人化からインバウンド、食品ロス対策まで宿泊・外食・サービス産業の課題解決ソリューションが関西集結「第18回ホテル・レストラン・ショー&FOODEX JAPAN in 関西 2026」開催",
-      "summary": "関西で「ホテル・レストラン・ショー&FOODEX JAPAN」が開催され、AI・DXによる省人化、インバウンド対応、食品ロス対策など、宿泊・外食産業の多岐にわたる課題解決ソリューションが紹介される。",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBhMXZJYWVkTVFveV9MSlpreXRWOGx6MkhqWlozMHR5bkplVkt2Q00wTTJmdnVjOExWc3d5bmpVMzY0WmF0OTZsMlNPWUlBT1NOMVFXXzNlOHp0UkpSX2U0YmpFMTJNRnNoUVE?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "PR TIMES",
-      "impact_memo": "このイベントは、1NIWAが簡易宿所を運営する上で直面するであろう人手不足や効率化、インバウンド対応といった課題に対する最新ソリューションを学ぶ良い機会となる。"
-    },
-    {
-      "date": "2026-07-09",
-      "title": "日本人は「富山高山すし空港」を絶望的にダサいと笑うが… 世界で通じる“Sushi”と“Takayama”の圧倒的な吸引力、インバウンド大国への可能性 - Page 2",
-      "summary": "「富山高山すし空港」のネーミングは日本人には不評でも、「Sushi」や「Takayama」といった世界的に認知度の高いキーワードがインバウンド誘致に強力な効果を発揮しています。",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9wNjlQN1NHNkVwLWUtT0c2bzBTNG5BUU85eWZ6SFltcm5vd1h5SUpKT2JiTjhEMDQ0bFNrTEo0UjBUczd3OEswN2FWXzdGNVYzcGlrQ3RwYkw1OGp1QUk4cld3?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "AdverTimes.（アドタイ） by 宣伝会議",
-      "impact_memo": "インバウンド客にとって、日本文化や特定の地域を連想させるキーワードが強い訴求力を持つことを示しており、1NIWAは施設名やプロモーションにおいて、外国人観光客に響くような東京らしさや日本の魅力を打ち出すことで集客力を高めるヒントになります。"
     }
   ]
 }
