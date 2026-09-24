@@ -1,6 +1,66 @@
 {
-  "last_updated": "2026-09-23 00:11",
+  "last_updated": "2026-09-24 00:19",
   "articles": [
+    {
+      "date": "2026-09-23",
+      "title": "8月の訪日外客数は310万人 スペイン・イタリアで単月最高、12市場で8月の記録を更新 ほか：訪日ラボ 今週の注目記事5選",
+      "summary": "8月の訪日外客数は310万人を記録し、スペイン・イタリアを含む12市場で単月最高を更新するなど、インバウンド需要が引き続き堅調に推移している。",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE01eVdmYmJEQ1VyZ0RBN1lPV01yRy1wRkhQa1lsTnU0dXZxdUxiUDA3QVNMc3FMQUdLLXdNQWNQUDQ3RVBFOHRFaTVFYmtlaXNFaFRiSmNMbXhpSzAxaEpKYnBVTmRvamc?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "訪日ラボ",
+      "impact_memo": "訪日外客数の堅調な増加は、東京都23区で簡易宿所を開業する1NIWAにとって、安定した宿泊需要が見込めることを示唆しており、事業計画の確度を高める要因となる。"
+    },
+    {
+      "date": "2026-09-24",
+      "title": "観光庁が訪日客6000万人へ施策強化 地方誘客や宿泊業DX、省力化投資を推進",
+      "summary": "観光庁は訪日客6000万人達成に向け、地方誘客、宿泊業のDX推進、省力化投資支援などの施策を強化する方針を打ち出した。",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQNlY4V2daRk5kdW1TdWZ4SzVWVm1vUWFBQV9vbzJzekJuLWZwLWJqUFBtU0h2cUc3UVoxdXNaSzdVMGgyOFVzZlRyeUxDazZsUG1JTldlYm9NQTlvRjFJS05oMVJXcTY2UTg5ZG1pcjhrZ0lxcUctZUptZzUtSlJIa29pbkMxdw?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "projectdesign.jp",
+      "impact_memo": "宿泊業のDXや省力化投資への支援は、開業を目指す1NIWAにとって、効率的な運営体制の構築や初期投資の負担軽減に繋がる可能性があり、事業計画に組み込むべき要素となる。"
+    },
+    {
+      "date": "2026-09-24",
+      "title": "鹿児島県、福岡空港経由の訪日客に向け九州新幹線の片道相当額を補助 県内宿泊が条件",
+      "summary": "鹿児島県が、福岡空港経由で訪れる訪日外国人観光客に対し、県内宿泊を条件に九州新幹線の片道相当額を補助する施策を開始した。",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5TV2Q2XzJiQzRJNDJqTDV2dlkyT3hPTEpmRE0yczJJQWgtMXl2MGRkaFNEcF9JUGcyVVpKeDQxdWJWS0lqNmhzdGp2ODJDQWkxVFAtdWgwRk9Ha1FDMnRaVk1oVy0wa3JPNUxldVJJNmxfelk?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "訪日ラボ",
+      "impact_memo": "この記事は地方自治体のインバウンド誘致策であり、東京都23区で簡易宿所を目指す1NIWAには直接的な影響はないが、地方の取り組みからインバウンド誘致のヒントを得ることはできる。"
+    },
+    {
+      "date": "2026-09-23",
+      "title": "国内主要ホテルの客室単価が1万8000円超え インバウンド需要が牽引し高稼働を維持",
+      "summary": "国内主要ホテルの客室単価が1万8000円を超え、インバウンド需要の回復が牽引し、高稼働率を維持している。",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9oZDExaWtjUDlmZVJtbnZmWnBVTW5EaC1MSkJ3S1FBbzFjQXd4ZkVQc28tcy10a284eXVTVG1JMDJXd1NjYXBKSnRkZXZHTDZaVXVF?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "東京報道新聞",
+      "impact_memo": "インバウンド需要の好調と客室単価の上昇は、1NIWAが簡易宿所として開業した際の収益性向上に繋がるポジティブな市場環境を示しており、事業計画の策定において有利な要素となる。"
+    },
+    {
+      "date": "2026-09-23",
+      "title": "毎小ニュース：社会 各地で民泊に規制強化 騒音やゴミが問題に",
+      "summary": "全国各地で民泊による騒音やゴミの問題が深刻化し、これに対応するため民泊への規制強化が進められている。",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1fa2RwYjdkWl9lNDhPd0dibllwQkJ1ZnZfRXFheUZPTjMyUURZZW5MdEtHOUh2ak5laUFWMVpmN1RTYTBWVFMzQUFFdkNVMWpzcjN1bWJQMjF2RHlpVnQxMkZwWV9uWGNNaV9DMVhzb0diZw?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "高",
+      "source": "毎日新聞",
+      "impact_memo": "民泊規制の強化は、競合である民泊の減少や需要の簡易宿所へのシフトを促す可能性があり、1NIWAの事業にとっては追い風となる可能性がある。"
+    },
+    {
+      "date": "2026-09-23",
+      "title": "北海道の短期賃貸「イオルマンスリー」公開！民泊180日規制と空室課題を解消",
+      "summary": "北海道で民泊の180日規制と空室課題を解消するため、短期賃貸サービス「イオルマンスリー」が開始された。",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE55cjZhUlR3a0ZNZnMxUkN2bkVnNkFIQWNaelNzd2VDS3l1SE5TWUtKM1hKOWNWQTlfMzhDUmdRbGcxaXhlX3lhSUZ4bXlsa0doV1NhQ3VPX1VESDQ0TUl1WUJ3?oc=5",
+      "category": "旅館業法・条例改正",
+      "importance": "中",
+      "source": "excite.co.jp",
+      "impact_memo": "この事例は北海道のものであり、東京都23区で簡易宿所を目指す1NIWAに直接的な影響はないが、民泊規制強化が全国的な傾向であることを示唆している。"
+    },
     {
       "date": "2026-09-19",
       "title": "九州ふっこう応援割はいつから？県別予約開始日・補助率・上限額・併用について解説【2026年】",
@@ -4940,66 +5000,6 @@
       "importance": "中",
       "source": "ｄメニューニュース",
       "impact_memo": "簡易宿所の内装デザインやターゲット層設定において、インバウンドやファミリー層のニーズを捉えた「癒やし」や「和」の要素を取り入れることの重要性を示唆する。"
-    },
-    {
-      "date": "2026-07-15",
-      "title": "宿泊ホテル以外の系列施設もインバウンド支援拠点に、道案内や充電、雨宿りなどを相互サポート、都内アパートメントホテル15施設で",
-      "summary": "都内アパートメントホテル15施設が、宿泊施設以外の系列施設も活用し、インバウンド客向けに道案内や充電、雨宿りなどの相互サポートを開始した。",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBjMlhqZDZrUDUtRllfNWZIOXRYenU4ajF4LUVfVWo3b0hBcWJzUHZZTjNMbE1MTmppbkpobDZobDRiS19LcUw3anBWelpSZGJhcVN3UQ?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "トラベルボイス",
-      "impact_memo": "簡易宿所として開業後、インバウンド客の利便性向上や顧客満足度向上のため、周辺施設との連携や独自の付加価値サービス提供を検討する際の参考になる。"
-    },
-    {
-      "date": "2026-07-15",
-      "title": "インバウンド増加を見据え県の宿泊税1600万円活用 地域の魅力を伝える観光ガイド育成講座開かれる 仙台（tbc東北放送）",
-      "summary": "仙台市でインバウンド増加を見据え、県の宿泊税1600万円を活用して地域の魅力を伝える観光ガイド育成講座が開催された。",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1FUU9mbHdoOEVCY3pSVy1BMFFxWm42OGxMdi1QM1dBeklueFRzT0lrTFBXc0I4TkttWGIyc21HNU5xQ21OTEFqSFFQSVNVZTd5bGJVU3NSd1poOUF2Smw2UmtBMHhIZnNxUy1vSFpONkQ1YWF3WXJyMzVkRnZxQXM?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "Yahoo!ニュース",
-      "impact_memo": "1NIWAが簡易宿所を運営する東京都23区でもインバウンド需要は重要であり、地方での宿泊税活用による観光振興策は、宿泊客の満足度向上や滞在期間延長に繋がる可能性があり参考になる。"
-    },
-    {
-      "date": "2026-07-15",
-      "title": "民泊、条例による「ゼロ日規制」を容認",
-      "summary": "民泊新法において、地方自治体が条例で民泊の営業日数を「ゼロ日」に規制することが容認された。",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE50am5Fa25LNXItTHNHOVdWa0FtM0VNZ0lfNUZSZmh2WUtqVlNUTFloZ3UwajJJTkstUWtqWEVqSkN6anF1TkJEUDEydWpTbUdYOGxnNFNXSEROYl9x0gFiQVVfeXFMUDU3WEVFRWdPYi1NdHd1LV9CNGVQYy11MmIzV0pOTnNTaGx5NGw1ZkZOa2ZFMk1FSFAtYnNId0N5TFc1aTVTdzE0Tzd0S0dQcmtVLWhyVGcxVGVHSTFETmpQbEE?oc=5",
-      "category": "民泊・住宅宿泊事業",
-      "importance": "中",
-      "source": "最新不動産ニュースサイト「R.E.port」",
-      "impact_memo": "1NIWAは旅館業法に基づく簡易宿所を目指しており、民泊規制強化は直接的な影響は少ないが、民泊市場の供給減少により簡易宿所への需要が高まる可能性がある。"
-    },
-    {
-      "date": "2026-07-15",
-      "title": "観光庁ら、民泊の禁止やICT管理の義務付けを可能に 地方公共団体に通知",
-      "summary": "観光庁は、地方公共団体に対し、民泊の禁止やICT管理の義務付けを可能にする通知を発出した。",
-      "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFBLaG81TkNTNGd5TkYyanVpUGZtemFvUmkzbTBOckhMYV8zNGtNQzl3Y2xDYmRyUGVTLVlPUjZtbS1vQWs1alFV?oc=5",
-      "category": "民泊・住宅宿泊事業",
-      "importance": "中",
-      "source": "TRAICY（トライシー）",
-      "impact_memo": "1NIWAは旅館業法に基づく簡易宿所を目指しており、民泊規制強化は直接影響しないが、民泊からの転換組が増え、物件取得競争が激化する可能性がある。"
-    },
-    {
-      "date": "2026-07-15",
-      "title": "地方公共団体に対して民泊に関する通知を行いました ～「住宅宿泊事業法に規定する届出住宅に係る ゼロ日規制等について（技術的助言）」の発出について～ | 2026年 | 報道発表 | 観光庁",
-      "summary": "観光庁は、地方公共団体に対し、住宅宿泊事業法に基づく届出住宅（民泊）に関する「ゼロ日規制等について」の技術的助言を通知した。",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1JZ0Y5S3VnYmpVVmNCMmt0Z3lxMTZrdFIteXlRbTZqOV8xMlh2YkhHcGIzRkRKbFBQNW9wQXN5bWQ5ZEZQanBIV1ptb0g0X01HYjRNbUozeUJOc2lWcVE?oc=5",
-      "category": "民泊・住宅宿泊事業",
-      "importance": "中",
-      "source": "mlit.go.jp",
-      "impact_memo": "1NIWAは旅館業法に基づく簡易宿所を目指しており、民泊規制強化は直接影響しないが、民泊からの転換組が増え、物件取得競争が激化する可能性がある。"
-    },
-    {
-      "date": "2026-07-15",
-      "title": "住宅地の民泊「ゼロ日規制」で実質禁止可能に 観光庁が通知発出（毎日新聞）",
-      "summary": "観光庁は、住宅地における民泊について、自治体が「ゼロ日規制」を適用することで、実質的に禁止できるとする通知を発出した。",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9FbFp5R2lLQTR4NXlHbVM3RGNMeFpMYkViOWRvZWoyb2VIdVdOY05oZWVWLWJUcU55ZFltbFBaVWtBalo5S3J3RXNuT0QtN1RnMndBem1GemhKaUZ0SjZKSTY3QXNQMF9lMnh2WnBBVlBlLWItcGcxMXk5Z3Z5WXM?oc=5",
-      "category": "民泊・住宅宿泊事業",
-      "importance": "中",
-      "source": "Yahoo!ニュース",
-      "impact_memo": "1NIWAは旅館業法に基づく簡易宿所を目指しており、民泊規制強化は直接影響しないが、民泊からの転換組が増え、物件取得競争が激化する可能性がある。"
     }
   ]
 }
