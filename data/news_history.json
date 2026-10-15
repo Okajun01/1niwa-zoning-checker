@@ -1,6 +1,56 @@
 {
-  "last_updated": "2026-10-14 01:00",
+  "last_updated": "2026-10-15 00:21",
   "articles": [
+    {
+      "date": "2026-10-14",
+      "title": "復旧事業者、羽咋にホテル 県の補助制度第１号 来年７月稼働 作業員と観光客向け（北國新聞社）",
+      "summary": "石川県羽咋市で復旧事業者が県の補助制度を活用してホテルを建設し、来年7月に作業員と観光客向けに稼働開始する。",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBLZHBzcHFMejFmcWJ4ZXBtb0RsaW1KbGN6ZVhuekwwSk5sQjFQU2p1Rm9ESGN5ZWNBSm8xekxqQ1V1MVRhUnE3RDBCSGtIWFlJOTlXRkZEMG5GSnQteUdGQlZYODdGcHFjTXhycmJfR3lYZEd5M2JRZGVRcGFCVjg?oc=5",
+      "category": "補助金・助成金",
+      "importance": "中",
+      "source": "Yahoo!ニュース",
+      "impact_memo": "1NIWAが東京都23区で簡易宿所を計画する上で、地方自治体の補助金・助成金制度の活用可能性を示唆するが、東京都23区における簡易宿所向けの直接的な補助金制度の有無を確認する必要がある。"
+    },
+    {
+      "date": "2026-10-14",
+      "title": "日本が「世界で最も魅力的な国」米国版で4年連続1位、英国版は2位 米旅行誌",
+      "summary": "日本が米国の旅行誌で「世界で最も魅力的な国」の米国版で4年連続1位、英国版で2位を獲得し、国際的な観光地としての高い評価を維持している。",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE03OWFSR0wybkFxQWZmMkdxRmFYTkFib3NFaWdXQ3YtS1BveEcwT21ELXhMVTd5QlBOT2tSTm1hWjZoUTJMYWRhNncxeXYwU05pcjAzX0ZmWE1BcDJ3bnFZWkhVRGIxTVIxTG1faFNJeVRIMTg?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "訪日ラボ",
+      "impact_memo": "日本の国際的な魅力度が高いことは、1NIWAがターゲットとするインバウンド需要の継続的な高まりを示唆し、東京都23区での簡易宿所事業の潜在的な成功を後押しする。"
+    },
+    {
+      "date": "2026-10-14",
+      "title": "【独自調査】2026年最新：外国人に人気のホテル・旅館ランキング［47都道府県 総集編］",
+      "summary": "2026年最新の外国人に人気のホテル・旅館ランキングを47都道府県別にまとめた独自調査である。",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5iVkZka0RGTk9tdklTMDU2OFFzd1pjU0ltSk5KdXNaREhUckZxSUk0NzZCdXR5MzNuQmpaMDF2TnlocWRnblRsbUJVeFo0UDBMR2d4b2wzdnFQMXI4UmtIYi02VU0xTWtkZmlBZmFGdURiX0ZuQWJUVnBxUQ?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "ニコニコニュース",
+      "impact_memo": "このランキングは、外国人が宿泊施設に求める要素やトレンドを把握する上で貴重な情報源となる。1NIWAは、東京都23区で物件を探す際に、ランキングで上位にくる施設の共通点や特徴を分析し、自社の簡易宿所のコンセプトやサービス設計に活かすことで、インバウンド顧客の誘致に繋げられる。"
+    },
+    {
+      "date": "2026-10-14",
+      "title": "インバウンド消費動向調査とは｜旧・訪日外国人消費動向調査の読み方 — 4-6月期2.5兆円・宿泊費36.6%",
+      "summary": "2026年4-6月期の訪日外国人消費額は2.5兆円に達し、そのうち宿泊費が36.6%を占めている。",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQOEtKcnIxNXpvNHNCVktrcDg1bTdVU2JQVzVJaVkwVmlhdFVEZHBvNWs0am5UMkMxaE9GR2JWZmZRRy1NOFNSeE1vS3Z4ZW9BQm8ybXcyREhaMWd1X2VQVEdacWlYeTZRQjZFUzFDWHRFLU9pdUliR1BYVDdiSkU0WFdPaExhdWdBaUJ6TkNXbXFjZw?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "HotelBank",
+      "impact_memo": "訪日外国人による宿泊費が消費全体の大きな割合を占めていることは、1NIWAがターゲットとするインバウンド需要の高さを示しており、事業の収益性向上に期待が持てる。このデータは、物件選定や施設コンセプトを検討する上で重要な市場情報となる。"
+    },
+    {
+      "date": "2026-10-14",
+      "title": "軽井沢町、追分の別荘地で宿泊施設などの新設規制を検討 「古くからの環境を保全するため」",
+      "summary": "軽井沢町が追分の別荘地で宿泊施設などの新設規制を検討しており、古くからの環境保全が目的である。",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBNYUhnakNZQU4wTXdxMGthZzNrUEtSel9qUmRFTU9tM3JXMlJUZFRpdGNfNWNrOFBkSXBpN2NZenBWLVo3QUkwYXRnS3dnay1KNkhxN1hUMm8ycG43bHZReVFjTUVEVUxOZWJRZkUtdU8?oc=5",
+      "category": "旅館業法・条例改正",
+      "importance": "中",
+      "source": "信濃毎日新聞デジタル",
+      "impact_memo": "1NIWAは東京都23区での事業展開のため直接的な影響はないが、地方自治体による宿泊施設規制の動きは、将来的に東京都23区でも同様の規制が検討される可能性を示唆しており、動向を注視する必要がある。"
+    },
     {
       "date": "2026-10-13",
       "title": "｢最近は欧米系の方も増えてきています｣外国人観光客が増え続ける中\"働き手\"不足が懸念　宿泊業界に特化した合同就職説明会",
@@ -4950,56 +5000,6 @@
       "importance": "高",
       "source": "フーズチャネル",
       "impact_memo": "1NIWAは簡易宿所の許可取得を目指しており、このような専門の行政書士法人の存在は、複雑な許認可申請プロセスを円滑に進める上で有効なサポートとなり得ます。"
-    },
-    {
-      "date": "2026-08-02",
-      "title": "【写真・画像】民泊規制、健全化の契機 米仲介大手、騒音に対応 | | 全国のニュース",
-      "summary": "民泊規制の強化が業界の健全化を促しており、米仲介大手も騒音問題などに対応を強化しています。",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBUc2FIam1tSG5NbGNUbEdwVS1QUkdKQUpnWmZmcnNkcUNra3hZZVphZEdGblZWc1RXamFwWmRkM1hBN3JsSUxhaTd3R2VtNTZkR3pLV2dBSWVNaFVWRVE?oc=5",
-      "category": "民泊・住宅宿泊事業",
-      "importance": "中",
-      "source": "佐賀新聞",
-      "impact_memo": "1NIWAは旅館業法に基づく簡易宿所を目指しており、民泊規制の直接的な影響は少ないですが、宿泊施設全般における近隣住民とのトラブル対策は参考になります。"
-    },
-    {
-      "date": "2026-07-30",
-      "title": "【2026年7月最新】全国の旅行補助金・割引サービスまとめ｜GW・夏休みに使える全国お得情報【個人向け】",
-      "summary": "2026年7月時点の全国の旅行補助金や割引サービスが個人向けにまとめられており、GWや夏休みに利用できるお得な情報が提供されています。",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9OeUVNclZwRGJIV19BOS1HSklvQzNWcGFfVWVjcDktNGU5elhXNXZ4ekZ5TTZTZ0dMcGNuS25HVlpWSG1nVWwySTczU3FUY0J6TElMTmE1N1lzT3hpMHB4NzBKSlA?oc=5",
-      "category": "補助金・助成金",
-      "importance": "高",
-      "source": "hojyokin-portal.jp",
-      "impact_memo": "個人旅行者向けの補助金や割引サービスは、旅行需要を喚起し、1NIWAが運営する簡易宿所への宿泊客増加に繋がる可能性があります。特に、東京都内での利用可能な割引があれば、直接的な集客効果が期待できます。"
-    },
-    {
-      "date": "2026-08-01",
-      "title": "暑中お見舞い申し上げます。観光立国の実現は地方（地域）から。令和八年盛夏",
-      "summary": "観光立国の実現には地方（地域）の活性化が重要であるという視点から、観光業界の現状と展望について述べられています。",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9kZGFyZEtUSGFfZUJBZC1zdmJDaFZBTENFN3ZSdmdCWFlURExzOFdaMXg5QUxoT0ZpcUpuXzFfSGtpWHlmaUhlVGprWDBNbzJGaFNuYw?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "観光経済新聞",
-      "impact_memo": "記事は地方観光の重要性を強調しており、東京都23区で事業展開を計画する1NIWAへの直接的な影響は限定的ですが、日本全体の観光需要が高まることは、都心部への波及効果も期待できます。"
-    },
-    {
-      "date": "2026-08-01",
-      "title": "京都の観光客は本当に“迷惑”なのか？ インバウンド4300万人時代、地元調査で見えた“迷惑行動”が生まれる条件とは",
-      "summary": "京都における観光客、特にインバウンドによる「迷惑行動」の実態を地元調査に基づいて分析し、その発生条件について考察している。",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBORTlsaEQ3OTVyekxIZG1pN3NZWTdyeUltLTZia3YzbS1ua0xQM3JFWUVBMFBLLVZkX1Vpbk9FVlg3eFh4OS1oMmpXTkJoVHpwUkVOR2ZQRGdwcnMxWnBmQTl4Q0VFczQ0ZUdIeWw2RE1vLTdERmZmUWUxWQ?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "au Webポータル",
-      "impact_memo": "観光客による迷惑行動は、地域住民との共存が重要となる1NIWAにとって、宿泊客へのマナー啓発や施設利用ルールの明確化、地域とのコミュニケーション戦略を検討する上で重要な示唆を与える。"
-    },
-    {
-      "date": "2026-07-31",
-      "title": "函館地域産業振興財団交付 創業バックアップ助成金、今年度は5件採択 食や観光、多彩な事業（函館新聞デジタル）",
-      "summary": "函館地域産業振興財団が創業バックアップ助成金を交付し、食や観光など多様な分野から5件の事業が採択された。",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1RQkdDQldvODVpbm9yYXl6T2N2M2lyQkpZMlJxOG9adnFZNkRxYXRERGpSUnR4cGFRdE1hY3U2Qk5kUFRqeG5NcVRUQkVaM0Q5WTNnN3BXdUg2NGZzWm14WXk5T1VKdk03UlhNNlZZU2hTby0zal9NTEZTcVVSVEk?oc=5",
-      "category": "補助金・助成金",
-      "importance": "高",
-      "source": "Yahoo!ニュース",
-      "impact_memo": "この助成金は函館地域の創業支援であるため、東京都23区での開業を目指す1NIWAは直接的な対象外となる。しかし、地域に特化した創業支援制度の存在は、将来的に東京都や区が同様の制度を設ける可能性を示唆しており、情報収集の参考にはなる。"
     }
   ]
 }
