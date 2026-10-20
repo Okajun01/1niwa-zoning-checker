@@ -1,6 +1,66 @@
 {
-  "last_updated": "2026-10-19 00:02",
+  "last_updated": "2026-10-20 00:59",
   "articles": [
+    {
+      "date": "2026-10-19",
+      "title": "半壊世帯に「特別な支援金を支給」 熊谷知事、１２月補正予算案に支援策 農業、観光もサポート",
+      "summary": "千葉県は災害で半壊した世帯への特別な支援金支給に加え、農業や観光業への支援策を12月補正予算案に盛り込むことを発表した。",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9ROXphNzlkR3Y2dEFxTU1TUVJzN1psUFVNQU5UeDV2LU9FN3IyVmNqVHhRU1Z5YkFsRTNSRTdXcUEzT2FSRWRXdC13dzVrTGVjelhZWndlSEM?oc=5",
+      "category": "補助金・助成金",
+      "importance": "中",
+      "source": "千葉日報オンライン",
+      "impact_memo": "この支援策は千葉県の災害復興に特化したものであり、東京都23区で事業展開を目指す1NIWAには直接的な影響はないが、災害時の観光業支援の事例として、将来的なリスクマネジメントや事業継続計画を検討する際の参考情報となり得る。"
+    },
+    {
+      "date": "2026-10-19",
+      "title": "地震の復旧作業員の長期滞在用に 石川・羽咋市にホテル整備へ 能登宿泊業復興投資補助金を初活用（2026年10月19日掲載）",
+      "summary": "石川県羽咋市で能登地震の復旧作業員向け長期滞在ホテルが整備され、能登宿泊業復興投資補助金が初めて活用されることになった。",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQRmZyOGRYTVp1NlZhYmpMNTl5aW5YVlc1OThKdFdpQnl4VFRSZFFpM2lqZkxCVTdCS2M5SkdlRHh2dDVySkwzZnhJeWNNczhrbWZNZHRXS0NvMnhwTlpUUkljYzVCMmd4OG5TbVFJU2JjSXU0Z2VyeW8yMWlzWC1MSHBxMzhvT0k?oc=5",
+      "category": "補助金・助成金",
+      "importance": "高",
+      "source": "日テレNEWS NNN",
+      "impact_memo": "この補助金は能登地域の復興に特化したものであり、東京都23区で事業展開を目指す1NIWAには直接的な影響はないが、災害復興における宿泊施設の需要創出と補助金活用の事例として参考になり得る。"
+    },
+    {
+      "date": "2026-10-19",
+      "title": "「ごみが湧くように増える」、訪日客増えポイ捨て被害深刻…東京都が過料科す条例の議論本格化（読売新聞オンライン）",
+      "summary": "訪日客増加に伴う東京都内でのポイ捨て被害が深刻化しており、東京都が過料を科す条例の制定に向けて議論を本格化させています。",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1wOUlVa3VzYU1yY1JDMVRCb01uWXNVRW82MjNnZGkwZFNTYTJwUVFGakR2U1NDU0ZEejNTbTMtZEVMSWVjazJQV2FjSGtUOXdGdVg0bVdCblZ3ZGVYY1FFeXRWbkZRRV9aYU5FeDBqS0MxdUJPNEdHR2xmOWpUNWc?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "高",
+      "source": "Yahoo!ニュース",
+      "impact_memo": "1NIWAが東京都23区で簡易宿所を運営する際、宿泊客へのゴミの分別やポイ捨て防止に関する注意喚起がより重要になり、地域住民との良好な関係維持のためにも対策が求められます。"
+    },
+    {
+      "date": "2026-10-19",
+      "title": "【今週の注目記事5選】観光庁、大阪・夢洲IR計画で訪日客誘致の具体化を要求 ほか",
+      "summary": "観光庁が大阪のIR計画における訪日客誘致の具体化を求めていることなど、観光・インバウンドに関する主要な動きをまとめている。",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1BVklPRFVUNE1rXzRBX1k0THh3ZDRDbjlSZ2NlcU02eFhaN3RoWVFxU0VwZ3FnaE1GQU5rNEVQMzVEQVRMMUJFeGJhbjhHaVNUY3RNMS11OUxmTkJqanhaRkJCeFd1aEU?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "訪日ラボ",
+      "impact_memo": "国や自治体がインバウンド誘致に積極的であることは、宿泊業界全体にとって好材料であり、1NIWAの事業展開にも追い風となる。特に東京都23区はインバウンドの主要な目的地であるため、政策的な支援や需要喚起の恩恵を受けやすい。"
+    },
+    {
+      "date": "2026-10-16",
+      "title": "「民泊への規制強化を喜ぶのは“違法業者”ばかりです」…専門家が明かす「閉鎖」「禁止」が民泊問題の解決に繋がらない理由 「悪質な業者は徹底的に排除してほしい」（デイリー新潮）",
+      "summary": "民泊規制の強化が違法業者を利する可能性があり、悪質な業者を排除しつつ、合法的な民泊の健全な発展を促す必要性が専門家によって指摘されている。",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5RZGpyM3pfT0VIMVVrVmZNZTRqc2FhNnVjWTJFNkJSTXZKSUhxUFpRM0pEMTVMQkNkRGJxMzc0cE9RY2ZUVUJ0X0F1czk0cjhfUU1TQmZqbE16Ny1rSXNaZWlWRUFiZXZJdGtTMG9oWWFWNWpka1lWcTZqb3VOcXc?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "高",
+      "source": "Yahoo!ニュース",
+      "impact_memo": "1NIWAは旅館業法に基づく簡易宿所であり、合法的な事業を目指しているため、民泊の違法業者排除の動きは歓迎される。これにより、宿泊市場全体の健全化が進み、合法的な簡易宿所への信頼と需要が高まる可能性がある。"
+    },
+    {
+      "date": "2026-10-16",
+      "title": "住宅宿泊事業の届出について",
+      "summary": "新潟市が住宅宿泊事業（民泊）の届出に関する情報を提供している。",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNUzdkT2k2TGVFWUU1VEYwSVVURmhrMFpPekZjRXdGR1dOU1A3eUVBdzNIU2FiVTdTdXpxUUZpczFnSHRpaUYwUFhqdmRRaGYwNVRFczZ3bVRJTG8xM01lRHQ2dFp0Rjc0OXJLc0JDX1JWOFRwS1ZqLTA0OUlSejBENzBFUV9HMGRQTHZlRDluXzhhOEUydkE?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "高",
+      "source": "新潟市",
+      "impact_memo": "1NIWAは東京都23区で旅館業法に基づく簡易宿所を目指しており、新潟市の住宅宿泊事業に関する情報は事業地域も事業形態も異なるため、直接的な影響はない。"
+    },
     {
       "date": "2026-10-16",
       "title": "宿泊事業者向け「3社の実例から学ぶ 省力化投資セミナー」開催のお知らせ",
@@ -4940,66 +5000,6 @@
       "importance": "高",
       "source": "YouTube",
       "impact_memo": "1NIWAは旅館業法に基づく簡易宿所を目指しており、民泊（住宅宿泊事業法）とは異なるため、直接的な規制強化の影響は受けにくいと考えられます。"
-    },
-    {
-      "date": "2026-08-09",
-      "title": "神奈川県　「かながわ観光連携エリア」補助金　 観光の周遊促進事業を支援　２次募集を開始〈厚木市・愛川町・清川村〉",
-      "summary": "神奈川県が観光の周遊促進事業を支援する「かながわ観光連携エリア」補助金の2次募集を開始し、厚木市・愛川町・清川村の事業者を対象としている。",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPLTY3bmh1Vk1mTExwOGZnMEdoTHhTYlJtY2FnMV9fWTMzM3FyU3VCNEwyMWpvYWc2WEZoTVh5c2h1MmlwNmc0Z0hqWlNFanhOa3BLWUFWQnVMR1NWRVhRSW10NGdNSzVUVjYxUUNOVjJSMl85Z1o3czZ1UFhOV1JPNNIBgAFBVV95cUxPLTY3bmh1Vk1mTExwOGZnMEdoTHhTYlJtY2FnMV9fWTMzM3FyU3VCNEwyMWpvYWc2WEZoTVh5c2h1MmlwNmc0Z0hqWlNFanhOa3BLWUFWQnVMR1NWRVhRSW10NGdNSzVUVjYxUUNOVjJSMl85Z1o3czZ1UFhOV1JPNA?oc=5",
-      "category": "補助金・助成金",
-      "importance": "高",
-      "source": "ｄメニューニュース",
-      "impact_memo": "1NIWAは東京都23区での事業展開のため、神奈川県の補助金は直接利用できないが、地域連携や周遊促進といった補助金の目的や要件は、将来的な事業計画や国レベルの補助金申請の参考になる可能性がある。"
-    },
-    {
-      "date": "2026-08-05",
-      "title": "公式情報を自動更新、生成 AI が整理する観光庁系の補助金一覧「観光補助金ボード」を公開",
-      "summary": "観光庁系の補助金情報を生成AIが自動更新・整理する「観光補助金ボード」が公開され、事業者による情報収集の効率化が期待される。",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5ZSVFtZ3VIekNIOW9kRDRYX013cW1FbEVhQ2VWNzZwOVVjend4OW1mU3UwdGs1Rjc5a0MzVnd2ajV2RmRoUmRqNWJXMUdCaHVLOEh3OW9SYlRNaGM3MFFUcUxHUGVOVk1LcG10SXJ3?oc=5",
-      "category": "補助金・助成金",
-      "importance": "高",
-      "source": "tv-tokyo.co.jp",
-      "impact_memo": "1NIWAは将来的に国の補助金（観光庁系を含む）の活用を検討する可能性があるため、このツールは補助金情報の効率的な収集に大いに役立つだろう。"
-    },
-    {
-      "date": "2026-08-06",
-      "title": "観光立国の未来に向けて本学の教員が観光庁長官らと対談",
-      "summary": "観光立国の未来に向けた議論が観光庁長官と大学教員の間で行われ、持続可能な観光のあり方や政策について意見交換がなされた。",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5FazU1SXBYQTl6VnNoZjBlVDdUTzlFcS1XZE0wQlVfWFlpVnk2R19OUkhtcjdZT3ZlcTYyX1l1ZVU1RVZINElvUGpDSUFvS1ZKNFB1Mjg4SThSbnFk?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "kyushu-u.ac.jp",
-      "impact_memo": "観光政策の方向性や規制緩和・強化の動向を注視し、簡易宿所事業の許認可や運営に影響を与える可能性があるため、今後の政策発表に注意を払う必要がある。"
-    },
-    {
-      "date": "2026-08-09",
-      "title": "ニッポンの「お土産事情」に異変？ 提灯型の水筒、ミニのぼり……外国人に人気のワケ 日本人も驚きのアイデア満載『every.特集』（日テレNEWS NNN）",
-      "summary": "インバウンド客の間で、提灯型水筒やミニのぼりなど、日本人には意外なユニークなアイデア商品が人気のお土産として注目されている。",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1paGZBWWU0SlQ0WDE5TUZkR3BxUmxyQ1hqaVY3WmlyZkZ0bGY5NEd2amprVEhfWjRreFBwbGtMSGRvTHBVSlVveGVaYTZRREFvZFVnczlkUGwxNjR0dENOUnN2MUFJYWU5cmJMczBVUnZrYUI1QVpRUm5UR3VsNlE?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "Yahoo!ニュース",
-      "impact_memo": "1NIWAは簡易宿所として、宿泊客向けにこのようなユニークな日本のお土産情報を提供したり、施設内で販売スペースを設けることで、顧客満足度向上や追加収益の機会を創出できる。"
-    },
-    {
-      "date": "2026-08-09",
-      "title": "民泊の実質営業禁止へ「営業0日」規制も容認｜NetIB-News",
-      "summary": "観光庁が民泊（住宅宿泊事業）に対し、自治体が「営業0日」規制を設けることを容認し、実質的な営業禁止に繋がる可能性が指摘されています。",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9CbUdqY1F4VGdQcVBaYjRUUnlfVTExb09yYWhkWXIyRXFfZERmb2diT1VSd1ZPNU90S2RtQnpjOHdCYzM2RE5sdV9rU0NEdDc3LUE?oc=5",
-      "category": "民泊・住宅宿泊事業",
-      "importance": "中",
-      "source": "data-max.co.jp",
-      "impact_memo": "1NIWAは旅館業法に基づく簡易宿所を目指しており、民泊の規制強化は競合が減るため、簡易宿所としての需要が高まり、事業環境としては有利に働く可能性があります。"
-    },
-    {
-      "date": "2026-08-08",
-      "title": "Chinamaxxing 外国人観光客の中国旅行が世界のトレンドに",
-      "summary": "外国人観光客の間で中国旅行が新たなトレンド「Chinamaxxing」として浮上し、世界の旅行市場に影響を与えている。",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5NemtoSHVTRHJaNlhGd0JxdHFnT0ZXY0dKRnhnQUhndUdsRXg0NXI5ZHNrUFhaMk1Fa201M3BhdlFPN2VPeHlmZUNRQ21jaDVSYlHSAVRBVV95cUxPX250NkNrSnJsTjNkcW1QWGNSU2M3TDZJTlJkVzFEdENDbDB4ZWVwdGdsNFhubXNjRVZTV3Qwang4bE0tQXMyeGJscHhtT1UwT3FrQWE?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "AFPBB News",
-      "impact_memo": "中国への旅行需要が高まることで、日本へのインバウンド需要が分散する可能性があり、1NIWAはターゲット層やプロモーション戦略を再検討する必要があるかもしれない。"
     }
   ]
 }
