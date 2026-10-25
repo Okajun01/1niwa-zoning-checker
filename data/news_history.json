@@ -1,6 +1,56 @@
 {
-  "last_updated": "2026-10-24 00:23",
+  "last_updated": "2026-10-25 00:07",
   "articles": [
+    {
+      "date": "2026-10-23",
+      "title": "日本旅行業協会、「全国DMC」で訪日客と地域をつなぐ流通網を構築へ、旅行会社をハブに地方誘客の新事業",
+      "summary": "日本旅行業協会が、全国DMC（Destination Management Company）を通じて旅行会社をハブとし、訪日客を地方へ誘客する新たな流通網を構築する事業を進めている。",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE0zVkFaM25ieUtkVE1BdGF5WjFHVHJPWDdBTUxRZ242UG5hSU1Mdmh4SFVwWFc3RzlSQ1BXcXdYdENNdjFsemhsWTZadjZMM2RiNTNaRg?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "トラベルボイス",
+      "impact_memo": "1NIWAは東京都23区に立地するため、この地方誘客の動きから直接的な恩恵は少ないが、地方へ向かう訪日客の東京での滞在拠点として、DMCや旅行会社との連携を検討する余地がある。"
+    },
+    {
+      "date": "2026-10-23",
+      "title": "星野リゾートが挑む「予約DX」と、インバウンド偏重の「観光税」に投げかける危機感（中山智） - エキスパート",
+      "summary": "星野リゾートが予約システムのDX化を進める一方で、インバウンドに偏重した観光税の導入が国内観光客の減少を招く可能性に警鐘を鳴らしている。",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQME02RXpSTFFPODVFQVZFOEVVSXBFMUVXTEppcm1OVlJCby1vdEdoZk5WUzlXcGxMb3FPQ2VYNkM0a0RkNVlKbzZNNV81SkR0aDMxRmtEaFI3UDIxN01URlo1R3BLdnhhZnJsVElYSmRzQ1ZZckJpOEJGcFlvNTZCamxhYTFHZm1a?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "Yahoo!ニュース",
+      "impact_memo": "1NIWAは開業後、効率的な予約システム導入を検討するとともに、インバウンド客だけでなく国内客もターゲットに含めることで、観光税の影響を緩和し安定した稼働率を目指すべきである。"
+    },
+    {
+      "date": "2026-10-23",
+      "title": "中国人観光客が激減しても「日本観光」は本当に大丈夫なのか？ 9月は前年比45%減！ 消費額が過去最高でも地域に恩恵が行き渡らないのはなぜか――観光業の明暗を分けるものとは",
+      "summary": "中国人観光客の減少にもかかわらず訪日客全体の消費額は過去最高を記録しているが、その恩恵が地方に行き渡らず、観光業の明暗が分かれている現状を指摘している。",
+      "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1sRzlEcmdSNkhaOGF1SGtzbUdGUV9EeUdqbnI0UWduTmxSYVlsNm9vSE1rc1M5SmtkQlZlaktSVDloN2tzUDUtSVdB?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "merkmal-biz.jp",
+      "impact_memo": "1NIWAは東京都23区での開業を目指しており、中国人観光客の動向に左右されにくい多様な国籍のインバウンド客層をターゲットにすることで、安定した集客を図るべきである。"
+    },
+    {
+      "date": "2026-10-24",
+      "title": "旅館協会北海道、9月の宿泊人員は10％増 インバウンドは地域差も",
+      "summary": "旅館協会北海道によると、9月の宿泊人員は前年比10％増と好調で、特にインバウンド需要が回復しているが、地域によってその恩恵には差がある。",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5tdWRSSmRucThjYm5HU0R2cW96LUk3T2d6enVmRTA2NjJydFRXQVJtMUlKYjdNUkp1Rl8zV2tqbVNiUGxZM083azJhdmI4Wk4xM3JFYg?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "観光経済新聞",
+      "impact_memo": "1NIWAが事業展開を予定する東京都23区は、インバウンド需要が高い地域であるため、このニュースは市場の好調さを示すポジティブな情報となる。簡易宿所としてインバウンド需要を取り込む戦略を強化する上で、追い風となる。"
+    },
+    {
+      "date": "2026-10-24",
+      "title": "【注目】兵庫県が民泊の規制強化へ 旅館業法条例を改正方針【神戸市北区】兵庫県議会議員 大塚公彦",
+      "summary": "兵庫県が民泊の規制強化のため、旅館業法条例の改正方針を示した。",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBIeGEzOGtiVVhwQ0p4cU52MzZvNmZ4NWZhODVYWlpNOGNaMVFIU0Q0YnB4VEFQMHhFYlEwbF9mWkNMamVFYkRKU2lnNW1hajZaM2F5TnRQaDg3UDFpTzRj?oc=5",
+      "category": "旅館業法・条例改正",
+      "importance": "高",
+      "source": "選挙ドットコム",
+      "impact_memo": "1NIWAは東京都での簡易宿所事業を計画しており、兵庫県の規制強化は直接的な影響はない。しかし、他地域での規制強化の動きは、将来的に東京都でも同様の動きが起こる可能性を示唆しており、事業計画の策定において注視すべき動向となる。"
+    },
     {
       "date": "2026-10-23",
       "title": "台湾人の日本旅行熱はすさまじい！訪日旅行消費額が世界トップ、中国は4割減―台湾メディア｜Infoseekニュース",
@@ -4950,56 +5000,6 @@
       "importance": "中",
       "source": "トラベルボイス",
       "impact_memo": "1NIWAは、インバウンドの購買意欲が改善傾向にあることを踏まえ、宿泊だけでなく周辺地域の消費を促すような情報提供や、購買体験を向上させるサービス連携を検討することで収益機会を拡大できる可能性がある。"
-    },
-    {
-      "date": "2026-08-16",
-      "title": "「救急車が来ているのに」渋谷スクランブル交差点で目撃した光景にあ然 外国人観光客が撮影を続け「本当に迷惑」",
-      "summary": "渋谷スクランブル交差点で救急活動中に外国人観光客が撮影を続ける迷惑行為が問題視されており、観光客のマナー違反が社会問題となっている。",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9TU1laa1cwek04WFg3QWpKRXJrMnN1VjhTQ0lQdXQtSDBaTFBhTVpkQ2NlUGZWUGlrRWxzODVVLTRvSUxweUhBaU9tQVdDZHVPaWNSdTE2OHh1SGsxY2RKU1lPVzcyZDBkNWplT2E3bFZWcGlCSjFSSk1ORHZxT2s?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "Yahoo!ニュース",
-      "impact_memo": "1NIWAは、宿泊客に対して日本の文化やマナーに関する情報提供を強化し、地域住民との良好な関係を築くための啓発活動を行うことで、オーバーツーリズム問題への配慮を示す必要がある。"
-    },
-    {
-      "date": "2026-08-17",
-      "title": "「外国人宿泊客75%目標」上野エリア8棟目、アパホテル〈京成上野駅前南〉が開業 台東区に4,402室の巨大ネットワーク",
-      "summary": "アパホテルが上野エリアに新たなホテルを開業し、外国人宿泊客75%を目標に台東区で大規模な客室ネットワークを構築している。",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBPeTAtSWpWb1p2VklzNm1VaGx2djdRLXJXeWw0OG85ZlNIOGwyY0wwd3haVWVnT0RsX3VyNUVsZVM4bHNsTXhWR1BDS1YyTW1LbFpfVg?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "観光経済新聞",
-      "impact_memo": "東京都23区、特にインバウンド需要が高いエリアでは大手ホテルチェーンとの競争が激化しており、1NIWAは独自の魅力やターゲット層を明確にする必要がある。"
-    },
-    {
-      "date": "2026-08-17",
-      "title": "外国人に\"見つけてもらう\"場所をどう選ぶか【意外と知らないインバウンドの基本 vol.3】",
-      "summary": "インバウンド客に宿泊施設を見つけてもらうための立地選定やマーケティング戦略に関する記事である。",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9tMGJVUkdGVTNOR0hiOXU5UkRRTnRTNHFCbm5fNFU4THl5RjNmNEZIb2JQTnpRUnAwZm0xWHQ4NlI2bVV6ODBlQU4xY2t1dHh5UVJBR3JWYzFyZw?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "訪日ラボ",
-      "impact_memo": "1NIWAが物件探し段階であるため、インバウンド客の集客を考慮した立地選定や、効果的な情報発信戦略を検討する上で参考になる。"
-    },
-    {
-      "date": "2026-08-16",
-      "title": "「観光革命」地球規模の構造的変化（297）ー最終回ー フューチャーデザインの必要性",
-      "summary": "観光業界は地球規模の構造的変化に直面しており、持続可能な観光を実現するためには、将来世代の視点を取り入れた「フューチャーデザイン」の考え方が不可欠である。",
-      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE51X09xVS1idDV5VFFlNkxmVUVMNkV1dDlTMWIxUTNvclVJM2I4bmVrcWxhazA4ZURsMFBnVTJkdENZMDdRX0Z1ZkVoZWdaQQ?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "ryoko-net.co.jp",
-      "impact_memo": "1NIWAは簡易宿所の事業計画において、短期的な収益だけでなく、環境負荷の低減や地域社会との共生など、持続可能性を考慮したフューチャーデザインの視点を取り入れ、長期的な事業発展を目指すべきである。"
-    },
-    {
-      "date": "2026-08-16",
-      "title": "「救急車が来ているのに」渋谷スクランブル交差点で目撃した光景にあ然 外国人観光客が撮影を続け「本当に迷惑」",
-      "summary": "渋谷スクランブル交差点で救急車が来ているにも関わらず、外国人観光客が撮影を続ける迷惑行為が目撃され、観光客のマナー問題が浮上している。",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9RTEtlMUg4N2lSZ1djeTlOb2NmTXhTRGFDQTFrYTVybzdzOHA5QlBYeFJaNlY3azg4bnliRzRMYjNBaXlpSWx5OFEzMnBidm5CUGdSR01rdXlzeWM4ZEVZ?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "J-CAST ニュース",
-      "impact_memo": "1NIWAは簡易宿所を運営する際、外国人観光客に対し、日本の文化やマナー、緊急時の対応に関する情報（多言語対応）をチェックイン時や施設内に掲示するなどして、トラブル防止と快適な滞在を促す必要がある。"
     }
   ]
 }
