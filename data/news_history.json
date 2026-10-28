@@ -1,6 +1,56 @@
 {
-  "last_updated": "2026-10-27 01:18",
+  "last_updated": "2026-10-28 01:03",
   "articles": [
+    {
+      "date": "2026-10-27",
+      "title": "【日本政府観光局インバウンド最新リポート 137】インドネシアのインセンティブ旅行 リピーター化で地方にも勝機あり ＪＮＴＯジャカルタ事務所 山本祐輔所長",
+      "summary": "インドネシアからのインセンティブ旅行において、リピーター化が進むことで地方にも誘客のチャンスがあることが示唆されている。",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBZUGVGczYtTERuTl9MMFBCWEN4VjlET2lmTGRjRGx3Z3haNk9oRWg5VDFKX3FsTHdxTzBlcGFKMC05Tm8wTUxaMU53N2ZqczNOOVY1SQ?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "観光経済新聞",
+      "impact_memo": "インドネシアからのインバウンド需要は都心部にも波及する可能性があり、1NIWAはリピーター層をターゲットにしたサービスや情報提供を検討する上で参考になる。"
+    },
+    {
+      "date": "2026-10-26",
+      "title": "インバウンド特化のインフルエンサーマッチング「VisitClub」、2026年11月1日より正式提供を開始",
+      "summary": "インバウンドに特化したインフルエンサーマッチングサービス「VisitClub」が2026年11月1日より正式提供を開始する。",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBxVkxnZzF0Y0ZiQTA5UUlyUk45YVM1a3NOU29jQkFiVi1ZWjluNEVwSFA4OWpkdlFoVFNHM25NRzBSaGtVUmctNEFReWN1UkZKcVUwUXFEdzVWbmRJMGdGeU5WUkV6eU5FYWc?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "PR TIMES",
+      "impact_memo": "1NIWAが簡易宿所を開業した際、このサービスを利用してインバウンド層への効果的なプロモーションが可能になり、集客に貢献する可能性がある。"
+    },
+    {
+      "date": "2026-10-27",
+      "title": "県の強み「農業」体験を通しインバウンド誘客促進へ 海外旅行会社が視察【新潟】（UX新潟テレビ21）",
+      "summary": "新潟県が農業体験を通じたインバウンド誘客を促進するため、海外旅行会社を招いて視察ツアーを実施した。",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9sLVFGTFdWbDl0TjloMEJPQ2pGaXRVU054UW1TdzZuNFJWa2NhOUh4N1BibjVnQml4eDN5V1dINUxBQkVNNTRjZGRVb2JsVmVralAtWWxKYjN2ZDZDOFJENVFZcGpjXzV1dnZ6YXpqZFpsOEc0XzhUbWlUUlZGeU0?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "Yahoo!ニュース",
+      "impact_memo": "地方での体験型観光の動きであり、直接的な影響は小さいが、将来的に都心部でも日本の文化体験（例：茶道、着付けなど）を簡易宿所と連携させることで、インバウンド誘客のヒントになる可能性がある。"
+    },
+    {
+      "date": "2026-10-23",
+      "title": "米沢市の宿泊施設がリニューアル・インバウンドを含めた幅広い誘客を目指す 山形｜ニュース",
+      "summary": "山形県米沢市の宿泊施設がリニューアルし、インバウンドを含む多様な客層の誘致を目指しているという地域ニュースです。",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5SWkZyLTFfWkthTlotX1pmRENldXBIYmFBYmFyb0w4RVhYS0swdkNpS1BqcDlPd3lfQV9tQ05saG9WYzJkM0NvNEkxQVRIRlpYR2gtNnVRS3RQUk1mMU0wTF9ZS0U0ZGk2VHNXYUlPTG9NbW8?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "さくらんぼテレビ",
+      "impact_memo": "地方の事例ではあるものの、インバウンドを含めた幅広い客層をターゲットとする戦略は、1NIWAが東京都内で簡易宿所を運営する上でも参考になります。ターゲット層を明確にし、それに合わせた施設コンセプトやサービスを検討する重要性を示唆しています。"
+    },
+    {
+      "date": "2026-10-26",
+      "title": "宿泊施設法で安全性など懸念、ホテル業界",
+      "summary": "宿泊施設に関する新たな法規制（または既存法の改正）に対し、ホテル業界が安全性などへの懸念を表明しているというニュースです。",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE8ycVFYazc3ekxsSjREYzFUT3p5WFA4dHJQSEEzU1pUcVE0cF9HbVQ4TnlmeUZuUDBrNTI2Nl9HdUsxaHVCZ3c?oc=5",
+      "category": "旅館業法・条例改正",
+      "importance": "中",
+      "source": "NNAアジア",
+      "impact_memo": "1NIWAが簡易宿所として許可取得を目指す上で、安全性に関する規制強化は直接的な影響があります。物件選定や設計段階から、より厳格な安全基準への対応が必要となる可能性があります。"
+    },
     {
       "date": "2026-10-26",
       "title": "インバウンドの地方誘客を促進する官民連携プロジェクト始動、地方に眠る「未知の宝物」の発見を ―日本旅行業協会",
@@ -4950,56 +5000,6 @@
       "importance": "中",
       "source": "KAB 熊本朝日放送",
       "impact_memo": "直接的な影響は少ないが、災害時の宿泊支援は社会貢献の一環として宿泊施設が担う役割を示しており、1NIWAも将来的に地域社会との連携やCSR活動を検討する際の参考になる。"
-    },
-    {
-      "date": "2026-08-19",
-      "title": "株式会社VISIT北海道、スギ薬局と連携し、訪日外国人観光客向けの新たな販促アプローチを開始",
-      "summary": "株式会社VISIT北海道がスギ薬局と連携し、訪日外国人観光客向けに薬局での割引や情報提供を行う新たな販促アプローチを開始した。",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBkNF9xSzdxX0NCLUdiR1ZvSl9nN3V0V01PX3VjWkIwU3A3cHRQdG9vVThmcmd2Z3kwRUhidDFETlktb2R1S1VTbHdzcGpzYm0yZEhWNF9kblZJS0oydnVwdk5UUWQtMHBReUE?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "prtimes.jp",
-      "impact_memo": "他地域での事例ではあるが、異業種連携による訪日外国人向け販促は、1NIWAが将来的に宿泊施設周辺の店舗やサービスと連携し、宿泊客への付加価値提供や集客を行う際の参考となる。"
-    },
-    {
-      "date": "2026-08-19",
-      "title": "訪日外国人数、2026年7月は同月過去最多の344万人、台湾は初めて70万人超 ―日本政府観光局（速報）（トラベルボイス）",
-      "summary": "2026年7月の訪日外国人数が過去最多の344万人を記録し、特に台湾からの訪問者が初めて70万人を超えた。",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5SR1FtRzZoVVl0c3FfVGN2LXJVUlF5S0FhVHNjcUNoYUxNcDJ1d0NmZGgtejJMSjFZRGZRUGJCZzYtZXUzTTlWYmtZMkcwZU9hemFwVTdJOFcwRUx3LWVJdUd0VG5LSTZPVHozYUdCQUlpZ0lDZ2pjQTdLSkJVSVE?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "Yahoo!ニュース",
-      "impact_memo": "訪日外国人の増加は、東京都23区で簡易宿所を計画する1NIWAにとって、潜在的な宿泊客層の拡大と高い稼働率を期待できる好材料となる。"
-    },
-    {
-      "date": "2026-08-17",
-      "title": "【2026年最新】岡山で外国人に人気のホテル・旅館TOP10！後楽ホテルは第3位、1位は？",
-      "summary": "2026年最新の岡山県における外国人観光客に人気のホテル・旅館ランキングが発表され、後楽ホテルが3位にランクインした。",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFA0MmZaT1pIRHhobnhjREJ1MzJ1M210RWFyTEdMT1JCSGpqX2Q5ZDRBSkxhZnhnZjQyMDJGb2lqU1lMMEZweFJzb1JXbThtMFZobVhHWUlXR200cFVNODA1eWpmbnlLX0lROWwzS0NGRUVQQ296dlBDV3pXRlY?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "訪日ラボ",
-      "impact_memo": "1NIWAは東京都23区で簡易宿所を運営するため、岡山県のランキングは直接的な影響はないが、外国人観光客のニーズや人気の傾向を把握する上で、今後の施設設計やサービス内容の参考にできる。"
-    },
-    {
-      "date": "2026-08-19",
-      "title": "古民家等を活用したインバウンド誘客支援事業に係るクラウドファンディング実施業務、公募型プロポーザルの実施",
-      "summary": "古民家等を活用したインバウンド誘客支援事業において、クラウドファンディング実施業務の公募型プロポーザルが実施される。",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5wTkZ1MHpvMFhwOTJEOGJFS09hQURUSDU4cS1rendsNjR0b3JvNk9BMnVtOVBVbmJpX1kzcm5zUWEzU283S195NDI1ekJJSnlT?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "高",
-      "source": "トラベルボイス",
-      "impact_memo": "1NIWAは簡易宿所としてインバウンド誘客を目指すため、クラウドファンディングによる資金調達や地域資源を活用した誘客支援の取り組みは、将来的な事業拡大や資金調達の参考にできる可能性がある。"
-    },
-    {
-      "date": "2026-08-19",
-      "title": "大田区、住居専用地域で 民泊 新規禁止へ 家主居住型も対象 2027年度上半期施行めざす",
-      "summary": "大田区が住居専用地域での民泊新規開設を家主居住型も含めて禁止する方針を打ち出し、2027年度上半期の施行を目指している。",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1vNHVReXlaTjRsYlJDcTdzVmQ4eE9TOTh3NVZNU3ZHS1owcTE2eC1ZWWZXNWh4TUxaSTlNNUxSS3dQbU1xcnFoMGpsbGcwdmlsUmJLZkpvZ3dySUxnM0E?oc=5",
-      "category": "民泊・住宅宿泊事業",
-      "importance": "中",
-      "source": "選挙ドットコム",
-      "impact_memo": "1NIWAは旅館業法に基づく簡易宿所を目指しており、民泊規制の直接的な対象ではないが、民泊事業者の簡易宿所への転換を促し、競合が増える可能性や、物件探しにおける選択肢に影響を与える可能性がある。"
     }
   ]
 }
