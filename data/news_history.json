@@ -1,6 +1,56 @@
 {
-  "last_updated": "2026-10-31 01:27",
+  "last_updated": "2026-11-01 00:50",
   "articles": [
+    {
+      "date": "2026-10-31",
+      "title": "長崎県、外国人雇用の費用で補助金申請受け付け",
+      "summary": "長崎県が、宿泊施設における外国人雇用にかかる費用（採用活動費、生活支援費、日本語教育費など）を補助する制度の申請受付を開始しました。",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1nRzExaGpJcC1lcDZ4ZXRoaUwwV3F4c1FsWVItdjhaZWZuRnZpY0U3Y3BBM2RtbTJYc0RLNWxaMDVMSFdxODYwZHhlc1BYXzlhRWJPVg?oc=5",
+      "category": "補助金・助成金",
+      "importance": "高",
+      "source": "観光経済新聞",
+      "impact_memo": "1NIWAは東京都での事業展開を予定しており、長崎県の補助金は直接的な恩恵はありません。しかし、将来的に外国人雇用を検討する際に、同様の補助金制度が東京都や国で導入されれば、採用コスト削減に繋がる可能性があります。"
+    },
+    {
+      "date": "2026-10-28",
+      "title": "バスタ新宿とこうも違うのか…インバウンド客が少ない｢バスターミナル東京八重洲｣開業半年後に訪れてわかった\"実態\"",
+      "summary": "バスターミナル東京八重洲は開業半年後もバスタ新宿に比べてインバウンド客が少なく、利用実態に差があることが明らかになった。",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBZdnlqYUZDUzhaQmhOS0g5SzE3bHJaZFQ2b25YSDl6dGpYSVBTLUVEb1NFZDdRaExRREVCSDFWMDJuV051dTBaODIxaXBfX0dLNVVrbDRINWRJU1E?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "東洋経済オンライン",
+      "impact_memo": "東京都内の主要交通拠点におけるインバウンド客の流動性の違いを示しており、1NIWAが物件を探す際、インバウンド客が多い主要交通ハブへのアクセスやその周辺の立地を重視するべきであるという示唆を与える。"
+    },
+    {
+      "date": "2026-10-31",
+      "title": "日本の芝は青いぞ、アジアゴルフ客誘う安さと温泉 栃木の町は宿泊急増",
+      "summary": "栃木県那須烏山市が、低価格と温泉をフックにアジアからのゴルフ客を誘致し、宿泊客が急増している。",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1yYm5jXzJUNEZ1TlFhTmNYUDZjTVFvRldsOTdVRGRzWGNHMFhZYURhZkJjRWRnWFBhZzRnTlRucHJWbEhEeXc4clNFclItWmFTcnlyVFRJb0lDTGF4QWhrbWI0R1dQNFVxRkpNSA?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "日本経済新聞",
+      "impact_memo": "地方の特定のニッチ市場（ゴルフツーリズム）での成功事例であり、東京都23区で簡易宿所を目指す1NIWAには直接的な影響は少ないが、ターゲット層のニーズを深く捉える重要性を示唆する。"
+    },
+    {
+      "date": "2026-10-31",
+      "title": "京都市の民泊で相次ぐ「騒音トラブル」は防げるのか 新技術で検知「規制の在り方考える材料に」",
+      "summary": "京都市の民泊で騒音トラブルが相次いでおり、新技術による騒音検知システムが導入され、今後の規制の在り方を検討する材料として注目されている。",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1MWUtTcE11TDdQNVdITUk5YzhDUlhEaGxiZjNWX0FyaklUQmlNUnFNWTNidi1GdVZ1WjJ0d2xaakh3cTZDRnliQ01WaEtLZGpxS2hCZmg4N3c?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "中",
+      "source": "京都新聞デジタル",
+      "impact_memo": "1NIWAは簡易宿所として運営するが、民泊と同様に騒音トラブルは地域住民との関係悪化に直結するため、開業前から騒音対策や近隣住民への配慮を徹底し、トラブル防止策を講じる必要がある。"
+    },
+    {
+      "date": "2026-11-01",
+      "title": "民泊の規制強化要求/辰巳氏「住民の生活守れ」/衆院厚労委 | しんぶん赤旗",
+      "summary": "日本共産党の辰巳氏が衆院厚労委で、民泊による騒音やゴミ問題など住民トラブルが多発している現状を指摘し、規制強化を政府に求めた。",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE91emtkdlVVNWpmeHljWElzakl3SzZsV2o1V2o3TUxsTnNqd2o5dHVhd2NEOG9tUlpsaWhteTdLZXpscmlFYXJOTkJ3d3BSanp4NzdaYjR6Qk41THYtN0Z5WGZaZlQ3aWRycHVObER3Q0VPMFRs?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "高",
+      "source": "日本共産党",
+      "impact_memo": "1NIWAは簡易宿所であり民泊とは異なるが、民泊に対する規制強化の動きは、宿泊施設全般への住民感情の悪化や、簡易宿所への規制強化の波及リスクを高める可能性があるため、地域住民への配慮を一層強化する必要がある。"
+    },
     {
       "date": "2026-10-30",
       "title": "城が地域観光の核に 寄与度は石川トップ、インバウンドが国内客呼ぶ",
@@ -4950,56 +5000,6 @@
       "importance": "高",
       "source": "projectdesign.jp",
       "impact_memo": "1NIWAは旅館業法に基づく簡易宿所を目指しており、民泊制度の規制強化は直接的な影響は少ないですが、東京都における違法民泊の減少に繋がり、適法に運営する1NIWAにとっては競争環境が改善される可能性があります。"
-    },
-    {
-      "date": "2026-08-25",
-      "title": "【実践大家コラム】民泊がオワコンか！？5月から予約が入らない…汗",
-      "summary": "民泊事業者が5月以降予約が減少している状況を報告し、民泊市場の厳しさや課題について考察している記事です。",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBWNGpmV2R2UnF0V0JRczg1MDR5WHNjXzMzcy1aRkZRbXNSenBIT2VpLXdwbVIwVHNqTHpMZUFXSjd3dTRDLXpTS0VkSGNORnFWYUt2aVgyMEhSZw?oc=5",
-      "category": "民泊・住宅宿泊事業",
-      "importance": "中",
-      "source": "rakumachi.jp",
-      "impact_memo": "民泊市場の予約減少は、競争激化や需要の変化を示唆しており、1NIWAが目指す簡易宿所も同様の市場環境に直面する可能性があるため、物件選定やターゲット設定において差別化戦略を検討する必要があります。"
-    },
-    {
-      "date": "2026-08-24",
-      "title": "札幌市の観光消費額・来訪客数、共に過去最高 訪日客回復が寄与",
-      "summary": "札幌市では訪日客の回復により、観光消費額と来訪客数が共に過去最高を記録した。",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1NdkpMU1ctQTF6ZE9HUGpwMi1vbDQ2YVktZWtKQ3FqbjNFbUpmbWhwYU1BLTZvbl9abVY2WFRoT1RmWHRzdmI4T05DUFl6YTNVckhjVVRKLUY1MnBicHcxN3R3bGZzejgxNVVHdQ?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "日本経済新聞",
-      "impact_memo": "地方都市での訪日客による観光需要の回復は、東京都23区でも同様の傾向が期待でき、1NIWAが簡易宿所を開業する際の需要増加に繋がる可能性がある。"
-    },
-    {
-      "date": "2026-08-24",
-      "title": "韓国の旅行各社、外国人観光客の取り込みを本格化…Kカルチャー軸に新たな成長市場へ（KOREA WAVE）",
-      "summary": "韓国の旅行会社がKカルチャーを軸に外国人観光客の誘致を本格化させ、新たな成長市場を開拓している。",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE10T3BmVjU0RE1pam5xb3dpaFJNUENOQmlua3YzT1g0dGxKXy1hS3BJbVRTRmhBMGhmUkx6SHNQRmxVV3Y3VmliV2FnQUw0bmE5UDRMSW1WM1BJZ2V0YjhTNjNvZ2czZkhKeks3Z3ZTeXdOR3dDRDhhU2JGTVQ4c3M?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "Yahoo!ニュース",
-      "impact_memo": "韓国がKカルチャーをフックにインバウンドを強化していることは、日本へのインバウンド客層にも影響を与える可能性がある。1NIWAは、訪日外国人観光客がどのような文化体験やコンテンツを求めているかを分析し、日本の文化体験や地域性を活かしたサービス提供を検討することで、差別化を図れる。"
-    },
-    {
-      "date": "2026-08-24",
-      "title": "【2026年最新】山形で外国人に人気のホテル・旅館TOP10！銀山温泉・仙峡の宿 銀山荘は第2位、1位は？",
-      "summary": "2026年における山形県で外国人に人気のホテル・旅館ランキングを紹介しており、銀山温泉の宿が上位にランクインしている。",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1jWS02T3ZTOGtYdmtFYmxMQV85bTR2VzM1WlhKN1Q1M2R3YkFiTklKUVFaUG5YNnY3ckZiQVVORkFFYUhIel9BQm04R3ExRm5NcExIUkxLSXBNMlRtVHVKT011bERHUWFzRFB6MG1HTjBUSFkzUkNBYVdsTzNtQQ?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "訪日ラボ",
-      "impact_memo": "1NIWAは東京都23区での展開のため、山形県のランキングは直接的な競合分析にはならない。しかし、外国人観光客がどのような宿泊施設（温泉地、特定の体験など）を評価しているかを知ることで、1NIWAがターゲットとするインバウンド客のニーズを把握し、施設設計やサービス内容に活かすヒントを得られる可能性がある。"
-    },
-    {
-      "date": "2026-08-24",
-      "title": "マリオットの新ブランドホテル、来年春に開業 那覇旭町に全215室、ビジネス・インバウンド客取り込みへ",
-      "summary": "マリオットが那覇旭町に新ブランドホテルを来年春に開業し、全215室でビジネス客とインバウンド客の取り込みを目指す。",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9laFNLYnhISG9nN2V1WXE1elh6MjVOOFdubld6bHMtaDN5bVFfalYxWmE4ZnRHMnFMcXQzSjNWNmYzVjFTc1RLM1U5Nkd0RHFIVGJMTUJuS292bDNnMUE?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "okinawatimes.co.jp",
-      "impact_memo": "1NIWAは東京都23区での展開を計画しており、沖縄での大型ホテル開業は直接的な競合ではない。しかし、大手ブランドの新規参入は宿泊市場全体の競争激化を示唆しており、特にインバウンド需要の取り込みにおける戦略やサービス品質のベンチマークとして参考になる。"
     }
   ]
 }
