@@ -1,6 +1,66 @@
 {
-  "last_updated": "2026-11-10 03:59",
+  "last_updated": "2026-11-11 01:45",
   "articles": [
+    {
+      "date": "2026-11-09",
+      "title": "インバウンド客の手荷物配送 羽田と首都圏観光地、京急や小田急など実証",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBVNFFqX0txUHhIOGE0cF94NmVybnE3cFlPMkxKT1FnQ0xYWHc1a09SbmJkb3pSeXR1R0J6X1RHOWNodUFOZG53UFVublJaa05MN1BaSXc5TWI1bVFWYmpwMkhhTndBYTlQ?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "カナロコ",
+      "impact_memo": ""
+    },
+    {
+      "date": "2026-11-10",
+      "title": "インバウンド「なしには成り立たない」「ごみが散乱する」観光地で探る共生（西日本新聞me）",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBVUDJvckJiR3d6NURJOEJidXZtUGxoN0pGUEEtRUtYMlFkY1otWUMwckVmb083VTJFSE8yUGVCcDByTzlSbjJyd2NWRF9yTGhqOFRicGZpLWVfNGRnbkhKeGtSalVDbGJSYVNtUG9NQTdBTkpYQVhmNVI5WW0tbVk?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "Yahoo!ニュース",
+      "impact_memo": ""
+    },
+    {
+      "date": "2026-11-10",
+      "title": "稼働率38％、倒産2年連続増…インバウンド好調の裏で「旅館」が大苦戦する深刻なワケ",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE95UlNUVXV1RkQzOFE3Z1ZSYUx3bTY1U2FiLTFRMkdjZURXelRsekFneFcyOEdCRE1EYVFDbkk2WjRNeFpWRzdUMmd4NGpRcl9jVUFWWFB3?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "楽待",
+      "impact_memo": ""
+    },
+    {
+      "date": "2026-11-11",
+      "title": "第5次観光立国推進基本計画｜地方部1.3億人泊へ年16.5%増、追加11万室は地方の空室の23%相当",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNOTQwZVAwTzJLOUFveHlaY2lNWHZialNZQzl4bnROS09VUGYxRHk5b0ZQRXFpNTZVZHlpYzdNTFB0MHdmODFsTVpkb1EzUHE3UUk3Uzc5S1dIUkN1enY5a2h4MzJEeUdtMlp6bGpLSFlZMjI4VE1mTTZXWEVOYlFBM2xGOXVWSElmcXk4ZWtiS1JfeFhNM212ckNMWDdPY3JqUENwczdqVWxyWGc?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "HotelBank",
+      "impact_memo": ""
+    },
+    {
+      "date": "2026-11-11",
+      "title": "JNTO、徳島県の宿泊増につなげた取り組みを紹介 アジア初開催・カナダ旅行業協会総会への期待も語る",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE93T2NubGpTSUdmc3lHdkZFMUlhci05SEZuVzNsNEpSaEp1TmU1WV9CS1E1TzFGM214OG9JUXFtSkdBdERGQ01EYlQzU0ZMdDBfcHI0N0ZkMTlkOVoxRmYzRmxxUlhlLXM?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "訪日ラボ",
+      "impact_memo": ""
+    },
+    {
+      "date": "2026-11-09",
+      "title": "東京・台東区、民泊業者に初の業務改善命令 定期報告を提出せず（毎日新聞）",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5ZcjhIbldGUnd4czRJblJDN0kwOUEySmNpU1lpY1lycjZoSjhkVEZqcjM0Y2tjYXRDaFVsX3h3Z0s1VkdWekY4Y0JYZEpHYV9oMG91aGFFakhFVXgxem94WE8xQ1dIVHROWV9kQkh3eGJ2dWdvU3laOVBvVWtybUU?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "中",
+      "source": "Yahoo!ニュース",
+      "impact_memo": ""
+    },
     {
       "date": "2026-11-09",
       "title": "【観光DX特集】TabiHubの宿泊事業者向けマッチングサービス 比較から商談まで1カ所で完結",
@@ -4940,66 +5000,6 @@
       "importance": "中",
       "source": "47NEWS",
       "impact_memo": "1NIWAは東京都23区での簡易宿所事業を目指しており、奈良県葛城市の条例は直接的な影響はない。しかし、地方自治体が宿泊施設誘致に積極的になる傾向は、将来的な事業拡大の参考となる可能性がある。"
-    },
-    {
-      "date": "2026-09-01",
-      "title": "JR東海と大阪観光局、大阪でのMICE開催に支援金 新幹線利用見込む500人以上の案件が対象",
-      "summary": "JR東海と大阪観光局が、新幹線利用の500人以上のMICE案件を対象に大阪での開催支援金を提供している。",
-      "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE4yUWJmQ3N0VENRQnlFal8tWXBBcDRZMHNQcU9pdGdNWG50WlBGc3NKcHZyUC1TS01JVG5OSzFURHlHeXJmVkJMS0F3?oc=5",
-      "category": "補助金・助成金",
-      "importance": "中",
-      "source": "展示会とMICE",
-      "impact_memo": "1NIWAは東京都23区での簡易宿所開業を目指しており、大阪でのMICE開催支援金は直接的な対象外となる。"
-    },
-    {
-      "date": "2026-09-01",
-      "title": "《免税制度の大改革㊤》「観光立国」に向け免税店拡大 70年の歴史も、 目的は変わらず",
-      "summary": "日本の免税制度が観光立国推進のために改革され、免税店の拡大が進められている。",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA1cjFETmhsZVZTdUhFRTJ3aXo4aUhWOUVLSGI1NDViOXQ5RVhSczdyNnE2OE0xNzdMckFkR0VYQVNONmRMUmJJbkRaNzFQLTFHNklZQW53?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "繊研新聞",
-      "impact_memo": "訪日外国人観光客の消費意欲向上と誘客促進に繋がり、1NIWAがターゲットとするインバウンド需要の増加が期待できる。"
-    },
-    {
-      "date": "2026-09-01",
-      "title": "観光立国ネパール、土石流で再び試練 団体予約キャンセルの動きも（朝日新聞）",
-      "summary": "ネパールが土石流の被害を受け、観光業に打撃が生じ、団体予約のキャンセルが相次いでいる。",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1NZ0NuNExkUzAxRVY4ZlRPNHNZbGc2dUhheFJNdjRiTUpxYnl6OTlzZmZPQzNsT0VWUWZEX3p5b0V0WFZBZTAxVmlSUjd1Y0ZvaWJLeWZRa1VDeUZwTlFPMHRiTVRpS25WV1d2YmY0eF9JUWhmekRuWS1oOVNyWnc?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "Yahoo!ニュース",
-      "impact_memo": "1NIWAは東京都内の簡易宿所を目指しており、ネパールの自然災害による直接的な影響はほとんどない。ただし、国際的な旅行需要の変動要因として、海外の災害情報も注視する必要がある。"
-    },
-    {
-      "date": "2026-09-01",
-      "title": "特集ギャラリー：観光立国を目指すウズベキスタン、作家が見た「絹の道」の今 写真と地図14点（2026年9月号）",
-      "summary": "観光立国を目指すウズベキスタンの現状を、作家が「絹の道」をテーマに写真と地図で紹介する特集記事。",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE45S0l1NGRubDcwZ3pHdkw2YWJ1S1cySTNPZmlCMmtESEJwZ1R6WG1EdmJ2bFV4Qk1VUUNHVWNPdWhOUll6VExXUWtUTDNfZlByWEl4V3ZlZHJ6b2NoY3hzNDI4Yw?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "natgeo.nikkeibp.co.jp",
-      "impact_memo": "直接的な影響は小さいが、世界各地で観光振興が進む中で、日本のインバウンド市場における競争激化や、多様な国からの観光客誘致の可能性を認識するきっかけとなる。"
-    },
-    {
-      "date": "2026-09-01",
-      "title": "観光庁採択事業「南紀白浜 面的周遊プログラム」がスタート！「WANDERIDE」が実現するインバウンド向け周遊体験を提供開始",
-      "summary": "観光庁採択事業として、和歌山県南紀白浜でインバウンド向けの周遊体験プログラム「WANDERIDE」が開始され、地域の魅力を多角的に発信する。",
-      "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE51WVhRZHZhbXQ4ekE5NzU3M0lpUFltenVoZ2dHMXZDWTJ5Wm5PSDNYeFE2WlV2aWNRSm55VGplVW1EVVVyWlNPeTFB?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "MOTA",
-      "impact_memo": "地方の取り組みだが、インバウンド客が求める「体験」の重要性を示しており、1NIWAも東京都23区内で地域と連携した独自の体験プログラム提供を検討するヒントになる。"
-    },
-    {
-      "date": "2026-09-01",
-      "title": "訪日外国人観光客の利便性向上と免税手続きへの負担軽減を実現！横浜赤レンガ倉庫に免税カウンター新設のお知らせ",
-      "summary": "訪日外国人観光客の利便性向上と免税手続きの負担軽減のため、横浜赤レンガ倉庫に新たな免税カウンターが設置された。",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1vZzNrUXRQcnZTWkFpTXVTdFNfay01TFVQZ1p2X2VvLXFVSzFNbnZrdG9BdlZjZ1lZTlNURFhyaGFkSnRSY0RhQ1NVUTgta1BrS1pfLTJ6aWt3LW5rMk9XTFhMMTZrUkRWaUE?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "PR TIMES",
-      "impact_memo": "訪日外国人観光客の利便性向上が宿泊施設選びの重要な要素となるため、1NIWAは周辺の免税店情報提供や、免税手続きに関する情報提供をサービスに組み込むことを検討できる。"
     }
   ]
 }
