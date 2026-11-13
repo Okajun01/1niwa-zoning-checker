@@ -1,6 +1,106 @@
 {
-  "last_updated": "2026-11-12 02:45",
+  "last_updated": "2026-11-13 02:28",
   "articles": [
+    {
+      "date": "2026-11-12",
+      "title": "仙北市観光文化スポーツ部の50代課長補佐、減給処分 補助金を過大支給し市民に内部情報漏らす 秋田（秋田テレビ）",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1Wd0JJdUhPT0txc2tKS3Y1QnlCTkpRM2pFWG45d0d3NmdFQ1F5WDlmSE5LRFlEU2tkeFd2MmVNWVZybmhHYklYbko2V01uNVF1THJIS3pNOXlYRS1TRDBkZ3FQSHRTT01lTEh5Y1h2VTRhYXFycFhHdm81QTZ1bkE?oc=5",
+      "category": "補助金・助成金",
+      "importance": "高",
+      "source": "Yahoo!ニュース",
+      "impact_memo": ""
+    },
+    {
+      "date": "2026-11-11",
+      "title": "インバウンド免税の「リファンド方式」移行は観光産業をどう変えるか？ 旅行会社・OTAにも新たな商機【コラム】",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE02bkNQV2puZFVJTFd4Z2RqZy0zYUlvbWVHSXg1SXA4VERWNE93MmVqNW5YNVZGUlYzcG90NENKc0psMWJnNlNZYlRTS3ZVcVk3aVRJWQ?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "トラベルボイス",
+      "impact_memo": ""
+    },
+    {
+      "date": "2026-11-13",
+      "title": "インバウンド成長の次なる鍵は「日本ならではの体験」。訪日客の消費を後押しする、アメックス独自の仕組みとは？",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9pemtIYkNFc0otdUg5VktPSm1nS1FtbEJ0ODlpWURuR2ZPOUs0QkZCcmE3YldHQm9JZ01lRmpFN1dzZm1ldzdacFRhN0NpeGktTEpUU1Q0WmJGU1BmUTNiUXloVWI2UVl3UmY2V181dXA1ZERG?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "Business Insider Japan",
+      "impact_memo": ""
+    },
+    {
+      "date": "2026-11-12",
+      "title": "【全国470ホテル・旅館を調査】インバウンドに人気、全国1位は？ 沖縄、山梨、岐阜のホテルもトップ10に",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE53NGI5SkF4Y3h6RFprd2tuRzBHT0FKLS1SU25pVjUyOXhIUHZhZTc3aXpCVkNmeG1QOFF6a1NnZl9DMW5ydmpQc2JnejlkTTB2?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "まいどなニュース",
+      "impact_memo": ""
+    },
+    {
+      "date": "2026-11-12",
+      "title": "インバウンドの地方分散 四国支部の事例を発表 日旅連塾",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1rcDA0TXNMbEtNUHAwYlJub1BkLVczY3ZMcDg2Y0lQWGxvZ2hZNk5SUV9SVWNxN2xfSnJuTElJbWI2X0JZajhvdWdyLWFTU1ljemhRb01n?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "低",
+      "source": "ニッキンONLINE",
+      "impact_memo": ""
+    },
+    {
+      "date": "2026-11-12",
+      "title": "民泊の稼働率は約25%、北海道は35%｜2026年6〜7月の観光庁実績をホテルと比較",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPOEVTM3ZDMzk3RzMwel9NN2J6bFE1dDlTaHlva2QwR3U4YUVIelNGa3VIcV9QNDhnZjVONG11VFh1alNJbk5HNndLRG5MbkhfVXdIRFA3bGxCblVCd24zSDltQWNZVVFaSUthajFJQ0ktU29KelB3ZXR3VnpjM3F4dVREeFlDeHFQNmdoNg?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "中",
+      "source": "HotelBank",
+      "impact_memo": ""
+    },
+    {
+      "date": "2026-11-13",
+      "title": "“民泊”トラブル相次ぐ中…東京都が初の「適正運営強化月間」 施設を巡回しチェック（TOKYO MX）",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE56ei1lUmxLSkIydUdVUUZlaWRmZGl2QnNuSU5jSWtRNFRqR2RaNGYwNXRaNVBnMkFHVmVsdTFlOFhJNVAxTHhyYThraHpqdzNCNG00TW85c1VSRDN1NWs4Z2dsUFZieTZtcjBCcXZwOTR2SFN6c2tkbkVZaE5Gczg?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "高",
+      "source": "Yahoo!ニュース",
+      "impact_memo": ""
+    },
+    {
+      "date": "2026-11-13",
+      "title": "新宿区長選 4人が立候補、現職に新人3人が挑む 民泊規制も争点に（TOKYO MX）",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1FTzFnS2ExX25pVkI5QnhOSUt3VW5TdzFpMXRSY1cxd2d5MmdiQlNWTE4yU0RzN1lrQl9Yaklqa2hpQ1ZCMU9zN3VKUWhvU0c4SEtiaVhlN2NDb3ZOUS0wN3M1a1NDbUkzMDFfV3hFU0NrY0dteWNaZjljaWhUUG8?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "中",
+      "source": "Yahoo!ニュース",
+      "impact_memo": ""
+    },
+    {
+      "date": "2026-11-12",
+      "title": "民泊の近隣住民、７割が「規制強化すべき」…京都市で初のアンケート調査・半数以上が「住民の不安感増した」",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5Qa3NFaG91SVZaU2VaQ09lZ2FpWGRBb2I1Nml1YWh3bkFXY1J3OTlwVXhzb0FaWmtFaWJUNWdLQkZEelBMYm9ET0NOTTBZN1p3LUNrdjlDN2Z4M2lORkZRalN4Wl94dw?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "高",
+      "source": "読売新聞",
+      "impact_memo": ""
+    },
+    {
+      "date": "2026-11-13",
+      "title": "本日11月13日午前、観光宿泊施設におけるタバコの有害影響の予防と抑制に関するワークショップが開催されました。",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQbzZuR2lQQUZ0R085ZFZ1ZnI1dlBnTHJvV2F1NDJieGt0el9OY1hPUnZyMXNGRVZhMVZYRnlsa01QdHhOaHM4WVdvbFd2T3BKdmVmYXB0QmpnVDVxOW40NnEyVFJTY1MySkJnVHhMbGowQUk5bWlyc0VLM2JkcDdrNnB2T1A2M0VBUnc5UGRFNWtmRVZJb3YzekpIWWV2bnd3SkZELWx1c3lhZEN2aW5NQw?oc=5",
+      "category": "旅館業法・条例改正",
+      "importance": "中",
+      "source": "Vietnam.vn",
+      "impact_memo": ""
+    },
     {
       "date": "2026-11-10",
       "title": "東京都、AI等先端技術を活用した観光地の高付加価値化を支援 補助金を追加募集",
@@ -4900,106 +5000,6 @@
       "importance": "高",
       "source": "Yahoo!ニュース",
       "impact_memo": "1NIWAは東京都23区での簡易宿所開業を目指しており、大阪市の規制強化は直接的な影響はない。しかし、他自治体も同様の規制強化に追随する可能性があり、東京都での物件探しや許可取得に影響が出るリスクを考慮する必要がある。"
-    },
-    {
-      "date": "2026-09-03",
-      "title": "民泊規制の論点、観光の新たな魅力育む観点を 東徹氏",
-      "summary": "民泊規制について、単なる規制強化だけでなく、観光の新たな魅力を育む視点も重要であると東徹氏が提言している。",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5VcWM4enZjN2VZRm5YMlBzdm9GY0cxTzFQRG53STI5WV9BaGxlN19sSjl2LUtGdW9xLU5UeWRQVU53Y053LUd2cWQ2aHZRMW5RUno0YVU2NG5hTjE0eERnT25mX2VveGNxSWxBaQ?oc=5",
-      "category": "民泊・住宅宿泊事業",
-      "importance": "中",
-      "source": "日本経済新聞",
-      "impact_memo": "1NIWAは簡易宿所として観光客誘致を目指しており、規制が観光振興の観点から議論されることは、事業環境が改善する可能性を秘めている。ただし、具体的な規制緩和に繋がるかは不透明であり、今後の議論の行方を注視する必要がある。"
-    },
-    {
-      "date": "2026-09-03",
-      "title": "【独自】トラブル相次ぎ新規受付停止の「特区民泊」に代わり 大阪市「旅館業法で民泊」関連申請が“7.7倍”に “フロント”設置義務も「物件から1キロ以内に設置すれば許可」が要因か 市は規制強化へ",
-      "summary": "大阪市で特区民泊の新規受付停止後、旅館業法に基づく民泊申請が急増したが、市はフロント設置義務の緩和が要因とみてさらなる規制強化を検討している。",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBFYkI1U3FBeG1YVVRPNE1ac2hSZmdyejFvOFhDeFRtNUU4R2p0Yi1veGJxWG9HQVlhVFdweGliRGZGeHhZeFZPcFo0aTk2YURrZVZrNQ?oc=5",
-      "category": "旅館業法・条例改正",
-      "importance": "高",
-      "source": "ktv.jp",
-      "impact_memo": "1NIWAは旅館業法に基づく簡易宿所を目指しており、フロント設置義務の緩和は許可取得のハードルを下げる可能性がある。しかし、大阪市が規制強化を検討していることから、東京都でも同様の緩和が一時的であったり、将来的に厳格化される可能性があり、動向を注視する必要がある。"
-    },
-    {
-      "date": "2026-09-02",
-      "title": "九州7県対象「ふっこう応援割」の割引上限額・対象期間は？【熊本・鹿児島は60％オフに】（ファンファン福岡）",
-      "summary": "九州7県を対象とした「ふっこう応援割」の詳細が報じられ、特に熊本・鹿児島では最大60%オフの割引が適用されることや、割引上限額・対象期間が具体的に示されている。",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9QNXBoVjd1YXZkdWZudWxFYzRRbnU0OVBSMFRUek9rT0l5OWk3Mnd0T1Jyd0RueXNuZlhJeVljS04zSVVoUUwwbVlFUXlIcTN4RmNuQUd5VlpPUmdrek1CSVNWZ0FrRG9aSUhKRWRCTWw1ODlTRzRXREpvUzAyUmM?oc=5",
-      "category": "補助金・助成金",
-      "importance": "中",
-      "source": "Yahoo!ニュース",
-      "impact_memo": "1NIWAは東京都での簡易宿所開業を目指しており、九州の補助金制度は直接関係ないが、地域限定の観光振興策が宿泊需要に与える影響や、割引率の高さが示す集客効果の大きさを把握する上で参考になる。"
-    },
-    {
-      "date": "2026-09-01",
-      "title": "九州ふっこう応援割 | 災害関連情報 | 観光庁",
-      "summary": "観光庁が九州の復興を支援するため、「九州ふっこう応援割」を実施していることを示す災害関連情報である。",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1rdklROWczM0VVSWhyRlFmM1VhUDh0ZTRVT3FaT0pCM2NScHFoSWxGbTNycEsxWEtJTkpFbnVNZmtVVm5US25oRHRNUlRqX3A2TmNHdkl1QTVhaDdNcUE?oc=5",
-      "category": "補助金・助成金",
-      "importance": "中",
-      "source": "mlit.go.jp",
-      "impact_memo": "1NIWAは東京都での事業展開を計画しており、九州の補助金制度は直接的な影響はないが、将来的に東京都でも同様の観光振興策が導入される可能性を考慮する参考となる。"
-    },
-    {
-      "date": "2026-09-01",
-      "title": "観光立国ネパール、土石流で再び試練 団体予約キャンセルの動きも",
-      "summary": "観光立国ネパールが土石流の被害により観光業に打撃を受け、団体予約のキャンセルが発生するなど厳しい状況に直面している。",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1ycjhJaEdDYU0yVmNmN0xJdGNPbU5SNlpoNlh2MHBWQjVuckRXUTFlMmJQR0VnRThwanprRm9pc0ZrUS1ITEFyZlZwb0ZIdzRnVDl0OTR0M040VWdBdldrVzJRTTdNYUE?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "朝日新聞",
-      "impact_memo": "ネパールの災害は直接的な影響はないが、他国の観光地での自然災害がインバウンド市場全体に与える心理的影響や、旅行先の分散化といった間接的な動向を注視する必要がある。"
-    },
-    {
-      "date": "2026-09-02",
-      "title": "観光への「投資」で地域を変える、観光立国ファンド新社長が描く「投資してよし」の好循環を聞いてきた",
-      "summary": "観光立国ファンドの新社長が、観光分野への投資を通じて地域経済を活性化させる好循環の創出を目指す方針を語った。",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5rdnUwQnhoZFFTUlpJZUNYYzVXbVZJSnBON3pCV2ZGV1NDTTAwSkY1a1RlTndERXBYQ2pyQzZqSFpsRDFPcjJtQW5BemVPa3ZBMHB3Wg?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "トラベルボイス",
-      "impact_memo": "観光分野への投資が活発化することは、将来的に東京都内の観光インフラ整備やプロモーション強化に繋がり、1NIWAの簡易宿所事業の市場環境を改善する可能性がある。"
-    },
-    {
-      "date": "2026-09-01",
-      "title": "訪日外国人向け食体験予約プラットフォーム「byFood」運営のテーブルクロス、総額約13.4億円のシリーズBラウンドを実施",
-      "summary": "訪日外国人向け食体験予約プラットフォーム「byFood」を運営するテーブルクロスが、総額約13.4億円の資金調達を実施し、事業拡大を加速させる。",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE12blhCM2pnbFJvd3hoUEktVmxEN3FPcXNRVDJELVYxVnZhcU44R2hSWTZ0Q25BejhYZEhNUVFBUElLWkxBZ3V2UTQtamZya2VDODZxZHBLamZMWXVETXFtd3pZWGdMeHdTbFE?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "PR TIMES",
-      "impact_memo": "訪日外国人向けの食体験予約サービスが強化されることで、1NIWAの宿泊客が東京での滞在中に食事や文化体験をより手軽に予約できるようになり、顧客満足度向上に貢献する。"
-    },
-    {
-      "date": "2026-09-01",
-      "title": "「回転寿司」が東京の街を走る インバウンドの新たな定番になれるか #エキスパートトピ（山路力也） - エキスパート",
-      "summary": "東京で「回転寿司」をテーマにした移動型エンターテイメントがインバウンド向けに登場し、新たな観光コンテンツとしての可能性を探っている。",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQSHlXTHVHNlNGRW0xVkstWUFVN0xrOXI3YWlTdVZ3enZEQU5YZXF6Mk1vM1Q2U0V1dUFHNi1LQjlTalpqdjFFTEhuemphdWw0R3JlNGEyZzU5Q3RJYUtUM3VZMDgtV0M3ZGN3Zkk5NTdrZklENkY5ZkJpYnAxOXI2UU1EYkNmOWlK?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "Yahoo!ニュース",
-      "impact_memo": "東京都内でユニークなインバウンド向け体験が増えることで、1NIWAの簡易宿所を利用する訪日外国人客の滞在満足度向上に繋がり、集客の一助となる可能性がある。"
-    },
-    {
-      "date": "2026-09-02",
-      "title": "トイズキング、越境ECへ誘導する訪日外国人観光客けOMO施策を開始",
-      "summary": "ホビーショップのトイズキングが、訪日外国人観光客を実店舗から越境ECへ誘導するOMO（Online Merges with Offline）施策を開始した。",
-      "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPYUFLcEpCNmltaEExQXhPZ3hLSE5ydUE3NkE0T0hwWmJGemdIYVdNUHlpRGk1aHNDV1JQYkx6QUdZMHM1ZkhLUVFwV2tIb1J5X2xWU3RWTzFSOHZXZnpXZ1VJWUNGdXFMZ2JLUDgxd1J4WEgxbzVwSG82MDJkdkpNTkJ1T2tMdEJwbWVrQ2t5TmhmSS15UURpSmJraUhVaDJPNlFQbXMwb1hNNGotNEJ2dVcxOTVOS2ZsOThMRjFIRS1TbWg3UjVEQXJWQzZUUTAzel9tUFFFTHNPLVA1NWhFRFg1TENkaVp1Tk4ySjg5bWRXUmdTbzVnc3E1WmZvZUVPOW9HVNIBtAFBVV95cUxPZDJwWXZTMmkwWFo2X0VDRllkVS04bnhURTNKd2F3ODRFT0h2a1llM2p1dDNJWHFwMDlIRlJIa2l1eGduNi1ZM20zcHlxVXJtT0MwTWlIdUNlc0NMbXktOV9xejdyQThSdl95MTdXZVVLSmxldW5DaF8wbFRnUG5CalJZOFI3ejhwUW44VlVLNURzNkxpam5UYUp5MThpTzh2S1hzUXhGOWExeGZWUHFjTkdRMEQ?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "ｄメニューニュース",
-      "impact_memo": "1NIWAは宿泊施設であり直接的な競合ではないが、訪日外国人観光客の消費行動や購買チャネルの多様化を示す事例として参考になり、宿泊施設としてもOMO的なアプローチを検討するヒントになる可能性がある。"
-    },
-    {
-      "date": "2026-09-01",
-      "title": "インバウンド狙いのリニューアルも 宿泊施設の稼働率は大阪・東京に次ぐ全国3位 今後は 福岡 (FBS福岡放送)",
-      "summary": "福岡県がインバウンド需要を取り込み、宿泊施設の稼働率で大阪・東京に次ぐ全国3位となるなど好調で、今後も観光客誘致に注力する。",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPWXV6aFJvUlVWREhVUFBsZXhMRHUxYWZoamxWR0hLbnU0aE9OY2FYZm5YT0Qwc2ZaNEZ6RTZza2lFeFdWdUx2SEFDOXF0TEE4ajBsYV9UOFJQdHRFa2RUVUxrVzhNQS1rVlBkbVRyaEtDR01KeEVGY3ozaTB0ZUFmeFlyYmNrQ0xrdmhvY2FR?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "Yahoo!ニュース",
-      "impact_memo": "1NIWAは東京都23区での事業展開を予定しており、福岡の好調は直接的な影響はないが、インバウンド需要が全国的に高まっていることを示唆しており、東京での事業においてもインバウンドを強く意識した施設設計やサービス提供が重要となる。"
     }
   ]
 }
