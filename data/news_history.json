@@ -1,6 +1,76 @@
 {
-  "last_updated": "2026-11-16 01:40",
+  "last_updated": "2026-11-17 04:22",
   "articles": [
+    {
+      "date": "2026-11-16",
+      "title": "宿泊事業者の生産性向上への取り組みに最大300万円を支援",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5pbDFWVFJZQWsycUpRcEVzRFNvZTJFbVFEZE5BVGxzSnVsVkFLTk9fZ1pqcXd2VjZ3ay1jdm9IVmJmODM2QkpGRVJwbjlOZFJxMnJYRnlHb3VtNGlISHAtUW15Yw?oc=5",
+      "category": "補助金・助成金",
+      "importance": "中",
+      "source": "J-Net21[中小企業ビジネス支援サイト]",
+      "impact_memo": ""
+    },
+    {
+      "date": "2026-11-16",
+      "title": "東京が「世界で最も魅力的な都市」に選出、日本は魅力的な国ランキング2位に 英・旅行情報誌「Wanderlust」",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBJbDl0clNIRm1DSDRoc0hKeERuS0lLeDlCMVpndjZNSGVKRjJSV1FuMEVoVVlOZTk3UEhWQWlKVnMtYkNQTGFyTlkyRk9IaW9UTEt3Ti1FYmF1Mzg?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "訪日ラボ",
+      "impact_memo": ""
+    },
+    {
+      "date": "2026-11-16",
+      "title": "ナビタイム、インバウンド動態データを取得できる法人向けAPIを提供開始、2地点間の移動傾向や滞在人数などを集計",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5iLVppRTlIcUhPOE52Rnh5RC1qWFVTb0o0WkJFcHVzNXAxX1pQaVExRlBWZXRHSVVlVFNocWVjczFTVk9pUEM3b2pCRGJvNkpkWE5XVg?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "トラベルボイス",
+      "impact_memo": ""
+    },
+    {
+      "date": "2026-11-16",
+      "title": "インバウンド「受け入れる余力がない」「自社だけでは難しい」地方ホテルの現場から悲鳴続出！ なぜ3000万人突破の商機を取りこぼすのか？（Merkmal） | 自動車情報・ニュース",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOYXRsdUs1NGZkZlQ0S3JnM3Z5bW9XV2xqRkg5WUVrcF95NVdUYVBlV1pCbVYyRXZycUhGWXFockJla3FlN3d3bGliVkdyMlMxS0VCdjVwVUgwMXJHZmtnNU9yeUlBVXNiMVpsekhpSjBCRmtFS3diblpZNlFEMnUtVVVTenRMQ1Ba?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "carview!",
+      "impact_memo": ""
+    },
+    {
+      "date": "2026-11-16",
+      "title": "インバウンド「受け入れる余力がない」「自社だけでは難しい」地方ホテルの現場から悲鳴続出！ なぜ3000万人突破の商機を取りこぼすのか？",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9wR2NSZnVBUDZsVi1xMFkwSFNkR1EyM3Q2dHJPd1ZmV2o0NFQtbkpTcjFTeVNDaXZaZ3pSSWYzTzlaNGVxcXNJWGlR?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "merkmal-biz.jp",
+      "impact_memo": ""
+    },
+    {
+      "date": "2026-11-17",
+      "title": "JNTO、徳島県の宿泊増につなげた取り組みを紹介 アジア初開催・ACTA総会への期待も /",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBMYUM1RkRKdk5IcHEzb0dOTndpa3dqQmtueE5QRDg5Q2lwWU8waDBDV0p5OTFoaGkxaXBReE9LWWl6d0FJZ1dicmVhZEc4dFBDXzkwTlpSZTVMYVkwVDJzQjZrTQ?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "訪日ラボ",
+      "impact_memo": ""
+    },
+    {
+      "date": "2026-11-17",
+      "title": "宿泊施設に関する最新の規制では、宿泊施設を報告しなかったゲストハウスやホテルのオーナーは、最大1200万ベトナムドンの罰金を科される可能性がある。",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPbmVSaWFlUWlrWVc5VVBrYU9fMEZCSmNxQnNPWDFDcEtRRmtuZC1yQXhKN1BoM0ZFbE1na2JQN3JUbFZKSHdfODdRYzk3UDVGTUUtMTZ5S0E4anV3TUl5VVNoMzNJNDhYY0hJZUJqVVlVT3VfT3A3Z1otajE2dEMwYlRmel9mOHRJb1k1UGU4Vkk4OFJscmdxRmpqV0NRaXhwdFhqVFBIRGJfcHYtN1JhZGgxUExtMlRzR25jN0xaS3RISDU0MnF4ZjItNm8?oc=5",
+      "category": "旅館業法・条例改正",
+      "importance": "中",
+      "source": "Vietnam.vn",
+      "impact_memo": ""
+    },
     {
       "date": "2026-11-16",
       "title": "高付加価値旅行とは？ 旅行者が求める価値や注目される理由、地域の事例を紹介",
@@ -4930,76 +5000,6 @@
       "importance": "高",
       "source": "日本経済新聞",
       "impact_memo": "1NIWAは簡易宿所を目指しており民泊とは異なりますが、東京都23区内で民泊の規制が強化されていることは、宿泊施設全般に対する住民の懸念や行政の厳しい姿勢を示しています。簡易宿所の物件探しにおいても、住宅地での許可取得が難しくなるなど、間接的な影響が考えられるため、物件選定にはより慎重な検討が必要です。"
-    },
-    {
-      "date": "2026-09-07",
-      "title": "京都市、民泊規制強化案を公表 全施設に常駐義務、「ゼロ日規制」検討",
-      "summary": "京都市が民泊規制強化案を公表し、全施設への常駐義務化や「ゼロ日規制」（年間営業日数制限）の検討を進めています。",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFByUTRsY1VGMU9mTEFsTEZZU3RvandYUmtuaEdla3YzeHhfV1Fxb0RPaGtCUDdyUzc4VTROSGtXRUc5VlhQX0ZHSEpTc3VsdGtzenh5RWFoNA?oc=5",
-      "category": "旅館業法・条例改正",
-      "importance": "高",
-      "source": "traicy.com",
-      "impact_memo": "1NIWAは簡易宿所を目指しており民泊とは異なりますが、京都市の厳しい規制検討は全国的なトレンドを示唆します。東京都23区でも簡易宿所に対して同様の運営上の義務が課される可能性があり、事業計画に人件費や管理体制の考慮が必要になるかもしれません。"
-    },
-    {
-      "date": "2026-09-07",
-      "title": "速報‼【民泊・大きく前進】新宿区が住宅地・学校周辺で原則禁止へ",
-      "summary": "東京都新宿区が民泊について、住宅地や学校周辺での営業を原則禁止する方針を示しました。",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1ub0t5UDQ2Tnd0NTNoVXptTEl3SVF2Vm5tZFRWN3ZQZU5pVWhObFMxajNxb05VdkU2dHcwRFBCdEVCdlBFODdUVjhyZGJXQjVuZTlTSl9WQnZtSmxVLVE?oc=5",
-      "category": "旅館業法・条例改正",
-      "importance": "中",
-      "source": "選挙ドットコム",
-      "impact_memo": "1NIWAは簡易宿所を目指しており民泊とは異なりますが、新宿区が住宅地や学校周辺での宿泊施設に対する規制を強化していることから、簡易宿所についても同様の住民感情や行政判断が働く可能性があり、物件選定時に周辺環境を慎重に考慮する必要があります。"
-    },
-    {
-      "date": "2026-09-04",
-      "title": "観光地で増える入場料の「二重価格」…姫路城では市民以外2500円 価格差の「理屈」と「効果」は",
-      "summary": "観光地で入場料の「二重価格」が増加しており、姫路城では市民以外に高額な料金を設定することで、観光客と地元住民のバランスを取り、収益向上を図っている。",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9POWRmOFVIdkRac2FOZjMyZFdwLXp5MV93WllEZVIwZEE1N0xjNDN3ZHBPMVkwVkNKS2UwQnpOdlJ1Y3Q4b1VYU0pRMUR1bHNrbEVz?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "東京新聞",
-      "impact_memo": "1NIWAの簡易宿所運営には直接関係ないが、観光客からの収益最大化と地元住民への配慮という視点は、宿泊料金設定やサービス提供において、ターゲット層に応じた価格戦略を検討する上で参考になる。"
-    },
-    {
-      "date": "2026-09-06",
-      "title": "民泊規制の論点、複雑化したルールの統一が必要 矢ケ崎紀子氏",
-      "summary": "矢ケ崎紀子氏が、複雑化した民泊規制のルール統一の必要性を指摘している。",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE82dWt6V2txblRVd3laQm1seUwyb1BvaVVvUjQwaXlYYUpQUmNIVXJFajQ1U0tBS3ZCampKUTMzTXBmSWNQZ3JFaGI2d2tYNE53Z05CS0s1WUJhcjhhZFFGblpmcVh0LVZHNnZPaw?oc=5",
-      "category": "民泊・住宅宿泊事業",
-      "importance": "中",
-      "source": "日本経済新聞",
-      "impact_memo": "1NIWAは簡易宿所を目指しており、民泊規制の複雑さは直接的な影響は少ない。しかし、将来的に簡易宿所を含む宿泊施設全般の規制が統一・簡素化されれば、事業運営の透明性や予測可能性が高まる可能性がある。"
-    },
-    {
-      "date": "2026-09-06",
-      "title": "民泊が全国最多の新宿区、住宅地や学校周辺の営業禁止へ…既存施設も・半数以上営業できなくなる可能性",
-      "summary": "新宿区が民泊の規制を強化し、住宅地や学校周辺での営業を禁止する方針で、既存施設も半数以上が営業できなくなる可能性がある。",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1GWEZBRHpYZWY2cDJFUEpBdnE0Vmk4NEJqTFJOLVFhYWZiU1RkVzFBbEMwYnJ1VGxaUHh4bTRvT1NUT080VGZ3QzBJMHctYUdRdEVZcGxKVzBYVFkwaW9jNHZiSHFfUQ?oc=5",
-      "category": "民泊・住宅宿泊事業",
-      "importance": "中",
-      "source": "読売新聞",
-      "impact_memo": "1NIWAは旅館業法に基づく簡易宿所を目指しており、民泊とは異なるが、新宿区が簡易宿所に対しても同様の規制を導入する可能性があり、物件選定時には立地条件（住宅地、学校周辺など）に注意が必要となる。"
-    },
-    {
-      "date": "2026-09-05",
-      "title": "横手市の協力隊に台湾出身・陳さん　インバウンド向け観光ＰＲ担う",
-      "summary": "秋田県横手市が台湾出身の協力隊員を迎え、インバウンド向けの観光PRを強化し、多言語対応やSNSを活用した情報発信を進めている。",
-      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPZnZReTZSaFp3TjdkaUFzTElWYXlTOW1YUm9Wam9NczJUc3FhXzc2MGswQmRGZzJLaEkyZHE0RVBfclZ5NW5qb1Y4MUl5TFBITVlqRTZ3aTBnT1BKQmRuTTJyQlU4MUJqUWFlYmdHZ3ZVZGo4aF95bUhPT0FhaThSU1VSUW1JYnVTOU0wejdOY29uQlZPeWM4eFBHRnQyaU9JZzY2QlBEYm1MTE9UaF9zZk1LdDJMR2FTR3JYVEtYUENTdmpDWWtpRHZzeGQ4ZnFxRkw3VE0wUDRpU3PSAYsBQVVfeXFMTlRkVVN0YkJqMXF4dk9vWERsaUVGZ2h1VzZGZWVxOUZRRlhGY3QxZFhIQTB2bHNPaDhNdXM3UU80V0oyOHlNOHFSV0lpRGhUaVFqN3NIdDV2eEtQNG03cjB6VUZuMVFoLVFYeWREalZuM2ZSQk1qWUJzSkp2OU1iRU80MDFoUV9ENFdadw?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "ｄメニューニュース",
-      "impact_memo": "地方自治体が外国人材を登用してインバウンドPRを強化する動きは、1NIWAが将来的に多言語対応や外国人目線での情報発信を強化する際の参考となり、ターゲットとするインバウンド層へのアプローチ方法を考える上で示唆を与える。"
-    },
-    {
-      "date": "2026-09-05",
-      "title": "【ずっと、能登と。 2026観光編】 ＜7＞体験型ツアーでインバウンド呼び込め、能登ならではの自然をPR",
-      "summary": "能登地域が2026年に向け、体験型ツアーを通じて能登ならではの自然をPRし、インバウンド誘致を強化する取り組みを進めている。",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBMS3ZwSHBmUEV4SHgtU2d3RGFMMmliVjhWRzlIS1pQUlRxUDI0bWpwZExGeUhZV2lpODBKM25KbjJsYTBIbnpCNjh2UEt1LWJFc0E0TA?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "中日新聞Web",
-      "impact_memo": "地方の成功事例ではあるが、体験型ツアーによるインバウンド誘致は、1NIWAが東京都内で簡易宿所を運営する際にも、周辺地域の体験コンテンツと連携することで集客力を高めるヒントとなる。"
     }
   ]
 }
