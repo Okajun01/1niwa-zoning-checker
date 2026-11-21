@@ -1,6 +1,66 @@
 {
-  "last_updated": "2026-11-20 02:53",
+  "last_updated": "2026-11-21 03:01",
   "articles": [
+    {
+      "date": "2026-11-20",
+      "title": "宿泊業の省力化投資補助金は補助率1/2・上限1,000万円｜50〜200室の1室負担5.9万〜6.8万円と回収年数",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQWDRFeldpYmRDUUJKWU84Ums4UXpZei1PTkdZdXREbERFLTcwUEpYWC1fU3BJWTduRHAydjVKNFhJQlJPbFBJWWkyY1FkTllUcm9CT080b0hlNW9GbTBCN05Zd2dROEhlM0piMFhpUTNVVkd5RFUzMXpqX2t4MXdPUGtyZE5JZDhZREhXdC15c2ZjemFnOVQ3YnRRdno5TWRIUmFjd05RWTI5UGtiSzVTeGxTb2l4enZyYXc?oc=5",
+      "category": "補助金・助成金",
+      "importance": "高",
+      "source": "HotelBank",
+      "impact_memo": ""
+    },
+    {
+      "date": "2026-11-18",
+      "title": "世界的ホテルチェーンの元総支配人が期待する、外国人観光客がまだ発見していない日本の魅力【ラジオビジネス英語】",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBvRlZvSHZKSWRHRERaWVhnOFhIaWFrb0NlaHhBZjV3S3VjWkpqSzVnQ21wY3ZYTWZlV2xoQU5SVURyUlZLdHREd3lBU3c1ekxqeUE?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "NHK出版デジタルマガジン",
+      "impact_memo": ""
+    },
+    {
+      "date": "2026-11-21",
+      "title": "インバウンド収益増へ 観光プロデューサー永谷亜矢子さん講演会…２４日、岐阜・多治見市：地域ニュース",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE41RmJleG02cjFoV1JzUnZrcmVaY3huZWY3VGZIQ2ZRSnh0UFh1OXNISV9LOERXSVZ1SFRYMDB2RGxCNlp2RkpYc0ZLUFd2dmNmc0U2NVd2UmxuS3JLdV8zbEtSVTV4Z3BacVNDdy1oUDM?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "読売新聞",
+      "impact_memo": ""
+    },
+    {
+      "date": "2026-11-18",
+      "title": "26年の訪日客、5年ぶり前年割れか 中国人客の大幅減が影響（朝日新聞）",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBzSmw5NWV2d3RwMHVZc3FUR1ZWSGs2LUl4QnFvQ0FfQmpPd2k2bFdUeTloQjV2NmpqamZvM0RBaVJ6ei1MTlBqYkZ2NlJuQ3laVm4xLVNnZVJKNlBnNEh5bERjcHU5QnZfd0JrdzhxeGlGUFpCakR6QXBuRnhoTlE?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "Yahoo!ニュース",
+      "impact_memo": ""
+    },
+    {
+      "date": "2026-11-18",
+      "title": "インバウンド客の受け入れ環境考えるセミナー 宿泊税を活用して開催 集客のカギは地域の外国人〈宮城〉",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBESWJIVnprMlhrUC1JSHNZeUlhZWxmalgyQ2kxdDFuR0RMOUdsVUd3WEY2Um9sQkNkdllESF9IUmxpX2VrS0JraVdydkpKQQ?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "FNNプライムオンライン",
+      "impact_memo": ""
+    },
+    {
+      "date": "2026-11-20",
+      "title": "今年の秋は民泊・旅館業規制ラッシュ！？オワコン民泊の今後の動きはどうなる！？",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9namE3XzJ1Z2RTVjNUaXY5YjRYeUYzTDVIcEVQV0ptdHBCTDJIWEhreEJHN2dzZ24wbmk1YjQxUHZpUW1mTnAzY3FRWXd5SVRsZWhaaFNNOUc?oc=5",
+      "category": "民泊・住宅宿泊事業",
+      "importance": "中",
+      "source": "健美家",
+      "impact_memo": ""
+    },
     {
       "date": "2026-11-19",
       "title": "訪日客に観光地への移動手段紹介、岡山県がサイト刷新 駅から美観地区など検索機能新設",
@@ -4940,66 +5000,6 @@
       "importance": "高",
       "source": "日テレNEWS NNN",
       "impact_memo": "1NIWAは東京都23区で簡易宿所を目指しており、新宿区での民泊規制強化は、簡易宿所にも同様の規制が波及する可能性があり、近隣住民とのトラブル回避のための対策や物件選定の重要性が高まります。"
-    },
-    {
-      "date": "2026-09-08",
-      "title": "「やめとくれやす民泊」京都の民泊が岐路に 住宅地での新規営業が事実上禁止へ 「セルフチェックイン」など100施設以上が条例違反か 初の営業停止処分も「氷山の一角」（関西テレビ）",
-      "summary": "京都市で民泊（住宅宿泊事業）の規制が強化され、住宅地での新規営業が事実上禁止となり、セルフチェックインなど条例違反の施設に営業停止処分が出ています。",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBwQ2ZMeWthUHlOUTFIT3AxQXRwb3FJZmxwNUtsai03TU1PRjZsMDVUYm9hVk16eE41eWhBM0JXSUMwQkIwMU03MDExcGNVODdJTHdLMUt5RklwczRwTUg2SHJacjBENXFnZlRrZnZ5akpodDdRcGV6NmZ6RFRBNW8?oc=5",
-      "category": "旅館業法・条例改正",
-      "importance": "中",
-      "source": "Yahoo!ニュース",
-      "impact_memo": "1NIWAは東京都23区で簡易宿所を目指しており、京都市の民泊規制は直接的な影響はないものの、住宅地での規制強化やセルフチェックインへの厳しい目が、東京都の簡易宿所にも波及する可能性があり、運営方法に注意が必要です。"
-    },
-    {
-      "date": "2026-09-03",
-      "title": "「地方誘客促進に向けたインバウンド安全・安心対策推進事業」とは？【9/25締切】補助率・対象経費・申請方法を解説",
-      "summary": "本記事は、地方へのインバウンド誘客を促進するための「インバウンド安全・安心対策推進事業」という補助金について、その補助率、対象経費、申請方法を解説しています。",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE8zNk01UlFTTjJCWG56cm9YWXVyd3oxeEllcTVWM1VxTE9qYVpNLXAzcDdJWUdFSlJGbU1qekJHd3FVUjRiVU9nLXk2RWQ1ZTd4S2kzajB0eXBjdEVTNFQyM0NWbGI?oc=5",
-      "category": "補助金・助成金",
-      "importance": "中",
-      "source": "補助金ポータル",
-      "impact_memo": "「地方誘客促進」が主眼であるため、東京都23区で簡易宿所を計画中の1NIWAには直接適用されにくいですが、インバウンドの安全・安心対策というテーマは将来的な施設運営において参考となる可能性があります。"
-    },
-    {
-      "date": "2026-09-08",
-      "title": "【独自】高知市議全員が飲食に《補助金》使用 福岡県議会きっかけに辞退へ 20年以上で1500万円超（高知さんさんテレビ）",
-      "summary": "高知市議会議員全員が飲食費に補助金を使用していた問題が発覚し、福岡県議会の事例を受けて辞退する動きが出ている。",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9JekNpVTZfeFdRSmpDcXAyR3VSTHVvV2NQUUItejNabW5OZWFNeHRvaWwyQ1c1anhRMXJMamU4MUw2UWQ5SDRXQUhHMXF5SWpUMThEa2VNUDJMbTRJOXl0X2hxaUtKVXE1Ulg1dmZEZ29CSmtzcmNidjdzZnlST3M?oc=5",
-      "category": "補助金・助成金",
-      "importance": "高",
-      "source": "Yahoo!ニュース",
-      "impact_memo": "地方議会の補助金不正使用に関する記事であり、東京都23区で簡易宿所を目指す1NIWAには直接的な影響はない。"
-    },
-    {
-      "date": "2026-09-07",
-      "title": "ホテル建物の特別償却15〜25%、賃上げ5%が条件 — 経営強化税制E類型を試算",
-      "summary": "経営強化税制E類型において、ホテル建物の特別償却が15〜25%適用され、賃上げ5%が条件となる試算が示された。",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOVzd2R3Y4dFlpSUlFNURYNzJhbmNjcTZSNGtHSFBuY05LM1dqazBidERkRkxnUUk1cWRmZ1NOUnhBMG9aRDgxQkN1SnZ5QXVBVk95bEpqNDlDWmczZE9WbmxPVE5INDJZSWVSajBTOHBZaktJYVBhckl2M3pzTENIczNPblpjeG5DWm9Lay1XRGk4NnFzVzVIOEJwOU1hYlNYUmc?oc=5",
-      "category": "補助金・助成金",
-      "importance": "中",
-      "source": "HotelBank",
-      "impact_memo": "簡易宿所も対象となる可能性があれば、将来的に1NIWAが建物を取得・改修する際に税制優遇を受けられる可能性がある。また、賃上げ条件は人件費計画に影響を与える。"
-    },
-    {
-      "date": "2026-09-08",
-      "title": "訪日外国人観光客から見た「熱海」の魅力とは？90.4％が「訪れたい」と回答！人気は“温泉・花火・食”",
-      "summary": "訪日外国人観光客の90.4%が熱海を訪れたいと回答し、温泉、花火、食が主な魅力として挙げられている。",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9vQTFhd1hRN2JpYktOem1KNk9IdC11cVBQRUlHVjlvUDRrSE1LbDJPNnhIRmU4LUtZSWFoQ0ZzaXd0U25qaU5Rd1R4SUNVVzFZdnRSZWlxUzZBaHhxdGQxalAxMW1NQkVKMlNveEo1N2FLeXlHdHZIcQ?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "rbbtoday.com",
-      "impact_memo": "熱海に関する記事であり、東京都23区で簡易宿所を目指す1NIWAには直接的な影響は少ないが、訪日外国人観光客の地方への関心の高さは、都内での宿泊需要にも波及する可能性がある。"
-    },
-    {
-      "date": "2026-09-08",
-      "title": "移動時間を“体験”として楽しめる、訪日外国人向け日帰りツアーを新たに展開 ９月１０日「Odakyu Official CHECKBOX TOUR with Guide」を発売",
-      "summary": "小田急電鉄が、移動時間自体を体験として楽しめる訪日外国人向けの日帰りツアーを新たに展開します。",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1icGlCejBiQWMyRGt3T1lmY3FYNHZNRDJ3aURMR2tQYnoydGZDRmhCaVp6aGFWWXgwbl96UExUcWxhckpxUF95cXV1NGloRXcxYS1GR2hhSkFDZ0M0YXZId1llaFpnNFFIbWc?oc=5",
-      "category": "観光・インバウンド",
-      "importance": "中",
-      "source": "PR TIMES",
-      "impact_memo": "1NIWAは東京都23区に立地するため、このような都心発着の体験型ツアーと連携することで、宿泊客への付加価値提供や集客機会の創出が可能となります。"
     }
   ]
 }
