@@ -1,6 +1,16 @@
 {
-  "last_updated": "2026-11-21 03:01",
+  "last_updated": "2026-11-22 01:58",
   "articles": [
+    {
+      "date": "2026-11-21",
+      "title": "インバウンド「地方スルー」で偏る恩恵 34県の客数・消費単価が低調",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBiaklJWmVwVkdqaHdraWE0UEJHbjlyZGJkLVhWaEJCRnFIdXpxWHdzb2VpVjhNUVdQbzNsMEM4RkwwRVZ3alNxcTJXNHlDV2tGYkpaaGR1ek92XzJ4TUFnWnk0aDg1Y2RNMUg3Rg?oc=5",
+      "category": "観光・インバウンド",
+      "importance": "中",
+      "source": "日本経済新聞",
+      "impact_memo": ""
+    },
     {
       "date": "2026-11-20",
       "title": "宿泊業の省力化投資補助金は補助率1/2・上限1,000万円｜50〜200室の1室負担5.9万〜6.8万円と回収年数",
@@ -4990,16 +5000,6 @@
       "importance": "中",
       "source": "Yahoo!ニュース",
       "impact_memo": "1NIWAは旅館業法に基づく簡易宿所であり、民泊規制の直接的な対象外です。新宿区での民泊規制強化は、民泊から簡易宿所への需要シフトを促し、1NIWAが新宿区で物件を見つけた場合の競争環境を有利にする可能性があります。"
-    },
-    {
-      "date": "2026-09-08",
-      "title": "【解説】“全国最多”新宿区が民泊規制強化へ 約半数が営業できなくなる可能性…強化のワケは？【#みんなのギモン】",
-      "summary": "新宿区が民泊（住宅宿泊事業）の規制を強化し、約半数の施設が営業できなくなる可能性があり、近隣住民とのトラブルが規制強化の背景にあると解説されています。",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE12QjFsUk4ycVN2Uko2Wi1LcXRQaU5LUk1BYzRxVHFQb25HeEJPdHBRZzN3YzJoTzBfWEtGSHEzUnpDTjVtaEJ5S2JkblR5SnkwQngzNVZtM1J4VmN0V3M5ekpCVF9jb3piYzl0Vi1GaVpnYXRZUllGZ2g0dkQ?oc=5",
-      "category": "民泊・住宅宿泊事業",
-      "importance": "高",
-      "source": "日テレNEWS NNN",
-      "impact_memo": "1NIWAは東京都23区で簡易宿所を目指しており、新宿区での民泊規制強化は、簡易宿所にも同様の規制が波及する可能性があり、近隣住民とのトラブル回避のための対策や物件選定の重要性が高まります。"
     }
   ]
 }
